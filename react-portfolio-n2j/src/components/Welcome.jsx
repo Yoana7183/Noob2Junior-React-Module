@@ -5,8 +5,7 @@ export default function Welcome() {
     return (
         <>
             <div className="wrapper">
-                <h1>Welcome To My App</h1>
-                <p>This is going to be the coolest app in the world!</p>
+                <h1 className="text-3xl font-bold underline text-center bg-red-900">Hello world!</h1>
                 <img src={sam} alt="Sammy Image" width={200} height={200} />
             </div>
         </>
