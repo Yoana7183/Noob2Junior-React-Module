@@ -4,27 +4,40 @@
         "es2021": true,
         "jest": true
     },
+    
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended",
         "plugin:react/jsx-runtime",
         "plugin:prettier/recommended",
-        "plugin:import/errors",
-        "plugin:import/warnings"
+        "prettier"
     ],
+
+    "overrides": [
+    ],
+
     "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module",
         "ecmaFeatures": {
             "jsx": true
-        }
+          }
     },
+
+    "plugins": [
+        "react",
+        "prettier"
+    ],
+
     "rules": {
         "prettier/prettier": "error",
         "react/jsx-uses-react": "error",
         "react/jsx-uses-vars": "error"
     },
-    "plugins": [
-        "react",
-        "prettier",
-        "import"
-    ]
+
+    "settings": {
+        "react": {
+          "version": "detect"
+        }
+      }
 }
