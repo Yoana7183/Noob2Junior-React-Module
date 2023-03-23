@@ -32,7 +32,12 @@
     "rules": {
         "prettier/prettier": "error",
         "react/jsx-uses-react": "error",
-        "react/jsx-uses-vars": "error"
+        "react/jsx-uses-vars": "error",
+        "react/prop-types":
+         [ { "ignore": "<ignore>", 
+         "customValidators": "<customValidator>", 
+         "skipUndeclared": "<skipUndeclared>" }]
+
     },
 
     "settings": {
