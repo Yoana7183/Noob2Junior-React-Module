@@ -1,5 +1,5 @@
 import React from 'react';
-import '/src/css/main.css';
+import Button from './components/button';
 
 export default function HomePage() {
   return (
@@ -9,11 +9,7 @@ export default function HomePage() {
         <li></li>
       </div>
       <div className="btn-projects">
-        <button></button>
-        <button></button>
-        <button></button>
-        <button></button>
-        <button></button>
+        <Button title="landing" />
       </div>
     </div>
   );
