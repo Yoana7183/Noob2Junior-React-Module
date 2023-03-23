@@ -10,6 +10,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
     "format": "prettier --write \"src/**/*.{jsx,js,css,html}\" --config ./.prettierrc.json"
+
+
   },
   "dependencies": {
     "react": "^18.2.0",

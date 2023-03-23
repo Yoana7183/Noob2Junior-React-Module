@@ -1,7 +1,5 @@
 import * as React from 'react';
 
-const title = 'React';
-
 function App() {
   return (
     <div>
