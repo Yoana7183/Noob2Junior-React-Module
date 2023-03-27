@@ -25,5 +25,15 @@
     "react",
     "prettier",
     "import"
-  ]
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    }
+  }
 }
