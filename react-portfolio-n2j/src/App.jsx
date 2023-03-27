@@ -1,6 +1,6 @@
 import React from 'react';
-import { Routes } from 'react-router-dom';
-import { Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+
 import HomePage from './HomePage';
 import ECommerce from './pages/E-CommerceShop';
 import GitHub from './pages/GitHub';
