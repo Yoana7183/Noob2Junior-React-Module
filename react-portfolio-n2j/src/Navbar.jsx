@@ -11,16 +11,16 @@ const Navbar = () => {
       currentProject = 'Landing Page Equalizer';
       break;
     case '/git':
-      currentProject = 'GitHub user search app';
+      currentProject = 'GitHub User Search App';
       break;
     case '/tipscalc':
-      currentProject = 'Tips calculator App';
+      currentProject = 'Tips Calculator App';
       break;
     case '/e-commerce':
-      currentProject = 'E-commerce product page';
+      currentProject = 'E-Commerce Product Page';
       break;
     case '/':
-      currentProject = 'Home page';
+      currentProject = 'Home Page';
       break;
   }
 
@@ -38,7 +38,7 @@ const Navbar = () => {
             </div>
           </Link>
         </div>
-        <div className="basis-1/2 sm:text-3xl sms:text-base lg:text-4xl text-gray-700">
+        <div className="basis-1/2 font-thin sm:text-3xl sms:text-base lg:text-4xl text-gray-700">
           {currentProject}
         </div>
       </nav>
