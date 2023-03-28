@@ -38,8 +38,8 @@ const Navbar = () => {
             </div>
           </Link>
         </div>
-        <div className="basis-1/2 text-xl">
-          Current Project: {currentProject}
+        <div className="basis-1/2 sm:text-3xl sms:text-base lg:text-4xl text-gray-700">
+          {currentProject}
         </div>
       </nav>
 

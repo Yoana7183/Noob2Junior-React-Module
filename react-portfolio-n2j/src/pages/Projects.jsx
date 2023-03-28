@@ -1,5 +1,7 @@
 import { Outlet, Link } from 'react-router-dom';
 
+import Footer from '../Footer';
+
 const Projects = () => {
   return (
     <>
@@ -64,7 +66,7 @@ const Projects = () => {
           </div>
           <div>
             <Link to="/equalize">
-              <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl col-span-2">
+              <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl col-span-3">
                 <img
                   src="\src\img-icons\equalizer.jpg"
                   alt="Product"
@@ -101,6 +103,7 @@ const Projects = () => {
             </Link>
           </div>
         </div>
+        <Footer />
       </div>
       <Outlet />
     </>
