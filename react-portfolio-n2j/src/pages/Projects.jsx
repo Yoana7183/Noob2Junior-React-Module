@@ -4,12 +4,12 @@ const Projects = () => {
   return (
     <>
       <div>
-        <div className="w-fit mx-auto grid grid-cols-3 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5 sm:grid-cols-1 ">
+        <div className="w-fit mx-auto grid grid-cols-3 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 pt-10 mb-56 sm:grid-cols-1 sms:grid-cols-1">
           <div>
             <Link to="/git">
               <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1646753522408-077ef9839300?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NjZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                  src="\src\img-icons\github.jpg"
                   alt="Product"
                   className="h-80 w-72 object-cover rounded-t-xl"
                 />
@@ -18,7 +18,7 @@ const Projects = () => {
                     GitHub
                   </span>
                   <p className="text-lg font-bold text-black truncate block capitalize">
-                    Product Name
+                    GitHub
                   </p>
                 </div>
               </div>
@@ -28,7 +28,7 @@ const Projects = () => {
             <Link to="/loopstudio">
               <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1646753522408-077ef9839300?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NjZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                  src="\src\img-icons\loopstudios.jpg"
                   alt="Product"
                   className="h-80 w-72 object-cover rounded-t-xl"
                 />
@@ -37,7 +37,7 @@ const Projects = () => {
                     Loopstudios
                   </span>
                   <p className="text-lg font-bold text-black truncate block capitalize">
-                    Product Name
+                    Loopstudios
                   </p>
                 </div>
               </div>
@@ -47,7 +47,7 @@ const Projects = () => {
             <Link to="/e-commerce">
               <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1646753522408-077ef9839300?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NjZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                  src="\src\img-icons\e-commerce.jpg"
                   alt="Product"
                   className="h-80 w-72 object-cover rounded-t-xl"
                 />
@@ -56,7 +56,7 @@ const Projects = () => {
                     E-commerce
                   </span>
                   <p className="text-lg font-bold text-black truncate block capitalize">
-                    Product Name
+                    E-commerce
                   </p>
                 </div>
               </div>
@@ -64,9 +64,9 @@ const Projects = () => {
           </div>
           <div>
             <Link to="/equalize">
-              <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+              <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl col-span-2">
                 <img
-                  src="https://images.unsplash.com/photo-1646753522408-077ef9839300?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NjZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                  src="\src\img-icons\equalizer.jpg"
                   alt="Product"
                   className="h-80 w-72 object-cover rounded-t-xl"
                 />
@@ -75,7 +75,7 @@ const Projects = () => {
                     Equalizer
                   </span>
                   <p className="text-lg font-bold text-black truncate block capitalize">
-                    Product Name
+                    Equalizer
                   </p>
                 </div>
               </div>
@@ -85,7 +85,7 @@ const Projects = () => {
             <Link to="/tipscalc">
               <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1646753522408-077ef9839300?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NjZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                  src="\src\img-icons\tipsCalculator.jpg"
                   alt="Product"
                   className="h-80 w-72 object-cover rounded-t-xl"
                 />
@@ -94,7 +94,7 @@ const Projects = () => {
                     Tips Calculator
                   </span>
                   <p className="text-lg font-bold text-black truncate block capitalize">
-                    Product Name
+                    Tips Calculator
                   </p>
                 </div>
               </div>

@@ -26,10 +26,10 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="flex flex-row bg-slate-400">
-        <div className="basis-1/3 w-96">
+      <nav className="flex flex-row shadow-md h-16 hover:shadow-xl items-center mb-5">
+        <div className="basis-5/12 ">
           <Link to="/">
-            <div className="w-5">
+            <div className="w-6 ml-4">
               <img
                 src="\src\img-icons\angles-left-solid.svg"
                 alt=""
@@ -38,7 +38,9 @@ const Navbar = () => {
             </div>
           </Link>
         </div>
-        <div className="basis-1/2">Current Project: {currentProject}</div>
+        <div className="basis-1/2 text-xl">
+          Current Project: {currentProject}
+        </div>
       </nav>
 
       <Outlet />
