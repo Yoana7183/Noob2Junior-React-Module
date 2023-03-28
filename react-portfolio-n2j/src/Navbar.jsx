@@ -1,5 +1,5 @@
 import { Outlet, Link, useLocation } from 'react-router-dom';
-import Button from './components/Button';
+
 const Navbar = () => {
   let currentProject = useLocation();
 
@@ -26,18 +26,19 @@ const Navbar = () => {
 
   return (
     <>
-      <nav>
-        <ul>
-          <li>Home</li>
-          <li>
-            Current Project: <div>{currentProject}</div>
-          </li>
-          <div className="bg-indigo-500">
-            <Link to="/">
-              <Button title={'BACK'} />
-            </Link>
-          </div>
-        </ul>
+      <nav className="flex flex-row bg-slate-400">
+        <div className="basis-1/3 w-96">
+          <Link to="/">
+            <div className="w-5">
+              <img
+                src="\src\img-icons\angles-left-solid.svg"
+                alt=""
+                srcSet=""
+              />
+            </div>
+          </Link>
+        </div>
+        <div className="basis-1/2">Current Project: {currentProject}</div>
       </nav>
 
       <Outlet />

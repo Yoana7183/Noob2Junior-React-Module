@@ -1,8 +1,8 @@
 import React from 'react';
 export default function GitHub() {
   return (
-    <div>
-      <h1>Git Hub page</h1>
+    <div className="bg-amber-400 bg-cover">
+      <h1>Git Hub pAge</h1>
     </div>
   );
 }
