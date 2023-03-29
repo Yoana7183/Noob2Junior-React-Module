@@ -1,4 +1,4 @@
-import { Outlet, Link, useLocation } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   let currentProject = useLocation();
@@ -26,19 +26,8 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="flex flex-row shadow-md h-16 hover:shadow-xl items-center mb-5">
-        <div className="basis-5/12 ">
-          <Link to="/">
-            <div className="w-6 ml-4">
-              <img
-                src="\src\img-icons\angles-left-solid.svg"
-                alt=""
-                srcSet=""
-              />
-            </div>
-          </Link>
-        </div>
-        <div className="basis-1/2 font-thin sm:text-3xl sms:text-base lg:text-4xl text-gray-700">
+      <nav className="flex justify-center pt-5 lg:pt-2 md:pt-2 sm:pt-2 shadow-md h-16 hover:shadow-xl mb-5">
+        <div className="flex justify-center font-thin sm:text-3xl sms:text-base lg:text-4xl lg:pt-0 text-gray-700">
           {currentProject}
         </div>
       </nav>
