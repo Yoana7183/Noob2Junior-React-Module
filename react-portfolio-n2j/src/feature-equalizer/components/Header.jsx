@@ -18,7 +18,7 @@ const Header = () => {
         />
       </div>
       <div>
-        <div className=" lg:-tracking-[0.50rem] font-titleEqualizer text-5xl sm:w-[50%] sm:mt-[-7rem]  mt-[3rem]  mb-[3rem] md:w-[68%] md:mt-[-10rem] lg:w-[60%] md:text-5xl lg:text-8xl font-[1000] lg:mt-[-12rem]">
+        <div className=" lg:-tracking-[0.50rem] font-Equalizer font-black text-5xl sm:w-[50%] sm:mt-[-7rem]  mt-[3rem]  mb-[3rem] md:w-[68%] md:mt-[-10rem] lg:w-[60%] md:text-5xl lg:text-8xl  lg:mt-[-12rem]">
           We make your music sound extraordinary.
         </div>
         <div className="text-base leading-loose flex justify-center lg:w-[50%] md:w-[60%] sm:w-[70%]">

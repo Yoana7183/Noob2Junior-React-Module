@@ -7,7 +7,7 @@ module.exports = {
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],
       serif: ['Merriweather', 'serif'],
-      titleEqualizer: ['IBM Plex Sans', 'sans-serif'],
+      Equalizer: ['IBM Plex Sans', 'sans-serif'],
     },
   },
   plugins: [],
