@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className=" w-[73%] h-[30px] mt-[10rem] flex lg:flex-row lg: md:flex-col sm:flex-col lg:justify-between">
+    <div className=" w-[88%] h-[30px] mt-[10rem] flex  lg:flex-row lg: md:flex-col sm:flex-col lg:justify-between">
       <div>
         <img
           className="lg:pt-13 "

@@ -4,7 +4,7 @@ const CartSection = () => {
       <div className="bg-black h-[600px] w-[1110px] flex ">
         <div className="w-[100%] lg:z-40">
           <img
-            className=" bg-cover h-[642px] ml-[4rem] mt-[-180px]"
+            className=" bg-cover xl:h-[642px] xl:ml-[4rem] xl:mt-[-180px] md:w-[270px] md:h-[556px] md:mt-[-120px] md:ml-[3rem]"
             src="/src/feature-equalizer/assets/illustration-app.png"
             alt=""
             srcSet=""
@@ -12,7 +12,7 @@ const CartSection = () => {
         </div>
         <div className="lg:w-[350px] lg:z-0">
           <img
-            className="  lg:bg-cover xl:ml-[-33.5rem] lg:ml-[-46rem] md:ml-[-25rem]"
+            className="  lg:bg-cover xl:ml-[-33.5rem] lg:ml-[-46rem] md:ml-[-10rem]  "
             src="/src/feature-equalizer/assets/bg-pattern-2.svg"
             alt=""
             srcSet=""
