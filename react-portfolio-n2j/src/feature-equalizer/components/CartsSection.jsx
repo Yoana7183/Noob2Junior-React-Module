@@ -34,11 +34,17 @@ const CartSection = () => {
           <div className="mt-[1.5rem]"> / month</div>
         </div>
         <div className="flex flex-col">
-          <button className="bg-black xl:w-[333px] xl:h-[61px] rounded-xl mb-4">
-            {'iOS Download iOS Download'}
+          <button
+            type="button"
+            className="cursor-pointer bg-black xl:w-[333px] xl:h-[61px] rounded-xl mb-4"
+          >
+            iOS Download iOS Download
           </button>
-          <button className="bg-white text-black xl:w-[333px] xl:h-[61px] rounded-xl">
-            {'  Android Download '}
+          <button
+            type="button"
+            className="cursor-pointer bg-white text-black xl:w-[333px] xl:h-[61px] rounded-xl"
+          >
+            Android Download
           </button>
         </div>
       </div>
