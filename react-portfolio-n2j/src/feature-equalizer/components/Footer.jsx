@@ -3,7 +3,7 @@ const Footer = () => {
     <div className=" xl:w-[88%] lg:mb-[5rem] lg:w-[80%] h-[30px] mt-[10rem] flex  lg:flex-row lg: md:flex-col sm:flex-col lg:justify-between">
       <div>
         <img
-          className="lg:pt-13 mb-[2rem]"
+          className="lg:pt-13 md:mb-[2rem]"
           src="/src/feature-equalizer/assets/logo.svg"
           alt=""
           srcSet=""
@@ -16,7 +16,7 @@ const Footer = () => {
           email us at <strong>equalizer@example.com</strong>
         </div>
       </div>
-      <div className="flex md:justify-end md:mt-[-6rem]">
+      <div className="flex md:justify-end md:mt-[-6rem] xl:mt-0 lg:mt-0">
         <img
           className="p-1"
           src="/src/feature-equalizer/assets/icon-facebook.svg"
