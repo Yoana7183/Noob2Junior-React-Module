@@ -1,10 +1,10 @@
 const CartSection = () => {
   return (
     <div className="mt-[15rem] mr-[-5%] ml-[-5%] lg:mr-16 lg:ml-0 lg:mt-[18rem] md:mr-6 md:ml-1 md:mt-[15rem] sm:ml-[-3rem] flex ">
-      <div className="bg-black h-[600px] w-[1110px] flex ">
+      <div className="bg-black xl:h-[600px] xl:w-[1110px] lg:w-[850px] lg:h-[500px] flex rounded-xl">
         <div className="w-[100%] lg:z-40">
           <img
-            className=" bg-cover xl:h-[642px] xl:ml-[4rem] xl:mt-[-180px] md:w-[270px] md:h-[556px] md:mt-[-120px] md:ml-[3rem]"
+            className=" bg-cover xl:h-[642px]  xl:ml-[4rem] xl:mt-[-180px] md:w-[270px] md:h-[556px] md:mt-[-120px] md:ml-[3rem]"
             src="/src/feature-equalizer/assets/illustration-app.png"
             alt=""
             srcSet=""
@@ -12,7 +12,7 @@ const CartSection = () => {
         </div>
         <div className="lg:w-[350px] lg:z-0">
           <img
-            className="  lg:bg-cover xl:ml-[-33.5rem] lg:ml-[-46rem] md:ml-[-10rem]  "
+            className="  lg:bg-cover xl:ml-[-37rem] lg:ml-[-22rem] md:ml-[-10rem]  "
             src="/src/feature-equalizer/assets/bg-pattern-2.svg"
             alt=""
             srcSet=""
@@ -20,7 +20,7 @@ const CartSection = () => {
         </div>
         <div></div>
       </div>
-      <div className="bg-[#FA7453]  text-white w-[446px] h-[625px] xl:mt-[7rem] xl:ml-[-37rem] z-20 pb-[5rem] xl:p-10 ">
+      <div className="bg-[#FA7453] roundedn-xl text-white xl:w-[446px] xl:h-[625px] xl:mt-[7rem] xl:ml-[-40rem] z-20 pb-[5rem] xl:p-10 lg:ml-[-28rem] lg:w-[400px] lg:h-[600px] lg:mt-[7rem] lg:rounded-xl">
         <div className="xl:text-4xl xl:font-bold font-titleEqualizer xl:mb-[1.5rem]">
           Premium EQ
         </div>
