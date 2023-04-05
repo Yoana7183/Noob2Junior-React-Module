@@ -1,6 +1,6 @@
 const CartSection = () => {
   return (
-    <div className="flex-col mt-[15rem] mr-[-5%] ml-[-5%] xl:flex-row lg:mr-16 lg:flex-row lg:ml-0 lg:mt-[18rem] md:flex-row md:mr-6 md:ml-1 md:mt-[15rem] sm:flex-row sm:ml-[-3rem] flex md:flex  ">
+    <div className="flex-col mt-[8rem] mr-[-5%] ml-[-5%] xl:flex-row lg:mr-16 lg:flex-row lg:ml-0 lg:mt-[18rem] md:flex-row md:mr-6 md:ml-1 md:mt-[15rem] sm:flex-row sm:ml-[-3rem] sm:mt-[14rem] flex md:flex  ">
       <div className=" ml-[calc(50%-11.7rem)] w-[375px] h-[600px] xl:ml-[0] bg-black xl:h-[600px] xl:w-[1110px] lg:w-[850px] lg:ml-[0] lg:h-[500px] flex rounded-xl md:ml-[0] md:w-[696px] md:h-[600px] sm:ml-[0] sm:w-[600px] sm:h-[520px] sm-ml-[-2rem] ">
         <div className=" w-[1150px] h-[600px] xl:w-[100%] lg:w-[100%] md:w-[100%] sm:w-[100%] z-40 md:z-40 sm:z-40 ">
           <img
