@@ -35,15 +35,28 @@ const CartSection = () => {
         <div className="flex flex-col">
           <button
             type="button"
-            className="hover:bg-[#66E2DC] cursor-pointer bg-black xl:w-[333px] h-[61px] rounded-xl mb-4 "
+            className=" flex  pt-4 pl-20
+            hover:bg-[#66E2DC] cursor-pointer bg-black xl:w-[333px] h-[61px] rounded-xl mb-4 "
           >
-            iOS Download iOS Download
+            <img
+              className="w-[30px] h-[22px] pr-[10px]"
+              src="\src\feature-equalizer\assets\icon-apple.svg"
+              alt=""
+              srcSet=""
+            />
+            {' iOS Download'}
           </button>
           <button
             type="button"
-            className="hover:bg-[#FFB964] cursor-pointer bg-white text-black xl:w-[333px] h-[61px] rounded-xl"
+            className=" flex pt-4 pl-20 hover:bg-[#FFB964] cursor-pointer bg-white text-black xl:w-[333px] h-[61px] rounded-xl"
           >
-            Android Download
+            <img
+              className="w-[30px] h-[22px] pr-[10px] "
+              src="\src\feature-equalizer\assets\icon-android.svg"
+              alt=""
+              srcSet=""
+            />
+            {'Android Download'}
           </button>
         </div>
       </div>
