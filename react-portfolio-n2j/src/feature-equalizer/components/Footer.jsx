@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="flex-col mb-[15rem] xl:w-[88%] md:w-[90%] lg:mb-[5rem] lg:w-[80%] h-[30px] mt-[10rem] flex  lg:flex-row lg: md:flex-col sm:flex-col lg:justify-between sm:mb-[12rem]">
+    <div className=" ml-[calc(50%-11.7rem)] xl:ml-[0] lg:ml-[0] md:ml-[0] sm:ml-[0] flex-col mb-[15rem] xl:w-[88%] md:w-[90%] lg:mb-[5rem] lg:w-[80%] h-[30px] mt-[10rem] flex  lg:flex-row lg: md:flex-col sm:flex-col lg:justify-between sm:mb-[12rem]">
       <div>
         <img
           className=" mb-[1rem] lg:pt-13 md:mb-[2rem] sm:mb-[1rem]"
