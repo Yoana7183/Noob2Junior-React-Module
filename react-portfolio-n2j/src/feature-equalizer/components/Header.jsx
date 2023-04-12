@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <div className="grid">
+    <div className="grid w-full">
       <div className="">
         <img
           className="pt-12"
@@ -18,7 +18,7 @@ const Header = () => {
         />
       </div>
       <div>
-        <div className="  lg:-tracking-[0.50rem] font-Equalizer font-black text-5xl sm:w-[50%] sm:mt-[-7rem]  mt-[3rem]  mb-[3rem] md:w-[60%]  md:mt-[-12rem] lg:w-[65%] md:text-6xl lg:text-8xl md:font-extrabold lg:mt-[-12rem]">
+        <div className="  lg:-tracking-[0.50rem] font-Equalizer font-black text-4xl sm:w-[50%] sm:mt-[-7rem]  mt-[3rem]  mb-[3rem] md:w-[60%]  md:mt-[-12rem] lg:w-[65%] md:text-6xl lg:text-8xl md:font-extrabold lg:mt-[-12rem]">
           We make your music sound extraordinary.
         </div>
         <div className="text-base font-Equalizer leading-loose flex justify-center lg:w-[50%] md:w-[60%] md:font-black md:drop-shadow-2xl sm:w-[70%]">
