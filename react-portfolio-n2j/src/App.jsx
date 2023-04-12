@@ -5,7 +5,7 @@ import Projects from './pages/Projects';
 import ECommerce from './pages/E-CommerceShop';
 import GitHub from './pages/GitHub';
 import LandingPage from './pages/LandingPage';
-import LandingPageEz from './pages/equalizer/Equalizer';
+import LandingPageEz from './pages/LandingPageEz';
 import TipsCalculator from './pages/TipsCalculator';
 function App() {
   return (
