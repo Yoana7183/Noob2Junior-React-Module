@@ -8,6 +8,8 @@ module.exports = {
       sans: ['Graphik', 'sans-serif'],
       serif: ['Merriweather', 'serif'],
       titleEqualizer: ['IBM Plex Sans', 'sans-serif'],
+      alata: ['Alata'],
+      josefin: ['Josefin-Sans'],
     },
   },
   plugins: [],

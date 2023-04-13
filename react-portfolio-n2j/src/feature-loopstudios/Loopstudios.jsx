@@ -1,7 +1,11 @@
+import Header from '../feature-loopstudios/components/Header';
+
 const Loopstudios = () => {
   return (
-    <div>
-      <div>Looooooooop Studios</div>
+    <div className="bg-red">
+      <div>
+        <Header />
+      </div>
     </div>
   );
 };
