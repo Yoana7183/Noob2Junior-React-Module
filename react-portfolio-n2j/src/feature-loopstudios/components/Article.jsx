@@ -1,7 +1,7 @@
 const Article = () => {
   return (
-    <div className=" ml-32 flex mr-32 border-2 border-black lg:h-[500px] mb-[300rem]">
-      <div className="lg:w-[730px] h-[500px] ">
+    <div className=" lg:ml-32 flex lg:mr-32">
+      <div className="lg:w-[730px] lg:h-[500px] z-10">
         <img
           src="/src/feature-loopstudios/images/desktop/image-interactive.jpg"
           alt=""
@@ -9,7 +9,7 @@ const Article = () => {
         />
       </div>
 
-      <div className="font-alata pt-20 pl-12   pr-12 text-base  border-2 bg-white border-black lg:w-[550px] lg:h-[320px]">
+      <div className="font-alata z-20 lg:ml-[-250px] lg:mt-[11.2rem] pt-20 pl-12  pr-12 lg:text-base  bg-white lg:w-[550px] lg:h-[320px]">
         <h1 className="font-sans uppercase text-5xl leading-10 mb-9 font-thin ">
           The leader in interactive VR
         </h1>
