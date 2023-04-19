@@ -14,38 +14,42 @@ const Cards = () => {
         </div>
         <div className="grid lg:grid-cols-4 gap-10 lg:w-[100%]">
           <div className="lg:bg-[url('/src/feature-loopstudios/images/desktop/image-deep-earth.jpg')] lg:w-[256px]  lg:h-[450px] bg-no-repeat lg:text-3xl text-white lg:relative ">
-            <p className="lg:absolute lg:inset-x-0 lg:bottom-0  ">DEEP EARTH</p>
+            <p className="lg:absolute lg:inset-x-0 lg:bottom-0 p-5 ">
+              DEEP EARTH
+            </p>
           </div>
           <div className="lg:bg-[url('/src/feature-loopstudios/images/desktop/image-night-arcade.jpg')] lg:w-[256px] lg:h-[450px] bg-no-repeat  lg:text-3xl text-white lg:relative">
-            <p className="lg:absolute lg:inset-x-0 lg:bottom-0  ">
+            <p className="lg:absolute lg:inset-x-0 lg:bottom-0 p-5 ">
               NIGHT ARCAD
             </p>
           </div>
           <div className="lg:bg-[url('/src/feature-loopstudios/images/desktop/image-soccer-team.jpg')] lg:w-[256px] lg:h-[450px] bg-no-repeat  lg:text-3xl text-white lg:relative">
-            <p className="lg:absolute lg:inset-x-0 lg:bottom-0  ">
+            <p className="lg:absolute lg:inset-x-0 lg:bottom-0 p-5 ">
               SOCCER TEAM VR
             </p>
           </div>
           <div className="lg:bg-[url('/src/feature-loopstudios/images/desktop/image-grid.jpg')] lg:w-[256px] lg:h-[450px] bg-no-repeat  lg:text-3xl text-white lg:relative">
-            <p className="lg:absolute lg:inset-x-0 lg:bottom-0  ">THE GRID</p>
+            <p className="lg:absolute lg:inset-x-0 lg:bottom-0 p-5 ">
+              THE GRID
+            </p>
           </div>
           <div className="lg:bg-[url('/src/feature-loopstudios/images/desktop/image-from-above.jpg')] lg:w-[256px] lg:h-[450px] bg-no-repeat  lg:text-3xl text-white lg:relative">
-            <p className="lg:absolute lg:inset-x-0 lg:bottom-0  ">
+            <p className="lg:absolute lg:inset-x-0 lg:bottom-0 p-5 ">
               FROM UP ABOVE VR
             </p>
           </div>
           <div className="lg:bg-[url('/src/feature-loopstudios/images/desktop/image-pocket-borealis.jpg')] lg:w-[256px] lg:h-[450px] bg-no-repeat  lg:text-3xl text-white lg:relative">
-            <p className="lg:absolute lg:inset-x-0 lg:bottom-0  ">
+            <p className="lg:absolute lg:inset-x-0 lg:bottom-0 p-5 ">
               POCKET BOREALIS
             </p>
           </div>
           <div className="lg:bg-[url('/src/feature-loopstudios/images/desktop/image-curiosity.jpg')] lg:w-[256px] lg:h-[450px] bg-no-repeat  lg:text-3xl text-white lg:relative">
-            <p className="lg:absolute lg:inset-x-0 lg:bottom-0  ">
+            <p className="lg:absolute lg:inset-x-0 lg:bottom-0 p-5 ">
               POCKET BOREALIS
             </p>
           </div>
           <div className="lg:bg-[url('/src/feature-loopstudios/images/desktop/image-fisheye.jpg')] lg:w-[256px] lg:h-[450px] bg-no-repeat  lg:text-3xl text-white lg:relative">
-            <p className="lg:absolute lg:inset-x-0 lg:bottom-0  ">
+            <p className="lg:absolute lg:inset-x-0 lg:bottom-0 p-5 ">
               MAKE IT FISHEYE
             </p>
           </div>
