@@ -28,7 +28,8 @@ const Header = () => {
         <Navbar />
       </div>
       <div
-        className="border border-white  text-white
+        className="font-sans
+        border border-white  text-white
        lg:w-[600px]
         lg:h-[300px] 
         lg:ml-32 
@@ -37,8 +38,10 @@ const Header = () => {
         lg:p-10 
         md:h-[220px] 
         md:w-[400px]
-         md:ml-24
-          md:mr-24"
+         md:ml-32
+          md:mr-24
+          md:text-4xl
+          md:p-7"
       >
         IMMERSIVE EXPERIENCES THAT DELIVER
       </div>

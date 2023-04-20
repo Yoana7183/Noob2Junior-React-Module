@@ -2,9 +2,13 @@ const Navbar = () => {
   return (
     <div
       className=" text-white
+      2xl:flex-row
+      xl:Flex-row
+      lg:flex-row
      lg:flex leading-7
       flex justify-end 
-      pr-32"
+      pr-32
+      md:flex-col"
     >
       <a
         className="mr-5

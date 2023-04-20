@@ -10,7 +10,7 @@ const Article = () => {
          lg:mr-32
           md:ml-24 
           md:mr-24 
-          md:mb-96 
+          md:mb-36 
           first-letter
            md:flex-col"
     >
@@ -37,7 +37,9 @@ const Article = () => {
             lg:text-base
               bg-white
                lg:w-[550px]
-                lg:h-[320px] "
+                lg:h-[320px]
+                md:justify-center
+                md:text-center "
       >
         <h1
           className="font-sans 

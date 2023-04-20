@@ -5,7 +5,7 @@ import Footer from '../feature-loopstudios/components/Footer';
 
 const Loopstudios = () => {
   return (
-    <div className="">
+    <div className="font-sans">
       <Header />
       <Article />
       <Cards />
