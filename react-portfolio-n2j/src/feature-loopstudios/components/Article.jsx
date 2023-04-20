@@ -1,6 +1,6 @@
 const Article = () => {
   return (
-    <div className=" lg:ml-32 flex lg:mr-32">
+    <div className="2xl:pl-[calc(10%-1.7rem)] 2xl:pr-[calc(10%-1.7rem)] xl:pl-0 xl:pr-0  lg:ml-32 flex lg:mr-32">
       <div className="lg:w-[730px] lg:h-[500px] z-10">
         <img
           src="/src/feature-loopstudios/images/desktop/image-interactive.jpg"

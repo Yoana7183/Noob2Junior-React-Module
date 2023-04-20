@@ -1,16 +1,14 @@
 const Cards = () => {
   return (
-    <div className="mt-36 ml-32 mr-32">
+    <div className=" 2xl:pl-[calc(10%-1.7rem)] 2xl:pr-[calc(10%-1.7rem)] xl:pl-0 xl:pr-0 mt-36 ml-32 mr-32 ">
       <div>
         <div className="flex justify-between mb-10">
           <div className="font-sans lg:text-5xl lg:font-thin">
             OUR CREATIONS
           </div>
-          <div className="">
-            <button className="lg:mr-2 lg:w-[160px] lg:h-[50px] bg-black text-white">
-              SEE ALL
-            </button>
-          </div>
+          <button className="lg:mr-2 lg:w-[160px] lg:h-[50px] bg-black text-white">
+            SEE ALL
+          </button>
         </div>
         <div className="grid lg:grid-cols-4 gap-10 lg:w-[100%]">
           <div className="lg:bg-[url('/src/feature-loopstudios/images/desktop/image-deep-earth.jpg')] lg:w-[256px]  lg:h-[450px] bg-no-repeat lg:text-3xl text-white lg:relative ">

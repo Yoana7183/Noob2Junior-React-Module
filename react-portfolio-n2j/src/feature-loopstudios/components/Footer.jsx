@@ -1,7 +1,7 @@
 import Navbar from './Navbar';
 const Footer = () => {
   return (
-    <div className="lg:h-[160px] w-full bg-black mt-40 text-white ">
+    <div className=" 2xl:pl-[calc(10%-1.7rem)] 2xl:pr-[calc(10%-1.7rem)] xl:pl-0 xl:pr-0  lg:h-[160px] w-full bg-black mt-40 text-white ">
       <div className=" flex pl-32 justify-between  ">
         <div className="mt-5 mb-5">
           <div className="font-alata text-white w-[190px] text-4xl ">
