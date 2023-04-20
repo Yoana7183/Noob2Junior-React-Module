@@ -1,58 +1,79 @@
+import React, { useState } from 'react';
+
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <div
-      className=" text-white
-      2xl:flex-row
-      xl:Flex-row
-      lg:flex-row
-     lg:flex leading-7
-      flex justify-end 
-      pr-32
-      md:flex-col"
-    >
-      <a
-        className="mr-5
-         font-alata
-          text-base 
-          hover:border-b-[1px]
-           border-white"
-        href="http://"
+    <nav className="flex items-center justify-between flex-wrap p-6">
+      <div className="flex items-center flex-shrink-0 text-white mr-6 lg:mr-72"></div>
+
+      <div className="block lg:hidden">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="flex items-center px-3 py-2 rounded text-black-500 hover:text-black-400"
+        >
+          <img
+            className={`fill-current h-10 w-10 ${isOpen ? 'hidden' : 'block'}`}
+            src="/src/feature-loopstudios/images/hamburger.svg"
+            alt=""
+            srcSet=""
+          />
+
+          <img
+            className={`fill-current h-10 w-10  ${isOpen ? 'block' : 'hidden'}`}
+            src="/src/feature-loopstudios/images/close.svg"
+            alt=""
+            srcSet=""
+          />
+        </button>
+      </div>
+
+      <div
+        className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto ${
+          isOpen ? 'block' : 'hidden'
+        }`}
       >
-        About
-      </a>
-      <a
-        className="mr-5
-         font-alata
-          text-base hover:border-b-[1px] border-white "
-        href="http://"
-      >
-        Careers
-      </a>
-      <a
-        className="mr-5 font-alata text-base hover:border-b-[1px] border-white"
-        href="http://"
-      >
-        LinkedIn
-      </a>
-      <a
-        className="mr-5 font-alata text-base hover:border-b-[1px] border-white"
-        href="http://"
-      >
-        Events
-      </a>
-      <a
-        className="mr-5 font-alata text-base hover:border-b-[1px] border-white"
-        href="http://"
-      >
-        Products
-      </a>
-      <a
-        className="mr-5 font-alata text-base hover:border-b-[1px] border-white "
-        href="http://"
-      >
-        Support
-      </a>
-    </div>
+        <div className="text-sm lg:flex-grow text-white">
+          <a
+            href="#"
+            className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4"
+          >
+            About
+          </a>
+          <a
+            href="#"
+            className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4"
+          >
+            Careers
+          </a>
+          <a
+            href="#"
+            className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="#"
+            className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4"
+          >
+            Events
+          </a>
+
+          <a
+            href="#"
+            className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4"
+          >
+            Products
+          </a>
+
+          <a
+            href="#"
+            className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4"
+          >
+            Support
+          </a>
+        </div>
+      </div>
+    </nav>
   );
 };
 
