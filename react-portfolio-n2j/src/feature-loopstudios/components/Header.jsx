@@ -80,39 +80,39 @@ const Header = () => {
             <div className="text-sm lg:flex-grow text-white">
               <a
                 href="#"
-                className=" font-sans lg:font-bold block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4"
+                className=" hover:border-b-[1px] border-white  font-alata lg:font-bold block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-5"
               >
                 About
               </a>
               <a
                 href="#"
-                className=" font-sans lg:font-bold block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4"
+                className=" hover:border-b-[1px] border-white   font-alata lg:font-bold block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-5"
               >
                 Careers
               </a>
               <a
                 href="#"
-                className=" font-sans lg:font-bold block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4"
+                className=" hover:border-b-[1px] border-white  font-alata lg:font-bold block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-5"
               >
                 LinkedIn
               </a>
               <a
                 href="#"
-                className=" font-sans lg:font-bold block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4"
+                className=" hover:border-b-[1px] border-white  font-alata lg:font-bold block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-5"
               >
                 Events
               </a>
 
               <a
                 href="#"
-                className=" font-sans lg:font-bold block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4"
+                className=" hover:border-b-[1px] border-white font-alata lg:font-bold block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-5"
               >
                 Products
               </a>
 
               <a
                 href="#"
-                className=" font-sans lg:font-bold block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4"
+                className=" hover:border-b-[1px] border-white font-alata lg:font-bold block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-5"
               >
                 Support
               </a>
