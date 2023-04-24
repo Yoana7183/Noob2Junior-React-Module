@@ -259,7 +259,7 @@ const Cards = () => {
          md:h-[50px]
          border border-black
           sm:inline
-           ml-[30%]
+           ml-[35%]
            mt-12
            
            "
