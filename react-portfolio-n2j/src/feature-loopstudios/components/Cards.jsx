@@ -1,21 +1,29 @@
 const Cards = () => {
   return (
     <div
-      className=" 2xl:pl-[calc(10%-1.7rem)]
+      className=" 
+      mr-10
+      ml-10
+      2xl:pl-[calc(10%-1.7rem)]
      2xl:pr-[calc(10%-1.7rem)]
       xl:pl-0
        xl:pr-0
         mt-36
-         ml-32
-          mr-32 "
+         lg:ml-32
+          lg:mr-32 
+          md:ml-20
+          md:mr-20
+          sm:ml-10
+          sm:mr-10"
     >
       <div>
         <div className="flex justify-between mb-10">
           <div
-            className="font-sans 
-          lg:text-5xl
+            className="font-sans text-xl 
+            lg:text-4xl
            lg:font-thin
-           md:text-3xl"
+           md:text-3xl
+           sm:text-2xl"
           >
             OUR CREATIONS
           </div>
@@ -37,17 +45,24 @@ const Cards = () => {
           </button>
         </div>
         <div
-          className="grid gap-10 
+          className="grid gap-5
+         
            lg:grid-cols-4 
            lg:gap-10
           lg:w-[100%] 
           md:grid-cols-1
-          md:gap-1"
+          md:gap-7
+          sm:gap-6
+          "
         >
           <div
             className="
+            h-[7.5rem]
+            sm:h-[11rem]
+            bg-[url('/src/feature-loopstudios/images/mobile/image-deep-earth.jpg')]
             lg:bg-[url('/src/feature-loopstudios/images/desktop/image-deep-earth.jpg')]
-            md:bg-[url('/src/feature-loopstudios/images/mobile/image-deep-earth.jpg')]
+            
+
            lg:w-[256px] 
             lg:h-[450px]
              bg-no-repeat
@@ -59,7 +74,7 @@ const Cards = () => {
                "
           >
             <p
-              className="
+              className=" text-2xl sm:text-3xl
               font-sans
             lg:absolute
              lg:inset-x-0 
@@ -73,8 +88,11 @@ const Cards = () => {
           </div>
           <div
             className="
+            h-[7.5rem]
+            sm:h-[11rem]
+            bg-[url('/src/feature-loopstudios/images/mobile/image-night-arcade.jpg')]
             lg:bg-[url('/src/feature-loopstudios/images/desktop/image-night-arcade.jpg')]
-            md:bg-[url('/src/feature-loopstudios/images/mobile/image-night-arcade.jpg')]
+        
            lg:w-[256px]
             lg:h-[450px]
              bg-no-repeat 
@@ -85,7 +103,7 @@ const Cards = () => {
           >
             <p
               className="
-              font-sans
+              font-sans text-2xl sm:text-3xl
               lg:absolute
              lg:inset-x-0 
              lg:bottom-0
@@ -100,8 +118,11 @@ const Cards = () => {
           </div>
           <div
             className="
+            h-[7.5rem]
+            sm:h-[11rem]
+            bg-[url('/src/feature-loopstudios/images/mobile/image-soccer-team.jpg')]
             lg:bg-[url('/src/feature-loopstudios/images/desktop/image-soccer-team.jpg')]
-            md:bg-[url('/src/feature-loopstudios/images/mobile/image-soccer-team.jpg')]
+     
            lg:w-[256px]
             lg:h-[450px]
              bg-no-repeat
@@ -113,7 +134,7 @@ const Cards = () => {
                "
           >
             <p
-              className="lg:absolute
+              className="lg:absolute text-2xl sm:text-3xl
              lg:inset-x-0
               lg:bottom-0
                p-5
@@ -126,8 +147,11 @@ const Cards = () => {
           </div>
           <div
             className="
+            h-[7.5rem]
+            sm:h-[11rem]
+            bg-[url('/src/feature-loopstudios/images/mobile/image-grid.jpg')]
             lg:bg-[url('/src/feature-loopstudios/images/desktop/image-grid.jpg')]
-            md:bg-[url('/src/feature-loopstudios/images/mobile/image-grid.jpg')]
+    
             lg:h-[450px]
             bg-no-repeat
               lg:text-3xl
@@ -137,7 +161,7 @@ const Cards = () => {
                md:h-[250px]"
           >
             <p
-              className="lg:absolute
+              className="lg:absolute text-2xl sm:text-3xl
              lg:inset-x-0
               lg:bottom-0
                p-5 
@@ -150,8 +174,11 @@ const Cards = () => {
           </div>
           <div
             className="
+            h-[7.5rem]
+            sm:h-[11rem]
+            bg-[url('/src/feature-loopstudios/images/mobile/image-from-above.jpg')]
             lg:bg-[url('/src/feature-loopstudios/images/desktop/image-from-above.jpg')]
-            md:bg-[url('/src/feature-loopstudios/images/mobile/image-from-above.jpg')]
+      
            lg:w-[256px]
             lg:h-[450px]
              bg-no-repeat 
@@ -162,7 +189,7 @@ const Cards = () => {
                md:h-[250px]"
           >
             <p
-              className="lg:absolute
+              className="lg:absolute text-2xl sm:text-3xl
              lg:inset-x-0
               lg:bottom-0 
               p-5 
@@ -175,8 +202,11 @@ const Cards = () => {
           </div>
           <div
             className="
+            h-[7.5rem]
+            sm:h-[11rem]
+            bg-[url('/src/feature-loopstudios/images/mobile/image-pocket-borealis.jpg')]
             lg:bg-[url('/src/feature-loopstudios/images/desktop/image-pocket-borealis.jpg')]
-            md:bg-[url('/src/feature-loopstudios/images/mobile/image-pocket-borealis.jpg')]
+            
            lg:w-[256px]
             lg:h-[450px]
              bg-no-repeat 
@@ -187,7 +217,7 @@ const Cards = () => {
                md:h-[250px]"
           >
             <p
-              className="lg:absolute
+              className="lg:absolute text-2xl sm:text-3xl
              lg:inset-x-0 
              lg:bottom-0
               p-5 
@@ -200,8 +230,11 @@ const Cards = () => {
           </div>
           <div
             className="
+            h-[7.5rem]
+            sm:h-[11rem]
+            bg-[url('/src/feature-loopstudios/images/mobile/image-curiosity.jpg')]
             lg:bg-[url('/src/feature-loopstudios/images/desktop/image-curiosity.jpg')]
-            md:bg-[url('/src/feature-loopstudios/images/mobile/image-curiosity.jpg')]
+           
           lg:w-[256px]
            lg:h-[450px]
             bg-no-repeat 
@@ -212,7 +245,7 @@ const Cards = () => {
                md:h-[250px]"
           >
             <p
-              className="lg:absolute 
+              className="lg:absolute text-2xl sm:text-3xl
             lg:inset-x-0
              lg:bottom-0
               p-5 
@@ -220,13 +253,16 @@ const Cards = () => {
              md:font-thin
              md:w-[30%]"
             >
-              POCKET BOREALIS
+              THE CURIOSITY
             </p>
           </div>
           <div
             className="
+            h-[7.5rem]
+            sm:h-[11rem]
+            bg-[url('/src/feature-loopstudios/images/mobile/image-fisheye.jpg')]
             lg:bg-[url('/src/feature-loopstudios/images/desktop/image-fisheye.jpg')]
-            md:bg-[url('/src/feature-loopstudios/images/mobile/image-fisheye.jpg')]
+            
             lg:h-[450px]
              bg-no-repeat
                lg:text-3xl
@@ -236,7 +272,8 @@ const Cards = () => {
                md:h-[250px]"
           >
             <p
-              className="lg:absolute
+              className="text-2xl sm:text-3xl
+              lg:absolute
              lg:inset-x-0
               lg:bottom-0 
               p-5
@@ -251,6 +288,11 @@ const Cards = () => {
       </div>
       <button
         className="
+        ml-[25%]
+        mr-[25%]
+        mt-12
+        w-[10rem]
+        h-[3rem]
       2xl:hidden
        xl:hidden
        hover:bg-black
@@ -259,10 +301,13 @@ const Cards = () => {
          md:inline
          md:w-[200px]
          md:h-[50px]
+    
          border border-black
           sm:inline
-           ml-[35%]
-           mt-12
+          sm:w-[12rem]
+          sm:h-[3.5rem]
+          sm:ml-[35%]
+         
            
            "
       >

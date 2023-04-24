@@ -46,6 +46,7 @@ const Article = () => {
           pt-20
            lg:pl-12 
             lg:pr-12 
+            md:mr-15
             lg:text-base
               bg-white
                lg:w-[550px]

@@ -1,19 +1,23 @@
 const Footer = () => {
   return (
     <div
-      className=" 2xl:pl-[calc(10%-1.7rem)] 
+      className=" pl-[25%] sm:pl-[35%]
+      2xl:pl-[calc(10%-1.7rem)] flex justify-between text-center
     2xl:pr-[calc(10%-1.7rem)]
      xl:pl-0 xl:pr-0 
       lg:h-[160px]
+      lg:pl-0
        w-full
         bg-black
          mt-40
           text-white "
     >
       <div
-        className=" flex 
-      pl-32 
-      justify-between  "
+        className=" flex flex-col
+       
+      lg:pl-32 
+      lg:justify-between
+      lg:flex-row  "
       >
         <div className="mt-5 mb-5">
           <div
@@ -32,7 +36,7 @@ const Footer = () => {
       lg:pr-32
       flex 
       items-center
-       justify-between 
+       lg:justify-between 
        flex-wrap
         p-6"
             >
@@ -92,29 +96,35 @@ const Footer = () => {
           </div>
         </div>
         <div className="pr-32">
-          <div className="flex mt-6 mb-6 ">
+          <div className="flex mt-6 mb-6 pl-5">
             <img
+              className="pr-3"
               src="src\feature-loopstudios\images\icon-facebook.svg"
               alt=""
               srcSet=""
             />
             <img
+              className="pr-3"
               src="src\feature-loopstudios\images\icon-twitter.svg"
               alt=""
               srcSet=""
             />
             <img
+              className="pr-3"
               src="src\feature-loopstudios\images\icon-pinterest.svg"
               alt=""
               srcSet=""
             />
             <img
+              className="pr-3"
               src="src\feature-loopstudios\images\icon-instagram.svg"
               alt=""
               srcSet=""
             />
           </div>
-          <div>© 2021 Loopstudios. All rights reserved.</div>
+          <div className="text-xs w-[150%]  text-zinc-500 mb-8 ml-[-2rem] ">
+            © 2021 Loopstudios. All rights reserved.
+          </div>
         </div>
       </div>
     </div>
