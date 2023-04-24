@@ -7,7 +7,7 @@ const Header = () => {
     <div
       className={
         isOpen
-          ? 'bg-black h-[50rem] lg:h-[650px]  md:h-[550px] mb-[5rem] sm:h-[400px] '
+          ? 'bg-black h-[50rem] lg:h-[650px]  md:h-[550px] mb-[5rem] sm:h-[600px] '
           : '2xl:pl-[calc(10%-1.7rem)]  2xl:pr-[calc(10%-1.7rem)] bg-[url("/src/feature-loopstudios/images/mobile/image-hero.jpg")] bg-cover h-[50rem] w-[100%] xl:pl-0 xl:pr-0  lg:bg-[url("/src/feature-loopstudios/images/desktop/image-hero.jpg")] lg:w-[100%] lg:bg-cover lg:h-[650px] mb-[5rem] md:bg-[url("/src/feature-loopstudios/images/desktop/image-hero.jpg")] md:bg-no-repeat md:h-[550px] md:w-[100%] sm:bg-[url("/src/feature-loopstudios/images/desktop/image-hero.jpg")] sm:h-[400px] sm:w-[100%]  '
       }
     >
@@ -62,7 +62,7 @@ const Header = () => {
               />
 
               <img
-                className={`fill-current h-10 w-10 mt-[-2rem] ${
+                className={`fill-current h-10 w-10 mt-[-24rem] mr-5 ${
                   isOpen ? 'block' : 'hidden'
                 }`}
                 src="/src/feature-loopstudios/images/close.svg"
@@ -73,46 +73,58 @@ const Header = () => {
           </div>
 
           <div
-            className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto ${
+            className={`w-full block ml-[-22rem] sm:ml-[-35rem] md:ml-[-40rem] mt-24 flex-grow lg:flex lg:items-center lg:w-auto ${
               isOpen ? 'block' : 'hidden'
             }`}
           >
-            <div className="text-sm lg:flex-grow text-white">
+            <div className="text-sm lg:flex-grow text-white ">
               <a
                 href="#"
-                className=" hover:border-b-[1px] border-white  font-alata lg:font-bold block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-5"
+                className={` hover:border-b-[1px] border-white  font-sans lg:font-bold block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-5 ${
+                  isOpen ? 'uppercase hover:border-b-[0px] text-2xl' : 'inline'
+                }`}
               >
                 About
               </a>
               <a
                 href="#"
-                className=" hover:border-b-[1px] border-white   font-alata lg:font-bold block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-5"
+                className={` hover:border-b-[1px] border-white  font-sans lg:font-bold block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-5 ${
+                  isOpen ? 'uppercase hover:border-b-[0px] text-2xl' : 'inline'
+                }`}
               >
                 Careers
               </a>
               <a
                 href="#"
-                className=" hover:border-b-[1px] border-white  font-alata lg:font-bold block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-5"
+                className={` hover:border-b-[1px] border-white  font-sans lg:font-bold block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-5 ${
+                  isOpen ? 'uppercase hover:border-b-[0px] text-2xl' : 'inline'
+                }`}
               >
                 LinkedIn
               </a>
               <a
                 href="#"
-                className=" hover:border-b-[1px] border-white  font-alata lg:font-bold block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-5"
+                className={` hover:border-b-[1px] border-white  font-sans lg:font-bold block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-5 ${
+                  isOpen ? 'uppercase hover:border-b-[0px] text-2xl' : 'inline'
+                }`}
               >
                 Events
               </a>
 
               <a
                 href="#"
-                className=" hover:border-b-[1px] border-white font-alata lg:font-bold block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-5"
+                className={` hover:border-b-[1px] border-white  font-sans lg:font-bold block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-5 ${
+                  isOpen ? 'uppercase hover:border-b-[0px] text-2xl' : 'inline'
+                }`}
               >
                 Products
               </a>
 
               <a
                 href="#"
-                className=" hover:border-b-[1px] border-white font-alata lg:font-bold block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-5"
+                className={` hover:border-b-[1px] border-white  font-sans lg:font-bold block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-5 ${
+                  isOpen ? 'uppercase hover:border-b-[0px] text-2xl' : 'inline'
+                }`}
               >
                 Support
               </a>
