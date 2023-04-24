@@ -7,8 +7,8 @@ const Header = () => {
     <div
       className={
         isOpen
-          ? 'bg-black h-[50rem] lg:h-[650px]  md:h-[550px] mb-[10rem] sm:h-[400px]'
-          : '2xl:pl-[calc(10%-1.7rem)]  2xl:pr-[calc(10%-1.7rem)] bg-[url("/src/feature-loopstudios/images/mobile/image-hero.jpg")] bg-cover h-[50rem] w-[100%] xl:pl-0 xl:pr-0  lg:bg-[url("/src/feature-loopstudios/images/desktop/image-hero.jpg")] lg:w-[100%] lg:bg-cover lg:h-[650px] mb-[10rem] md:bg-[url("/src/feature-loopstudios/images/desktop/image-hero.jpg")] md:bg-no-repeat md:h-[550px] md:w-[100%] sm:bg-[url("/src/feature-loopstudios/images/desktop/image-hero.jpg")] sm:h-[400px] sm:w-[100%]  '
+          ? 'bg-black h-[50rem] lg:h-[650px]  md:h-[550px] mb-[5rem] sm:h-[400px] '
+          : '2xl:pl-[calc(10%-1.7rem)]  2xl:pr-[calc(10%-1.7rem)] bg-[url("/src/feature-loopstudios/images/mobile/image-hero.jpg")] bg-cover h-[50rem] w-[100%] xl:pl-0 xl:pr-0  lg:bg-[url("/src/feature-loopstudios/images/desktop/image-hero.jpg")] lg:w-[100%] lg:bg-cover lg:h-[650px] mb-[5rem] md:bg-[url("/src/feature-loopstudios/images/desktop/image-hero.jpg")] md:bg-no-repeat md:h-[550px] md:w-[100%] sm:bg-[url("/src/feature-loopstudios/images/desktop/image-hero.jpg")] sm:h-[400px] sm:w-[100%]  '
       }
     >
       <div className="flex justify-between pt-10">
@@ -124,7 +124,7 @@ const Header = () => {
         className={
           isOpen
             ? 'hidden'
-            : 'font-sans border border-white font-light text-white w-[20.5rem] h-[12.5rem] text-4xl p-8 ml-[calc(10%-1rem)] mt-[10rem]  lg:w-[600px] lg:h-[300px]  lg:ml-32 lg:text-7xl lg:mt-32 lg:p-10 md:h-[220px] md:w-[400px] md:ml-32 md:mr-24 md:text-4xl md:p-10 md:mt-[6rem] sm:mt-[2rem]'
+            : 'font-sans border border-white font-light text-white w-[90%] h-[12.5rem] text-[200%] p-8 ml-[calc(10%-1rem)] mt-[10rem]  lg:w-[600px] lg:h-[300px]  lg:ml-32 lg:text-7xl lg:mt-32 lg:p-10 md:h-[220px] md:w-[400px] md:ml-32 md:mr-24 md:text-4xl md:p-10 md:mt-[6rem] sm:mt-[2rem]'
         }
       >
         IMMERSIVE EXPERIENCES THAT DELIVER
