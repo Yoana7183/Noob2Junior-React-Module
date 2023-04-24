@@ -253,6 +253,8 @@ const Cards = () => {
         className="
       2xl:hidden
        xl:hidden
+       hover:bg-black
+       hover:text-white
         lg:hidden
          md:inline
          md:w-[200px]

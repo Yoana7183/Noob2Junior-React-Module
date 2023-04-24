@@ -7,15 +7,15 @@ const Header = () => {
     <div
       className={
         isOpen
-          ? 'bg-black lg:h-[650px]  md:h-[550px] mb-[10rem] '
-          : '2xl:pl-[calc(10%-1.7rem)]  2xl:pr-[calc(10%-1.7rem)] xl:pl-0 xl:pr-0  lg:bg-[url("/src/feature-loopstudios/images/desktop/image-hero.jpg")] lg:w-[100%] lg:bg-cover lg:h-[650px] mb-[10rem] md:bg-[url("/src/feature-loopstudios/images/desktop/image-hero.jpg")] md:bg-no-repeat md:h-[550px] md:w-[100%]  '
+          ? 'bg-black h-[50rem] lg:h-[650px]  md:h-[550px] mb-[10rem] sm:h-[400px]'
+          : '2xl:pl-[calc(10%-1.7rem)]  2xl:pr-[calc(10%-1.7rem)] bg-[url("/src/feature-loopstudios/images/mobile/image-hero.jpg")] bg-cover h-[50rem] w-[100%] xl:pl-0 xl:pr-0  lg:bg-[url("/src/feature-loopstudios/images/desktop/image-hero.jpg")] lg:w-[100%] lg:bg-cover lg:h-[650px] mb-[10rem] md:bg-[url("/src/feature-loopstudios/images/desktop/image-hero.jpg")] md:bg-no-repeat md:h-[550px] md:w-[100%] sm:bg-[url("/src/feature-loopstudios/images/desktop/image-hero.jpg")] sm:h-[400px] sm:w-[100%]  '
       }
     >
       <div className="flex justify-between pt-10">
         <div
-          className="pl-32 font-alata text-white
+          className=" text-3xl pl-5 lg:pl-32 md:pl-32 sm:pl-20 font-alata text-white
          w-[190px]
-          text-4xl "
+          lg:text-4xl md:text-4xl sm:text-4xl "
         >
           loopstudios
         </div>
@@ -53,7 +53,7 @@ const Header = () => {
            hover:text-black-400"
             >
               <img
-                className={`fill-current h-10 w-10 ${
+                className={`fill-current h-10 w-10 mt-[-2rem] ${
                   isOpen ? 'hidden' : 'block'
                 }`}
                 src="/src/feature-loopstudios/images/hamburger.svg"
@@ -62,7 +62,7 @@ const Header = () => {
               />
 
               <img
-                className={`fill-current h-10 w-10  ${
+                className={`fill-current h-10 w-10 mt-[-2rem] ${
                   isOpen ? 'block' : 'hidden'
                 }`}
                 src="/src/feature-loopstudios/images/close.svg"
@@ -124,7 +124,7 @@ const Header = () => {
         className={
           isOpen
             ? 'hidden'
-            : 'font-sans border border-white  text-white lg:w-[600px] lg:h-[300px]  lg:ml-32 lg:text-7xl lg:mt-32 lg:p-10 md:h-[220px] md:w-[400px] md:ml-32 md:mr-24 md:text-4xl md:p-7'
+            : 'font-sans border border-white font-light text-white w-[20.5rem] h-[12.5rem] text-4xl p-8 ml-[calc(10%-1rem)] mt-[10rem]  lg:w-[600px] lg:h-[300px]  lg:ml-32 lg:text-7xl lg:mt-32 lg:p-10 md:h-[220px] md:w-[400px] md:ml-32 md:mr-24 md:text-4xl md:p-10 md:mt-[6rem] sm:mt-[2rem]'
         }
       >
         IMMERSIVE EXPERIENCES THAT DELIVER
