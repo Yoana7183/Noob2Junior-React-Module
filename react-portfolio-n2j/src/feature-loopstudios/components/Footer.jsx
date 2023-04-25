@@ -2,11 +2,11 @@ const Footer = () => {
   return (
     <div
       className=" pl-[25%] sm:pl-[35%]
-      2xl:pl-[calc(10%-1.7rem)] flex justify-between text-center
-    2xl:pr-[calc(10%-1.7rem)]
-     xl:pl-0 xl:pr-0 
-      lg:h-[160px]
-      lg:pl-0
+       2xl:pl-[calc(10%-1.7rem)] flex justify-between text-center
+       2xl:pr-[calc(10%-1.7rem)]
+       xl:pl-0 xl:pr-0 
+       lg:h-[160px]
+       lg:pl-0
        w-full
         bg-black
          mt-40
@@ -27,27 +27,27 @@ const Footer = () => {
           >
             loopstudios
           </div>
-          <div className="pl-5 mt-5">
+          <div className="">
             <nav
               className="
-      2xl:pl-[calc(10%-1.7rem)] 
-      2xl:pr-[calc(10%-1.7rem)] 
-      xl:pr-32
-      lg:pr-32
-      flex 
-      items-center
-       lg:justify-between 
-       flex-wrap
-        p-6"
+          2xl:pl-[calc(10%-1.7rem)] 
+          2xl:pr-[calc(10%-1.7rem)] 
+          xl:pr-32
+          lg:pr-32
+          flex 
+          items-center
+          lg:justify-between 
+          flex-wrap
+           p-6"
             >
               <div
                 className="
-      flex
-       items-center
-        flex-shrink-0
-         text-white
-          mr-6
-           lg:mr-72"
+               flex
+               items-center
+               flex-shrink-0
+              text-white
+              mr-6
+               lg:mr-72"
               ></div>
 
               <div>
@@ -95,7 +95,7 @@ const Footer = () => {
             </nav>
           </div>
         </div>
-        <div className="pr-32">
+        <div className="pr-16 2xl:mr-[calc(10%-78rem)] xl:mr-[calc(10%-60rem)]">
           <div className="flex mt-6 mb-6 pl-5">
             <img
               className="pr-3"

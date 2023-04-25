@@ -1,5 +1,5 @@
 const Cards = () => {
-  const paragraphCardsStyle = `lg:absolute text-base  sm:text-3xl lg:inset-x-0 lg:bottom-0  p-5 md:text-4xl md:font-thin md:w-[30%]`;
+  const paragraphCardsStyle = `lg:absolute font-[Amatic+SC] text-xl w-[50%] font-light sm:text-3xl lg:inset-x-0 lg:bottom-0  p-5 md:text-4xl md:font-thin md:w-[30%]`;
   return (
     <div
       className=" 
@@ -118,6 +118,7 @@ const Cards = () => {
             sm:h-[11rem]
             bg-[url('/src/feature-loopstudios/images/mobile/image-grid.jpg')]
             lg:bg-[url('/src/feature-loopstudios/images/desktop/image-grid.jpg')]
+            lg:w-[256px]
             bg-cover
             lg:h-[450px]
             bg-no-repeat

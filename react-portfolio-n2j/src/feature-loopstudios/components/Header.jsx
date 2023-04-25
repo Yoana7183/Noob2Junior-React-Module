@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navLinkStyle = `font-sans font-extralight leading-loose hover:border-b-[1px] border-white  font-sans lg:font-bold block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-5 ${
+  const navLinkStyle = `font-sans  leading-8 hover:border-b-[1px] border-white  font-sans lg:font-bold block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-5 ${
     isOpen ? 'uppercase hover:border-b-[0px] text-2xl' : 'inline'
   }`;
 
@@ -66,7 +66,7 @@ const Header = () => {
               />
 
               <img
-                className={`fill-current h-10 w-10 mt-[-30rem] mr-10 ${
+                className={`fill-current h-10 w-10 mt-[-24rem] mr-10 ${
                   isOpen ? 'block' : 'hidden'
                 }`}
                 src="/src/feature-loopstudios/images/close.svg"
