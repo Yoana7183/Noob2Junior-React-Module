@@ -1,4 +1,5 @@
 const Cards = () => {
+  const paragraphCardsStyle = `lg:absolute text-base  sm:text-3xl lg:inset-x-0 lg:bottom-0  p-5 md:text-4xl md:font-thin md:w-[30%]`;
   return (
     <div
       className=" 
@@ -62,7 +63,7 @@ const Cards = () => {
             bg-[url('/src/feature-loopstudios/images/mobile/image-deep-earth.jpg')]
             lg:bg-[url('/src/feature-loopstudios/images/desktop/image-deep-earth.jpg')]
             
-
+            bg-cover
            lg:w-[256px] 
             lg:h-[450px]
              bg-no-repeat
@@ -73,18 +74,7 @@ const Cards = () => {
                md:h-[250px]
                "
           >
-            <p
-              className=" text-2xl sm:text-3xl
-              font-sans
-            lg:absolute
-             lg:inset-x-0 
-             lg:bottom-0 p-5 
-             md:text-4xl
-             md:font-thin
-             md:w-[30%]"
-            >
-              DEEP EARTH
-            </p>
+            <p className={paragraphCardsStyle}>DEEP EARTH</p>
           </div>
           <div
             className="
@@ -92,7 +82,7 @@ const Cards = () => {
             sm:h-[11rem]
             bg-[url('/src/feature-loopstudios/images/mobile/image-night-arcade.jpg')]
             lg:bg-[url('/src/feature-loopstudios/images/desktop/image-night-arcade.jpg')]
-        
+            bg-cover
            lg:w-[256px]
             lg:h-[450px]
              bg-no-repeat 
@@ -101,20 +91,7 @@ const Cards = () => {
                md:w-[100%]
                md:h-[250px]"
           >
-            <p
-              className="
-              font-sans text-2xl sm:text-3xl
-              lg:absolute
-             lg:inset-x-0 
-             lg:bottom-0
-              p-5 
-              md:text-4xl
-             md:font-thin
-             md:w-[30%]
-              "
-            >
-              NIGHT ARCADE
-            </p>
+            <p className={paragraphCardsStyle}>NIGHT ARCADE</p>
           </div>
           <div
             className="
@@ -122,7 +99,7 @@ const Cards = () => {
             sm:h-[11rem]
             bg-[url('/src/feature-loopstudios/images/mobile/image-soccer-team.jpg')]
             lg:bg-[url('/src/feature-loopstudios/images/desktop/image-soccer-team.jpg')]
-     
+        bg-cover
            lg:w-[256px]
             lg:h-[450px]
              bg-no-repeat
@@ -133,17 +110,7 @@ const Cards = () => {
                md:h-[250px]
                "
           >
-            <p
-              className="lg:absolute text-2xl sm:text-3xl
-             lg:inset-x-0
-              lg:bottom-0
-               p-5
-               md:text-4xl
-             md:font-thin
-             md:w-[30%] "
-            >
-              SOCCER TEAM VR
-            </p>
+            <p className={paragraphCardsStyle}>SOCCER TEAM VR</p>
           </div>
           <div
             className="
@@ -151,7 +118,7 @@ const Cards = () => {
             sm:h-[11rem]
             bg-[url('/src/feature-loopstudios/images/mobile/image-grid.jpg')]
             lg:bg-[url('/src/feature-loopstudios/images/desktop/image-grid.jpg')]
-    
+            bg-cover
             lg:h-[450px]
             bg-no-repeat
               lg:text-3xl
@@ -160,17 +127,7 @@ const Cards = () => {
                 md:w-[100%]
                md:h-[250px]"
           >
-            <p
-              className="lg:absolute text-2xl sm:text-3xl
-             lg:inset-x-0
-              lg:bottom-0
-               p-5 
-               md:text-4xl
-             md:font-thin
-             md:w-[30%]"
-            >
-              THE GRID
-            </p>
+            <p className={paragraphCardsStyle}>THE GRID</p>
           </div>
           <div
             className="
@@ -178,7 +135,7 @@ const Cards = () => {
             sm:h-[11rem]
             bg-[url('/src/feature-loopstudios/images/mobile/image-from-above.jpg')]
             lg:bg-[url('/src/feature-loopstudios/images/desktop/image-from-above.jpg')]
-      
+            bg-cover
            lg:w-[256px]
             lg:h-[450px]
              bg-no-repeat 
@@ -188,17 +145,7 @@ const Cards = () => {
                 md:w-[100%]
                md:h-[250px]"
           >
-            <p
-              className="lg:absolute text-2xl sm:text-3xl
-             lg:inset-x-0
-              lg:bottom-0 
-              p-5 
-              md:text-4xl
-             md:font-thin
-             md:w-[30%]"
-            >
-              FROM UP ABOVE VR
-            </p>
+            <p className={paragraphCardsStyle}>FROM UP ABOVE VR</p>
           </div>
           <div
             className="
@@ -206,7 +153,7 @@ const Cards = () => {
             sm:h-[11rem]
             bg-[url('/src/feature-loopstudios/images/mobile/image-pocket-borealis.jpg')]
             lg:bg-[url('/src/feature-loopstudios/images/desktop/image-pocket-borealis.jpg')]
-            
+            bg-cover
            lg:w-[256px]
             lg:h-[450px]
              bg-no-repeat 
@@ -216,17 +163,7 @@ const Cards = () => {
                 md:w-[100%]
                md:h-[250px]"
           >
-            <p
-              className="lg:absolute text-2xl sm:text-3xl
-             lg:inset-x-0 
-             lg:bottom-0
-              p-5 
-              md:text-4xl
-             md:font-thin
-             md:w-[30%]"
-            >
-              POCKET BOREALIS
-            </p>
+            <p className={paragraphCardsStyle}>POCKET BOREALIS</p>
           </div>
           <div
             className="
@@ -234,7 +171,7 @@ const Cards = () => {
             sm:h-[11rem]
             bg-[url('/src/feature-loopstudios/images/mobile/image-curiosity.jpg')]
             lg:bg-[url('/src/feature-loopstudios/images/desktop/image-curiosity.jpg')]
-           
+            bg-cover
           lg:w-[256px]
            lg:h-[450px]
             bg-no-repeat 
@@ -244,17 +181,7 @@ const Cards = () => {
               md:w-[100%]
                md:h-[250px]"
           >
-            <p
-              className="lg:absolute text-2xl sm:text-3xl
-            lg:inset-x-0
-             lg:bottom-0
-              p-5 
-              md:text-4xl
-             md:font-thin
-             md:w-[30%]"
-            >
-              THE CURIOSITY
-            </p>
+            <p className={paragraphCardsStyle}>THE CURIOSITY</p>
           </div>
           <div
             className="
@@ -271,18 +198,7 @@ const Cards = () => {
                  md:w-[100%]
                md:h-[250px]"
           >
-            <p
-              className="text-2xl sm:text-3xl
-              lg:absolute
-             lg:inset-x-0
-              lg:bottom-0 
-              p-5
-              md:text-4xl
-             md:font-thin
-             md:w-[30%] "
-            >
-              MAKE IT FISHEYE
-            </p>
+            <p className={paragraphCardsStyle}>MAKE IT FISHEYE</p>
           </div>
         </div>
       </div>

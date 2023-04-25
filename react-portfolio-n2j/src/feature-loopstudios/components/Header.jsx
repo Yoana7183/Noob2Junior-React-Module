@@ -2,16 +2,19 @@ import { useState } from 'react';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navLinkStyle = `font-sans font-extralight leading-loose hover:border-b-[1px] border-white  font-sans lg:font-bold block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-5 ${
+    isOpen ? 'uppercase hover:border-b-[0px] text-2xl' : 'inline'
+  }`;
 
   return (
     <div
       className={
         isOpen
-          ? 'bg-black h-[50rem] lg:h-[650px]  md:h-[550px] mb-[5rem] sm:h-[600px] '
-          : '2xl:pl-[calc(10%-1.7rem)]  2xl:pr-[calc(10%-1.7rem)] bg-[url("/src/feature-loopstudios/images/mobile/image-hero.jpg")] bg-cover h-[50rem] w-[100%] xl:pl-0 xl:pr-0  lg:bg-[url("/src/feature-loopstudios/images/desktop/image-hero.jpg")] lg:w-[100%] lg:bg-cover lg:h-[650px] mb-[5rem] md:bg-[url("/src/feature-loopstudios/images/desktop/image-hero.jpg")] md:bg-no-repeat md:h-[550px] md:w-[100%] sm:bg-[url("/src/feature-loopstudios/images/desktop/image-hero.jpg")] sm:h-[400px] sm:w-[100%]  '
+          ? 'bg-black h-[50rem] lg:h-[650px]  md:h-[650px] mb-[5rem] sm:h-[600px] '
+          : '2xl:pl-[calc(10%-1.7rem)]  2xl:pr-[calc(10%-1.7rem)] lg:h-[650px]  md:h-[650px] sm:h-[600px] bg-[url("/src/feature-loopstudios/images/mobile/image-hero.jpg")] bg-cover h-[50rem] w-[100%] xl:pl-0 xl:pr-0  lg:bg-[url("/src/feature-loopstudios/images/desktop/image-hero.jpg")] lg:w-[100%] lg:bg-cover  mb-[5rem] md:bg-[url("/src/feature-loopstudios/images/desktop/image-hero.jpg")] md:bg-no-repeat  md:w-[100%] sm:bg-[url("/src/feature-loopstudios/images/desktop/image-hero.jpg")] sm:w-[100%]  '
       }
     >
-      <div className="flex justify-between pt-10">
+      <div className="flex justify-between content-center pt-10">
         <div
           className=" text-3xl pl-5 lg:pl-32 md:pl-32 sm:pl-20 font-alata text-white
          w-[190px]
@@ -37,6 +40,7 @@ const Header = () => {
        items-center
         flex-shrink-0
          text-white
+         
           mr-6
            lg:mr-72"
           ></div>
@@ -62,7 +66,7 @@ const Header = () => {
               />
 
               <img
-                className={`fill-current h-10 w-10 mt-[-24rem] mr-5 ${
+                className={`fill-current h-10 w-10 mt-[-30rem] mr-10 ${
                   isOpen ? 'block' : 'hidden'
                 }`}
                 src="/src/feature-loopstudios/images/close.svg"
@@ -73,59 +77,29 @@ const Header = () => {
           </div>
 
           <div
-            className={`w-full block ml-[-22rem] sm:ml-[-35rem] md:ml-[-40rem] mt-24 flex-grow lg:flex lg:items-center lg:w-auto ${
+            className={`w-full block ml-[-22rem] sm:ml-[-35rem] md:ml-[-30rem] md:mt-24 mt-24 lg:mt-0 flex-grow lg:flex lg:items-center lg:w-auto ${
               isOpen ? 'block' : 'hidden'
             }`}
           >
-            <div className="text-sm lg:flex-grow text-white ">
-              <a
-                href="#"
-                className={` hover:border-b-[1px] border-white  font-sans lg:font-bold block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-5 ${
-                  isOpen ? 'uppercase hover:border-b-[0px] text-2xl' : 'inline'
-                }`}
-              >
+            <div className="text-sm  lg:flex-grow text-white ">
+              <a href="#" className={navLinkStyle}>
                 About
               </a>
-              <a
-                href="#"
-                className={` hover:border-b-[1px] border-white  font-sans lg:font-bold block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-5 ${
-                  isOpen ? 'uppercase hover:border-b-[0px] text-2xl' : 'inline'
-                }`}
-              >
+              <a href="#" className={navLinkStyle}>
                 Careers
               </a>
-              <a
-                href="#"
-                className={` hover:border-b-[1px] border-white  font-sans lg:font-bold block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-5 ${
-                  isOpen ? 'uppercase hover:border-b-[0px] text-2xl' : 'inline'
-                }`}
-              >
+              <a href="#" className={navLinkStyle}>
                 LinkedIn
               </a>
-              <a
-                href="#"
-                className={` hover:border-b-[1px] border-white  font-sans lg:font-bold block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-5 ${
-                  isOpen ? 'uppercase hover:border-b-[0px] text-2xl' : 'inline'
-                }`}
-              >
+              <a href="#" className={navLinkStyle}>
                 Events
               </a>
 
-              <a
-                href="#"
-                className={` hover:border-b-[1px] border-white  font-sans lg:font-bold block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-5 ${
-                  isOpen ? 'uppercase hover:border-b-[0px] text-2xl' : 'inline'
-                }`}
-              >
+              <a href="#" className={navLinkStyle}>
                 Products
               </a>
 
-              <a
-                href="#"
-                className={` hover:border-b-[1px] border-white  font-sans lg:font-bold block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-5 ${
-                  isOpen ? 'uppercase hover:border-b-[0px] text-2xl' : 'inline'
-                }`}
-              >
+              <a href="#" className={navLinkStyle}>
                 Support
               </a>
             </div>

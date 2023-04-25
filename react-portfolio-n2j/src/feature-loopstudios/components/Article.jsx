@@ -2,6 +2,7 @@ const Article = () => {
   return (
     <div
       className="
+      font-sans
       flex-col 
       ml-[10%]
       mr-[10%]
