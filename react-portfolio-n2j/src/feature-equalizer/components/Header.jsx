@@ -48,7 +48,7 @@ const Header = () => {
           We make your music sound extraordinary.
         </div>
         <div
-          className="text-base
+          className="  text-base lg:text-2xl
          font-Equalizer
           leading-loose
            flex
