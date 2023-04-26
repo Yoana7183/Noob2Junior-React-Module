@@ -27,10 +27,10 @@ const Footer = () => {
           >
             loopstudios
           </div>
-          <div className="">
+          <div className="pl-5 mt-5 ">
             <nav
               className="
-          2xl:pl-[calc(10%-1.7rem)] 
+              pl-[25%]
           2xl:pr-[calc(10%-1.7rem)] 
           xl:pr-32
           lg:pr-32
@@ -95,7 +95,7 @@ const Footer = () => {
             </nav>
           </div>
         </div>
-        <div className="pr-16 2xl:mr-[calc(10%-78rem)] xl:mr-[calc(10%-60rem)]">
+        <div className="pr-16 2xl:mr-[calc(10%-78rem)] xl:mr-[-20%]">
           <div className="flex mt-6 mb-6 pl-5">
             <img
               className="pr-3"
