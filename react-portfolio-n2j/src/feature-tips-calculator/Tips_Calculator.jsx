@@ -1,3 +1,5 @@
+import Input from './components/Input';
+
 const TipsCalculator = () => {
   return (
     <div className="bg-teal-50 w-[100%] h-[70rem] m-0">
@@ -9,8 +11,10 @@ const TipsCalculator = () => {
       </div>
       <div className="flex justify-center">
         <div className="flex rounded-md w-[920px] h-[481px] bg-white mt-36">
-          <div>sss</div>
-          <div>bbbb</div>
+          <div>
+            <Input />
+          </div>
+          <div></div>
         </div>
       </div>
     </div>
