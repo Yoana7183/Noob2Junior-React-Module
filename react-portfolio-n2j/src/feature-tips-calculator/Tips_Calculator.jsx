@@ -3,9 +3,9 @@ import React, { createContext, useState } from 'react';
 
 export const TipsContext = createContext();
 const initialState = {
-  bill: 0,
-  tip: 0,
-  people: 0,
+  bill: undefined,
+  tip: undefined,
+  people: undefined,
 };
 
 const TipsCalculator = () => {

@@ -11,7 +11,15 @@ const TipsBtnAndInput = () => {
   };
   return (
     <div>
+      <button id="5" onChange={handleClick}>
+        5%
+      </button>
+      <button id="10">10%</button>
+      <button id="15">15%</button>
+      <button id="25">25%</button>
+      <button id="50"> 50%</button>
       <input
+        placeholder="Custom"
         type="number"
         id="tip"
         name="tip"
