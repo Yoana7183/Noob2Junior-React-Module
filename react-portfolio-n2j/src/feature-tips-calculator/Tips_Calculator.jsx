@@ -1,5 +1,6 @@
 import LeftPart from './components/LeftPart';
-import React, { createContext, useState } from 'react';
+import RightPart from './components/RightPart';
+import React, { createContext, useEffect, useState } from 'react';
 
 export const TipsContext = createContext();
 const initialState = {
@@ -10,8 +11,18 @@ const initialState = {
 
 const TipsCalculator = () => {
   const [inputsInObject, setinputsInObject] = useState(initialState);
-  console.log(inputsInObject);
+  const [totalBill, setTotalBill] = useState(0);
+  const [tipByPerson, setTipByPerson] = useState(0);
 
+  useEffect(() => {
+    let total = (inputsInObject.bill * inputsInObject.tip) / 100;
+    setTotalBill(total);
+
+    let titByPer = total / inputsInObject.people;
+    setTipByPerson(titByPer);
+  }, [inputsInObject]);
+
+  console.log(tipByPerson);
   return (
     <div className="bg-teal-50 w-[100%] h-[70rem] m-0">
       <div className="flex flex-cols-1 justify-center pt-16">
@@ -26,6 +37,9 @@ const TipsCalculator = () => {
             <TipsContext.Provider value={{ inputsInObject, setinputsInObject }}>
               <LeftPart />
             </TipsContext.Provider>
+          </div>
+          <div>
+            <RightPart total={totalBill} byPerson={tipByPerson} />
           </div>
         </div>
       </div>
