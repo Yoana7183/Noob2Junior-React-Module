@@ -9,6 +9,10 @@ const TipsBtnAndInput = () => {
 
     setinputsInObject((prev) => ({ ...prev, tip: percentTip }));
   };
+  if (inputsInObject.tip === 0) {
+    inputsInObject.tip = '';
+  }
+
   return (
     <div>
       <button id="5" onChange={handleClick}>

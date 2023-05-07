@@ -10,6 +10,10 @@ const InputBill = () => {
 
     setinputsInObject((prev) => ({ ...prev, bill: amountBill }));
   };
+
+  if (inputsInObject.bill === 0) {
+    inputsInObject.bill = '';
+  }
   return (
     <div>
       <input

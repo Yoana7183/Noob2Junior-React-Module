@@ -6,9 +6,14 @@ const Input = () => {
 
   const handleClick = (event) => {
     const numberOfPeople = event.target.value;
+    inputsInObject ? 0 : '';
 
     setinputsInObject((prev) => ({ ...prev, people: numberOfPeople }));
   };
+
+  if (inputsInObject.people === 0) {
+    inputsInObject.people = '';
+  }
 
   return (
     <div>
