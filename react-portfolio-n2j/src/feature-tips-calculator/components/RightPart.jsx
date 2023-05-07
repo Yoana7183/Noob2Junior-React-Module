@@ -1,11 +1,19 @@
 import React from 'react';
 
-import ResultContainer from './ResultContainer';
 const RightPart = (total, byPerson) => {
   return (
-    <>
-      <ResultContainer total={total} byPerson={byPerson} />
-    </>
+    <div>
+      <div>
+        Tip Amount
+        <p>/person</p>
+        <div>{byPerson.byPerson}</div>
+      </div>
+      <div>
+        Total
+        <p>/person</p>
+        <div>{total.total}</div>
+      </div>
+    </div>
   );
 };
 
