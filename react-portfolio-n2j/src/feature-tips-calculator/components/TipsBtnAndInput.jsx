@@ -13,6 +13,7 @@ const TipsBtnAndInput = () => {
   const handleChange = (event) => {
     let inputPercvet = event.target.value;
     setinputsInObject((prev) => ({ ...prev, tip: inputPercvet }));
+
     if (isNaN(inputPercvet)) {
       setError(`Please enter a number`);
     } else if (inputPercvet < 0) {
@@ -29,29 +30,34 @@ const TipsBtnAndInput = () => {
   };
   return (
     <div>
-      <button id="5" onClick={() => handleButtonClick(5)}>
-        5%
-      </button>
-      <button id="10" onClick={() => handleButtonClick(10)}>
-        10%
-      </button>
-      <button id="15" onClick={() => handleButtonClick(15)}>
-        15%
-      </button>
-      <button id="25" onClick={() => handleButtonClick(25)}>
-        25%
-      </button>
-      <button id="50" onClick={() => handleButtonClick(50)}>
-        50%
-      </button>
-      {error && <div style={{ color: 'red' }}>{error}</div>}
-      <input
-        placeholder="Custom"
-        type="text"
-        id="tip"
-        name="tip"
-        onChange={handleChange}
-      />
+      {'  Select Tip %'}
+
+      <div className="grid grid-cols-3">
+        <button id="5" onClick={() => handleButtonClick(5)}>
+          5%
+        </button>
+        <button id="10" onClick={() => handleButtonClick(10)}>
+          10%
+        </button>
+        <button id="15" onClick={() => handleButtonClick(15)}>
+          15%
+        </button>
+        <button id="25" onClick={() => handleButtonClick(25)}>
+          25%
+        </button>
+        <button id="50" onClick={() => handleButtonClick(50)}>
+          50%
+        </button>
+        {error && <div style={{ color: 'red' }}>{error}</div>}
+        <input
+          value={inputsInObject.tip}
+          placeholder="Custom"
+          type="text"
+          id="tip"
+          name="tip"
+          onChange={handleChange}
+        />
+      </div>
     </div>
   );
 };

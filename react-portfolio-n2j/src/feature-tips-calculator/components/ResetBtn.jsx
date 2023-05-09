@@ -1,9 +1,15 @@
-import React from 'react';
+import { useContext } from 'react';
+import { TipsContext as ClearContext } from '../Tips_Calculator';
 
 const ResetBtn = () => {
+  const { inputsInObject, setinputsInObject } = useContext(ClearContext);
+  const handleButtonClickClearContext = () => {
+    setinputsInObject(() => ({ bill: 0, tip: 0, people: 0 }));
+    inputsInObject;
+  };
   return (
     <div>
-      <button>RESET</button>
+      <button onClick={() => handleButtonClickClearContext()}>RESET</button>
     </div>
   );
 };

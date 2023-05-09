@@ -22,7 +22,6 @@ const TipsCalculator = () => {
     setTipByPerson(titByPer);
   }, [inputsInObject]);
 
-  console.log(tipByPerson);
   return (
     <div className="bg-teal-50 w-[100%] h-[70rem] m-0">
       <div className="flex flex-cols-1 justify-center pt-16">
@@ -33,13 +32,13 @@ const TipsCalculator = () => {
       </div>
       <div className="flex justify-center">
         <div className="flex rounded-md w-[920px] h-[481px] bg-white mt-36">
-          <div>
+          <div className="flex">
             <TipsContext.Provider value={{ inputsInObject, setinputsInObject }}>
               <LeftPart />
+              <div>
+                <RightPart total={totalBill} byPerson={tipByPerson} />
+              </div>
             </TipsContext.Provider>
-          </div>
-          <div>
-            <RightPart total={totalBill} byPerson={tipByPerson} />
           </div>
         </div>
       </div>

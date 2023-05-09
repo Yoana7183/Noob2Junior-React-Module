@@ -21,14 +21,17 @@ const Input = () => {
   }
   return (
     <div>
-      {error && <div style={{ color: 'red' }}>{error}</div>}
-      <input
-        type="text"
-        id="people"
-        name="people"
-        value={inputsInObject.people}
-        onChange={handleClick}
-      />
+      Number of People
+      <div>
+        {error && <div style={{ color: 'red' }}>{error}</div>}
+        <input
+          type="text"
+          id="people"
+          name="people"
+          value={inputsInObject.people}
+          onChange={handleClick}
+        />
+      </div>
     </div>
   );
 };

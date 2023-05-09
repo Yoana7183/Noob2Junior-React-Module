@@ -1,4 +1,5 @@
 import React from 'react';
+import ResetBtn from './ResetBtn';
 
 const RightPart = (total) => {
   let totalByPerson = total.byPerson;
@@ -21,6 +22,7 @@ const RightPart = (total) => {
         <p>/person</p>
         <div>{JSON.stringify(total.total)}</div>
       </div>
+      <ResetBtn />
     </div>
   );
 };
