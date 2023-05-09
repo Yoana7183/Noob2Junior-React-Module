@@ -11,7 +11,6 @@ const TipsBtnAndInput = () => {
 
   const handleChange = (event) => {
     let inputPercvet = event.target.value;
-
     setinputsInObject((prev) => ({ ...prev, tip: inputPercvet }));
   };
   if (inputsInObject.tip === 0) {
@@ -42,7 +41,6 @@ const TipsBtnAndInput = () => {
         type="number"
         id="tip"
         name="tip"
-        value={inputsInObject.tip}
         onChange={handleChange}
       />
     </div>

@@ -6,7 +6,7 @@ export const TipsContext = createContext();
 const initialState = {
   bill: 0,
   tip: 0,
-  people: 0,
+  people: 1,
 };
 
 const TipsCalculator = () => {
