@@ -8,9 +8,9 @@ const Input = () => {
 
     setinputsInObject((prev) => ({ ...prev, people: numberOfPeople }));
     if (isNaN(numberOfPeople)) {
-      setError('Моля, въведете число.');
+      setError(`Please enter a number`);
     } else if (numberOfPeople < 0) {
-      setError('Моля, въведете положително число.');
+      setError(`Can/'t be zero`);
     } else {
       setError('');
     }

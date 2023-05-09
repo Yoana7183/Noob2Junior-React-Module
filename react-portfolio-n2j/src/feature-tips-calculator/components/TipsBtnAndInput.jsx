@@ -14,9 +14,9 @@ const TipsBtnAndInput = () => {
     let inputPercvet = event.target.value;
     setinputsInObject((prev) => ({ ...prev, tip: inputPercvet }));
     if (isNaN(inputPercvet)) {
-      setError('Моля, въведете число.');
+      setError(`Please enter a number`);
     } else if (inputPercvet < 0) {
-      setError('Моля, въведете положително число.');
+      setError(`Can/'t be zero`);
     } else {
       setError('');
     }

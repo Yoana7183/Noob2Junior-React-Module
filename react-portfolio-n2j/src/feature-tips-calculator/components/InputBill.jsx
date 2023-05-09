@@ -11,9 +11,9 @@ const InputBill = () => {
     setinputsInObject((prev) => ({ ...prev, bill: amountBill }));
     console.log(amountBill);
     if (isNaN(amountBill)) {
-      setError('Моля, въведете число.');
-    } else if (amountBill < 0) {
-      setError('Моля, въведете положително число.');
+      setError(`Please enter a number`);
+    } else if (amountBill <= 0) {
+      setError(`Can/'t be zero`);
     } else {
       setError('');
     }
