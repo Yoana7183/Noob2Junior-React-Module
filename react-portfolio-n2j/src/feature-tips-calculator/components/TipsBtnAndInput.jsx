@@ -4,6 +4,7 @@ import { TipsContext as PercentTipContext } from '../Tips_Calculator';
 const TipsBtnAndInput = () => {
   const { inputsInObject, setinputsInObject } = useContext(PercentTipContext);
   const [percent, setPercent] = useState(0);
+  const [error, setError] = useState('');
 
   useEffect(() => {
     setinputsInObject((prev) => ({ ...prev, tip: percent }));
@@ -12,6 +13,13 @@ const TipsBtnAndInput = () => {
   const handleChange = (event) => {
     let inputPercvet = event.target.value;
     setinputsInObject((prev) => ({ ...prev, tip: inputPercvet }));
+    if (isNaN(inputPercvet)) {
+      setError('Моля, въведете число.');
+    } else if (inputPercvet < 0) {
+      setError('Моля, въведете положително число.');
+    } else {
+      setError('');
+    }
   };
   if (inputsInObject.tip === 0) {
     inputsInObject.tip = '';
@@ -36,9 +44,10 @@ const TipsBtnAndInput = () => {
       <button id="50" onClick={() => handleButtonClick(50)}>
         50%
       </button>
+      {error && <div style={{ color: 'red' }}>{error}</div>}
       <input
         placeholder="Custom"
-        type="number"
+        type="text"
         id="tip"
         name="tip"
         onChange={handleChange}
