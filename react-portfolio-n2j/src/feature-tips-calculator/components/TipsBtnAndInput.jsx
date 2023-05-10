@@ -46,7 +46,7 @@ const TipsBtnAndInput = () => {
   }
   const btnStyle = ` bg-buttonOfCalculatorAndRightSideBackground bg-cover hover:bg-hoverbuttonOfCalculatorAndRightSideBackground text-2xl font-bold rounded-md text-white hover:text-black  w-[117px] h-[48px]`;
   return (
-    <div className="pb-10">
+    <div className="pb-10 text-buttonOfCalculatorAndRightSideBackground">
       {'  Select Tip %'}
 
       <div className="grid grid-cols-3 gap-4 pt-2">

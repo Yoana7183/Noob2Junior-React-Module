@@ -10,17 +10,19 @@ const RightPart = (total) => {
   ) {
     totalByPerson = 0;
   }
+  const resultNumStyle = `text-hoverbuttonOfCalculatorAndRightSideBackground text-6xl`;
+
   return (
-    <div>
-      <div>
+    <div className="bg-buttonOfCalculatorAndRightSideBackground w-[420px] h-[417px] rounded-lg p-10">
+      <div className="text-white">
         Tip Amount
-        <p>/person</p>
-        <div>{JSON.stringify(totalByPerson)}</div>
+        <p className="text-slate-300">/person</p>
+        <div className={resultNumStyle}>{JSON.stringify(totalByPerson)}</div>
       </div>
-      <div>
+      <div className="text-white">
         Total
-        <p>/person</p>
-        <div>{JSON.stringify(total.total)}</div>
+        <p className="text-slate-300">/person</p>
+        <div className={resultNumStyle}>{JSON.stringify(total.total)}</div>
       </div>
       <ResetBtn />
     </div>

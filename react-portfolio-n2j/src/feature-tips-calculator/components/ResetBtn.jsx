@@ -9,7 +9,12 @@ const ResetBtn = () => {
   };
   return (
     <div>
-      <button onClick={() => handleButtonClickClearContext()}>RESET</button>
+      <button
+        className="bg-hoverbuttonOfCalculatorAndRightSideBackground w-[100%] h-[48px] text-2xl text-center"
+        onClick={() => handleButtonClickClearContext()}
+      >
+        RESET
+      </button>
     </div>
   );
 };

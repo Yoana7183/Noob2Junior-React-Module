@@ -26,8 +26,12 @@ const TipsCalculator = () => {
     <div className="bg-teal-50 w-[100%] h-[70rem] m-0 font-mono">
       <div className="flex flex-cols-1 justify-center pt-16">
         <div>
-          <div>SPLI</div>
-          <div>TTER</div>
+          <div className="text-4xl  text-buttonOfCalculatorAndRightSideBackground">
+            SPLI
+          </div>
+          <div className="text-4xl  text-buttonOfCalculatorAndRightSideBackground">
+            TTER
+          </div>
         </div>
       </div>
       <div className="flex justify-center">

@@ -24,7 +24,7 @@ const InputBill = () => {
   }
   return (
     <div className="pb-10">
-      <p className="pb-2">Bill</p>
+      <p className="pb-2 text-buttonOfCalculatorAndRightSideBackground">Bill</p>
       {error && <div style={{ color: 'red' }}>{error}</div>}
       <div className="relative">
         <img

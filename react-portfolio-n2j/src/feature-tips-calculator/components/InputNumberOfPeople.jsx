@@ -21,7 +21,9 @@ const Input = () => {
   }
   return (
     <div>
-      Number of People
+      <p className="text-buttonOfCalculatorAndRightSideBackground">
+        Number of People
+      </p>
       <div className="pt-2">
         {error && <div style={{ color: 'red' }}>{error}</div>}
         <div className="relative">
