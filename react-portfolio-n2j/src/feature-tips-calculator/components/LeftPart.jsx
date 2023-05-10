@@ -4,7 +4,7 @@ import TipsBtnAndInput from './TipsBtnAndInput';
 
 const LeftPart = () => {
   return (
-    <div>
+    <div className="p-6 w-[460px]">
       <div>
         <InputBill />
       </div>

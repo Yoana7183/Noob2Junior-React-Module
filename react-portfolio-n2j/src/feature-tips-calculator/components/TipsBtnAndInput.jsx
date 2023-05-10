@@ -44,29 +44,30 @@ const TipsBtnAndInput = () => {
     }
     inputRef.current.disabled = false;
   }
-
+  const btnStyle = ` bg-buttonOfCalculatorAndRightSideBackground bg-cover hover:bg-hoverbuttonOfCalculatorAndRightSideBackground text-2xl font-bold rounded-md text-white hover:text-black  w-[117px] h-[48px]`;
   return (
-    <div>
+    <div className="pb-10">
       {'  Select Tip %'}
 
-      <div className="grid grid-cols-3">
-        <button id="percent" onClick={() => handleButtonClick(5)}>
+      <div className="grid grid-cols-3 gap-4 pt-2">
+        <button className={btnStyle} onClick={() => handleButtonClick(5)}>
           5%
         </button>
-        <button id="percent" onClick={() => handleButtonClick(10)}>
+        <button className={btnStyle} onClick={() => handleButtonClick(10)}>
           10%
         </button>
-        <button id="percent" onClick={() => handleButtonClick(15)}>
+        <button className={btnStyle} onClick={() => handleButtonClick(15)}>
           15%
         </button>
-        <button id="percent" onClick={() => handleButtonClick(25)}>
+        <button className={btnStyle} onClick={() => handleButtonClick(25)}>
           25%
         </button>
-        <button id="percent" onClick={() => handleButtonClick(50)}>
+        <button className={btnStyle} onClick={() => handleButtonClick(50)}>
           50%
         </button>
         {error && <div style={{ color: 'red' }}>{error}</div>}
         <input
+          className=" bg-teal-50 rounded-md w-[100%] h-[48px] text-2xl text-center"
           ref={inputRef}
           placeholder="Custom"
           type="text"

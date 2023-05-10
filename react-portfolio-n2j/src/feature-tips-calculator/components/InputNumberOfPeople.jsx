@@ -22,15 +22,25 @@ const Input = () => {
   return (
     <div>
       Number of People
-      <div>
+      <div className="pt-2">
         {error && <div style={{ color: 'red' }}>{error}</div>}
-        <input
-          type="text"
-          id="people"
-          name="people"
-          value={inputsInObject.people}
-          onChange={handleClick}
-        />
+        <div className="relative">
+          <img
+            className="w-[25px] h-[16px] absolute inset-y-4 left-0 flex items-center pl-3 "
+            src="src\feature-tips-calculator\images\icon-person.svg"
+            alt=""
+            srcSet=""
+          />
+
+          <input
+            className=" bg-teal-50 rounded-md w-[100%] h-[48px] text-2xl text-right pr-4"
+            type="text"
+            id="people"
+            name="people"
+            value={inputsInObject.people}
+            onChange={handleClick}
+          />
+        </div>
       </div>
     </div>
   );

@@ -23,17 +23,26 @@ const InputBill = () => {
     inputsInObject.bill = '';
   }
   return (
-    <div>
-      <p>Bill</p>
+    <div className="pb-10">
+      <p className="pb-2">Bill</p>
       {error && <div style={{ color: 'red' }}>{error}</div>}
-      <input
-        className=" bg-url(./src/feature-tips-calculator/images/icon-dollar.svg) w-9 h-9"
-        type="text"
-        id="bill"
-        name="bill"
-        value={inputsInObject.bill}
-        onChange={handleClick}
-      />
+      <div className="relative">
+        <img
+          className="w-[25px] h-[16px] absolute inset-y-4 left-0 flex items-center pl-3 "
+          src="src\feature-tips-calculator\images\icon-dollar.svg"
+          alt=""
+          srcSet=""
+        />
+
+        <input
+          className=" bg-teal-50 rounded-md w-[100%] h-[48px] text-2xl text-right pr-4"
+          type="text"
+          id="bill"
+          name="bill"
+          value={inputsInObject.bill}
+          onChange={handleClick}
+        />
+      </div>
     </div>
   );
 };

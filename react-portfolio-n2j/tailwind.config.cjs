@@ -18,6 +18,10 @@ module.exports = {
           'sans-serif',
         ],
       },
+      colors: {
+        buttonOfCalculatorAndRightSideBackground: '#00474B',
+        hoverbuttonOfCalculatorAndRightSideBackground: '#26C2AE',
+      },
     },
   },
   plugins: [],
