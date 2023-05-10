@@ -11,9 +11,14 @@ const TipsBtnAndInput = () => {
     setinputsInObject((prev) => ({ ...prev, tip: percentOfBtn }));
   }, [percentOfBtn]);
 
+  useEffect(() => {
+    if (inputsInObject.tip == 0) {
+      inputRef.current.value = '';
+    }
+  }, [inputsInObject]);
+
   const handleChange = (event) => {
     event.preventDefault();
-
     let inputPercent = inputRef.current.value;
 
     if (isNaN(inputPercent)) {
@@ -25,6 +30,7 @@ const TipsBtnAndInput = () => {
       setinputsInObject((prev) => ({ ...prev, tip: inputPercent }));
     }
   };
+
   if (inputsInObject.tip === 0) {
     inputsInObject.tip = '';
   }
@@ -36,6 +42,7 @@ const TipsBtnAndInput = () => {
     if (inputRef.current) {
       inputRef.current.disabled = true;
     }
+    inputRef.current.disabled = false;
   }
 
   return (
