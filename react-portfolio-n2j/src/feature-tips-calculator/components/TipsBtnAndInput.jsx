@@ -1,56 +1,66 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext, useState, useEffect, useRef } from 'react';
 import { TipsContext as PercentTipContext } from '../Tips_Calculator';
 
 const TipsBtnAndInput = () => {
   const { inputsInObject, setinputsInObject } = useContext(PercentTipContext);
-  const [percent, setPercent] = useState(0);
+  const [percentOfBtn, setPercent] = useState(0);
   const [error, setError] = useState('');
+  const inputRef = useRef(null);
 
   useEffect(() => {
-    setinputsInObject((prev) => ({ ...prev, tip: percent }));
-  }, [percent]);
+    setinputsInObject((prev) => ({ ...prev, tip: percentOfBtn }));
+  }, [percentOfBtn]);
 
   const handleChange = (event) => {
-    let inputPercvet = event.target.value;
-    setinputsInObject((prev) => ({ ...prev, tip: inputPercvet }));
+    event.preventDefault();
 
-    if (isNaN(inputPercvet)) {
+    let inputPercent = inputRef.current.value;
+
+    if (isNaN(inputPercent)) {
       setError(`Please enter a number`);
-    } else if (inputPercvet < 0) {
+    } else if (inputPercent < 0) {
       setError(`Can/'t be zero`);
     } else {
       setError('');
+      setinputsInObject((prev) => ({ ...prev, tip: inputPercent }));
     }
   };
   if (inputsInObject.tip === 0) {
     inputsInObject.tip = '';
   }
-  const handleButtonClick = (newPercent) => {
+
+  function handleButtonClick(newPercent) {
+    inputRef.current.value = '';
     setPercent(newPercent);
-  };
+
+    if (inputRef.current) {
+      inputRef.current.disabled = true;
+    }
+  }
+
   return (
     <div>
       {'  Select Tip %'}
 
       <div className="grid grid-cols-3">
-        <button id="5" onClick={() => handleButtonClick(5)}>
+        <button id="percent" onClick={() => handleButtonClick(5)}>
           5%
         </button>
-        <button id="10" onClick={() => handleButtonClick(10)}>
+        <button id="percent" onClick={() => handleButtonClick(10)}>
           10%
         </button>
-        <button id="15" onClick={() => handleButtonClick(15)}>
+        <button id="percent" onClick={() => handleButtonClick(15)}>
           15%
         </button>
-        <button id="25" onClick={() => handleButtonClick(25)}>
+        <button id="percent" onClick={() => handleButtonClick(25)}>
           25%
         </button>
-        <button id="50" onClick={() => handleButtonClick(50)}>
+        <button id="percent" onClick={() => handleButtonClick(50)}>
           50%
         </button>
         {error && <div style={{ color: 'red' }}>{error}</div>}
         <input
-          value={inputsInObject.tip}
+          ref={inputRef}
           placeholder="Custom"
           type="text"
           id="tip"
