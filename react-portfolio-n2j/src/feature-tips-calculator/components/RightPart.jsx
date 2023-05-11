@@ -3,6 +3,7 @@ import ResetBtn from './ResetBtn';
 
 const RightPart = (total) => {
   let totalByPerson = total.byPerson;
+
   if (
     totalByPerson === null ||
     totalByPerson === Infinity ||
@@ -17,12 +18,12 @@ const RightPart = (total) => {
       <div className="text-white">
         Tip Amount
         <p className="text-slate-300">/person</p>
-        <div className={resultNumStyle}>{JSON.stringify(totalByPerson)}</div>
+        <div className={resultNumStyle}>{totalByPerson.toFixed(2)}</div>
       </div>
       <div className="text-white">
         Total
         <p className="text-slate-300">/person</p>
-        <div className={resultNumStyle}>{JSON.stringify(total.total)}</div>
+        <div className={resultNumStyle}>{total.total.toFixed(2)}</div>
       </div>
       <ResetBtn />
     </div>
