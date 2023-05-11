@@ -8,7 +8,7 @@ const ResetBtn = () => {
     inputsInObject;
   };
   return (
-    <div className="pt-[10rem]">
+    <div className="pt-[5rem]">
       <button
         className="bg-hoverbuttonOfCalculatorAndRightSideBackground w-[100%] h-[48px] text-2xl text-center"
         onClick={() => handleButtonClickClearContext()}

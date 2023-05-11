@@ -24,8 +24,12 @@ const InputBill = () => {
   }
   return (
     <div className="pb-10">
-      <p className="pb-2 text-buttonOfCalculatorAndRightSideBackground">Bill</p>
-      {error && <div style={{ color: 'red' }}>{error}</div>}
+      <div className="flex justify-between">
+        <p className="pb-2 text-buttonOfCalculatorAndRightSideBackground">
+          Bill
+        </p>
+        {error && <div style={{ color: 'red' }}>{error}</div>}
+      </div>
       <div className="relative">
         <img
           className="w-[25px] h-[16px] absolute inset-y-4 left-0 flex items-center pl-3 "

@@ -21,11 +21,13 @@ const Input = () => {
   }
   return (
     <div>
-      <p className="text-buttonOfCalculatorAndRightSideBackground">
-        Number of People
-      </p>
-      <div className="pt-2">
+      <div className="flex justify-between">
+        <p className="text-buttonOfCalculatorAndRightSideBackground">
+          Number of People
+        </p>
         {error && <div style={{ color: 'red' }}>{error}</div>}
+      </div>
+      <div className="pt-2">
         <div className="relative">
           <img
             className="w-[25px] h-[16px] absolute inset-y-4 left-0 flex items-center pl-3 "

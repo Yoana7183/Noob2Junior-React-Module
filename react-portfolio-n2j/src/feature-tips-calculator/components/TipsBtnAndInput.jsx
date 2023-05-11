@@ -4,7 +4,7 @@ import { TipsContext as PercentTipContext } from '../Tips_Calculator';
 const TipsBtnAndInput = () => {
   const { inputsInObject, setinputsInObject } = useContext(PercentTipContext);
   const [percentOfBtn, setPercent] = useState(0);
-  const [error, setError] = useState('');
+  const [error, setError] = useState(false);
   const inputRef = useRef(null);
 
   useEffect(() => {
@@ -22,11 +22,11 @@ const TipsBtnAndInput = () => {
     let inputPercent = inputRef.current.value;
 
     if (isNaN(inputPercent)) {
-      setError(`Please enter a number`);
+      setError(true);
     } else if (inputPercent < 0) {
-      setError(`Can/'t be zero`);
+      setError(true);
     } else {
-      setError('');
+      setError(false);
       setinputsInObject((prev) => ({ ...prev, tip: inputPercent }));
     }
   };
@@ -44,7 +44,11 @@ const TipsBtnAndInput = () => {
     }
     inputRef.current.disabled = false;
   }
+
   const btnStyle = ` bg-buttonOfCalculatorAndRightSideBackground bg-cover hover:bg-hoverbuttonOfCalculatorAndRightSideBackground text-2xl font-bold rounded-md text-white hover:text-black  w-[117px] h-[48px]`;
+  const errorInInputStyle = error
+    ? 'bg-red-800 text-white  bg-teal-50 rounded-md w-[100%] h-[48px] text-2xl text-right pr-4'
+    : 'bg-teal-50 rounded-md w-[100%] h-[48px] text-2xl text-right pr-4';
   return (
     <div className="pb-10 text-buttonOfCalculatorAndRightSideBackground">
       {'  Select Tip %'}
@@ -65,9 +69,8 @@ const TipsBtnAndInput = () => {
         <button className={btnStyle} onClick={() => handleButtonClick(50)}>
           50%
         </button>
-        {error && <div style={{ color: 'red' }}>{error}</div>}
         <input
-          className=" bg-teal-50 rounded-md w-[100%] h-[48px] text-2xl text-center"
+          className={errorInInputStyle}
           ref={inputRef}
           placeholder="Custom"
           type="text"
