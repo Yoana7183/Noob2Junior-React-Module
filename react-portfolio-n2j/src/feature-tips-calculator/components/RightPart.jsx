@@ -20,10 +20,10 @@ const RightPart = (total) => {
     }
   }, [total.total]);
 
-  const resultNumStyle = `text-hoverbuttonOfCalculatorAndRightSideBackground text-6xl flex bold `;
+  const resultNumStyle = `text-hoverbuttonOfCalculatorAndRightSideBackground text-3xl lg:text-6xl  sm:text-6xl flex bold `;
   const backgroundStyleisEmpty = isEmptyContainer
-    ? 'bg-buttonOfCalculatorAndRightSideBackground lg:w-[420px]  rounded-lg p-10 lg:h-[417px]'
-    : 'bg-white lg:w-[420px]  rounded-lg p-10 lg:h-[417px]';
+    ? 'bg-buttonOfCalculatorAndRightSideBackground lg:w-[420px] rounded-lg p-10 lg:h-[417px] mr-[5%] ml-[5%]'
+    : 'bg-white  lg:w-[420px] rounded-lg p-10 lg:h-[417px] mr-[5%] ml-[5%]';
 
   return (
     <div className={backgroundStyleisEmpty}>
@@ -33,7 +33,9 @@ const RightPart = (total) => {
           <p className="text-slate-300">/person</p>
         </div>
         <div className={resultNumStyle}>
-          <div className="text-4xl pt-2 font-black">$</div>
+          <div className="text-3xl lg:text-4xl  sm:text-4xl p-0 lg:pt-2 font-black">
+            $
+          </div>
           {totalByPerson.toFixed(2)}
         </div>
       </div>
@@ -43,7 +45,9 @@ const RightPart = (total) => {
           <p className="text-slate-300">/person</p>
         </div>
         <div className={resultNumStyle}>
-          <div className="text-4xl pt-2 font-black">$</div>
+          <div className="text-3xl lg:text-4xl  sm:text-4xl lg:pt-2 font-black">
+            $
+          </div>
 
           {total.total.toFixed(2)}
         </div>

@@ -23,8 +23,8 @@ const TipsCalculator = () => {
   }, [inputsInObject]);
 
   return (
-    <div className="bg-teal-50 w-[100%] h-[70rem] m-0 font-mono">
-      <div className="flex flex-cols-1 justify-center pt-16">
+    <div className="bg-teal-50 w-[100%] h-[70rem] sm:h-[80rem] m-0 font-mono">
+      <div className="flex flex-cols-1 pt-10 justify-center lg:pt-16 sm:pt-10">
         <div>
           <div className="text-4xl  text-buttonOfCalculatorAndRightSideBackground">
             SPLI
@@ -34,8 +34,8 @@ const TipsCalculator = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center ">
-        <div className="flex rounded-md lg:w-[920px] lg:h-[481px] bg-white mt-36 p-6">
+      <div className="flex justify-center pt-10 ">
+        <div className="flex rounded-md lg:w-[920px] lg:h-[481px] sm:mt-16 bg-white lg:mt-36 lg:p-6 sm:p-6">
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <TipsContext.Provider value={{ inputsInObject, setinputsInObject }}>
               <div className=" ">
