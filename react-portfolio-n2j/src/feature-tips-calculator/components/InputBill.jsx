@@ -39,7 +39,7 @@ const InputBill = () => {
         />
 
         <input
-          className=" bg-teal-50 rounded-md w-[100%] h-[48px] text-2xl text-right pr-4"
+          className=" bg-teal-50 rounded-md w-[100%] lg:h-[48px] text-2xl text-right pr-4 sm:h-[70px]"
           type="text"
           id="bill"
           name="bill"

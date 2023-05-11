@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ResetBtn from './ResetBtn';
 
 const RightPart = (total) => {
+  const [isEmptyContainer, setIsEmptyContainer] = useState(false);
   let totalByPerson = total.byPerson;
 
   if (
@@ -11,10 +12,21 @@ const RightPart = (total) => {
   ) {
     totalByPerson = 0;
   }
+  useEffect(() => {
+    if (total.total > 0) {
+      setIsEmptyContainer(true);
+    } else {
+      setIsEmptyContainer(false);
+    }
+  }, [total.total]);
+
   const resultNumStyle = `text-hoverbuttonOfCalculatorAndRightSideBackground text-6xl flex bold `;
+  const backgroundStyleisEmpty = isEmptyContainer
+    ? 'bg-buttonOfCalculatorAndRightSideBackground lg:w-[420px]  rounded-lg p-10 lg:h-[417px]'
+    : 'bg-white lg:w-[420px]  rounded-lg p-10 lg:h-[417px]';
 
   return (
-    <div className="bg-buttonOfCalculatorAndRightSideBackground w-[420px] h-[417px] rounded-lg p-10">
+    <div className={backgroundStyleisEmpty}>
       <div className="text-white flex justify-between pt-5">
         <div>
           Tip Amount

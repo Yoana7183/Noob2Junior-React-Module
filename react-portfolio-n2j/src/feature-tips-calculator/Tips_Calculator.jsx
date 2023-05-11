@@ -34,11 +34,13 @@ const TipsCalculator = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center">
-        <div className="flex rounded-md w-[920px] h-[481px] bg-white mt-36 p-6">
-          <div className="flex ">
+      <div className="flex justify-center ">
+        <div className="flex rounded-md lg:w-[920px] lg:h-[481px] bg-white mt-36 p-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2">
             <TipsContext.Provider value={{ inputsInObject, setinputsInObject }}>
-              <LeftPart />
+              <div className=" ">
+                <LeftPart />
+              </div>
               <div className="">
                 <RightPart total={totalBill} byPerson={tipByPerson} />
               </div>

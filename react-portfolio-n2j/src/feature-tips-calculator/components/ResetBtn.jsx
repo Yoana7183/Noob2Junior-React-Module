@@ -8,9 +8,9 @@ const ResetBtn = () => {
     inputsInObject;
   };
   return (
-    <div className="pt-[5rem]">
+    <div className="lg:pt-[5rem]">
       <button
-        className="bg-hoverbuttonOfCalculatorAndRightSideBackground w-[100%] h-[48px] text-2xl text-center"
+        className="bg-hoverbuttonOfCalculatorAndRightSideBackground w-[100%] lg:h-[48px] text-2xl rounded-md text-center sm:h-[70px]"
         onClick={() => handleButtonClickClearContext()}
       >
         RESET
