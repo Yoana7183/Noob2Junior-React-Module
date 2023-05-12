@@ -39,7 +39,7 @@ const Footer = () => {
             </nav>
           </div>
         </div>
-        <div className="flex flex-col ">
+        <div className="flex flex-col pt-10 ">
           <div className="flex pb-5">
             <img
               className={iconsStyle}
