@@ -9,14 +9,7 @@ module.exports = {
         serif: ['Merriweather', 'serif'],
         titleEqualizer: ['IBM Plex Sans', 'sans-serif'],
         alata: ['Alata'],
-        josefin: [
-          'Alata',
-          'Josefin-Sans',
-          'Amatic SC',
-          'cursive',
-          'IBM Plex Sans',
-          'sans-serif',
-        ],
+        josefin: ['Josefin-Sans'],
       },
       colors: {
         buttonOfCalculatorAndRightSideBackground: '#00474B',

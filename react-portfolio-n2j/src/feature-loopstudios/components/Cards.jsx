@@ -3,14 +3,14 @@ const Cards = () => {
 
    lg:h-[450px]
     bg-no-repeat
-     lg:text-3xl
+     lg:text-2xl
       text-white 
       lg:relative 
       md:w-[100%]
       md:h-[250px]
       h-[7.5rem]
-            sm:h-[11rem]`;
-  const paragraphCardsStyle = `lg:absolute font-[Amatic+SC] text-xl w-[50%] font-light sm:text-3xl lg:inset-x-0 lg:bottom-0  p-5 md:text-4xl md:font-thin md:w-[30%]`;
+      m:h-[11rem]`;
+  const paragraphCardsStyle = `lg:absolute font-alata font-thin text-xl w-[50%] font-light sm:text-3xl lg:inset-x-0 lg:bottom-0  p-5 md:text-4xl md:font-thin md:w-[30%]`;
   return (
     <div
       className=" 

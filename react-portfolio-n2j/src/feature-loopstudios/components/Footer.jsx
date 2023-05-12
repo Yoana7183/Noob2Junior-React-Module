@@ -30,7 +30,7 @@ const Footer = () => {
           <div className="pl-5 mt-5 ">
             <nav
               className="
-              pl-[25%]
+              
           2xl:pr-[calc(10%-1.7rem)] 
           xl:pr-32
           lg:pr-32

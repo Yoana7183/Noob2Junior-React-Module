@@ -5,7 +5,7 @@ import Footer from '../feature-loopstudios/components/Footer';
 
 const Loopstudios = () => {
   return (
-    <div className="font-sans overflow-hidden">
+    <div className=" font-alata overflow-hidden">
       <Header />
       <Article />
       <Cards />
