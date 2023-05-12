@@ -1,8 +1,21 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { TipsContext as PeopleContext } from '../Tips_Calculator';
 
 const Input = () => {
+  const { inputsInObject, setinputsInObject } = useContext(PeopleContext);
   const [error, setError] = useState('');
+
+  useEffect(() => {
+    if (inputsInObject.people === 0) {
+      inputsInObject.people = '';
+      setError('');
+    }
+    if (inputsInObject.people === 1) {
+      inputsInObject.people = '';
+      setError('');
+    }
+  }, [inputsInObject]);
+
   const handleClick = (event) => {
     const numberOfPeople = event.target.value;
 
@@ -15,10 +28,7 @@ const Input = () => {
       setError('');
     }
   };
-  const { inputsInObject, setinputsInObject } = useContext(PeopleContext);
-  if (inputsInObject.people === 0 || inputsInObject.people === 1) {
-    inputsInObject.people = '';
-  }
+
   return (
     <div>
       <div className="flex justify-between">

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 
 import { TipsContext as BillConext } from '../Tips_Calculator';
 
@@ -19,9 +19,12 @@ const InputBill = () => {
     }
   };
 
-  if (inputsInObject.bill === 0) {
-    inputsInObject.bill = '';
-  }
+  useEffect(() => {
+    if (inputsInObject.bill === 0) {
+      inputsInObject.bill = '';
+      setError('');
+    }
+  }, [inputsInObject]);
   return (
     <div className="pb-10">
       <div className="flex justify-between">

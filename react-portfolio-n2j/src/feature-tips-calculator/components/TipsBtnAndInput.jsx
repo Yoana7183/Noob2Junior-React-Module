@@ -14,6 +14,7 @@ const TipsBtnAndInput = () => {
   useEffect(() => {
     if (inputsInObject.tip == 0) {
       inputRef.current.value = '';
+      setError(false);
     }
   }, [inputsInObject]);
 
