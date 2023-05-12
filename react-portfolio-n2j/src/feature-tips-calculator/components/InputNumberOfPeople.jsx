@@ -31,7 +31,7 @@ const Input = () => {
   return (
     <div>
       <div className="flex justify-between">
-        <p className="text-buttonOfCalculatorAndRightSideBackground">
+        <p className="text-buttonOfCalculatorAndRightSideBackground font-bold">
           Number of People
         </p>
         {error && <div style={{ color: 'red' }}>{error}</div>}

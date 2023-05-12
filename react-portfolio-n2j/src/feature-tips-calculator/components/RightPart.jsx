@@ -32,13 +32,13 @@ const RightPart = (total) => {
 
   const resultNumStyle = `text-hoverbuttonOfCalculatorAndRightSideBackground text-3xl lg:text-6xl  sm:text-6xl flex bold `;
   const backgroundStyleisEmpty = isEmptyContainer
-    ? 'bg-buttonOfCalculatorAndRightSideBackground lg:w-[420px] rounded-lg p-10 lg:h-[417px] mr-[5%] ml-[5%]'
+    ? 'bg-buttonOfCalculatorAndRightSideBackground lg:w-[420px] rounded-lg p-6 lg:h-[417px] mr-[5%] ml-[5%]'
     : 'bg-white  lg:w-[420px] rounded-lg p-10 lg:h-[417px] mr-[5%] ml-[5%]';
 
   return (
     <div className={backgroundStyleisEmpty}>
       <div className="text-white flex justify-between pt-5">
-        <div>
+        <div className="font-bold">
           Tip Amount
           <p className="text-slate-300">/person</p>
         </div>
@@ -50,7 +50,7 @@ const RightPart = (total) => {
         </div>
       </div>
       <div className="text-white flex justify-between pt-10">
-        <div className="">
+        <div className="font-bold">
           Total
           <p className="text-slate-300">/person</p>
         </div>
