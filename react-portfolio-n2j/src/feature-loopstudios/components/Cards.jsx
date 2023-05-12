@@ -1,4 +1,15 @@
 const Cards = () => {
+  const cardStyle = ` bg-cover
+
+   lg:h-[450px]
+    bg-no-repeat
+     lg:text-3xl
+      text-white 
+      lg:relative 
+      md:w-[100%]
+      md:h-[250px]
+      h-[7.5rem]
+            sm:h-[11rem]`;
   const paragraphCardsStyle = `lg:absolute font-[Amatic+SC] text-xl w-[50%] font-light sm:text-3xl lg:inset-x-0 lg:bottom-0  p-5 md:text-4xl md:font-thin md:w-[30%]`;
   return (
     <div
@@ -17,8 +28,8 @@ const Cards = () => {
           sm:ml-10
           sm:mr-10"
     >
-      <div>
-        <div className="flex justify-between mb-10">
+      <div className="">
+        <div className="flex mb-10 justify-between">
           <div
             className="font-sans text-xl 
             lg:text-4xl
@@ -33,10 +44,8 @@ const Cards = () => {
             bg-black text-white
             hidden
             2xl:inline
-            2xl:mr-12 
             xl:inline
             lg:inline
-            lg:mr-2
             lg:w-[160px]
             lg:h-[50px]
            md:hidden
@@ -46,7 +55,9 @@ const Cards = () => {
           </button>
         </div>
         <div
-          className="grid gap-5
+          className="
+          2xl:gap-20
+          grid gap-5
          
            lg:grid-cols-4 
            lg:gap-10
@@ -57,147 +68,58 @@ const Cards = () => {
           "
         >
           <div
-            className="
-            h-[7.5rem]
-            sm:h-[11rem]
+            className={` ${cardStyle}
             bg-[url('/src/feature-loopstudios/images/mobile/image-deep-earth.jpg')]
-            lg:bg-[url('/src/feature-loopstudios/images/desktop/image-deep-earth.jpg')]
-            
-            bg-cover
-           lg:w-[256px] 
-            lg:h-[450px]
-             bg-no-repeat
-              lg:text-3xl
-               text-white 
-               lg:relative 
-               md:w-[100%]
-               md:h-[250px]
-               "
+            lg:bg-[url('/src/feature-loopstudios/images/desktop/image-deep-earth.jpg')]`}
           >
             <p className={paragraphCardsStyle}>DEEP EARTH</p>
           </div>
           <div
-            className="
-            h-[7.5rem]
-            sm:h-[11rem]
+            className={`${cardStyle}
             bg-[url('/src/feature-loopstudios/images/mobile/image-night-arcade.jpg')]
             lg:bg-[url('/src/feature-loopstudios/images/desktop/image-night-arcade.jpg')]
-            bg-cover
-           lg:w-[256px]
-            lg:h-[450px]
-             bg-no-repeat 
-              lg:text-3xl text-white
-               lg:relative
-               md:w-[100%]
-               md:h-[250px]"
+            `}
           >
             <p className={paragraphCardsStyle}>NIGHT ARCADE</p>
           </div>
           <div
-            className="
-            h-[7.5rem]
-            sm:h-[11rem]
-            bg-[url('/src/feature-loopstudios/images/mobile/image-soccer-team.jpg')]
-            lg:bg-[url('/src/feature-loopstudios/images/desktop/image-soccer-team.jpg')]
-        bg-cover
-           lg:w-[256px]
-            lg:h-[450px]
-             bg-no-repeat
-               lg:text-3xl
-                text-white
-                 lg:relative
-                 md:w-[100%]
-               md:h-[250px]
-               "
+            className={`${cardStyle}  bg-[url('/src/feature-loopstudios/images/mobile/image-soccer-team.jpg')]
+            lg:bg-[url('/src/feature-loopstudios/images/desktop/image-soccer-team.jpg')]`}
           >
             <p className={paragraphCardsStyle}>SOCCER TEAM VR</p>
           </div>
           <div
-            className="
-            h-[7.5rem]
-            sm:h-[11rem]
+            className={`${cardStyle}     
             bg-[url('/src/feature-loopstudios/images/mobile/image-grid.jpg')]
-            lg:bg-[url('/src/feature-loopstudios/images/desktop/image-grid.jpg')]
-            lg:w-[256px]
-            bg-cover
-            lg:h-[450px]
-            bg-no-repeat
-              lg:text-3xl
-               text-white
-                lg:relative
-                md:w-[100%]
-               md:h-[250px]"
+            lg:bg-[url('/src/feature-loopstudios/images/desktop/image-grid.jpg')]`}
           >
             <p className={paragraphCardsStyle}>THE GRID</p>
           </div>
           <div
-            className="
-            h-[7.5rem]
-            sm:h-[11rem]
+            className={`${cardStyle} 
             bg-[url('/src/feature-loopstudios/images/mobile/image-from-above.jpg')]
-            lg:bg-[url('/src/feature-loopstudios/images/desktop/image-from-above.jpg')]
-            bg-cover
-           lg:w-[256px]
-            lg:h-[450px]
-             bg-no-repeat 
-              lg:text-3xl
-               text-white
-                lg:relative
-                md:w-[100%]
-               md:h-[250px]"
+            lg:bg-[url('/src/feature-loopstudios/images/desktop/image-from-above.jpg')]`}
           >
             <p className={paragraphCardsStyle}>FROM UP ABOVE VR</p>
           </div>
           <div
-            className="
-            h-[7.5rem]
-            sm:h-[11rem]
+            className={`${cardStyle}     
             bg-[url('/src/feature-loopstudios/images/mobile/image-pocket-borealis.jpg')]
-            lg:bg-[url('/src/feature-loopstudios/images/desktop/image-pocket-borealis.jpg')]
-            bg-cover
-           lg:w-[256px]
-            lg:h-[450px]
-             bg-no-repeat 
-              lg:text-3xl
-               text-white
-                lg:relative
-                md:w-[100%]
-               md:h-[250px]"
+            lg:bg-[url('/src/feature-loopstudios/images/desktop/image-pocket-borealis.jpg')]`}
           >
             <p className={paragraphCardsStyle}>POCKET BOREALIS</p>
           </div>
           <div
-            className="
-            h-[7.5rem]
-            sm:h-[11rem]
+            className={`${cardStyle} 
             bg-[url('/src/feature-loopstudios/images/mobile/image-curiosity.jpg')]
-            lg:bg-[url('/src/feature-loopstudios/images/desktop/image-curiosity.jpg')]
-            bg-cover
-          lg:w-[256px]
-           lg:h-[450px]
-            bg-no-repeat 
-             lg:text-3xl
-              text-white 
-              lg:relative
-              md:w-[100%]
-               md:h-[250px]"
+            lg:bg-[url('/src/feature-loopstudios/images/desktop/image-curiosity.jpg')]`}
           >
             <p className={paragraphCardsStyle}>THE CURIOSITY</p>
           </div>
           <div
-            className="
-            h-[7.5rem]
-            sm:h-[11rem]
+            className={`${cardStyle} 
             bg-[url('/src/feature-loopstudios/images/mobile/image-fisheye.jpg')]
-            lg:bg-[url('/src/feature-loopstudios/images/desktop/image-fisheye.jpg')]
-            
-            lg:h-[450px]
-             bg-no-repeat
-               lg:text-3xl
-                text-white
-                 lg:relative
-                 md:w-[100%]
-               md:h-[250px]"
+            lg:bg-[url('/src/feature-loopstudios/images/desktop/image-fisheye.jpg')]`}
           >
             <p className={paragraphCardsStyle}>MAKE IT FISHEYE</p>
           </div>
