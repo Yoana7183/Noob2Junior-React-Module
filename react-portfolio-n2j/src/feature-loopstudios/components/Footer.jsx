@@ -1,93 +1,37 @@
 const Footer = () => {
+  const linksStyle = `block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4 border-b-[1px] border-transparent  hover:border-white`;
+  const iconsStyle = `pr-3 pb-2 pl-3 border-b-[2px] border-transparent  hover:border-white`;
   return (
-    <div
-      className=" pl-[25%] sm:pl-[35%]
-       2xl:pl-[calc(10%-1.7rem)] flex justify-between text-center
-       2xl:pr-[calc(10%-1.7rem)]
-       xl:pl-0 xl:pr-0 
-       lg:h-[160px]
-       lg:pl-0
-       w-full
-        bg-black
-         mt-40
-          text-white "
-    >
-      <div
-        className=" flex flex-col
-       
-      lg:pl-32 
-      lg:justify-between
-      lg:flex-row  "
-      >
-        <div className="mt-5 mb-5">
-          <div
-            className="font-alata text-white 
-          w-[190px] 
-          text-4xl "
-          >
+    <div className="bg-black h-[30rem] lg:h-[10rem] lg:pr-32 lg:pl-32 mt-16 text-center flex items-center justify-center lg:flex lg:justify-between lg:text-left">
+      <div className="mx-auto lg:mx-0 lg:w-[100%] lg:flex lg:justify-between ">
+        <div className="flex flex-col ">
+          <div className="text-white  font-bold text-3xl pb-6 ">
             loopstudios
           </div>
-          <div className="pl-5 mt-5 ">
-            <nav
-              className="
-              
-          2xl:pr-[calc(10%-1.7rem)] 
-          xl:pr-32
-          lg:pr-32
-          flex 
-          items-center
-          lg:justify-between 
-          flex-wrap
-           p-6"
-            >
-              <div
-                className="
-               flex
-               items-center
-               flex-shrink-0
-              text-white
-              mr-6
-               lg:mr-72"
-              ></div>
+          <div className="">
+            <nav className="">
+              <div className=""></div>
 
-              <div>
-                <div className="text-sm lg:flex-grow text-white">
-                  <a
-                    href="#"
-                    className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4"
-                  >
+              <div className="lg:bg-none">
+                <div className="text-sm lg:flex-grow text-white ">
+                  <a href="#" className={linksStyle}>
                     About
                   </a>
-                  <a
-                    href="#"
-                    className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4"
-                  >
+                  <a href="#" className={linksStyle}>
                     Careers
                   </a>
-                  <a
-                    href="#"
-                    className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4"
-                  >
+                  <a href="#" className={linksStyle}>
                     LinkedIn
                   </a>
-                  <a
-                    href="#"
-                    className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4"
-                  >
+                  <a href="#" className={linksStyle}>
                     Events
                   </a>
 
-                  <a
-                    href="#"
-                    className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4"
-                  >
+                  <a href="#" className={linksStyle}>
                     Products
                   </a>
 
-                  <a
-                    href="#"
-                    className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4"
-                  >
+                  <a href="#" className={linksStyle}>
                     Support
                   </a>
                 </div>
@@ -95,35 +39,35 @@ const Footer = () => {
             </nav>
           </div>
         </div>
-        <div className="pr-16 2xl:mr-[calc(10%-78rem)] xl:mr-[-20%]">
-          <div className="flex mt-6 mb-6 pl-5">
+        <div className="flex flex-col ">
+          <div className="flex pb-5">
             <img
-              className="pr-3"
+              className={iconsStyle}
               src="src\feature-loopstudios\images\icon-facebook.svg"
               alt=""
               srcSet=""
             />
             <img
-              className="pr-3"
+              className={iconsStyle}
               src="src\feature-loopstudios\images\icon-twitter.svg"
               alt=""
               srcSet=""
             />
             <img
-              className="pr-3"
+              className={iconsStyle}
               src="src\feature-loopstudios\images\icon-pinterest.svg"
               alt=""
               srcSet=""
             />
             <img
-              className="pr-3"
+              className={iconsStyle}
               src="src\feature-loopstudios\images\icon-instagram.svg"
               alt=""
               srcSet=""
             />
           </div>
-          <div className="text-xs w-[150%]  text-zinc-500 mb-8 ml-[-2rem] ">
-            © 2021 Loopstudios. All rights reserved.
+          <div className="text-xs  text-zinc-500 ">
+            {' © 2021 Loopstudios. All rights reserved.'}
           </div>
         </div>
       </div>
