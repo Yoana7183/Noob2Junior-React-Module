@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import { TipsContext as PeopleContext } from '../Tips_Calculator';
 
 const Input = () => {
@@ -6,16 +6,15 @@ const Input = () => {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    if (inputsInObject.people === 0) {
-      inputsInObject.people = '';
+    if (inputsInObject.people == 0) {
       setError('');
     }
-    if (inputsInObject.people === 1) {
-      inputsInObject.people = '';
-      setError('');
-    }
-  }, [inputsInObject]);
+  }, [inputsInObject.people]);
 
+  if (inputsInObject.people === 0) {
+    inputsInObject.people = '';
+    setError('');
+  }
   const handleClick = (event) => {
     const numberOfPeople = event.target.value;
 

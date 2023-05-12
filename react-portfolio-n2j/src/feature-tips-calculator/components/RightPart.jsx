@@ -4,6 +4,7 @@ import ResetBtn from './ResetBtn';
 const RightPart = (total) => {
   const [isEmptyContainer, setIsEmptyContainer] = useState(false);
   let totalByPerson = total.byPerson;
+  let totalAmount = total.total;
 
   if (
     totalByPerson === null ||
@@ -12,13 +13,22 @@ const RightPart = (total) => {
   ) {
     totalByPerson = 0;
   }
+  if (totalAmount === null || totalAmount === Infinity || isNaN(totalAmount)) {
+    totalAmount = 0;
+  }
+  if (totalAmount == 0) {
+    totalAmount == '';
+  }
+  if (totalByPerson == 0) {
+    totalByPerson == '';
+  }
   useEffect(() => {
     if (total.total > 0) {
       setIsEmptyContainer(true);
     } else {
       setIsEmptyContainer(false);
     }
-  }, [total.total]);
+  }, [totalAmount]);
 
   const resultNumStyle = `text-hoverbuttonOfCalculatorAndRightSideBackground text-3xl lg:text-6xl  sm:text-6xl flex bold `;
   const backgroundStyleisEmpty = isEmptyContainer
@@ -49,7 +59,7 @@ const RightPart = (total) => {
             $
           </div>
 
-          {total.total.toFixed(2)}
+          {totalAmount.toFixed(2)}
         </div>
       </div>
       <ResetBtn />
