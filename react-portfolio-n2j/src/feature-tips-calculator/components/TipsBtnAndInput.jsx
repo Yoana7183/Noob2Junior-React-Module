@@ -71,6 +71,7 @@ const TipsBtnAndInput = () => {
           50%
         </button>
         <input
+          inputMode="numeric"
           className={errorInInputStyle}
           ref={inputRef}
           placeholder="Custom"
