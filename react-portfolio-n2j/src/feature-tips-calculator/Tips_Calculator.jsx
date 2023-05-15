@@ -12,7 +12,7 @@ const initialState = {
 const TipsCalculator = () => {
   const [inputsInObject, setinputsInObject] = useState(initialState);
   const [totalBill, setTotalBill] = useState(0);
-  const [tipByPerson, setTipByPerson] = useState(1);
+  const [tipByPerson, setTipByPerson] = useState(0);
 
   useEffect(() => {
     let total = (inputsInObject.bill * inputsInObject.tip) / 100;

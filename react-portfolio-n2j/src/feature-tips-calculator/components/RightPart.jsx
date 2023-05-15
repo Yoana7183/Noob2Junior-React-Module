@@ -9,11 +9,19 @@ const RightPart = (total) => {
   if (
     totalByPerson === null ||
     totalByPerson === Infinity ||
-    isNaN(totalByPerson)
+    isNaN(totalByPerson) ||
+    totalByPerson === -Infinity ||
+    totalByPerson < 0
   ) {
     totalByPerson = 0;
   }
-  if (totalAmount === null || totalAmount === Infinity || isNaN(totalAmount)) {
+  if (
+    totalAmount === null ||
+    totalAmount === Infinity ||
+    isNaN(totalAmount) ||
+    totalAmount === -Infinity ||
+    totalAmount < 0
+  ) {
     totalAmount = 0;
   }
   if (totalAmount == 0) {

@@ -20,15 +20,15 @@ const TipsBtnAndInput = () => {
 
   const handleChange = (event) => {
     event.preventDefault();
-    let inputPercent = inputRef.current.value;
+    let inputPercent = inputRef.current.value.trim();
 
     if (isNaN(inputPercent)) {
       setError(true);
-    } else if (inputPercent < 0) {
+    } else if (inputPercent <= 0) {
       setError(true);
     } else {
-      setError(false);
       setinputsInObject((prev) => ({ ...prev, tip: inputPercent }));
+      setError(false);
     }
   };
 
@@ -48,7 +48,7 @@ const TipsBtnAndInput = () => {
 
   const btnStyle = ` bg-buttonOfCalculatorAndRightSideBackground bg-cover hover:bg-hoverbuttonOfCalculatorAndRightSideBackground text-2xl font-bold rounded-md text-white hover:text-black h-[48px] lg:w-[117px] lg:h-[48px] sm:w-[220px] sm:h-[70px]`;
   const errorInInputStyle = error
-    ? 'bg-red-800 text-white  bg-teal-50 rounded-md lg:w-[100%] lg:h-[48px] text-2xl text-right pr-4 sm:w-[220px] sm:h-[70px]'
+    ? 'bg-red-800 rounded-md lg:w-[100%] lg:h-[48px] text-2xl text-right pr-4 sm:w-[220px] sm:h-[70px]'
     : 'bg-teal-50 rounded-md lg:w-[100%] lg:h-[48px] text-2xl text-right pr-4 sm:w-[220px] sm:h-[70px]';
   return (
     <div className="pb-10 text-buttonOfCalculatorAndRightSideBackground font-bold ">

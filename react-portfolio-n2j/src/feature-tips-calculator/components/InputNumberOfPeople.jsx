@@ -6,7 +6,7 @@ const Input = () => {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    if (inputsInObject.people == 0) {
+    if (inputsInObject.people === 0) {
       setError('');
     }
   }, [inputsInObject.people]);
@@ -16,12 +16,14 @@ const Input = () => {
     setError('');
   }
   const handleClick = (event) => {
-    const numberOfPeople = event.target.value;
-
+    let numberOfPeople = event.target.value.trim();
     setinputsInObject((prev) => ({ ...prev, people: numberOfPeople }));
+
     if (isNaN(numberOfPeople)) {
       setError(`Please enter a number`);
+      numberOfPeople = 0;
     } else if (numberOfPeople < 0) {
+      numberOfPeople = 0;
       setError(`Can/'t be zero`);
     } else {
       setError('');
@@ -47,7 +49,7 @@ const Input = () => {
 
           <input
             inputMode="numeric"
-            className=" bg-teal-50 rounded-md h-[48px] w-[100%] lg:h-[48px] sm:h-[48px] text-2xl text-right pr-4"
+            className=" bg-teal-50 rounded-md h-[48px] w-[100%] lg:h-[48px] sm:h-[48px]  text-buttonOfCalculatorAndRightSideBackground  text-2xl text-right pr-4"
             type="text"
             id="people"
             name="people"
