@@ -35,7 +35,7 @@ const TipsCalculator = () => {
         </div>
       </div>
       <div className="flex justify-center pt-10 ">
-        <div className="flex rounded-3xl shadow-2xl h-[75rem]  lg:w-[920px]  lg:h-[481px] sm:mt-16 bg-white lg:mt-36 lg:p-6 sm:p-6">
+        <div className="flex rounded-3xl shadow-2xl h-[60rem] sm:h-[75rem]  lg:w-[920px]  lg:h-[481px] sm:mt-16 bg-white lg:mt-36 lg:p-6 sm:p-6">
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <TipsContext.Provider value={{ inputsInObject, setinputsInObject }}>
               <div className=" ">

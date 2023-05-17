@@ -40,8 +40,8 @@ const RightPart = (total) => {
 
   const resultNumStyle = `text-hoverbuttonOfCalculatorAndRightSideBackground text-3xl lg:text-6xl  sm:text-6xl flex bold `;
   const backgroundStyleisEmpty = isEmptyContainer
-    ? 'bg-buttonOfCalculatorAndRightSideBackground mt-[-15rem] lg:w-[420px] sm:mt-[-7rem] lg:mt-0 rounded-lg p-6 lg:h-[417px] mr-[5%] ml-[5%]'
-    : 'bg-white  lg:w-[420px] mt-[-15rem] rounded-lg p-10 lg:h-[417px] sm:mt-[-7rem] lg:mt-0 mr-[5%] ml-[5%] ';
+    ? 'bg-buttonOfCalculatorAndRightSideBackground mt-[-6rem] lg:w-[420px] sm:mt-[-3rem] lg:mt-0 rounded-lg p-6 lg:h-[417px] mr-[5%] ml-[5%]'
+    : 'bg-white  lg:w-[420px] mt-[-6rem]  rounded-lg p-10 lg:h-[417px] sm:mt-[-3rem] lg:mt-0 mr-[5%] ml-[5%] ';
 
   return (
     <div className={backgroundStyleisEmpty}>
