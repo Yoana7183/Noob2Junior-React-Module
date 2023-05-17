@@ -26,14 +26,12 @@ const InputBill = () => {
     }
   }, [bill, inputsInObject.bill]);
 
-  const handleClick = (event) => {
+  const handleChange = (event) => {
     let billAmount = event.target.value.trim();
     setBill(billAmount);
   };
 
   useEffect(() => {
-    let checkedValue;
-
     if (isNaN(bill)) {
       setError(`Please enter a number`);
     } else if (bill < 0) {
@@ -41,8 +39,7 @@ const InputBill = () => {
     } else if (bill === undefined) {
       setError('');
     } else {
-      checkedValue = bill;
-      setinputsInObject((prev) => ({ ...prev, bill: checkedValue }));
+      setinputsInObject((prev) => ({ ...prev, bill: bill }));
       setError('');
     }
   }, [bill]);
@@ -75,7 +72,7 @@ const InputBill = () => {
           id="bill"
           name="bill"
           value={value}
-          onChange={handleClick}
+          onChange={handleChange}
         />
       </div>
     </div>

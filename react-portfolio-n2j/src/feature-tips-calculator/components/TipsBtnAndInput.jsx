@@ -1,49 +1,71 @@
-import React, { useContext, useState, useEffect, useRef } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { TipsContext as PercentTipContext } from '../Tips_Calculator';
 
 const TipsBtnAndInput = () => {
   const { inputsInObject, setinputsInObject } = useContext(PercentTipContext);
   const [percentOfBtn, setPercent] = useState(0);
+  const [percentOfTitInput, setpercentOfTitInput] = useState(0);
+  const [isTipComesFromBtn, setisTipComesFromBtn] = useState(0);
   const [error, setError] = useState(false);
-  const inputRef = useRef(null);
 
   useEffect(() => {
     setinputsInObject((prev) => ({ ...prev, tip: percentOfBtn }));
   }, [percentOfBtn]);
 
   useEffect(() => {
+    if (/^[a-zA-Z]+$/.test(percentOfTitInput)) {
+      setError(false);
+      setpercentOfTitInput(0);
+    }
+  }, [percentOfTitInput]);
+
+  useEffect(() => {
+    if (percentOfTitInput == 0) {
+      setError(false);
+    }
+  }, [percentOfTitInput, inputsInObject.tip]);
+
+  useEffect(() => {
     if (inputsInObject.tip == 0) {
-      inputRef.current.value = '';
+      inputsInObject.tip = '';
       setError(false);
     }
   }, [inputsInObject]);
 
-  const handleChange = (event) => {
-    event.preventDefault();
-    let inputPercent = inputRef.current.value.trim();
-
-    if (isNaN(inputPercent)) {
-      setError(true);
-    } else if (inputPercent <= 0) {
-      setError(true);
-    } else {
-      setinputsInObject((prev) => ({ ...prev, tip: inputPercent }));
+  useEffect(() => {
+    if (percentOfTitInput == 0) {
       setError(false);
     }
+  }, [percentOfTitInput, inputsInObject.tip]);
+
+  const handleChange = (event) => {
+    let inputPercent = event.target.value.trim();
+    setpercentOfTitInput(inputPercent);
   };
+
+  useEffect(() => {
+    if (isNaN(percentOfTitInput)) {
+      setError(true);
+    } else if (percentOfTitInput < 0) {
+      setError(true);
+    } else if (percentOfTitInput === undefined) {
+      setError(true);
+    } else {
+      setisTipComesFromBtn(1);
+      setinputsInObject((prev) => ({ ...prev, tip: percentOfTitInput }));
+      setError(false);
+    }
+  }, [percentOfTitInput]);
 
   if (inputsInObject.tip === 0) {
     inputsInObject.tip = '';
   }
+  // only butttons logic
+  let value = isTipComesFromBtn == 0 ? '' : inputsInObject.tip;
 
   function handleButtonClick(newPercent) {
-    inputRef.current.value = '';
+    setisTipComesFromBtn(0);
     setPercent(newPercent);
-
-    if (inputRef.current) {
-      inputRef.current.disabled = true;
-    }
-    inputRef.current.disabled = false;
   }
 
   const btnStyle = ` bg-buttonOfCalculatorAndRightSideBackground bg-cover hover:bg-hoverbuttonOfCalculatorAndRightSideBackground text-2xl font-bold rounded-md text-white hover:text-black h-[48px] lg:w-[117px] lg:h-[48px] sm:w-[220px] sm:h-[70px]`;
@@ -73,7 +95,7 @@ const TipsBtnAndInput = () => {
         <input
           inputMode="numeric"
           className={errorInInputStyle}
-          ref={inputRef}
+          value={value}
           placeholder="Custom"
           type="text"
           id="tip"
