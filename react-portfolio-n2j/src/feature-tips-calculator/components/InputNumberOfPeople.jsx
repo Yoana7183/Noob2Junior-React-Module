@@ -19,7 +19,6 @@ const Input = () => {
     }
   }, [people]);
 
-  console.log(people);
   useEffect(() => {
     if (people == 0) {
       setError('');
