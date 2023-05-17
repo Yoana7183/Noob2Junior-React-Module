@@ -47,10 +47,16 @@ const GitHubFindDev = () => {
   useEffect(() => {
     useFetchData('Yoana7183');
   }, []);
-  console.log(user);
+
   return (
     <div>
-      <div>ddd</div>
+      <div>
+        {Object.keys(user).map((key) => (
+          <li key={key}>
+            {key}: {user[key]}
+          </li>
+        ))}
+      </div>
     </div>
   );
 };
