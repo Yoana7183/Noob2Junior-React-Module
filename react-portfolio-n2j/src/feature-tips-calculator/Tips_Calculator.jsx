@@ -23,7 +23,7 @@ const TipsCalculator = () => {
   }, [inputsInObject]);
 
   return (
-    <div className="bg-teal-50 w-[100%] h-[70rem]  sm:h-[80rem] m-0 font-mono">
+    <div className="bg-teal-50 w-[100%] h-[40rem]  sm:h-[100rem] m-0 font-mono">
       <div className="flex flex-cols-1 pt-10 justify-center lg:pt-16 sm:pt-10">
         <div>
           <div className="text-4xl  text-buttonOfCalculatorAndRightSideBackground">

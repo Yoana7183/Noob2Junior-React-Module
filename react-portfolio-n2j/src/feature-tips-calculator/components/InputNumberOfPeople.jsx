@@ -70,7 +70,7 @@ const Input = () => {
 
           <input
             inputMode="numeric"
-            className=" bg-teal-50 rounded-md h-[48px] w-[100%] lg:h-[48px] sm:h-[48px]  text-buttonOfCalculatorAndRightSideBackground  text-2xl text-right pr-4"
+            className=" bg-teal-50 rounded-md h-[48px] w-[100%] lg:h-[48px] text-2xl text-right pr-4 sm:h-[70px]"
             type="text"
             id="people"
             name="people"
