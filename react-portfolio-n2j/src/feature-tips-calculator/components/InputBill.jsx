@@ -5,30 +5,53 @@ import { TipsContext as BillConext } from '../Tips_Calculator';
 const InputBill = () => {
   const { inputsInObject, setinputsInObject } = useContext(BillConext);
   const [error, setError] = useState('');
+  const [bill, setBill] = useState(0);
 
   useEffect(() => {
     if (inputsInObject.bill == 0) {
-      setError('');
+      setBill(0);
+      inputsInObject.bill = '';
     }
   }, [inputsInObject.bill]);
 
-  const handleClick = (event) => {
-    const amountBill = event.target.value.trim();
-    setinputsInObject((prev) => ({ ...prev, bill: amountBill }));
+  useEffect(() => {
+    if (/^[a-zA-Z]+$/.test(bill)) {
+      setBill(0);
+    }
+  }, [bill]);
 
-    if (isNaN(amountBill)) {
-      setError(`Please enter a number`);
-    } else if (amountBill <= 0) {
-      setError(`Can/'t be zero`);
-    } else {
+  useEffect(() => {
+    if (bill == 0) {
       setError('');
     }
+  }, [bill, inputsInObject.bill]);
+
+  const handleClick = (event) => {
+    let billAmount = event.target.value.trim();
+    setBill(billAmount);
   };
+
+  useEffect(() => {
+    let checkedValue;
+
+    if (isNaN(bill)) {
+      setError(`Please enter a number`);
+    } else if (bill < 0) {
+      setError(`Can't be negative`);
+    } else if (bill === undefined) {
+      setError('');
+    } else {
+      checkedValue = bill;
+      setinputsInObject((prev) => ({ ...prev, bill: checkedValue }));
+      setError('');
+    }
+  }, [bill]);
 
   if (inputsInObject.bill === 0) {
     inputsInObject.bill = '';
   }
 
+  let value = inputsInObject.bill === undefined ? '' : inputsInObject.bill;
   return (
     <div className="pb-10">
       <div className="flex justify-between">
@@ -51,7 +74,7 @@ const InputBill = () => {
           type="text"
           id="bill"
           name="bill"
-          value={inputsInObject.bill}
+          value={value}
           onChange={handleClick}
         />
       </div>
