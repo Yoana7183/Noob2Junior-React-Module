@@ -1,4 +1,5 @@
-import useFetchData from './hooks/useFetchData';
+// import React, { createContext } from 'react';
+import SearchBarAndSubmitButton from './components/SearchBar';
 
 // export const UserContext = createContext();
 // const initialState = {
@@ -13,17 +14,11 @@ import useFetchData from './hooks/useFetchData';
 // };
 
 const GitHubFindDev = () => {
-  useFetchData('Yoana7183');
+  // const [userData, setUserData] = useState(initialState);
 
   return (
     <div>
-      <div>
-        {/* {Object.keys(user).map((key) => (
-          <li key={key}>
-            {key}: {user[key]}
-          </li>
-        ))} */}
-      </div>
+      <SearchBarAndSubmitButton />
     </div>
   );
 };

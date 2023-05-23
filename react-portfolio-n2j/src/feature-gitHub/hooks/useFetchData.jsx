@@ -16,19 +16,21 @@ function useFetchData(userName) {
       .then((response) => {
         if (!response.ok) {
           setError(true);
-          throw new Error('Oops.. something went wrong!');
         }
         return response.json();
       })
       .then((data) => {
         setfetchedData(data);
-        console.log(fetchedData);
         setIsLoading(false);
         setError(false);
       })
-      .catch((error) => console.log(error));
-  }, []);
-  if (fetchedData != null && isLoading == false && error == false) {
+      .catch((error) => {
+        setError(true);
+        console.log(error);
+      });
+  }, [userName]);
+
+  if (fetchedData != null && !isLoading && error == false) {
     console.log(fetchedData);
     return fetchedData;
   }
@@ -36,7 +38,7 @@ function useFetchData(userName) {
     return isLoading;
   }
 
-  if (fetchedData == null && isLoading == false && error == true) {
+  if (fetchedData == null && !isLoading && error == true) {
     return error;
   }
 }
