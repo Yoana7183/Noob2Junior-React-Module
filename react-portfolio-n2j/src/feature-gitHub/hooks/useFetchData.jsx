@@ -16,7 +16,6 @@ function useFetchData(userName) {
       .then((response) => {
         if (!response.ok) {
           setError(true);
-          console.log(error);
           throw new Error('Oops.. something went wrong!');
         }
         return response.json();
@@ -24,7 +23,6 @@ function useFetchData(userName) {
       .then((data) => {
         setfetchedData(data);
         console.log(fetchedData);
-        console.log(isLoading);
         setIsLoading(false);
         setError(false);
       })
