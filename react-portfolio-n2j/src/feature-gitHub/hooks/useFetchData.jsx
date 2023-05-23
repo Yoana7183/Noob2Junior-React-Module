@@ -31,14 +31,16 @@ function useFetchData(userName) {
   }, [userName]);
 
   if (fetchedData != null && !isLoading && error == false) {
-    console.log(fetchedData);
+    console.log(`THIS IS LOG FROM CUSTOM HOOK ${fetchedData}`);
     return fetchedData;
   }
   if (isLoading == true) {
+    console.log(`is loading ${isLoading}`);
     return isLoading;
   }
 
   if (fetchedData == null && !isLoading && error == true) {
+    console.log(`is error ${error}`);
     return error;
   }
 }

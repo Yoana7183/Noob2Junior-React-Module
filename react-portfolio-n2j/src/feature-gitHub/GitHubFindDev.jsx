@@ -1,7 +1,8 @@
-// import React, { createContext } from 'react';
+import React, { createContext, useState } from 'react';
 import SearchBarAndSubmitButton from './components/SearchBar';
+import useFetchData from './hooks/useFetchData';
+export const UserContext = createContext();
 
-// export const UserContext = createContext();
 // const initialState = {
 //   name: null,
 //   login: null,
@@ -14,11 +15,19 @@ import SearchBarAndSubmitButton from './components/SearchBar';
 // };
 
 const GitHubFindDev = () => {
+  const [inputValue, setInputValue] = useState('');
   // const [userData, setUserData] = useState(initialState);
+
+  const userData = useFetchData(inputValue);
+  console.log(userData);
+
+  const getValue = (value) => {
+    setInputValue(value);
+  };
 
   return (
     <div>
-      <SearchBarAndSubmitButton />
+      <SearchBarAndSubmitButton getValue={getValue} />
     </div>
   );
 };

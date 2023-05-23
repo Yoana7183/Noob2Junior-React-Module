@@ -1,25 +1,23 @@
-import React, { useState, useRef } from 'react';
-import useFetchData from '../hooks/useFetchData';
+import React, { useRef } from 'react';
+import PropTypes from 'prop-types';
 
-const SearchBarAndSubmitButton = () => {
-  const [inputValue, setInputValue] = useState('');
+const SearchBarAndSubmitButton = ({ getValue }) => {
   const inputRef = useRef(null);
 
   const handleSubmit = () => {
     const value = inputRef.current.value.trim();
-    setInputValue(value);
+    getValue(value);
   };
-  console.log(inputValue);
-  useFetchData(inputValue);
 
   return (
     <div>
       <input type="text" ref={inputRef} />
       <button onClick={handleSubmit}>Submit</button>
-      <p>Input Value: {inputValue}</p>
     </div>
   );
 };
-
+SearchBarAndSubmitButton.propTypes = {
+  getValue: PropTypes.func.isRequired,
+};
 export default SearchBarAndSubmitButton;
 ('Yoana7183');
