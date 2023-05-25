@@ -1,33 +1,56 @@
-import React, { createContext, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import SearchBarAndSubmitButton from './components/SearchBar';
 import useFetchData from './hooks/useFetchData';
-export const UserContext = createContext();
-
-// const initialState = {
-//   name: null,
-//   login: null,
-//   timeStamp: null,
-//   bio: null,
-//   repos: null,
-//   followers: null,
-//   following: null,
-//   location: null,
-// };
+import PersonalUserInformation from './components/PersonalUserInformation';
+import TableInformation from './components/TableInformation';
+import LinksAndLocation from './components/Links';
+const initialState = {
+  name: null,
+  login: null,
+  timeStamp: null,
+  bio: null,
+  repos: null,
+  followers: null,
+  following: null,
+  location: null,
+  loading: null,
+  error: null,
+};
 
 const GitHubFindDev = () => {
   const [inputValue, setInputValue] = useState('');
-  // const [userData, setUserData] = useState(initialState);
-
-  const userData = useFetchData(inputValue);
-  console.log(userData);
+  const [userData, setUserData] = useState(initialState);
 
   const getValue = (value) => {
     setInputValue(value);
   };
+  const userDataObject = useFetchData(inputValue);
 
+  useEffect(() => {
+    if (userDataObject.data == null || userDataObject.data == undefined) {
+      return;
+    } else
+      setUserData(() => ({
+        name: userDataObject.data.name,
+        login: userDataObject.data.login,
+        avatar: userDataObject.data.avatar_url,
+        timeStamp: userDataObject.data.created_at,
+        bio: userDataObject.data.bio,
+        repos: userDataObject.data.public_repos,
+        followers: userDataObject.data.followers,
+        following: userDataObject.data.following,
+        location: userDataObject.data.location,
+        loading: userDataObject.loading,
+        error: userDataObject.error,
+      }));
+  }, [userDataObject.data]);
+  console.log(`Is loading from main component ${userData.loading}`);
   return (
     <div>
       <SearchBarAndSubmitButton getValue={getValue} />
+      <PersonalUserInformation personalData={userData} />
+      <TableInformation additionalUserInfo={userData} />
+      <LinksAndLocation userLinks={userData} />
     </div>
   );
 };
