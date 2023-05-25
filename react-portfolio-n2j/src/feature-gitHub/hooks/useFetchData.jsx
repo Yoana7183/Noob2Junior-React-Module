@@ -28,21 +28,9 @@ function useFetchData(userName) {
         setError(true);
         console.log(error);
       });
+    console.log(`Is loading from Custom Hook ${isLoading}`);
   }, [userName]);
-
-  if (fetchedData != null && !isLoading && error == false) {
-    console.log(`THIS IS LOG FROM CUSTOM HOOK ${fetchedData}`);
-    return fetchedData;
-  }
-  if (isLoading == true) {
-    console.log(`is loading ${isLoading}`);
-    return isLoading;
-  }
-
-  if (fetchedData == null && !isLoading && error == true) {
-    console.log(`is error ${error}`);
-    return error;
-  }
+  return { data: fetchedData, loading: isLoading, error: error };
 }
 
 export default useFetchData;

@@ -5,7 +5,7 @@ const SearchBarAndSubmitButton = ({ getValue }) => {
   const inputRef = useRef(null);
 
   const handleSubmit = () => {
-    const value = inputRef.current.value.trim();
+    let value = inputRef.current.value.trim();
     getValue(value);
   };
 
