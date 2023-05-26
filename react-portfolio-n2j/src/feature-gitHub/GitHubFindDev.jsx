@@ -29,28 +29,44 @@ const GitHubFindDev = () => {
   useEffect(() => {
     if (userDataObject.data == null || userDataObject.data == undefined) {
       return;
-    } else
-      setUserData(() => ({
-        name: userDataObject.data.name,
-        login: userDataObject.data.login,
-        avatar: userDataObject.data.avatar_url,
-        timeStamp: userDataObject.data.created_at,
-        bio: userDataObject.data.bio,
-        repos: userDataObject.data.public_repos,
-        followers: userDataObject.data.followers,
-        following: userDataObject.data.following,
-        location: userDataObject.data.location,
-        loading: userDataObject.loading,
-        error: userDataObject.error,
-      }));
+    }
+    if (userDataObject.data.message == 'Not Found') {
+      userDataObject.error = true;
+    } else {
+      userDataObject.error = false;
+    }
+    setUserData(() => ({
+      name: userDataObject.data.name,
+      login: userDataObject.data.login,
+      avatar: userDataObject.data.avatar_url,
+      timeStamp: userDataObject.data.created_at,
+      bio: userDataObject.data.bio,
+      repos: userDataObject.data.public_repos,
+      followers: userDataObject.data.followers,
+      following: userDataObject.data.following,
+      location: userDataObject.data.location,
+      loading: userDataObject.loading,
+      error: userDataObject.error,
+    }));
   }, [userDataObject.data]);
-  console.log(`Is loading from main component ${userData.loading}`);
+
   return (
-    <div>
-      <SearchBarAndSubmitButton getValue={getValue} />
-      <PersonalUserInformation personalData={userData} />
-      <TableInformation additionalUserInfo={userData} />
-      <LinksAndLocation userLinks={userData} />
+    <div className="flex justify-center mt-[10rem]">
+      <div className="w-[730px] h-[444px]">
+        <div className="flex justify-between ">
+          <div className=" ">devfinder</div>
+          <button className=" ">black</button>
+        </div>
+        <div className="border-2 border-black ">
+          <SearchBarAndSubmitButton
+            getValue={getValue}
+            isError={userDataObject.error}
+          />
+          <PersonalUserInformation personalData={userData} />
+          <TableInformation additionalUserInfo={userData} />
+          <LinksAndLocation userLinks={userData} />
+        </div>
+      </div>
     </div>
   );
 };

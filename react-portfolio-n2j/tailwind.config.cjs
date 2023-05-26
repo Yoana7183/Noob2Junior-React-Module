@@ -14,6 +14,8 @@ module.exports = {
       colors: {
         buttonOfCalculatorAndRightSideBackground: '#00474B',
         hoverbuttonOfCalculatorAndRightSideBackground: '#26C2AE',
+        buttonOnGitHubFindDevSearchButton: '#0079FF',
+        hoverbuttonOnGitHubFindDevSearchButton: '#60ABFF',
       },
     },
   },

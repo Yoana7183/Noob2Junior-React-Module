@@ -28,8 +28,8 @@ function useFetchData(userName) {
         setError(true);
         console.log(error);
       });
-    console.log(`Is loading from Custom Hook ${isLoading}`);
   }, [userName]);
+
   return { data: fetchedData, loading: isLoading, error: error };
 }
 
