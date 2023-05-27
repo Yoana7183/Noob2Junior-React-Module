@@ -1,16 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-const TableInformation = (additionalUserInfo) => {
-  const ProfileAdditionalInfo = additionalUserInfo.additionalUserInfo;
+import React, { useContext } from 'react';
+import { UserDataContext as UserTableInformation } from '../GitHubFindDev';
+
+const TableInformation = () => {
+  const userData = useContext(UserTableInformation);
+  if (userData.error == true) {
+    return;
+  }
+
   return (
-    <div>
-      <div>{ProfileAdditionalInfo.repos}</div>
-      <div>{ProfileAdditionalInfo.followers}</div>
-      <div>{ProfileAdditionalInfo.following}</div>
+    <div className="flex">
+      <div>{userData.repos}</div>
+      <div>{userData.followers}</div>
+      <div>{userData.following}</div>
     </div>
   );
 };
-TableInformation.propTypes = {
-  additionalUserInfo: PropTypes.object.isRequired,
-};
+
 export default TableInformation;

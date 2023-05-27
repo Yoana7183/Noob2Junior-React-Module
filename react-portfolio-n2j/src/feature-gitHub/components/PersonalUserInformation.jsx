@@ -3,7 +3,7 @@ import { UserDataContext as UserCredentials } from '../GitHubFindDev';
 
 const PersonalUserInformation = () => {
   const userData = useContext(UserCredentials);
-  console.log(userData);
+
   if (userData === undefined || userData == null) {
     console.log(typeof userData);
     return;

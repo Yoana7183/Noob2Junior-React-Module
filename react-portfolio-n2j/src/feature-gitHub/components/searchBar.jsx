@@ -1,14 +1,20 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useContext, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-
-const SearchBarAndSubmitButton = ({ getValue, isError }) => {
+import { UserDataContext as UserError } from '../GitHubFindDev';
+const SearchBarAndSubmitButton = ({ getValue }) => {
   const inputRef = useRef(null);
-  const [isNotFound, setNotFound] = useState(null);
+  const userData = useContext(UserError);
+  const [errorMessage, setErrorMessage] = useState(false);
 
   useEffect(() => {
-    setNotFound(isError);
-    console.log(isNotFound);
-  }, [isError]);
+    if (userData.error) {
+      setErrorMessage('No results');
+      console.log(errorMessage);
+    }
+    if (!userData.error) {
+      setErrorMessage('');
+    }
+  }, [userData.error]);
 
   const handleSubmit = () => {
     let value = inputRef.current.value.trim();
@@ -17,8 +23,13 @@ const SearchBarAndSubmitButton = ({ getValue, isError }) => {
 
   return (
     <div className="flex">
-      <div>{isNotFound}</div>
-      <input className=" w-[625px] h-[69px]" type="text" ref={inputRef} />
+      <div>{errorMessage}</div>
+      <input
+        className=" w-[625px] h-[69px]"
+        type="text"
+        ref={inputRef}
+        placeholder="Search GitHub username… "
+      />
       <button
         className="w-[106px] h-[50px] bg-buttonOnGitHubFindDevSearchButton"
         onClick={handleSubmit}
@@ -30,7 +41,6 @@ const SearchBarAndSubmitButton = ({ getValue, isError }) => {
 };
 SearchBarAndSubmitButton.propTypes = {
   getValue: PropTypes.func.isRequired,
-  isError: PropTypes.bool.isRequired,
 };
 export default SearchBarAndSubmitButton;
 ('Yoana7183');

@@ -6,6 +6,9 @@ function useFetchData(userName) {
   const [error, setError] = useState(false);
 
   useEffect(() => {
+    if (userName.length == 0) {
+      return;
+    }
     setIsLoading(true);
     fetch(`https://api.github.com/users/${userName}`, {
       method: 'GET',
