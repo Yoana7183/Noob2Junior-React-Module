@@ -3,7 +3,7 @@ import { UserDataContext as UserCredentials } from '../GitHubFindDev';
 
 const PersonalUserInformation = () => {
   const userData = useContext(UserCredentials);
-
+  const image = userData.avatar;
   if (userData === undefined || userData == null) {
     console.log(typeof userData);
     return;
@@ -17,7 +17,9 @@ const PersonalUserInformation = () => {
   return (
     <div>
       <div>
-        <div>{userData.avatar}</div>
+        <div className="w-[117px] h-[117px]">
+          <img src={image} />
+        </div>
         <div>{userData.name}</div>
         <div>{userData.login}</div>
         <div>{userData.timeStamp}</div>

@@ -1,15 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useContext } from 'react';
 
-const LinksAndLocation = (userLinks) => {
-  const userLocation = userLinks.userLinks;
+import { UserDataContext as UserLocation } from '../GitHubFindDev';
+
+const LinksAndLocation = () => {
+  const userData = useContext(UserLocation);
   return (
     <div>
-      <div>{userLocation.location}</div>
+      <div>{userData.location}</div>
     </div>
   );
 };
-LinksAndLocation.propTypes = {
-  userLinks: PropTypes.object.isRequired,
-};
+
 export default LinksAndLocation;

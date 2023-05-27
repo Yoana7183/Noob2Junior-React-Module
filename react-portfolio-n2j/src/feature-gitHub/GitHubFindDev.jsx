@@ -3,7 +3,7 @@ import SearchBarAndSubmitButton from './components/SearchBar';
 import useFetchData from './hooks/useFetchData';
 import PersonalUserInformation from './components/PersonalUserInformation';
 import TableInformation from './components/TableInformation';
-// import LinksAndLocation from './components/Links';
+import LinksAndLocation from './components/Links';
 
 export const UserDataContext = createContext();
 const initialState = {
@@ -59,11 +59,16 @@ const GitHubFindDev = () => {
           <div className=" ">devfinder</div>
           <button className=" ">black</button>
         </div>
-        <div className="border-2 border-black ">
+        <div>
           <UserDataContext.Provider value={userData}>
-            <SearchBarAndSubmitButton getValue={getValue} />
-            <PersonalUserInformation />
-            <TableInformation />
+            <div className="border-2 border-black ">
+              <SearchBarAndSubmitButton getValue={getValue} />
+            </div>
+            <div className="border-2 border-black ">
+              <PersonalUserInformation />
+              <TableInformation />
+              <LinksAndLocation />
+            </div>
           </UserDataContext.Provider>
         </div>
       </div>
