@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, createContext } from 'react';
 import SearchBarAndSubmitButton from './components/SearchBar';
 import useFetchData from './hooks/useFetchData';
 import PersonalUserInformation from './components/PersonalUserInformation';
-import TableInformation from './components/TableInformation';
-import LinksAndLocation from './components/Links';
+// import TableInformation from './components/TableInformation';
+// import LinksAndLocation from './components/Links';
+
+export const UserDataContext = createContext();
 const initialState = {
   name: null,
   login: null,
@@ -58,13 +60,13 @@ const GitHubFindDev = () => {
           <button className=" ">black</button>
         </div>
         <div className="border-2 border-black ">
-          <SearchBarAndSubmitButton
-            getValue={getValue}
-            isError={userDataObject.error}
-          />
-          <PersonalUserInformation personalData={userData} />
-          <TableInformation additionalUserInfo={userData} />
-          <LinksAndLocation userLinks={userData} />
+          <UserDataContext.Provider value={userData}>
+            <SearchBarAndSubmitButton
+              getValue={getValue}
+              isError={userDataObject.error}
+            />
+            <PersonalUserInformation />
+          </UserDataContext.Provider>
         </div>
       </div>
     </div>
