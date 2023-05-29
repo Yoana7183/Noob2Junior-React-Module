@@ -2,15 +2,12 @@ import { useEffect, useState } from 'react';
 
 function useFetchData(userName) {
   const [fetchedData, setfetchedData] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(false);
 
   useEffect(() => {
     if (userName.length == 0) {
       return;
     }
-
-    setIsLoading(true);
     fetch(`https://api.github.com/users/${userName}`, {
       method: 'GET',
       headers: {
@@ -21,11 +18,13 @@ function useFetchData(userName) {
         if (!response.ok) {
           setError(true);
         }
+        if (response.ok) {
+          setError(false);
+        }
         return response.json();
       })
       .then((data) => {
         setfetchedData(data);
-        setIsLoading(false);
       })
       .catch((error) => {
         setError(true);
@@ -33,7 +32,7 @@ function useFetchData(userName) {
       });
   }, [userName]);
 
-  return { data: fetchedData, loading: isLoading, error: error };
+  return { data: fetchedData, error: error };
 }
 
 export default useFetchData;

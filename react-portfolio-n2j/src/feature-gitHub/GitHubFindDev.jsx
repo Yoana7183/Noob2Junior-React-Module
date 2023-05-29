@@ -16,7 +16,6 @@ const initialState = {
   followers: 9350,
   following: 9,
   location: 'San Francisco',
-  loading: false,
   error: false,
 };
 
@@ -29,6 +28,21 @@ const GitHubFindDev = () => {
   const getValue = (value) => {
     setInputValue(value);
   };
+
+  useEffect(() => {
+    setUserData(() => ({
+      name: 'The Octocat',
+      avatar: 'https://avatars.githubusercontent.com/u/583231?v=4',
+      login: 'octocat',
+      timeStamp: '2011-01-25',
+      bio: '',
+      repos: 8,
+      followers: 9350,
+      following: 9,
+      location: 'San Francisco',
+      error: false,
+    }));
+  }, []);
 
   useEffect(() => {
     if (
@@ -47,8 +61,9 @@ const GitHubFindDev = () => {
         following: 9,
         location: 'San Francisco',
         loading: '',
-        error: '',
+        error: true,
       }));
+      console.log(userData);
     } else {
       userDataObject.error = false;
       setUserData(() => ({
@@ -64,6 +79,7 @@ const GitHubFindDev = () => {
         loading: userDataObject.loading,
         error: userDataObject.error,
       }));
+      console.log(userData);
     }
   }, [userDataObject.data, userDataObject.error]);
 
