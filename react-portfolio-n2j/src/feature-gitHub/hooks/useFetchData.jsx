@@ -6,10 +6,6 @@ function useFetchData(userName) {
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    userName = 'octocat';
-  }, []);
-
-  useEffect(() => {
     if (userName.length == 0) {
       return;
     }
@@ -30,11 +26,10 @@ function useFetchData(userName) {
       .then((data) => {
         setfetchedData(data);
         setIsLoading(false);
-        setError(false);
       })
       .catch((error) => {
         setError(true);
-        console.log(error);
+        error;
       });
   }, [userName]);
 
