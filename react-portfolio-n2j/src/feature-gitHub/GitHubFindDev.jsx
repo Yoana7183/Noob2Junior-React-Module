@@ -35,7 +35,7 @@ const GitHubFindDev = () => {
         followers: 9350,
         following: 9,
         location: 'San Francisco',
-        error: 'istrue',
+        error: true,
       }));
     } else {
       userDataObject.error = false;
