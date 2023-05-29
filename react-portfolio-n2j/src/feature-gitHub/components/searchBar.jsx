@@ -1,20 +1,22 @@
-import React, { useRef, useContext, useState, useEffect } from 'react';
+import React, { useRef, useContext } from 'react';
 import PropTypes from 'prop-types';
 import { UserDataContext as UserError } from '../GitHubFindDev';
 const SearchBarAndSubmitButton = ({ getValue }) => {
   const inputRef = useRef(null);
   const userData = useContext(UserError);
-  const [errorMessage, setErrorMessage] = useState(false);
+  // const [errorMessage, setErrorMessage] = useState(false);
+  console.log('from search');
+  console.log(userData.error);
 
-  useEffect(() => {
-    if (userData.error) {
-      setErrorMessage('No results');
-      console.log(errorMessage);
-    }
-    if (!userData.error) {
-      setErrorMessage('');
-    }
-  }, [userData.error]);
+  // useEffect(() => {
+  //   if (userData.error) {
+  //     setErrorMessage('No results');
+  //     console.log(errorMessage);
+  //   }
+  //   if (!userData.error) {
+  //     setErrorMessage('');
+  //   }
+  // }, [userData.error]);
 
   const handleSubmit = () => {
     let value = inputRef.current.value.trim();
@@ -23,7 +25,7 @@ const SearchBarAndSubmitButton = ({ getValue }) => {
 
   return (
     <div className="flex">
-      <div>{errorMessage}</div>
+      {/* <div>{errorMessage}</div> */}
       <input
         className=" w-[625px] h-[69px]"
         type="text"

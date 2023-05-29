@@ -6,18 +6,7 @@ import TableInformation from './components/TableInformation';
 import LinksAndLocation from './components/Links';
 
 export const UserDataContext = createContext();
-const initialState = {
-  name: 'The Octocat',
-  avatar: 'https://avatars.githubusercontent.com/u/583231?v=4',
-  login: 'octocat',
-  timeStamp: '2011-01-25',
-  bio: '',
-  repos: 8,
-  followers: 9350,
-  following: 9,
-  location: 'San Francisco',
-  error: false,
-};
+const initialState = {};
 
 const GitHubFindDev = () => {
   const [inputValue, setInputValue] = useState('');
@@ -30,21 +19,7 @@ const GitHubFindDev = () => {
   };
 
   useEffect(() => {
-    setUserData(() => ({
-      name: 'The Octocat',
-      avatar: 'https://avatars.githubusercontent.com/u/583231?v=4',
-      login: 'octocat',
-      timeStamp: '2011-01-25',
-      bio: '',
-      repos: 8,
-      followers: 9350,
-      following: 9,
-      location: 'San Francisco',
-      error: false,
-    }));
-  }, []);
-
-  useEffect(() => {
+    console.log();
     if (
       userDataObject.data === null ||
       (userDataObject.error == true &&
@@ -60,10 +35,8 @@ const GitHubFindDev = () => {
         followers: 9350,
         following: 9,
         location: 'San Francisco',
-        loading: '',
-        error: true,
+        error: 'istrue',
       }));
-      console.log(userData);
     } else {
       userDataObject.error = false;
       setUserData(() => ({
@@ -81,7 +54,7 @@ const GitHubFindDev = () => {
       }));
       console.log(userData);
     }
-  }, [userDataObject.data, userDataObject.error]);
+  }, [userDataObject.data]);
 
   return (
     <div className="flex justify-center mt-[10rem]">
