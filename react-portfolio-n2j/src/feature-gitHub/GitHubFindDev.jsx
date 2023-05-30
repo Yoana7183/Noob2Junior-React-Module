@@ -1,5 +1,5 @@
 import React, { useEffect, useState, createContext } from 'react';
-import SearchBarAndSubmitButton from './components/SearchBar';
+import SearchBarAndSubmitButton from './components/InputSeach';
 import useFetchData from './hooks/useFetchData';
 import PersonalUserInformation from './components/PersonalUserInformation';
 import TableInformation from './components/TableInformation';
@@ -11,6 +11,7 @@ const initialState = {};
 const GitHubFindDev = () => {
   const [inputValue, setInputValue] = useState('');
   const [userData, setUserData] = useState(initialState);
+  const [isInitial, setIsInitial] = useState(true);
 
   const userDataObject = useFetchData(inputValue);
 
@@ -19,12 +20,7 @@ const GitHubFindDev = () => {
   };
 
   useEffect(() => {
-    console.log();
-    if (
-      userDataObject.data === null ||
-      (userDataObject.error == true &&
-        userDataObject.data.message == 'Not Found')
-    ) {
+    if (isInitial) {
       setUserData(() => ({
         name: 'The Octocat',
         avatar: 'https://avatars.githubusercontent.com/u/583231?v=4',
@@ -35,10 +31,14 @@ const GitHubFindDev = () => {
         followers: 9350,
         following: 9,
         location: 'San Francisco',
-        error: true,
+        error: 'initial',
       }));
-    } else {
-      userDataObject.error = false;
+      console.log(`isInitial in first use effect ${isInitial}`);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (userDataObject.data === !null && !userDataObject.error && !isInitial) {
       setUserData(() => ({
         name: userDataObject.data.name,
         login: userDataObject.data.login,
@@ -52,9 +52,27 @@ const GitHubFindDev = () => {
         loading: userDataObject.loading,
         error: userDataObject.error,
       }));
-      console.log(userData);
     }
-  }, [userDataObject.data]);
+    if (userDataObject.data == null) {
+      return;
+    }
+    if (userDataObject.data.message === 'Not Found') {
+      setUserData(() => ({
+        name: 'The Octocat',
+        avatar: 'https://avatars.githubusercontent.com/u/583231?v=4',
+        login: 'octocat',
+        timeStamp: '2011-01-25',
+        bio: '',
+        repos: 8,
+        followers: 9350,
+        following: 9,
+        location: 'San Francisco',
+        error: true,
+      }));
+      setIsInitial(false);
+    }
+    console.log(`isInitial in second use effect ${isInitial}`);
+  }, [userDataObject.data, isInitial]);
 
   return (
     <div className="flex justify-center mt-[10rem]">
