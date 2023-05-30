@@ -6,8 +6,6 @@ const SearchBarAndSubmitButton = ({ getValue }) => {
   const inputRef = useRef(null);
   const userData = useContext(UserError);
   const [errorMessage, setErrorMessage] = useState('');
-  console.log(`from search`);
-  console.log(userData);
 
   useEffect(() => {
     if (userData.error == 'firstLoad') {

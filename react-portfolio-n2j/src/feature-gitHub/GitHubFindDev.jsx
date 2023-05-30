@@ -6,17 +6,25 @@ import TableInformation from './components/TableInformation';
 import LinksAndLocation from './components/Links';
 
 export const UserDataContext = createContext();
+export const ThemeContext = createContext();
+
 const initialState = {};
+const initialTheme = 'light';
 
 const GitHubFindDev = () => {
   const [inputValue, setInputValue] = useState('');
   const [userData, setUserData] = useState(initialState);
+  const [theme, setTheme] = useState(initialTheme);
   const [isInitial, setIsInitial] = useState(true);
 
   const userDataObject = useFetchData(inputValue);
 
   const getValue = (value) => {
     setInputValue(value);
+  };
+
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
   };
 
   useEffect(() => {
@@ -74,22 +82,61 @@ const GitHubFindDev = () => {
   }, [userDataObject.data, isInitial]);
 
   return (
-    <div className="flex justify-center mt-[10rem]">
-      <div className="w-[730px] h-[444px]">
-        <div className="flex justify-between ">
-          <div className=" ">devfinder</div>
-          <button className=" ">black</button>
+    <div
+      className={`flex justify-center pt-[10rem]  ${
+        theme === 'dark'
+          ? 'bg-gitDarkSpaceBackground'
+          : 'bg-gitLightSpaceBackground'
+      }`}
+    >
+      <div
+        className={`w-[730px] h-[444px] ${
+          theme === 'dark' ? 'bg-black text-white' : 'bg-white'
+        }`}
+      >
+        <div
+          className={`flex justify-between  ${
+            theme === 'dark'
+              ? 'bg-gitDarkSpaceBackground'
+              : 'bg-gitLightSpaceBackground'
+          }`}
+        >
+          <div className="text-lg">devfinder</div>
+          <button
+            className={`flex justify-between  ${
+              theme === 'dark'
+                ? 'bg-gitDarkSpaceBackground'
+                : 'bg-gitLightSpaceBackground'
+            }`}
+            onClick={toggleTheme}
+          >
+            {theme === 'dark' ? (
+              <img
+                src="src/feature-gitHub/assets/icon-sun.svg"
+                alt=""
+                srcSet=""
+              />
+            ) : (
+              <img
+                src="src/feature-gitHub/assets/icon-moon.svg"
+                alt=""
+                srcSet=""
+              />
+            )}
+          </button>
         </div>
         <div>
           <UserDataContext.Provider value={userData}>
-            <div className="border-2 border-black ">
-              <SearchBarAndSubmitButton getValue={getValue} />
-            </div>
-            <div className="border-2 border-black ">
-              <PersonalUserInformation />
-              <TableInformation />
-              <LinksAndLocation />
-            </div>
+            <ThemeContext.Provider value={theme}>
+              <div className="border-2 border-black">
+                <SearchBarAndSubmitButton getValue={getValue} />
+              </div>
+              <div className="border-2 border-black">
+                <PersonalUserInformation />
+                <TableInformation />
+                <LinksAndLocation />
+              </div>
+            </ThemeContext.Provider>
           </UserDataContext.Provider>
         </div>
       </div>

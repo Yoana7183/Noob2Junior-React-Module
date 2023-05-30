@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 // eslint-disable-next-line no-undef
 module.exports = {
+  darkMode: 'class',
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
@@ -16,6 +17,12 @@ module.exports = {
         hoverbuttonOfCalculatorAndRightSideBackground: '#26C2AE',
         buttonOnGitHubFindDevSearchButton: '#0079FF',
         hoverbuttonOnGitHubFindDevSearchButton: '#60ABFF',
+        gitBlue: '#0079FF',
+        hoverGitBlue: '#60ABFF',
+        gitLightSpaceBackground: '#F6F8FF',
+        gitDarkSpaceBackground: '#141D2F',
+        gitContainerLightBackground: '#FEFEFE',
+        gitContainerBlackBackground: '#1E2A47',
       },
     },
   },
