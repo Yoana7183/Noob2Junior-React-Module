@@ -31,14 +31,16 @@ const GitHubFindDev = () => {
         followers: 9350,
         following: 9,
         location: 'San Francisco',
-        error: 'initial',
+        error: 'firstLoad',
       }));
-      console.log(`isInitial in first use effect ${isInitial}`);
     }
   }, []);
 
   useEffect(() => {
-    if (userDataObject.data === !null && !userDataObject.error && !isInitial) {
+    if (userDataObject.data == null) {
+      return;
+    }
+    if (userDataObject.data != null) {
       setUserData(() => ({
         name: userDataObject.data.name,
         login: userDataObject.data.login,
@@ -53,9 +55,7 @@ const GitHubFindDev = () => {
         error: userDataObject.error,
       }));
     }
-    if (userDataObject.data == null) {
-      return;
-    }
+
     if (userDataObject.data.message === 'Not Found') {
       setUserData(() => ({
         name: 'The Octocat',
@@ -71,7 +71,6 @@ const GitHubFindDev = () => {
       }));
       setIsInitial(false);
     }
-    console.log(`isInitial in second use effect ${isInitial}`);
   }, [userDataObject.data, isInitial]);
 
   return (
