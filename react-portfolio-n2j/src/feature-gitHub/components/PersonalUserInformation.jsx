@@ -27,7 +27,7 @@ const PersonalUserInformation = () => {
   }, [userData]);
   const toggleText = initialTheme === 'dark' ? '  text-white' : 'text-black';
   return (
-    <div className="pt-6 pl-4 h-[95px] mb-[10rem]">
+    <div className="pt-6 pl-4 h-[95px] mb-[6rem]">
       <div className="grid grid-cols-3">
         <div className="w-[117px] h-[117px] rounded-full overflow-hidden col-start-1">
           <img src={image} />
@@ -39,7 +39,9 @@ const PersonalUserInformation = () => {
           </div>
           <div className="text-blue-600">@{userData.login}</div>
           <div className="col-start-2 pt-5">
-            <div>{userData.bio ? userData.bio : 'This profile has no bio'}</div>
+            <div className=" line-clamp-2 w-[490px]">
+              {userData.bio ? userData.bio : 'This profile has no bio'}
+            </div>
           </div>
         </div>
         <div className=" mr-12">Joined {formattedDate}</div>
