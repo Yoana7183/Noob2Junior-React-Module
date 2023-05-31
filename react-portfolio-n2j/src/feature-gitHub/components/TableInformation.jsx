@@ -14,7 +14,7 @@ const TableInformation = () => {
   }
   const toggleDarkToLightStyleContainers =
     initialTheme === 'dark'
-      ? ' bg-gitContainerBlackBackground text-white'
+      ? ' bg-gitDarkSpaceBackground text-white'
       : 'bg-gitLightSpaceBackground text-gitTextOnLight ';
 
   const toggleNumbers =
