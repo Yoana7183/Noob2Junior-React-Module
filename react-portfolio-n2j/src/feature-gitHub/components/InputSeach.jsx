@@ -50,11 +50,11 @@ const SearchBarAndSubmitButton = ({ getValue }) => {
           ref={inputRef}
           placeholder="Search GitHub username..."
         />
-        {errorMessage && (
-          <div className="text-red-500 ml-2">{errorMessage}</div>
-        )}
+
+        <div className="text-red-500 ml-2 w-[90px]">{errorMessage}</div>
+
         <button
-          className="ml-52 py-2 px-4 bg-blue-500 hover:bg-blue-600 text-white rounded-lg"
+          className="ml-28 py-2 px-4 bg-blue-500 hover:bg-blue-600 text-white rounded-lg"
           onClick={handleSubmit}
         >
           Search
