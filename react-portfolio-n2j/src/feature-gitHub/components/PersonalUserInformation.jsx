@@ -1,8 +1,12 @@
 import { useContext, useEffect } from 'react';
-import { UserDataContext as UserCredentials } from '../GitHubFindDev';
+import {
+  UserDataContext as UserCredentials,
+  ThemeContext,
+} from '../GitHubFindDev';
 
 const PersonalUserInformation = () => {
   const userData = useContext(UserCredentials);
+  const initialTheme = useContext(ThemeContext);
   const image = userData.avatar;
   const formattedDate = userData.timeStamp
     ? new Date(userData.timeStamp).toLocaleString('en-US', {
@@ -21,19 +25,24 @@ const PersonalUserInformation = () => {
       return;
     }
   }, [userData]);
-
+  const toggleText = initialTheme === 'dark' ? '  text-white' : 'text-black';
   return (
-    <div>
-      <div>
-        <div className="w-[117px] h-[117px] rounded-full overflow-hidden">
+    <div className="pt-6 pl-4 h-[95px] mb-[10rem]">
+      <div className="grid grid-cols-3">
+        <div className="w-[117px] h-[117px] rounded-full overflow-hidden col-start-1">
           <img src={image} />
         </div>
-        <div>{userData.name}</div>
-        <div>@{userData.login}</div>
-        <div>Joined {formattedDate}</div>
-      </div>
-      <div>
-        <div>{userData.bio ? userData.bio : 'This profile has no bio'}</div>
+
+        <div className=" ml-[-5rem] pt-5 col-start-2">
+          <div className={` text-2xl font-black ${toggleText}`}>
+            {userData.name}
+          </div>
+          <div className="text-blue-600">@{userData.login}</div>
+          <div className="col-start-2 pt-5">
+            <div>{userData.bio ? userData.bio : 'This profile has no bio'}</div>
+          </div>
+        </div>
+        <div className=" mr-12">Joined {formattedDate}</div>
       </div>
     </div>
   );
