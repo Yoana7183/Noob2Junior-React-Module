@@ -80,34 +80,26 @@ const GitHubFindDev = () => {
       setIsInitial(false);
     }
   }, [userDataObject.data, isInitial]);
+  const toggleDarkToLightStyle =
+    theme === 'dark'
+      ? 'bg-gitDarkSpaceBackground'
+      : 'bg-gitLightSpaceBackground';
 
   return (
     <div
-      className={`flex justify-center pt-[10rem]  ${
-        theme === 'dark'
-          ? 'bg-gitDarkSpaceBackground'
-          : 'bg-gitLightSpaceBackground'
-      }`}
+      className={`flex justify-center pt-[10rem] h-[60rem] ${toggleDarkToLightStyle}`}
     >
       <div
         className={`w-[730px] h-[444px] ${
-          theme === 'dark' ? 'bg-black text-white' : 'bg-white'
+          theme === 'dark'
+            ? ' bg-gitContainerBlackBackground text-white'
+            : 'bg-white'
         }`}
       >
-        <div
-          className={`flex justify-between  ${
-            theme === 'dark'
-              ? 'bg-gitDarkSpaceBackground'
-              : 'bg-gitLightSpaceBackground'
-          }`}
-        >
+        <div className={`flex justify-between  ${toggleDarkToLightStyle}`}>
           <div className="text-lg">devfinder</div>
           <button
-            className={`flex justify-between  ${
-              theme === 'dark'
-                ? 'bg-gitDarkSpaceBackground'
-                : 'bg-gitLightSpaceBackground'
-            }`}
+            className={`flex justify-between  ${toggleDarkToLightStyle}`}
             onClick={toggleTheme}
           >
             {theme === 'dark' ? (
