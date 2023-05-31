@@ -29,8 +29,8 @@ const PersonalUserInformation = () => {
           <img src={image} />
         </div>
         <div>{userData.name}</div>
-        <div>{userData.login}</div>
-        <div>{formattedDate}</div>
+        <div>@{userData.login}</div>
+        <div>Joined {formattedDate}</div>
       </div>
       <div>
         <div>{userData.bio ? userData.bio : 'This profile has no bio'}</div>

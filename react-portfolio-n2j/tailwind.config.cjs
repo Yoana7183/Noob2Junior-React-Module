@@ -23,6 +23,7 @@ module.exports = {
         gitDarkSpaceBackground: '#141D2F',
         gitContainerLightBackground: '#FEFEFE',
         gitContainerBlackBackground: '#1E2A47',
+        gitTextOnLight: '#697C9A',
       },
     },
   },

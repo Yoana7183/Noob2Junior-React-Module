@@ -80,50 +80,70 @@ const GitHubFindDev = () => {
       setIsInitial(false);
     }
   }, [userDataObject.data, isInitial]);
-  const toggleDarkToLightStyle =
+  const toggleDarkToLightStyleBackground =
     theme === 'dark'
       ? 'bg-gitDarkSpaceBackground'
       : 'bg-gitLightSpaceBackground';
+  const toggleDarkToLightStyleContainers =
+    theme === 'dark'
+      ? ' bg-gitContainerBlackBackground text-white'
+      : 'bg-white text-gitTextOnLight';
 
   return (
     <div
-      className={`flex justify-center pt-[10rem] h-[60rem] ${toggleDarkToLightStyle}`}
+      className={`flex justify-center pt-[10rem] h-[60rem] font-mono ${toggleDarkToLightStyleBackground}`}
     >
       <div
-        className={`w-[730px] h-[444px] ${
-          theme === 'dark'
-            ? ' bg-gitContainerBlackBackground text-white'
-            : 'bg-white'
-        }`}
+        className={`w-[730px] h-[100px] ${toggleDarkToLightStyleContainers}`}
       >
-        <div className={`flex justify-between  ${toggleDarkToLightStyle}`}>
-          <div className="text-lg">devfinder</div>
+        <div
+          className={`flex justify-between pb-6 ${toggleDarkToLightStyleBackground}`}
+        >
+          <div
+            className={`text-3xl font-black ${
+              theme === 'dark'
+                ? ' bg-gitDarkSpaceBackground text-white'
+                : 'bg-gitLightSpaceBackground text-black'
+            }`}
+          >
+            devfinder
+          </div>
           <button
-            className={`flex justify-between  ${toggleDarkToLightStyle}`}
+            className={`flex justify-between  ${toggleDarkToLightStyleBackground}`}
             onClick={toggleTheme}
           >
             {theme === 'dark' ? (
-              <img
-                src="src/feature-gitHub/assets/icon-sun.svg"
-                alt=""
-                srcSet=""
-              />
+              <div className="flex">
+                <p className="mt-[1rem]">Dark</p>
+                <img
+                  className="w-[20px] h-[20px] ml-2"
+                  src="src/feature-gitHub/assets/icon-sun.svg"
+                  alt=""
+                  srcSet=""
+                />
+              </div>
             ) : (
-              <img
-                src="src/feature-gitHub/assets/icon-moon.svg"
-                alt=""
-                srcSet=""
-              />
+              <div className="flex">
+                <p className="mt-[1rem]">Light</p>
+                <img
+                  className="w-[20px] h-[20px] ml-2"
+                  src="src/feature-gitHub/assets/icon-moon.svg"
+                  alt=""
+                  srcSet=""
+                />
+              </div>
             )}
           </button>
         </div>
-        <div>
+        <div className={` ${toggleDarkToLightStyleBackground}`}>
           <UserDataContext.Provider value={userData}>
             <ThemeContext.Provider value={theme}>
-              <div className="border-2 border-black">
+              <div className=" rounded-2xl shadow-2xl mb-8">
                 <SearchBarAndSubmitButton getValue={getValue} />
               </div>
-              <div className="border-2 border-black">
+              <div
+                className={`rounded-2xl shadow-2xl mt-6 p-6 h-[444px] ${toggleDarkToLightStyleContainers}`}
+              >
                 <PersonalUserInformation />
                 <TableInformation />
                 <LinksAndLocation />
