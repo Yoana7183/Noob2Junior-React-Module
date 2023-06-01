@@ -4,10 +4,11 @@ import { UserDataContext as UserLocation } from '../GitHubFindDev';
 
 const LinksAndLocation = () => {
   const userData = useContext(UserLocation);
+  const linksContainerStyle = ` flex w-[240px] h-[22px]  lg:text-base md:text-sm sm:text-sm text-xs`;
   return (
-    <div className="ml-[10rem] mt-6">
-      <div className="flex justify-between pb-5">
-        <div className=" flex w-[240px] h-[22px]">
+    <div className="lg:ml-[10rem]  mt-6  md:ml-8 sm:ml-8 sm:grid grid-cols-1">
+      <div className="flex justify-between pb-5 ">
+        <div className={linksContainerStyle}>
           <img
             src="src/feature-gitHub/assets/icon-location.svg"
             alt=""
@@ -15,7 +16,7 @@ const LinksAndLocation = () => {
           />
           <div className="pl-3">{userData.location}</div>
         </div>
-        <div className="flex w-[240px] h-[22px]">
+        <div className={linksContainerStyle}>
           <img
             src="src/feature-gitHub/assets/icon-twitter.svg"
             alt=""
@@ -25,7 +26,7 @@ const LinksAndLocation = () => {
         </div>
       </div>
       <div className="flex justify-between">
-        <div className=" flex w-[240px] h-[22px]">
+        <div className={linksContainerStyle}>
           <img
             src="src/feature-gitHub/assets/icon-website.svg"
             alt=""
@@ -41,7 +42,7 @@ const LinksAndLocation = () => {
             </a>
           </div>
         </div>
-        <div className="flex w-[240px] h-[22px]">
+        <div className={linksContainerStyle}>
           <img
             src="src/feature-gitHub/assets/icon-company.svg"
             alt=""

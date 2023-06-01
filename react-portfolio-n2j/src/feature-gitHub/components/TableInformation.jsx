@@ -19,12 +19,12 @@ const TableInformation = () => {
 
   const toggleNumbers =
     initialTheme === 'dark'
-      ? '  text-white text-2xl font-bold'
-      : ' text-black text-2xl font-bold';
+      ? '  text-white text-2xl font-bold md:text-lg sm:text-lg text-sm'
+      : ' text-black text-2xl font-bold md:text-lg sm:text-lg text-sm';
 
   return (
     <div
-      className={`ml-[10rem] w-[480px] h-[85px] px-10 p-3 rounded-2xl flex justify-between ${toggleDarkToLightStyleContainers}`}
+      className={`lg:ml-[10rem] text-sm md:mt-32 sm:mt-32 md:ml-8 sm:ml-8 :w-[480px] lg:h-[85px] px-10 p-3 rounded-2xl flex justify-between md:text-sm sm:text-sm ${toggleDarkToLightStyleContainers}`}
     >
       <div className="flex flex-col items-center">
         <div className={toggleDarkToLightStyleContainers}>Repos</div>

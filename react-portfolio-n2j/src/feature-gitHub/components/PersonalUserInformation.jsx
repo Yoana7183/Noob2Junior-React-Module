@@ -28,23 +28,32 @@ const PersonalUserInformation = () => {
   const toggleText = initialTheme === 'dark' ? '  text-white' : 'text-black';
   return (
     <div className="pt-6 pl-4 h-[95px] mb-[6rem]">
-      <div className="grid grid-cols-3">
-        <div className="w-[117px] h-[117px] rounded-full overflow-hidden col-start-1">
+      <div className="grid lg:grid-cols-3 grid-cols-2">
+        <div className=" w-[70px] h-[70px] sm:w-[117px] sm:h-[117px] rounded-full overflow-hidden col-start-1">
           <img src={image} />
         </div>
 
-        <div className=" ml-[-5rem] pt-5 col-start-2">
-          <div className={` text-2xl font-black ${toggleText}`}>
+        <div className=" ml-[-3rem] sm:ml-[-5rem] pt-5 col-start-2">
+          <div
+            className={` text-sm  sm:text-2xl font-black h-[40px] ${toggleText}`}
+          >
             {userData.name}
           </div>
-          <div className="text-blue-600">@{userData.login}</div>
-          <div className="col-start-2 pt-5">
-            <div className=" line-clamp-2 w-[490px]">
+          <div className="text-blue-600  text-sm sm:text-base">
+            @{userData.login}
+          </div>
+          <div className=" lg:hidden text-sm sm:text-base">
+            Joineed {formattedDate}
+          </div>
+          <div className="lg:col-start-2 ml-[-5rem] md:col-start-1 pt-5 md:pt-8 md:ml-[-10rem] sm:ml-[-10rem] sm:pt-8 lg:ml-0 text-sm sm:text-base">
+            <div className="line-clamp-2 w-[490px] md:w-[493px] text-sm sm:text-base">
               {userData.bio ? userData.bio : 'This profile has no bio'}
             </div>
           </div>
         </div>
-        <div className=" mr-12">Joined {formattedDate}</div>
+        <div className=" mr-12 lg:inline-block hidden">
+          Joined {formattedDate}
+        </div>
       </div>
     </div>
   );
