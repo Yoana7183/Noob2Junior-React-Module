@@ -15,8 +15,8 @@ const InputBill = () => {
   }, [inputsInObject.bill]);
 
   useEffect(() => {
-    if (/^[a-zA-Z]+$/.test(bill)) {
-      setBill(0);
+    if (/^[a-zA-Z]+$/g.test(bill)) {
+      setError(`Please enter a number`);
     }
   }, [bill]);
 

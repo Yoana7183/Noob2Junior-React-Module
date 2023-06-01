@@ -14,8 +14,8 @@ const Input = () => {
   }, [inputsInObject.people]);
 
   useEffect(() => {
-    if (/^[a-zA-Z]+$/.test(people)) {
-      setPeople(0);
+    if (/^[a-zA-Z]+$/g.test(people)) {
+      setError(`Please enter a number`);
     }
   }, [people]);
 

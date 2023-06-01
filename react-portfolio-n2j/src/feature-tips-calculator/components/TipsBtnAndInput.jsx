@@ -13,9 +13,8 @@ const TipsBtnAndInput = () => {
   }, [percentOfBtn]);
 
   useEffect(() => {
-    if (/^[a-zA-Z]+$/.test(percentOfTitInput)) {
-      setError(false);
-      setpercentOfTitInput(0);
+    if (/^[a-zA-Z]+$/g.test(percentOfTitInput)) {
+      setError(true);
     }
   }, [percentOfTitInput]);
 

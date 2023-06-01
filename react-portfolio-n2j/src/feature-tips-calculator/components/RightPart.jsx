@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react';
 import ResetBtn from './ResetBtn';
 
 const RightPart = (total) => {
-  const [isEmptyContainer, setIsEmptyContainer] = useState(false);
   let totalByPerson = total.byPerson;
   let totalAmount = total.total;
 
@@ -30,18 +28,10 @@ const RightPart = (total) => {
   if (totalByPerson == 0) {
     totalByPerson == '';
   }
-  useEffect(() => {
-    if (total.total > 0) {
-      setIsEmptyContainer(true);
-    } else {
-      setIsEmptyContainer(false);
-    }
-  }, [totalAmount]);
 
   const resultNumStyle = `text-hoverbuttonOfCalculatorAndRightSideBackground text-3xl lg:text-6xl  sm:text-6xl flex bold `;
-  const backgroundStyleisEmpty = isEmptyContainer
-    ? 'bg-buttonOfCalculatorAndRightSideBackground mt-[-6rem] lg:w-[420px] sm:mt-[-3rem] lg:mt-0 rounded-lg p-6 lg:h-[417px] mr-[5%] ml-[5%]'
-    : 'bg-white  lg:w-[420px] mt-[-6rem]  rounded-lg p-10 lg:h-[417px] sm:mt-[-3rem] lg:mt-0 mr-[5%] ml-[5%] ';
+  const backgroundStyleisEmpty =
+    'bg-buttonOfCalculatorAndRightSideBackground mt-[-6rem] lg:w-[420px] sm:mt-[-3rem] lg:mt-0 rounded-lg p-6 lg:h-[417px] mr-[5%] ml-[5%]';
 
   return (
     <div className={backgroundStyleisEmpty}>
