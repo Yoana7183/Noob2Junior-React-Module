@@ -2,8 +2,8 @@ import { useState } from 'react';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navLinkStyle = `font-sans  leading-8 border-b-[1px] border-transparent  hover:border-white  font-sans lg:font-bold block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-5 ${
-    isOpen ? 'uppercase hover:border-b-[0px] text-2xl' : 'inline'
+  const navLinkStyle = `font-sans  leading-8 border-b-[1px] border-transparent pt-1 hover:border-white  font-sans  block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-5 ${
+    isOpen ? 'uppercase hover:border-b-[0px] text-2xl pt-0' : 'inline'
   }`;
 
   return (
@@ -16,7 +16,7 @@ const Header = () => {
     >
       <div className="flex justify-between content-center pt-10">
         <div
-          className=" text-3xl pl-5 lg:pl-32 md:pl-32 sm:pl-20 font-alata text-white
+          className=" text-3xl pl-5 pt-5 lg:pl-32 md:pl-32 sm:pl-20 font-alata text-white
          w-[190px]
           lg:text-4xl md:text-4xl sm:text-4xl "
         >
@@ -45,7 +45,7 @@ const Header = () => {
            lg:mr-72"
           ></div>
 
-          <div className="block lg:hidden">
+          <div className="block lg:hidden pt-7">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="flex 
@@ -57,7 +57,7 @@ const Header = () => {
            hover:text-black-400"
             >
               <img
-                className={`fill-current h-10 w-10 mt-[-2rem] ${
+                className={`fill-current h-10  w-10 mt-[-2rem] ${
                   isOpen ? 'hidden' : 'block'
                 }`}
                 src="/src/feature-loopstudios/images/hamburger.svg"
@@ -110,7 +110,7 @@ const Header = () => {
         className={
           isOpen
             ? 'hidden'
-            : 'font-[100] font-alata border border-white  text-white w-[90%] h-[12.5rem] text-[200%] p-8 ml-[calc(10%-1rem)] mt-[10rem]  lg:w-[600px] lg:h-[300px]  lg:ml-32 lg:text-7xl lg:mt-32 lg:p-10 md:h-[220px] md:w-[400px] md:ml-32 md:mr-24 md:text-4xl md:p-10 md:mt-[6rem] sm:mt-[2rem]'
+            : 'font-[100] font-alata border border-white  text-white w-[90%] h-[12.5rem] text-[200%] p-8 ml-[calc(10%-1rem)] mt-[10rem]  lg:w-[600px] lg:h-[300px]  lg:ml-32 lg:text-7xl lg:font-[1] lg:mt-32 lg:p-10 md:h-[220px] md:w-[400px] md:ml-32 md:mr-24 md:text-4xl md:p-10 md:mt-[6rem] sm:mt-[2rem]'
         }
       >
         IMMERSIVE EXPERIENCES THAT DELIVER
