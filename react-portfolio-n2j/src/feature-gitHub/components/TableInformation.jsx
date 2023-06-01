@@ -7,11 +7,7 @@ import {
 const TableInformation = () => {
   const userData = useContext(UserTableInformation);
   const initialTheme = useContext(ThemeContext);
-  if (userData.error == true) {
-    userData.repos = '';
-    userData.followers = '';
-    userData.following = '';
-  }
+
   const toggleDarkToLightStyleContainers =
     initialTheme === 'dark'
       ? ' bg-gitDarkSpaceBackground text-white'
@@ -24,7 +20,7 @@ const TableInformation = () => {
 
   return (
     <div
-      className={`lg:ml-[10rem] text-sm mt-[-1.5rem] md:mt-32 sm:mt-32 md:ml-8 sm:ml-8 :w-[480px] lg:h-[85px] px-10 p-3 rounded-2xl flex justify-between md:text-sm sm:text-sm ${toggleDarkToLightStyleContainers}`}
+      className={`border border-[#00000033] lg:ml-[10rem] text-sm mt-[-1.5rem] lg:mt-[0.5rem] md:mt-32 sm:mt-32 md:ml-8 sm:ml-8 lg:w-[480px] lg:h-[85px] px-10 p-3 rounded-2xl flex justify-between md:text-sm sm:text-sm ${toggleDarkToLightStyleContainers}`}
     >
       <div className="flex flex-col items-center">
         <div className={toggleDarkToLightStyleContainers}>Repos</div>

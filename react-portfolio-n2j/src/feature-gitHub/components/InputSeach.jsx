@@ -19,7 +19,7 @@ const SearchBarAndSubmitButton = ({ getValue }) => {
       setErrorMessage('');
     }
     if (userData.error === true) {
-      setErrorMessage('No result');
+      setErrorMessage('No results');
     }
     if (!userData.error) {
       setErrorMessage('');
@@ -60,16 +60,18 @@ const SearchBarAndSubmitButton = ({ getValue }) => {
           onKeyPress={handleKeyPress}
         />
 
-        <div className="text-red-500 lg:ml-10 lg:text-base md:text-base sm:text-sm lg:w-[90px] md:ml-[-3rem] sm:ml-[-2rem] sm:w-[120px] md:w-[150px] w-[80px] ml-[-8rem] mr-[4rem] text-xs ">
-          {errorMessage}
-        </div>
+        <div className="relative flex items-center">
+          <div className="text-red-500 lg:ml-[13rem] lg:text-base md:text-base sm:text-sm lg:w-[90px] md:ml-[4rem] sm:ml-[5rem] sm:w-[120px] md:w-[150px] w-[80px] ml-[-8rem] mr-[4rem] text-xs ">
+            {errorMessage}
+          </div>
 
-        <button
-          className="lg:ml-[4rem] md:ml-[-3.5rem] sm:ml-[-2rem] ml-[-4rem] py-2 px-4  bg-blue-500 hover:bg-blue-600 text-white rounded-lg"
-          onClick={handleSubmit}
-        >
-          Search
-        </button>
+          <button
+            className="lg:ml-[-3rem] sm:h-[50px] sm:w-[106px] h-[46px] w-[84]  md:ml-[-7rem] sm:ml-[-6rem] ml-[-4rem] py-2 px-4  bg-blue-500 hover:bg-blue-600 text-white rounded-lg"
+            onClick={handleSubmit}
+          >
+            Search
+          </button>
+        </div>
       </div>
     </div>
   );
