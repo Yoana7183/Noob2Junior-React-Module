@@ -115,22 +115,24 @@ const GitHubFindDev = () => {
             className={`flex justify-between  ${toggleDarkToLightStyleBackground}`}
             onClick={toggleTheme}
           >
-            {theme === 'dark' ? (
-              <div className="flex">
-                <p className="mt-[1rem]">Dark</p>
+            {theme === 'light' ? (
+              <div className="hover:text-black">
+                <div className="mt-[1rem] flex justify-center">
+                  Dark
+                  <img
+                    className="w-[20px] h-[20px] ml-2 "
+                    src="src/feature-gitHub/assets/icon-moon.svg"
+                    alt=""
+                    srcSet=""
+                  />
+                </div>
+              </div>
+            ) : (
+              <div className="mt-[1rem] flex justify-center">
+                Light
                 <img
                   className="w-[20px] h-[20px] ml-2"
                   src="src/feature-gitHub/assets/icon-sun.svg"
-                  alt=""
-                  srcSet=""
-                />
-              </div>
-            ) : (
-              <div className="flex">
-                <p className="mt-[1rem]">Light</p>
-                <img
-                  className="w-[20px] h-[20px] ml-2"
-                  src="src/feature-gitHub/assets/icon-moon.svg"
                   alt=""
                   srcSet=""
                 />

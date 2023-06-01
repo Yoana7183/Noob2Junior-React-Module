@@ -47,7 +47,7 @@ const PersonalUserInformation = () => {
           <div className=" lg:hidden text-sm sm:text-base ">
             Joineed {formattedDate}
           </div>
-          <div className="lg:col-start-2 ml-[-6rem] md:col-start-1 pt-4 md:pt-8 md:ml-[-10rem] sm:ml-[-10rem] sm:pt-8 lg:ml-0 text-sm sm:text-base">
+          <div className="lg:col-start-2 ml-[-6rem] md:col-start-1 pt-4  sm:ml-[-10rem] lg:ml-0 text-sm sm:text-base">
             <div className="line-clamp-2  md:w-[493px] text-sm sm:text-base">
               {userData.bio ? userData.bio : 'This profile has no bio'}
             </div>
