@@ -14,24 +14,15 @@ const InputBill = () => {
     }
   }, [inputsInObject.bill]);
 
-  useEffect(() => {
-    if (/^[a-zA-Z]+$/g.test(bill)) {
-      setError(`Please enter a number`);
-    }
-  }, [bill]);
-
-  useEffect(() => {
-    if (bill == 0) {
-      setError('');
-    }
-  }, [bill, inputsInObject.bill]);
-
   const handleChange = (event) => {
     let billAmount = event.target.value.trim();
     setBill(billAmount);
   };
 
   useEffect(() => {
+    if (/^[a-zA-Z]+$/g.test(bill)) {
+      setError(`Please enter a number`);
+    }
     if (isNaN(bill)) {
       setError(`Please enter a number`);
     } else if (bill < 0) {

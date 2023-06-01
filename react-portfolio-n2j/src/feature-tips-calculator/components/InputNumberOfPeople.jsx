@@ -13,18 +13,6 @@ const Input = () => {
     }
   }, [inputsInObject.people]);
 
-  useEffect(() => {
-    if (/^[a-zA-Z]+$/g.test(people)) {
-      setError(`Please enter a number`);
-    }
-  }, [people]);
-
-  useEffect(() => {
-    if (people == 0) {
-      setError('');
-    }
-  }, [people, inputsInObject.people]);
-
   const handleClick = (event) => {
     let numberOfPeople = event.target.value.trim();
     setPeople(numberOfPeople);
@@ -32,7 +20,9 @@ const Input = () => {
 
   useEffect(() => {
     let checkedValue;
-
+    if (/^[a-zA-Z]+$/g.test(people)) {
+      setError(`Please enter a number`);
+    }
     if (isNaN(people)) {
       setError(`Please enter a number`);
     } else if (people < 0) {

@@ -13,29 +13,11 @@ const TipsBtnAndInput = () => {
   }, [percentOfBtn]);
 
   useEffect(() => {
-    if (/^[a-zA-Z]+$/g.test(percentOfTitInput)) {
-      setError(true);
-    }
-  }, [percentOfTitInput]);
-
-  useEffect(() => {
-    if (percentOfTitInput == 0) {
-      setError(false);
-    }
-  }, [percentOfTitInput, inputsInObject.tip]);
-
-  useEffect(() => {
     if (inputsInObject.tip == 0) {
       inputsInObject.tip = '';
       setError(false);
     }
   }, [inputsInObject]);
-
-  useEffect(() => {
-    if (percentOfTitInput == 0) {
-      setError(false);
-    }
-  }, [percentOfTitInput, inputsInObject.tip]);
 
   const handleChange = (event) => {
     let inputPercent = event.target.value.trim();
@@ -43,6 +25,9 @@ const TipsBtnAndInput = () => {
   };
 
   useEffect(() => {
+    if (/^[a-zA-Z]+$/g.test(percentOfTitInput)) {
+      setError(true);
+    }
     if (isNaN(percentOfTitInput)) {
       setError(true);
     } else if (percentOfTitInput < 0) {
