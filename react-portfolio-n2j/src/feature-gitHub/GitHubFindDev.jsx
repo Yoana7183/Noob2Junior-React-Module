@@ -30,6 +30,7 @@ const GitHubFindDev = () => {
   useEffect(() => {
     if (isInitial) {
       setUserData(() => ({
+        urlUser: 'https://github.com/octocat',
         name: 'The Octocat',
         avatar: 'https://avatars.githubusercontent.com/u/583231?v=4',
         login: 'octocat',
@@ -50,6 +51,7 @@ const GitHubFindDev = () => {
     }
     if (userDataObject.data != null) {
       setUserData(() => ({
+        urlUser: userDataObject.data.html_url,
         name: userDataObject.data.name,
         login: userDataObject.data.login,
         avatar: userDataObject.data.avatar_url,
@@ -66,6 +68,7 @@ const GitHubFindDev = () => {
 
     if (userDataObject.data.message === 'Not Found') {
       setUserData(() => ({
+        urlUser: 'https://github.com/octocat',
         name: 'The Octocat',
         avatar: 'https://avatars.githubusercontent.com/u/583231?v=4',
         login: 'octocat',

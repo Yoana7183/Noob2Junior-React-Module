@@ -3,12 +3,12 @@ import { useEffect, useState } from 'react';
 function useFetchData(userName) {
   const [fetchedData, setfetchedData] = useState(null);
   const [error, setError] = useState(false);
-
+  const url = `https://api.github.com/users/${userName}`;
   useEffect(() => {
     if (userName.length == 0) {
       return;
     }
-    fetch(`https://api.github.com/users/${userName}`, {
+    fetch(url, {
       method: 'GET',
       headers: {
         Authorization: `Bearer ${import.meta.env.VITE_GITHUB_API_KEY}`,

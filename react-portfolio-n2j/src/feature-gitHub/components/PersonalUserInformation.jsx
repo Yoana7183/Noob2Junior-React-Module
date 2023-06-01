@@ -30,7 +30,9 @@ const PersonalUserInformation = () => {
     <div className=" pt-3 sm:pt-6 pl-4 h-[95px] mb-[6rem]">
       <div className="grid lg:grid-cols-3 grid-cols-2">
         <div className=" w-[70px] h-[70px] sm:w-[117px] sm:h-[117px] rounded-full overflow-hidden col-start-1">
-          <img src={image} />
+          <a href={userData.urlUser} target="_blank" rel="noopener noreferrer">
+            <img src={image} alt="" />
+          </a>
         </div>
 
         <div className=" ml-[-3rem] sm:ml-[-5rem] pt-3 sm:pt-5 col-start-2">
