@@ -1,6 +1,7 @@
 const Cards = () => {
   const cardStyle = ` bg-cover
-
+  "hover:bg-white hover:opacity-50 cursor-pointer
+fonr-thin
    lg:h-[450px]
     bg-no-repeat
      lg:text-2xl
@@ -9,8 +10,9 @@ const Cards = () => {
       md:w-[100%]
       md:h-[250px]
       h-[7.5rem]
-      m:h-[11rem]`;
-  const paragraphCardsStyle = `lg:absolute font-alata font-thin text-xl w-[50%] font-light sm:text-3xl lg:inset-x-0 lg:bottom-0  p-5 md:text-4xl md:font-thin md:w-[30%]`;
+      m:h-[11rem]
+      `;
+  const paragraphCardsStyle = `  hover:text-black  text-white font-normal font-sans lg:absolute  text-xl w-[20%] font-light sm:text-3xl lg:inset-x-0 lg:bottom-0  p-5 md:text-4xl md:font-thin md:w-[30%]`;
   return (
     <div
       className=" 
@@ -32,8 +34,7 @@ const Cards = () => {
         <div className="flex mb-10 justify-between">
           <div
             className="font-sans text-xl 
-            lg:text-4xl
-           lg:font-thin
+            lg:text-4xl font-thin
            md:text-3xl
            sm:text-2xl"
           >
@@ -41,7 +42,13 @@ const Cards = () => {
           </div>
           <button
             className="
-            bg-black text-white
+            font-sans
+            font-thin
+            bg-white
+            text-black
+            border
+            border-black
+            hover:bg-black hover:text-white
             hidden
             2xl:inline
             xl:inline
@@ -74,6 +81,7 @@ const Cards = () => {
           >
             <p className={paragraphCardsStyle}>DEEP EARTH</p>
           </div>
+
           <div
             className={`${cardStyle}
             bg-[url('/src/feature-loopstudios/images/mobile/image-night-arcade.jpg')]
@@ -127,6 +135,8 @@ const Cards = () => {
       </div>
       <button
         className="
+        font-sans
+        font-light
         ml-[25%]
         mr-[25%]
         mt-12

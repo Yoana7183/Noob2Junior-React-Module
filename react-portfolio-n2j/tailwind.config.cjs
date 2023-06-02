@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['IBM+Plex+Sans', 'Amatic SC', 'Alata', 'sans-serif'],
+        sans: ['Josefin Sans', 'sans-serif'],
         serif: ['Merriweather', 'serif'],
         titleEqualizer: ['IBM Plex Sans', 'sans-serif'],
         alata: ['Alata'],
@@ -27,5 +27,8 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@tailwindcss/line-clamp')],
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+    require('@tailwindcss/typography'),
+  ],
 };

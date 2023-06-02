@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navLinkStyle = `font-sans  leading-8 border-b-[1px] border-transparent pt-1 hover:border-white  font-sans  block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-5 ${
+  const navLinkStyle = `font-sans font-base leading-8 border-b-[1px] border-transparent pt-1 hover:border-white  block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-5 ${
     isOpen ? 'uppercase hover:border-b-[0px] text-2xl pt-0' : 'inline'
   }`;
 
@@ -54,10 +54,10 @@ const Header = () => {
            py-2 
            rounded 
            text-black-500 
-           hover:text-black-400"
+           hover:text-black-400 "
             >
               <img
-                className={`fill-current h-10  w-10 mt-[-2rem] ${
+                className={`fill-current h-10  w-10 mt-[-2.6rem] ${
                   isOpen ? 'hidden' : 'block'
                 }`}
                 src="/src/feature-loopstudios/images/hamburger.svg"
@@ -66,7 +66,7 @@ const Header = () => {
               />
 
               <img
-                className={`fill-current h-10 w-10 mt-[-24rem] mr-10 ${
+                className={`fill-current h-10 w-10 mt-[-26rem] mr-10 ${
                   isOpen ? 'block' : 'hidden'
                 }`}
                 src="/src/feature-loopstudios/images/close.svg"
@@ -77,7 +77,7 @@ const Header = () => {
           </div>
 
           <div
-            className={`w-full block ml-[-22rem] sm:ml-[-35rem] md:ml-[-30rem] md:mt-24 mt-24 lg:mt-0 flex-grow lg:flex lg:items-center lg:w-auto ${
+            className={`w-full block ml-[-22rem] font-sans font-thin sm:ml-[-35rem] md:ml-[-30rem] md:mt-24 mt-24 lg:mt-0 flex-grow lg:flex lg:items-center lg:w-auto ${
               isOpen ? 'block' : 'hidden'
             }`}
           >
@@ -106,11 +106,13 @@ const Header = () => {
           </div>
         </nav>
       </div>
+
       <div
+        id="headerText"
         className={
           isOpen
             ? 'hidden'
-            : 'font-[100] font-alata border border-white  text-white w-[90%] h-[12.5rem] text-[200%] p-8 ml-[calc(10%-1rem)] mt-[10rem]  lg:w-[600px] lg:h-[300px]  lg:ml-32 lg:text-7xl lg:font-[1] lg:mt-32 lg:p-10 md:h-[220px] md:w-[400px] md:ml-32 md:mr-24 md:text-4xl md:p-10 md:mt-[6rem] sm:mt-[2rem]'
+            : 'text-3xl font-thin font-sans border border-white text-white w-[90%] h-[12.5rem] p-8 ml-[calc(10%-1rem)] mt-[10rem] lg:w-[600px] lg:h-[300px] lg:ml-32 lg:text-7xl lg:mt-32 lg:p-10 md:h-[220px] md:w-[400px] md:ml-32 md:mr-24 md:text-4xl md:p-10 md:mt-[6rem] sm:mt-[2rem]'
         }
       >
         IMMERSIVE EXPERIENCES THAT DELIVER
