@@ -53,9 +53,13 @@ const Header = () => {
           leading-loose
            flex
             justify-center
+            lg:font-base
              lg:w-[50%] 
              md:w-[60%] 
-              md:drop-shadow-2xl
+             md:font-bold
+             sm:font-bold
+              md:drop-shadow-4xl
+              sm:drop-shadow-4xl
                sm:w-[70%]"
         >
           A system audio equalizer specifically designed for Android and iOS.
