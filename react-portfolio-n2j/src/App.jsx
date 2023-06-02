@@ -7,6 +7,7 @@ import GitHub from './pages/GitHub';
 import LandingPage from './pages/LandingPage';
 import LandingPageEz from './pages/LandingPageEz';
 import TipsCalculator from './pages/TipsCalculator';
+import ErrorPage from './pages/ErrorPage';
 function App() {
   return (
     <BrowserRouter>
@@ -18,9 +19,11 @@ function App() {
           <Route path="loopstudio" element={<LandingPage />} />
           <Route path="equalize" element={<LandingPageEz />} />
           <Route path="tipscalc" element={<TipsCalculator />} />
+          <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
   );
 }
+
 export default App;
