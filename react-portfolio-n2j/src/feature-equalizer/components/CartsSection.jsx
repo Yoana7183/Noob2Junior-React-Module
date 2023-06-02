@@ -128,7 +128,7 @@ const CartSection = () => {
                     md:p-10
                      md:rounded-xl
                       sm:w-[330px]
-                       sm:h-[520px]
+                       sm:h-[550px]
                         sm:rounded-xl
                          sm:p-8 
                          sm:mt-[7rem]

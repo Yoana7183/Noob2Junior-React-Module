@@ -8,7 +8,7 @@ module.exports = {
       fontFamily: {
         sans: ['Josefin Sans', 'sans-serif'],
         serif: ['Merriweather', 'serif'],
-        titleEqualizer: ['IBM Plex Sans', 'sans-serif'],
+        titleEqualizer: ['"IBM Plex Sans"', 'sans-serif'],
         alata: ['Alata'],
         josefin: ['Josefin-Sans'],
       },

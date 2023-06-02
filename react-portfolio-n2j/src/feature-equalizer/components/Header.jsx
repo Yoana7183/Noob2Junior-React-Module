@@ -48,14 +48,13 @@ const Header = () => {
           We make your music sound extraordinary.
         </div>
         <div
-          className="  text-base lg:text-2xl
+          className="  text-light lg:text-1xl
          font-Equalizer
           leading-loose
            flex
             justify-center
              lg:w-[50%] 
              md:w-[60%] 
-             md:font-black
               md:drop-shadow-2xl
                sm:w-[70%]"
         >
