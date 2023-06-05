@@ -9,10 +9,10 @@ const InputBill = () => {
 
   useEffect(() => {
     if (inputsInObject.bill == 0) {
-      setBill(0);
       inputsInObject.bill = '';
+      setError('');
     }
-  }, [inputsInObject.bill]);
+  }, [inputsInObject]);
 
   const handleChange = (event) => {
     let billAmount = event.target.value.trim();
@@ -39,7 +39,7 @@ const InputBill = () => {
     inputsInObject.bill = '';
   }
 
-  let value = inputsInObject.bill === undefined ? '' : inputsInObject.bill;
+  let value = bill == 0 ? '' : inputsInObject.bill;
   return (
     <div className="pb-10">
       <div className="flex justify-between">
