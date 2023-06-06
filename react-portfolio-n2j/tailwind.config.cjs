@@ -11,6 +11,7 @@ module.exports = {
         titleEqualizer: ['"IBM Plex Sans"', 'sans-serif'],
         alata: ['Alata'],
         josefin: ['Josefin-Sans'],
+        kumbhSans: ['Kumbh Sans'],
       },
       colors: {
         buttonOfCalculatorAndRightSideBackground: '#00474B',
