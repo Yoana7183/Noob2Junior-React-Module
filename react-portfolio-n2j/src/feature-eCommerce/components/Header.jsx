@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
-import { CartContext } from '../EcommerceShop';
+import { CartContext, QuantityContext } from '../EcommerceShop';
 
 const Header = () => {
   const { isCartOpen, setIsCartOpen } = useContext(CartContext);
+  const { quantity } = useContext(QuantityContext);
   const LinksStyle = `px-3.5 border-b-4 border-transparent  rounded-sm pb-10 hover:border-ecommerceOrangeColor ">`;
 
   const handleClick = () => {
@@ -28,7 +29,11 @@ const Header = () => {
           id="cart"
           onClick={handleClick}
         >
+          <div className="w-[20px] h-[15px] bg-ecommerceOrangeColor text-white text-xs flex justify-center font-black rounded-xl">
+            {quantity}
+          </div>
           <img
+            className="mt-[-0.2rem] ml-[-0.5rem]"
             src="src\feature-eCommerce\images\icon-cart.svg"
             alt=""
             srcSet=""
