@@ -1,11 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { QuantityContext } from '../EcommerceShop';
 
 const QuantityButton = () => {
+  const { quantity, setQuantity } = useContext(QuantityContext);
+
+  const handleMinusClick = () => {
+    if (quantity > 0) {
+      setQuantity((prevCount) => prevCount - 1);
+    }
+  };
+  const handlePlusClick = () => {
+    setQuantity((prevCount) => prevCount + 1);
+  };
+
+  const handleInputChange = (event) => {
+    const newQuantity = parseInt(event.target.value);
+    setQuantity(newQuantity);
+  };
   return (
     <div>
       <div className=" flex justify-between mt-10">
-        <div className="w-[157px] h-[56px]  bg-[#ececec] flex p-5 justify-center rounded-xl">
-          <div className="w-[15px]">
+        <div className="w-[157px] h-[56px]  bg-[#ececec] flex p-5 justify-between rounded-xl">
+          <div className="w-[15px] cursor-pointer " onClick={handleMinusClick}>
             <img
               className="bg-cover pt-1"
               src="src\feature-eCommerce\images\icon-minus.svg"
@@ -13,10 +29,15 @@ const QuantityButton = () => {
               srcSet=""
             />
           </div>
-          <input type="text" className="w-[80px] bg-[#ececec]" />
-          <div className="w-[15px]">
+          <input
+            type="text"
+            className=" w-[20px] bg-[#ececec]"
+            value={quantity}
+            onChange={handleInputChange}
+          />
+          <div className="w-[15px] cursor-pointer" onClick={handlePlusClick}>
             <img
-              className="bg-cover"
+              className="bg-cover "
               src="src\feature-eCommerce\images\icon-plus.svg"
               alt=""
               srcSet=""

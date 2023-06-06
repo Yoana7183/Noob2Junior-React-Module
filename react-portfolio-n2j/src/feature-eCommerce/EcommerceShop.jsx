@@ -5,21 +5,24 @@ import Gallery from './components/Gallery';
 import InformationContainer from './components/InformationContainer';
 
 export const CartContext = createContext();
-
+export const QuantityContext = createContext();
 const EcommerceShop = () => {
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [quantity, setQuantity] = useState(0);
   return (
     <div className=" font-kumbhSans flex justify-center mt-16">
       <div className="w-[1110px] h-[740px] ">
         <div className="">
-          <CartContext.Provider value={{ isCartOpen, setIsCartOpen }}>
-            <Header />
-            <Cart />
-          </CartContext.Provider>
-          <div className="w-[1015px] h-[565px] flex justify-between">
-            <Gallery />
-            <InformationContainer />
-          </div>
+          <QuantityContext.Provider value={{ quantity, setQuantity }}>
+            <CartContext.Provider value={{ isCartOpen, setIsCartOpen }}>
+              <Header />
+              <Cart />
+            </CartContext.Provider>
+            <div className="w-[1015px] h-[565px] flex justify-between">
+              <Gallery />
+              <InformationContainer />
+            </div>
+          </QuantityContext.Provider>
         </div>
       </div>
     </div>
