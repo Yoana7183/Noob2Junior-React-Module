@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { CartContext } from '../EcommerceShop';
 
 const Header = () => {
+  const { isCartOpen, setIsCartOpen } = useContext(CartContext);
   const LinksStyle = `px-3.5 border-b-4 border-transparent  rounded-sm pb-10 hover:border-ecommerceOrangeColor ">`;
+
+  const handleClick = () => {
+    setIsCartOpen(!isCartOpen);
+  };
+
   return (
     <div className="flex justify-between border-b-[1px] border-[#E4E9F2]  ">
       <div className="flex">
@@ -16,7 +23,11 @@ const Header = () => {
         <div className={LinksStyle}>Contact</div>
       </div>
       <div className="flex justify-center">
-        <div className=" w-[22px] pt-5 ">
+        <div
+          className=" cursor-pointer w-[22px] pt-5"
+          id="cart"
+          onClick={handleClick}
+        >
           <img
             src="src\feature-eCommerce\images\icon-cart.svg"
             alt=""
