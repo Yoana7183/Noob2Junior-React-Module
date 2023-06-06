@@ -1,9 +1,9 @@
 import React from 'react';
 
 const Header = () => {
-  const LinksStyle = `px-3.5 border-b-4 border-transparent  rounded-sm pb-10 hover:border-orange-500 ">`;
+  const LinksStyle = `px-3.5 border-b-4 border-transparent  rounded-sm pb-10 hover:border-ecommerceOrangeColor ">`;
   return (
-    <div className="flex justify-between border-[1px] border-[#E4E9F2]  ">
+    <div className="flex justify-between border-b-[1px] border-[#E4E9F2]  ">
       <div className="flex">
         <div className="w-[200px] pr-20">
           <img src="src\feature-eCommerce\images\logo.svg" alt="" srcSet="" />

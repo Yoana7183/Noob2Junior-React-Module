@@ -25,6 +25,8 @@ module.exports = {
         gitContainerLightBackground: '#FEFEFE',
         gitContainerBlackBackground: '#1E2A47',
         gitTextOnLight: '#697C9A',
+        ecommerceOrangeColor: '#FF7E1B',
+        hoverEcommerceOrangeColor: '#FFAB6A',
       },
     },
   },
