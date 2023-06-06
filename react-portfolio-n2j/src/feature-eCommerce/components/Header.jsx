@@ -29,9 +29,12 @@ const Header = () => {
           id="cart"
           onClick={handleClick}
         >
-          <div className="w-[20px] h-[15px] bg-ecommerceOrangeColor text-white text-xs flex justify-center font-black rounded-xl">
-            {quantity}
-          </div>
+          {quantity > 0 && (
+            <div className="w-[20px] h-[15px] bg-ecommerceOrangeColor text-white text-xs flex justify-center font-black rounded-xl">
+              {quantity}
+            </div>
+          )}
+
           <img
             className="mt-[-0.2rem] ml-[-0.5rem]"
             src="src\feature-eCommerce\images\icon-cart.svg"
