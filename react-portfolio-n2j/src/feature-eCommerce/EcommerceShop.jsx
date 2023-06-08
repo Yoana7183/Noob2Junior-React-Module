@@ -16,7 +16,7 @@ const EcommerceShop = () => {
 
   const bodyBackgroundStyleInModal = `${
     initialStateObject.isModal
-      ? `bg-green-100 font-kumbhSans flex justify-center pt-16 h-[1200px]`
+      ? `bg-grey-800 font-kumbhSans flex justify-center pt-16 h-[1200px] z-10`
       : `font-kumbhSans flex justify-center pt-16  `
   }`;
   return (

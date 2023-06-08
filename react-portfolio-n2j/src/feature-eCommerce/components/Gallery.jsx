@@ -52,7 +52,7 @@ const Gallery = () => {
   const thumbnailImages = images.map((image, index) => (
     <img
       key={index}
-      className="w-[88px] h-[88px] rounded-xl cursor-pointer ml-6"
+      className="w-[88px] h-[88px] rounded-xl cursor-pointer ml-6 hover:border-2 hover:border-ecommerceOrangeColor hover:opacity-60"
       src={image.thumbnail}
       alt="Gallery Image"
       onClick={() => getCurrentTargetImage(index)}
@@ -62,8 +62,8 @@ const Gallery = () => {
   return (
     <div>
       {isOpen && (
-        <div className=" fixed top-0 left-0 w-full h-full flex items-center justify-center">
-          <div className="w-full h-full rounded-lg p-8 ">
+        <div className=" fixed top-0 left-0 w-full h-full flex items-center justify-center ">
+          <div className="w-full h-full rounded-lg p-8 absolute top-0 left-0 bg-gray-800 bg-opacity-50">
             <div className="flex items-center justify-center mt-[10rem]">
               <div className="relative">
                 <div className="flex items-center">
@@ -88,7 +88,7 @@ const Gallery = () => {
                       />
                     </div>
                     <img
-                      className="w-[550px]"
+                      className="w-[550px] opacity-100"
                       src={images[currentImageIndex].origin}
                       alt="Gallery Image"
                     />
