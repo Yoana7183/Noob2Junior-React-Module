@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect, useContext } from 'react';
+import { InitialContext } from '../EcommerceShop';
 const images = [
   {
     origin: 'src/feature-eCommerce/images/image-product-1.jpg',
@@ -19,8 +20,18 @@ const images = [
 ];
 
 const Gallery = () => {
+  const { initialStateObject, setinitialStateObject } =
+    useContext(InitialContext);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    setinitialStateObject((prev) => ({
+      ...prev,
+      isModal: isOpen,
+    }));
+    initialStateObject;
+  }, [isOpen]);
 
   const goToPreviousImage = () => {
     setCurrentImageIndex((prevIndex) =>
@@ -41,7 +52,7 @@ const Gallery = () => {
   const thumbnailImages = images.map((image, index) => (
     <img
       key={index}
-      className="w-[88px] h-[88px] rounded-xl cursor-pointer"
+      className="w-[88px] h-[88px] rounded-xl cursor-pointer ml-6"
       src={image.thumbnail}
       alt="Gallery Image"
       onClick={() => getCurrentTargetImage(index)}
@@ -52,38 +63,50 @@ const Gallery = () => {
     <div>
       {isOpen && (
         <div className=" fixed top-0 left-0 w-full h-full flex items-center justify-center">
-          <div className="s rounded-lg p-8">
-            <div className="flex items-center">
-              <div className="mr-4">
-                <span className=""></span>
-                <img
-                  className="w-12 cursor-pointer"
-                  src="src/feature-eCommerce/images/icon-close.svg"
-                  alt=""
-                  onClick={() => setIsOpen(false)}
-                />
-              </div>
+          <div className="w-full h-full rounded-lg p-8 ">
+            <div className="flex items-center justify-center mt-[10rem]">
               <div className="relative">
                 <div className="flex items-center">
-                  <button
-                    className="bg-gray-200 text-gray-800 px-4 py-2 rounded-md mr-2"
+                  <div
+                    className="rounded-full bg-white w-[56px] h-[56px] flex justify-center"
                     onClick={goToPreviousImage}
                   >
-                    Prev
-                  </button>
-                  <img
-                    className="w-64"
-                    src={images[currentImageIndex].origin}
-                    alt="Gallery Image"
-                  />
-                  <button
-                    className="bg-gray-200 text-gray-800 px-4 py-2 rounded-md ml-2"
+                    <img
+                      className="w-[10px] h-[16px] mt-5"
+                      src="src\feature-eCommerce\images\icon-previous.svg"
+                      alt=""
+                      srcSet=""
+                    ></img>
+                  </div>
+                  <div className="w-[550px]">
+                    <div className="flex justify-end">
+                      <img
+                        className="w-8 cursor-pointer  text-orange-400"
+                        src="src/feature-eCommerce/images/icon-close.png"
+                        alt=""
+                        onClick={() => setIsOpen(false)}
+                      />
+                    </div>
+                    <img
+                      className="w-[550px]"
+                      src={images[currentImageIndex].origin}
+                      alt="Gallery Image"
+                    />
+                  </div>
+
+                  <div
+                    className="rounded-full bg-white w-[56px] h-[56px] flex justify-center"
                     onClick={goToNextImage}
                   >
-                    Next
-                  </button>
+                    <img
+                      className="w-[10px] h-[16px] mt-5"
+                      src="src\feature-eCommerce\images\icon-next.svg"
+                      alt=""
+                      srcSet=""
+                    ></img>
+                  </div>
                 </div>
-                <div className="flex mt-4">{thumbnailImages}</div>
+                <div className="flex mt-4 px-4 ml-16">{thumbnailImages}</div>
               </div>
             </div>
           </div>
@@ -101,7 +124,7 @@ const Gallery = () => {
             />
           </div>
         </div>
-        <div className="flex justify-evenly mt-5">{thumbnailImages}</div>
+        <div className="flex justify-evenly mt-5 ml-8">{thumbnailImages}</div>
       </div>
     </div>
   );

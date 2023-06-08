@@ -47,16 +47,16 @@ const QuantityButton = () => {
             />
           </div>
         </div>
-        <div className="w-[272px] h-[56px] bg-ecommerceOrangeColor hover:bg-hoverEcommerceOrangeColor flex justify-center rounded-xl text-white cursor-pointer">
-          <button
-            className=" flex justify-center pt-4"
-            onClick={() => {
-              setinitialStateObject((prev) => ({
-                ...prev,
-                quantity: inputQuantity,
-              }));
-            }}
-          >
+        <div
+          className="w-[272px] h-[56px] bg-ecommerceOrangeColor hover:bg-hoverEcommerceOrangeColor flex justify-center rounded-xl text-white cursor-pointer"
+          onClick={() => {
+            setinitialStateObject((prev) => ({
+              ...prev,
+              quantity: inputQuantity,
+            }));
+          }}
+        >
+          <button className=" flex justify-center pt-4">
             <div>
               <img
                 src="src\feature-eCommerce\images\icon-cart.svg"

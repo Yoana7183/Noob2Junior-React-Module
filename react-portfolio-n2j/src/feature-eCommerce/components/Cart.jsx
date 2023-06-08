@@ -37,7 +37,15 @@ const Cart = () => {
                   $125.00 x {initialStateObject.quantity} ${totalAmount}.00
                 </div>
               </div>
-              <div className="pt-5">
+              <div
+                className="pt-5 cursor-pointer"
+                onClick={() =>
+                  setinitialStateObject((prev) => ({
+                    ...prev,
+                    quantity: 0,
+                  }))
+                }
+              >
                 <img
                   src="src\feature-eCommerce\images\icon-delete.svg"
                   alt=""

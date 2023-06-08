@@ -8,13 +8,19 @@ export const InitialContext = createContext();
 const initialStateInfo = {
   quantity: 0,
   isCartOpen: false,
+  isModal: false,
 };
 const EcommerceShop = () => {
   const [initialStateObject, setinitialStateObject] =
     useState(initialStateInfo);
 
+  const bodyBackgroundStyleInModal = `${
+    initialStateObject.isModal
+      ? `bg-green-100 font-kumbhSans flex justify-center pt-16 h-[1200px]`
+      : `font-kumbhSans flex justify-center pt-16  `
+  }`;
   return (
-    <div className=" font-kumbhSans flex justify-center mt-16">
+    <div className={bodyBackgroundStyleInModal}>
       <div className="w-[1110px] h-[740px]  ">
         <div className="">
           <InitialContext.Provider
