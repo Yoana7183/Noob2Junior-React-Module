@@ -11,7 +11,7 @@ const EcommerceShop = () => {
   const [quantity, setQuantity] = useState(0);
   return (
     <div className=" font-kumbhSans flex justify-center mt-16">
-      <div className="w-[1110px] h-[740px] ">
+      <div className="w-[1110px] h-[740px]  ">
         <div className="">
           <QuantityContext.Provider value={{ quantity, setQuantity }}>
             <CartContext.Provider value={{ isCartOpen, setIsCartOpen }}>
