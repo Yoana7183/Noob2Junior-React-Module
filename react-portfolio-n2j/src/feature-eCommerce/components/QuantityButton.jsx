@@ -1,11 +1,14 @@
 import React, { useContext, useState } from 'react';
-import { QuantityContext } from '../EcommerceShop';
+import { InitialContext } from '../EcommerceShop';
 
 const QuantityButton = () => {
-  const { quantity, setQuantity } = useContext(QuantityContext);
+  const { initialStateObject, setinitialStateObject } =
+    useContext(InitialContext);
+
   const [inputQuantity, setInptQuantity] = useState(0);
+
   const handleMinusClick = () => {
-    if (quantity > 0) {
+    if (initialStateObject.quantity > 0) {
       setInptQuantity((prevCount) => prevCount - 1);
     }
   };
@@ -48,7 +51,10 @@ const QuantityButton = () => {
           <button
             className=" flex justify-center pt-4"
             onClick={() => {
-              setQuantity(inputQuantity);
+              setinitialStateObject((prev) => ({
+                ...prev,
+                quantity: inputQuantity,
+              }));
             }}
           >
             <div>

@@ -1,14 +1,14 @@
 import React, { useContext } from 'react';
-
-import { CartContext, QuantityContext } from '../EcommerceShop';
+import { InitialContext } from '../EcommerceShop';
 
 const Cart = () => {
-  const { isCartOpen } = useContext(CartContext);
-  const { quantity, setQuantity } = useContext(QuantityContext);
-  const cartContentStyle = isCartOpen
+  const { initialStateObject, setinitialStateObject } =
+    useContext(InitialContext);
+
+  const cartContentStyle = initialStateObject.isCartOpen
     ? 'opacity-100 relative z-20'
     : 'opacity-0';
-  const totalAmount = quantity * 125.0;
+  const totalAmount = initialStateObject.quantity * 125.0;
   return (
     <div className={cartContentStyle}>
       <div className="w-[360px] h-[256px] border-2shadow-2xl rounded-xl bg-white	shadow-2xl ml-[52rem]">
@@ -16,12 +16,12 @@ const Cart = () => {
           <div className="h-[67px] border-b-[1px] border-[#E4E9F2] pt-5 pl-3 ">
             Cart
           </div>
-          {quantity == 0 && (
+          {initialStateObject.quantity == 0 && (
             <div className="w-[312px] h-[56px] text-gray-300 flex justify-center rounded-xl mt-16 ml-5">
               <p>Your cart is empty.</p>
             </div>
           )}
-          {quantity > 0 && (
+          {initialStateObject.quantity > 0 && (
             <div className="flex justify-around mt-7 ">
               <div className="w-[50px] h-[50px] ">
                 <img
@@ -34,7 +34,7 @@ const Cart = () => {
               <div>
                 <div>Fall Limited Edition Sneakers</div>
                 <div>
-                  $125.00 x {quantity} ${totalAmount}.00
+                  $125.00 x {initialStateObject.quantity} ${totalAmount}.00
                 </div>
               </div>
               <div className="pt-5">
@@ -46,9 +46,18 @@ const Cart = () => {
               </div>
             </div>
           )}
-          {quantity > 0 && (
+          {initialStateObject.quantity > 0 && (
             <div className="w-[312px] h-[56px] bg-ecommerceOrangeColor hover:bg-hoverEcommerceOrangeColor text-white flex justify-center rounded-xl mt-7 ml-5">
-              <button onClick={() => setQuantity(0)}>Checkout</button>
+              <button
+                onClick={() =>
+                  setinitialStateObject((prev) => ({
+                    ...prev,
+                    quantity: 0,
+                  }))
+                }
+              >
+                Checkout
+              </button>
             </div>
           )}
         </div>

@@ -1,15 +1,21 @@
-import React, { useContext } from 'react';
-import { CartContext, QuantityContext } from '../EcommerceShop';
+import React, { useContext, useState } from 'react';
+import { InitialContext } from '../EcommerceShop';
 
 const Header = () => {
-  const { isCartOpen, setIsCartOpen } = useContext(CartContext);
-  const { quantity } = useContext(QuantityContext);
+  const { initialStateObject, setinitialStateObject } =
+    useContext(InitialContext);
+  const [isOpen, setIsOpen] = useState(true);
+
   const LinksStyle = `px-3.5 border-b-4 border-transparent  rounded-sm pb-10 hover:border-ecommerceOrangeColor ">`;
 
   const handleClick = () => {
-    setIsCartOpen(!isCartOpen);
+    setIsOpen(!isOpen);
+    setinitialStateObject((prev) => ({
+      ...prev,
+      isCartOpen: isOpen,
+    }));
   };
-
+  console.log(initialStateObject);
   return (
     <div className="flex justify-between border-b-[1px] border-[#E4E9F2]  ">
       <div className="flex">
@@ -29,9 +35,9 @@ const Header = () => {
           id="cart"
           onClick={handleClick}
         >
-          {quantity > 0 && (
+          {initialStateObject.quantity > 0 && (
             <div className="w-[20px] h-[15px] bg-ecommerceOrangeColor text-white text-xs flex justify-center font-black rounded-xl">
-              {quantity}
+              {initialStateObject.quantity}
             </div>
           )}
 
