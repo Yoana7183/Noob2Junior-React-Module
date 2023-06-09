@@ -6,7 +6,7 @@ const Header = () => {
     useContext(InitialContext);
   const [isOpen, setIsOpen] = useState(true);
 
-  const LinksStyle = ` cursor-pointer px-3.5 border-b-4 border-transparent  rounded-sm pb-10 hover:border-ecommerceOrangeColor`;
+  const LinksStyle = ` cursor-pointer lg:text-base px-3.5 border-b-4 border-transparent  rounded-sm pb-10 hover:border-ecommerceOrangeColor md:text-sm`;
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -15,7 +15,7 @@ const Header = () => {
       isCartOpen: isOpen,
     }));
   };
-  console.log(initialStateObject);
+
   return (
     <div className="flex justify-between border-b-[1px] border-[#E4E9F2]  ">
       <div className="flex">
@@ -42,14 +42,15 @@ const Header = () => {
           )}
 
           <img
-            className="mt-[-0.2rem] ml-[-0.5rem]"
+            className="lg:mt-[-0.2rem] ml-[-0.5rem] md:mt-[-1.2rem]"
             src="src\feature-eCommerce\images\icon-cart.svg"
             alt=""
             srcSet=""
           />
         </div>
-        <div className="pl-5 w-[70px] cursor-pointer">
+        <div className="pl-5 w-[70px] cursor-pointer mt-[-0.2rem] ">
           <img
+            className=""
             src="src\feature-eCommerce\images\image-avatar.png"
             alt=""
             srcSet=""

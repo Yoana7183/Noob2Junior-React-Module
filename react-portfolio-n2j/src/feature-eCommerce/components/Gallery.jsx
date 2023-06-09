@@ -52,7 +52,7 @@ const Gallery = () => {
   const thumbnailImages = images.map((image, index) => (
     <img
       key={index}
-      className="w-[88px] h-[88px] rounded-xl cursor-pointer ml-6 hover:border-2 hover:border-ecommerceOrangeColor hover:opacity-60"
+      className="lg:w-[88px] lg:h-[88px] md:w-[66px] md:h-[66px] rounded-xl cursor-pointer ml-6 hover:border-2 hover:border-ecommerceOrangeColor hover:opacity-60"
       src={image.thumbnail}
       alt="Gallery Image"
       onClick={() => getCurrentTargetImage(index)}
@@ -106,14 +106,16 @@ const Gallery = () => {
                     ></img>
                   </div>
                 </div>
-                <div className="flex mt-4 px-4 ml-[5%]">{thumbnailImages}</div>
+                <div className="flex mt-4 px-4 lg:ml-[5%] md:ml-10">
+                  {thumbnailImages}
+                </div>
               </div>
             </div>
           </div>
         </div>
       )}
 
-      <div className="w-[445px] h-[565px] mt-[-12rem]  pl-16 ">
+      <div className="lg:w-[445px] lg:h-[565px] xl:w-[445px] xl:h-[565px] md:w-[345px] md:h-[465px]  mt-[-12rem]  lg:pl-16 md:pl-0">
         <div>
           <div className="w-[445px] h-[445px]">
             <img
@@ -124,7 +126,9 @@ const Gallery = () => {
             />
           </div>
         </div>
-        <div className="flex justify-evenly mt-5 ml-8">{thumbnailImages}</div>
+        <div className="flex justify-evenly mt-5 lg:ml-8 md:ml-[4rem]">
+          {thumbnailImages}
+        </div>
       </div>
     </div>
   );
