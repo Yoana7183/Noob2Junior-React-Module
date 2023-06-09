@@ -64,11 +64,11 @@ const Gallery = () => {
       {isOpen && (
         <div className=" fixed top-0 left-0 w-full h-full flex items-center justify-center ">
           <div className="w-full h-full rounded-lg p-8 absolute top-0 left-0 bg-gray-800 bg-opacity-50">
-            <div className="flex items-center justify-center mt-[10rem]">
+            <div className="flex items-center justify-center ">
               <div className="relative">
                 <div className="flex items-center">
                   <div
-                    className="rounded-full bg-white w-[56px] h-[56px] flex justify-center"
+                    className="rounded-full bg-white w-[56px] h-[56px] flex justify-center cursor-pointer absolute inset-y-15 left-[-30px]"
                     onClick={goToPreviousImage}
                   >
                     <img
@@ -79,7 +79,7 @@ const Gallery = () => {
                     ></img>
                   </div>
                   <div className="w-[550px]">
-                    <div className="flex justify-end">
+                    <div className="flex justify-end mb-3">
                       <img
                         className="w-8 cursor-pointer  text-orange-400"
                         src="src/feature-eCommerce/images/icon-close.png"
@@ -88,25 +88,25 @@ const Gallery = () => {
                       />
                     </div>
                     <img
-                      className="w-[550px] opacity-100"
+                      className="w-[550px] rounded-xl"
                       src={images[currentImageIndex].origin}
                       alt="Gallery Image"
                     />
                   </div>
 
                   <div
-                    className="rounded-full bg-white w-[56px] h-[56px] flex justify-center"
+                    className="rounded-full bg-white w-[56px] h-[56px] flex justify-center cursor-pointer absolute inset-y-15 right-[-30px] "
                     onClick={goToNextImage}
                   >
                     <img
-                      className="w-[10px] h-[16px] mt-5"
+                      className="w-[10px] h-[16px] mt-5  "
                       src="src\feature-eCommerce\images\icon-next.svg"
                       alt=""
                       srcSet=""
                     ></img>
                   </div>
                 </div>
-                <div className="flex mt-4 px-4 ml-16">{thumbnailImages}</div>
+                <div className="flex mt-4 px-4 ml-[5%]">{thumbnailImages}</div>
               </div>
             </div>
           </div>

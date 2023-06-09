@@ -6,7 +6,7 @@ const Header = () => {
     useContext(InitialContext);
   const [isOpen, setIsOpen] = useState(true);
 
-  const LinksStyle = `px-3.5 border-b-4 border-transparent  rounded-sm pb-10 hover:border-ecommerceOrangeColor ">`;
+  const LinksStyle = ` cursor-pointer px-3.5 border-b-4 border-transparent  rounded-sm pb-10 hover:border-ecommerceOrangeColor`;
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -48,7 +48,7 @@ const Header = () => {
             srcSet=""
           />
         </div>
-        <div className="pl-5 w-[70px] ">
+        <div className="pl-5 w-[70px] cursor-pointer">
           <img
             src="src\feature-eCommerce\images\image-avatar.png"
             alt=""
