@@ -106,7 +106,7 @@ const Gallery = () => {
                     ></img>
                   </div>
                 </div>
-                <div className="flex mt-4 px-4 lg:ml-[5%] md:ml-10">
+                <div className="sm:flex mt-4 px-4 lg:ml-[5%] md:ml-10 hidden">
                   {thumbnailImages}
                 </div>
               </div>
@@ -126,7 +126,7 @@ const Gallery = () => {
             />
           </div>
         </div>
-        <div className="flex justify-evenly mt-5 lg:ml-8 md:ml-[4rem]">
+        <div className="md:flex justify-evenly mt-5 lg:ml-8 md:ml-[4rem] hidden">
           {thumbnailImages}
         </div>
       </div>
