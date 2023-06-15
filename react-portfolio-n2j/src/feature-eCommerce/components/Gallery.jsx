@@ -95,7 +95,7 @@ const Gallery = () => {
                   </div>
 
                   <div
-                    className="rounded-full bg-white w-[56px] h-[56px] flex justify-center cursor-pointer absolute inset-y-15 right-[-30px] "
+                    className="rounded-full bg-white w-[56px] h-[56px] flex justify-center cursor-pointer absolute inset-y-15  right-[-30px] "
                     onClick={goToNextImage}
                   >
                     <img
@@ -115,22 +115,43 @@ const Gallery = () => {
         </div>
       )}
 
-      <div className="lg:w-[445px] lg:h-[565px] xl:w-[445px] xl:h-[565px] md:w-[345px] md:h-[465px]  sm:mt-[-12rem]  mt-[-16rem] lg:pl-16 md:pl-0">
-        <div>
-          <div className="sm:w-[445px] sm:h-[445px] w-screen h-[300px]  ">
-            <img
-              className="sm:rounded-2xl rounded-none"
-              src="src\feature-eCommerce\images\image-product-1.jpg"
-              alt=""
-              srcSet=""
-            />
-          </div>
+      <div className="lg:w-[445px] lg:h-[565px] xl:w-[445px] xl:h-[565px] md:w-[345px] md:h-[465px]  sm:mt-[-12rem]  mt-[-16rem] lg:pl-16 md:pl-0 sm:mb-0 flex">
+        <div
+          className="rounded-full bg-white w-[40px] h-[40px] flex justify-center cursor-pointer absolute top-[19rem] left-10 sm:hidden z-20"
+          onClick={goToPreviousImage}
+        >
+          <img
+            className="w-[10px] h-[16px] mt-3"
+            src="src\feature-eCommerce\images\icon-previous.svg"
+            alt=""
+            srcSet=""
+          ></img>
         </div>
-        <div className="md:flex justify-evenly mt-5 lg:ml-8 md:ml-[4rem] hidden">
-          {thumbnailImages}
+        <div className="sm:w-[445px] sm:h-[445px] w-screen h-[300px] relative pb-[28%] ">
+          <img
+            className="sm:rounded-2xl rounded-none absolute top-0 left-0 w-full h-full object-cover"
+            src={images[currentImageIndex].origin}
+            alt=""
+            srcSet=""
+          />
         </div>
+        <div
+          className="rounded-full bg-white w-[40px] h-[40px] flex justify-center cursor-pointer absolute top-[19rem] right-10  sm:hidden"
+          onClick={goToNextImage}
+        >
+          <img
+            className="w-[10px] h-[16px] mt-3 "
+            src="src\feature-eCommerce\images\icon-next.svg"
+            alt=""
+            srcSet=""
+          />
+        </div>
+      </div>
+      <div className="md:flex justify-evenly mt-5 lg:ml-8 md:ml-[4rem] hidden">
+        {thumbnailImages}
       </div>
     </div>
   );
 };
 export default Gallery;
+//mb-[calc(10%+45rem]

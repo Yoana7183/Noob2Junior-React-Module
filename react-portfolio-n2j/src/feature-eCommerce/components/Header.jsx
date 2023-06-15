@@ -33,21 +33,21 @@ const Header = () => {
             <img
               className="fill-current mt-[-2.6rem]"
               src="/src/feature-eCommerce/images/icon-menu.svg"
-              alt=""
+              alt="Menu"
             />
           )}
           {isMenuOpen && (
             <img
               className="fill-current mt-[-15rem] pb-28"
               src="/src/feature-eCommerce/images/icon-close.png"
-              alt=""
+              alt="Close"
             />
           )}
         </button>
       </div>
       <div className="flex justify-start">
-        <div className="sm:w-[200px] sm:h-[20px] sm:pr-2 sm:mr-[-1.5rem] h-[25px] md:mr-20 mr-[2rem] w-[150px] md:flex flex">
-          <img src="/src/feature-eCommerce/images/logo.svg" alt="" />
+        <div className="sm:w-[200px] sm:h-[20px] sm:pr-0 sm:mr-[-1.5rem] h-[25px] md:mr-20 mr-[2rem] w-[150px] md:flex flex">
+          <img src="/src/feature-eCommerce/images/logo.svg" alt="Logo" />
         </div>
         {isMenuOpen && (
           <div className="fixed top-0 left-0 w-screen h-screen bg-gray-800 bg-opacity-40 z-10 flex justify-start items-center">
@@ -60,13 +60,13 @@ const Header = () => {
                   <img
                     className="w-8 h-8 fill-current"
                     src="/src/feature-eCommerce/images/icon-close.png"
-                    alt=""
+                    alt="Close"
                   />
                 ) : (
                   <img
                     className="w-4 h-4 fill-current"
                     src="/src/feature-eCommerce/images/icon-menu.svg"
-                    alt=""
+                    alt="Menu"
                   />
                 )}
               </button>
@@ -81,7 +81,7 @@ const Header = () => {
           </div>
         )}
       </div>
-      <div className={isMenuOpen ? `hidden` : ` sm:flex sm::flex-row  hidden`}>
+      <div className={isMenuOpen ? `hidden` : ` sm:flex sm:flex-row  hidden`}>
         <div className={eachLinkStyle}>Collections</div>
         <div className={eachLinkStyle}>Men</div>
         <div className={eachLinkStyle}>Woman</div>
@@ -106,13 +106,16 @@ const Header = () => {
             </div>
           )}
           <img
-            className="lg:mt-[-0.2rem] ml-[-0.5rem] md:mt-[-1.2rem]"
+            className="lg:mt-[-0.2rem] mt-[-0.6rem] ml-[-0.5rem] sm:mt-[-1.2rem] sm:ml-0 "
             src="/src/feature-eCommerce/images/icon-cart.svg"
-            alt=""
+            alt="Cart"
           />
         </div>
-        <div className="pl-5 w-[70px] cursor-pointer mt-[-0.2rem] ">
-          <img src="/src/feature-eCommerce/images/image-avatar.png" alt="" />
+        <div className="pl-5 w-[60px] md:w-[70px] cursor-pointer mt-[-0.2rem] sm:w-[50px] sm:mt-[-0.3rem] ">
+          <img
+            src="/src/feature-eCommerce/images/image-avatar.png"
+            alt="Avatar"
+          />
         </div>
       </div>
     </div>

@@ -21,7 +21,7 @@ const EcommerceShop = () => {
   }`;
   return (
     <div className={bodyBackgroundStyleInModal}>
-      <div className="xl:w-[1110px] xl:h-[740px] lg:w-[1000px] lg:h-[840px] md:w-[768px] sm:w-[640px] sm:h-[1050px] h-[950px]  overflow-hidden ">
+      <div className="xl:w-[1110px] xl:h-[740px] lg:w-[1000px] lg:h-[840px] md:w-[768px] sm:w-[640px] sm:h-[1150px] h-[950px]  overflow-hidden ">
         <div className="">
           <InitialContext.Provider
             value={{
@@ -32,9 +32,11 @@ const EcommerceShop = () => {
             <Header />
             <Cart />
 
-            <div className="w-[1015px] h-[565px] md:flex md:justify-between sm:flex-col md:flex-row">
+            <div className="w-[1015px] h-[565px] md:flex md:justify-between sm:flex-col sm:gap-0 gap-44 md:flex-row">
               <Gallery />
-              <InformationContainer />
+              <div className="">
+                <InformationContainer />
+              </div>
             </div>
           </InitialContext.Provider>
         </div>
