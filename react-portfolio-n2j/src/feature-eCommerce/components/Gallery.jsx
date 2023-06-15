@@ -117,7 +117,7 @@ const Gallery = () => {
 
       <div className="lg:w-[445px] lg:h-[565px] xl:w-[445px] xl:h-[565px] md:w-[345px] md:h-[465px]  sm:mt-[-12rem]  mt-[-16rem] lg:pl-16 md:pl-0">
         <div>
-          <div className="sm:w-[445px] sm:h-[445px] w-screen h-[300px]">
+          <div className="sm:w-[445px] sm:h-[445px] w-screen h-[300px]  ">
             <img
               className="sm:rounded-2xl rounded-none"
               src="src\feature-eCommerce\images\image-product-1.jpg"

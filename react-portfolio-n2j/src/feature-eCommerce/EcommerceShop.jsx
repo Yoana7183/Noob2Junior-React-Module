@@ -21,7 +21,7 @@ const EcommerceShop = () => {
   }`;
   return (
     <div className={bodyBackgroundStyleInModal}>
-      <div className="xl:w-[1110px] xl:h-[740px] lg:w-[1000px] lg:h-[740px] md:w-[768px] sm:w-[640px] sm:h-[950px] h-[950px]  overflow-hidden ">
+      <div className="xl:w-[1110px] xl:h-[740px] lg:w-[1000px] lg:h-[840px] md:w-[768px] sm:w-[640px] sm:h-[1050px] h-[950px]  overflow-hidden ">
         <div className="">
           <InitialContext.Provider
             value={{

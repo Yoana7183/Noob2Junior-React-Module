@@ -2,7 +2,7 @@ import React from 'react';
 import QuantityButton from './QuantityButton';
 const InformationContainer = () => {
   return (
-    <div className=" lg:w-[445px] lg:h-[426px] xl:w-[445px] xl:h-[426px] md:w-[245px] md:h-[326px] lg:mt-[-10rem] md:mt-[-12rem] md:mr-[18rem] lg:mr-0">
+    <div className=" lg:w-[445px] sm:w-[445px] lg:h-[426px] xl:w-[445px] xl:h-[426px] md:w-[245px] md:h-[326px] lg:mt-[-10rem] md:mt-[-12rem] md:mr-[18rem] lg:mr-0">
       <div>
         <div className="text-ecommerceOrangeColor font-black">
           SNEAKER COMPANY
