@@ -52,7 +52,7 @@ const Gallery = () => {
   const thumbnailImages = images.map((image, index) => (
     <img
       key={index}
-      className="lg:w-[88px] lg:h-[88px] sm:w-[66px] sm:h-[66px] sm:ml-1 rounded-xl cursor-pointer ml-6 hover:border-2 hover:border-ecommerceOrangeColor hover:opacity-60"
+      className="lg:w-[88px] lg:h-[88px] sm:w-[66px] sm:h-[66px] sm:ml-1 md:ml-5 rounded-xl cursor-pointer ml-6 hover:border-2 hover:border-ecommerceOrangeColor hover:opacity-60"
       src={image.thumbnail}
       alt="Gallery Image"
       onClick={() => getCurrentTargetImage(index)}
@@ -62,7 +62,7 @@ const Gallery = () => {
   return (
     <div>
       {isOpen && (
-        <div className=" fixed top-0 left-0 w-full h-full flex items-center justify-center ">
+        <div className=" fixed top-0 left-0 w-full h-full  items-center justify-center hidden sm:flex ">
           <div className="w-full h-full rounded-lg p-8 absolute top-0 left-0 bg-gray-800 bg-opacity-50">
             <div className="flex items-center justify-center ">
               <div className="relative">
@@ -106,7 +106,7 @@ const Gallery = () => {
                     ></img>
                   </div>
                 </div>
-                <div className="sm:flex mt-4 px-4 lg:ml-[5%] md:ml-10 hidden">
+                <div className="sm:flex mt-4 px-4 lg:ml-[5%] sm:ml-[4rem] md:ml-10 hidden">
                   {thumbnailImages}
                 </div>
               </div>
@@ -156,7 +156,7 @@ const Gallery = () => {
             />
           </div>
         </div>
-        <div className="sm:flex justify-evenly mt-5 md:ml-[4rem] lg:ml-[3rem] hidden  sm:ml-[11rem]">
+        <div className="sm:flex justify-between mt-5 md:ml-[2rem] sm:ml-12 lg:ml-0 hidden sm:w-[350px]">
           {thumbnailImages}
         </div>
       </div>
