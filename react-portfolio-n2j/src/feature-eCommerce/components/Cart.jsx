@@ -6,12 +6,12 @@ const Cart = () => {
     useContext(InitialContext);
 
   const cartContentStyle = initialStateObject.isCartOpen
-    ? 'opacity-100 relative z-20'
+    ? 'opacity-100 relative z-20 flex justify-center'
     : 'opacity-0';
   const totalAmount = initialStateObject.quantity * 125.0;
   return (
     <div className={cartContentStyle}>
-      <div className="w-[360px] h-[256px] border-2shadow-2xl rounded-xl bg-white	shadow-2xl xl:ml-[46.5rem] lg:ml-[40rem] md:ml-[25rem] sm:ml-[20rem] ml-0 mt-0">
+      <div className="w-[360px] h-[256px] border-2shadow-2xl rounded-xl bg-white	shadow-2xl xl:ml-[46.5rem] lg:ml-[40rem] md:ml-[25rem] sm:ml-[18rem]  mt-0">
         <div className="">
           <div className="h-[67px] border-b-[1px] border-[#E4E9F2] pt-5 pl-3 ">
             Cart
@@ -75,3 +75,4 @@ const Cart = () => {
 };
 
 export default Cart;
+//[calc(10vw-1px)]//
