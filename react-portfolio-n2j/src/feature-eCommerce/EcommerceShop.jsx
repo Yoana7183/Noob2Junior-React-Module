@@ -10,6 +10,7 @@ const initialStateInfo = {
   isCartOpen: false,
   isModal: false,
 };
+
 const EcommerceShop = () => {
   const [initialStateObject, setinitialStateObject] =
     useState(initialStateInfo);

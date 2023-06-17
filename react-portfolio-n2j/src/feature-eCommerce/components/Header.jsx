@@ -52,7 +52,7 @@ const Header = () => {
             <div className="w-[50%] h-full bg-white pt-20">
               <button
                 onClick={toggleMenu}
-                className="absolute top-[5rem] left-[-20px] m-4 p-2 rounded-full text-black bg-white hover:bg-gray-200"
+                className="absolute top-[6.6rem] left-[-20px] m-4 p-2 rounded-full text-black bg-white hover:bg-gray-200"
               >
                 {isMenuOpen ? (
                   <img
