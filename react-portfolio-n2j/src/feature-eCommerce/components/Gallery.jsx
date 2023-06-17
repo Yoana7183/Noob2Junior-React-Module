@@ -120,7 +120,7 @@ const Gallery = () => {
           <div className="sm:w-[445px] sm:h-[445px] w-screen h-[300px] ">
             <div className="sm:hidden">
               <div
-                className="rounded-full bg-white w-[56px] h-[56px] flex justify-center cursor-pointer absolute inset-y-25 top-[350px] left-0"
+                className="rounded-full bg-white w-[56px] h-[56px] flex justify-center cursor-pointer absolute inset-y-25 top-[45%] left-0"
                 onClick={goToPreviousImage}
               >
                 <img
@@ -137,7 +137,7 @@ const Gallery = () => {
                 className="]"
               />
               <div
-                className="rounded-full bg-white w-[56px] h-[56px] flex justify-center cursor-pointer absolute inset-y-25 top-[350px] right-0 "
+                className="rounded-full bg-white w-[56px] h-[56px] flex justify-center cursor-pointer absolute inset-y-25 top-[45%] right-0 "
                 onClick={goToNextImage}
               >
                 <img
