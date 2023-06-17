@@ -6,8 +6,6 @@ const Header = () => {
     useContext(InitialContext);
   const [isCartHasBeenOpen, setIsCartHasBeenOpen] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const LinksStyle = `cursor-pointer lg:text-base md:px-3.5 border-b-4 border-transparent rounded-sm pb-10 hover:border-ecommerceOrangeColor pt-[15rem] md:text-sm sm:text-xs sm:px-2`;
   const eachLinkStyle = `cursor-pointer lg:text-base md:px-3.5 border-b-4 border-transparent rounded-sm pb-10 hover:border-ecommerceOrangeColor md:text-sm sm:text-xs sm:px-2`;
   const handleClick = () => {
     setIsMenuOpen(false);
@@ -54,7 +52,7 @@ const Header = () => {
             <div className="w-[50%] h-full bg-white pt-20">
               <button
                 onClick={toggleMenu}
-                className="absolute top-[7rem] left-[-20px] m-4 p-2 rounded-full text-black bg-white hover:bg-gray-200"
+                className="absolute top-[5rem] left-[-20px] m-4 p-2 rounded-full text-black bg-white hover:bg-gray-200"
               >
                 {isMenuOpen ? (
                   <img
@@ -70,12 +68,12 @@ const Header = () => {
                   />
                 )}
               </button>
-              <div className={`sm:flex sm:justify-between ${LinksStyle}`}>
-                <div>Collections</div>
-                <div>Men</div>
-                <div>Woman</div>
-                <div>About</div>
-                <div>Contact</div>
+              <div className="sm:flex sm:justify-between cursor-pointer lg:text-base md:px-3.5 pb-10 ml-5 pt-[8rem] md:text-sm sm:text-xs font-bold sm:px-2">
+                <div className="pt-2">Collections</div>
+                <div className="pt-2">Men</div>
+                <div className="pt-2">Woman</div>
+                <div className="pt-2">About</div>
+                <div className="pt-2">Contact</div>
               </div>
             </div>
           </div>
