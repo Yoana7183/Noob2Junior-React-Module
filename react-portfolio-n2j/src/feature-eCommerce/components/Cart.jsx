@@ -4,11 +4,10 @@ import { InitialContext } from '../EcommerceShop';
 const Cart = () => {
   const { initialStateObject, setinitialStateObject } =
     useContext(InitialContext);
-
   const cartContentStyle = initialStateObject.isCartOpen
     ? 'opacity-100 relative z-20 flex justify-center'
     : 'opacity-0';
-  console.log(initialStateObject.isModal);
+
   const totalAmount = initialStateObject.quantity * 125.0;
   return (
     <div className={cartContentStyle}>

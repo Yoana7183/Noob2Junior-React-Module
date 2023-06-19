@@ -90,7 +90,7 @@ const Gallery = () => {
                     <img
                       className="md:w-[550px] sm:w-[450px] rounded-xl"
                       src={images[currentImageIndex].origin}
-                      alt="Gallery Image"
+                      alt="Product Image"
                     />
                   </div>
 

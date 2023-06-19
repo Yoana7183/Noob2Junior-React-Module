@@ -1,14 +1,28 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { InitialContext } from '../EcommerceShop';
 
 const Header = () => {
   const { initialStateObject, setinitialStateObject } =
     useContext(InitialContext);
   const [isCartHasBeenOpen, setIsCartHasBeenOpen] = useState(true);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const [isMenuOpen, setIsMenuOpen] = useState();
   const eachLinkStyle = `cursor-pointer lg:text-base md:px-3.5 border-b-4 border-transparent rounded-sm pb-10 hover:border-ecommerceOrangeColor md:text-sm sm:text-xs sm:px-2`;
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      setinitialStateObject((prev) => ({
+        ...prev,
+        isCartOpen: false,
+      }));
+    }
+  }, [isMenuOpen]);
+
   const handleClick = () => {
-    setIsMenuOpen(false);
     setIsCartHasBeenOpen(!isCartHasBeenOpen);
     setinitialStateObject((prev) => ({
       ...prev,
@@ -16,12 +30,8 @@ const Header = () => {
     }));
   };
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
   return (
-    <div className="flex justify-between border-b-[1px] border-[#E4E9F2] pt-4">
+    <div className="flex justify-between border-b-[1px] border-[#E4E9F2] pt-4 px-1 sm:px-0">
       <div className="block lg:hidden pt-7">
         <button
           onClick={toggleMenu}
@@ -36,7 +46,7 @@ const Header = () => {
           )}
           {isMenuOpen && (
             <img
-              className="fill-current mt-[-15rem] pb-28"
+              className="fill-current mt-[-2.6rem] pb-28 "
               src="/src/feature-eCommerce/images/icon-close.png"
               alt="Close"
             />
@@ -52,7 +62,7 @@ const Header = () => {
             <div className="w-[50%] h-full bg-white pt-20">
               <button
                 onClick={toggleMenu}
-                className="absolute top-[6.6rem] left-[-20px] m-4 p-2 rounded-full text-black bg-white hover:bg-gray-200"
+                className="absolute top-[7.6rem] left-[-15px] m-4 p-2 rounded-full text-black bg-white hover:bg-gray-200"
               >
                 {isMenuOpen ? (
                   <img
@@ -100,12 +110,12 @@ const Header = () => {
             </div>
           )}
           <img
-            className="lg:mt-[-0.4rem] mt-[-0.6rem]   ml-[-0.5rem] md:mt-[-0.5rem] sm:mt-[-1.2rem] sm:ml-0 "
+            className="lg:mt-[0.2rem] mt-[0.5rem]   ml-[-0.5rem] md:mt-[0.1rem] sm:mt-[-0.2rem] sm:ml-0 "
             src="/src/feature-eCommerce/images/icon-cart.svg"
             alt="Cart"
           />
         </div>
-        <div className="pl-5 w-[60px] md:w-[70px] cursor-pointer mt-[-0.2rem] sm:w-[50px] sm:mt-[-0.3rem] ">
+        <div className="pl-5 w-[60px] md:w-[70px] cursor-pointer mt-[-0.1rem] sm:w-[50px] sm:mt-[-0.5rem] ">
           <img
             src="/src/feature-eCommerce/images/image-avatar.png"
             alt="Avatar"
