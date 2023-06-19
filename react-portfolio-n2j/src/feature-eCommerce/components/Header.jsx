@@ -117,7 +117,7 @@ const Header = () => {
             alt="Cart"
           />
         </div>
-        <div className="pl-5 w-[60px] md:w-[70px] cursor-pointer mt-[-0.1rem] sm:w-[50px] sm:mt-[-0.5rem] ">
+        <div className="pl-5  w-[60px] md:w-[70px] cursor-pointer mt-[-0.1rem] sm:w-[50px] sm:mt-[-0.1rem] md:mt-[-0.5rem]">
           <img
             className="hover:border-2 hover:border-ecommerceOrangeColor hover:rounded-full"
             src="/src/feature-eCommerce/images/image-avatar.png"
