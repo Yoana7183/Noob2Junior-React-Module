@@ -129,30 +129,30 @@ const Gallery = () => {
           <div className="sm:w-[445px] sm:h-[445px] w-screen h-[300px] ">
             <div className="sm:hidden">
               <div
-                className="rounded-full bg-white w-[40px] h-[40px] flex justify-center cursor-pointer absolute inset-y-25 top-[calc(50vw+150px)] left-2"
+                className="rounded-full bg-white w-[40px] h-[40px] flex justify-center cursor-pointer absolute inset-y-25 top-[calc(50vw+120px)] left-2"
                 onClick={goToPreviousImage}
               >
                 <img
                   className="w-[10px] h-[16px] mt-3"
                   src="src\feature-eCommerce\images\icon-previous.svg"
-                  alt=""
+                  alt="Prev"
                   srcSet=""
                 ></img>
               </div>
               <img
                 src={images[currentImageIndex].origin}
-                alt=""
+                alt="ProductImage"
                 srcSet=""
-                className="]"
+                className=""
               />
               <div
-                className="rounded-full bg-white w-[40px] h-[40px] flex justify-center cursor-pointer absolute inset-y-25 top-[calc(50vw+150px)] right-2 "
+                className="rounded-full bg-white w-[40px] h-[40px] flex justify-center cursor-pointer absolute inset-y-25 top-[calc(50vw+120px)] right-2 "
                 onClick={goToNextImage}
               >
                 <img
                   className="w-[10px] h-[16px] mt-3  "
                   src="src\feature-eCommerce\images\icon-next.svg"
-                  alt=""
+                  alt="Next"
                   srcSet=""
                 ></img>
               </div>
@@ -173,4 +173,3 @@ const Gallery = () => {
   );
 };
 export default Gallery;
-//pb-[calc(10%+35vw)]

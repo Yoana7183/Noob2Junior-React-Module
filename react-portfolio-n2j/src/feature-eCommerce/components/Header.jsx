@@ -62,7 +62,7 @@ const Header = () => {
             <div className="w-[50%] h-full bg-white pt-20">
               <button
                 onClick={toggleMenu}
-                className="absolute top-[7.6rem] left-[-15px] m-4 p-2 rounded-full text-black bg-white hover:bg-gray-200"
+                className="absolute top-[5rem] left-[-15px] m-4 p-2 rounded-full text-black bg-white hover:bg-gray-200"
               >
                 {isMobileMenuOpen ? (
                   <img
@@ -106,19 +106,20 @@ const Header = () => {
         >
           {initialStateObject.quantity > 0 && (
             <div
-              className={` w-[20px] h-[15px]  bg-ecommerceOrangeColor text-white text-xs flex font-black rounded-xl justify-center`}
+              className={` w-[20px] h-[15px] absolute  bg-ecommerceOrangeColor text-white text-xs flex font-black rounded-xl justify-center`}
             >
               {initialStateObject.quantity}
             </div>
           )}
           <img
-            className="lg:mt-[0.2rem] mt-[0.5rem]   ml-[-0.5rem] md:mt-[0.1rem] sm:mt-[-0.2rem] sm:ml-0 "
+            className="lg:mt-[0.2rem] mt-[0.5rem] sm:pt-2   ml-[-0.5rem] md:mt-[0.1rem] sm:mt-[-0.2rem]  sm:ml-[-0.7rem] "
             src="/src/feature-eCommerce/images/icon-cart.svg"
             alt="Cart"
           />
         </div>
         <div className="pl-5 w-[60px] md:w-[70px] cursor-pointer mt-[-0.1rem] sm:w-[50px] sm:mt-[-0.5rem] ">
           <img
+            className="hover:border-2 hover:border-ecommerceOrangeColor hover:rounded-full"
             src="/src/feature-eCommerce/images/image-avatar.png"
             alt="Avatar"
           />
