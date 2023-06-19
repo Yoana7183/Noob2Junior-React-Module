@@ -21,7 +21,7 @@ const Header = () => {
   };
 
   return (
-    <div className="flex justify-between border-b-[1px] border-[#E4E9F2]">
+    <div className="flex justify-between border-b-[1px] border-[#E4E9F2] pt-4">
       <div className="block lg:hidden pt-7">
         <button
           onClick={toggleMenu}
@@ -44,7 +44,7 @@ const Header = () => {
         </button>
       </div>
       <div className="flex justify-start">
-        <div className="sm:w-[200px] sm:h-[20px] sm:pr-0 sm:mr-[-1.5rem] h-[25px] md:mr-20 mr-[2rem] w-[150px] md:flex flex">
+        <div className="sm:w-[200px] sm:h-[20px] sm:pr-0 sm:mr-[-1.5rem] h-[25px] md:mr-0 mr-[2rem] w-[150px] md:flex flex">
           <img src="/src/feature-eCommerce/images/logo.svg" alt="Logo" />
         </div>
         {isMenuOpen && (
@@ -88,23 +88,19 @@ const Header = () => {
       </div>
       <div className="flex justify-center">
         <div
-          className="cursor-pointer w-[22px] pt-5"
+          className="cursor-pointer w-[22px] "
           id="cart"
           onClick={handleClick}
         >
           {initialStateObject.quantity > 0 && (
             <div
-              className={
-                isMenuOpen
-                  ? 'w-[20px] h-[15px] bg-ecommerceOrangeColor text-white text-xs flex justify-center font-black rounded-xl'
-                  : 'w-[20px] h-[15px] bg-ecommerceOrangeColor text-white text-xs flex justify-end font-black rounded-xl'
-              }
+              className={` w-[20px] h-[15px]  bg-ecommerceOrangeColor text-white text-xs flex font-black rounded-xl justify-center`}
             >
               {initialStateObject.quantity}
             </div>
           )}
           <img
-            className="lg:mt-[-0.2rem] mt-[-0.6rem] ml-[-0.5rem] sm:mt-[-1.2rem] sm:ml-0 "
+            className="lg:mt-[-0.4rem] mt-[-0.6rem]   ml-[-0.5rem] md:mt-[-0.5rem] sm:mt-[-1.2rem] sm:ml-0 "
             src="/src/feature-eCommerce/images/icon-cart.svg"
             alt="Cart"
           />

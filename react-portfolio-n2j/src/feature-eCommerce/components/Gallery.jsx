@@ -120,11 +120,11 @@ const Gallery = () => {
           <div className="sm:w-[445px] sm:h-[445px] w-screen h-[300px] ">
             <div className="sm:hidden">
               <div
-                className="rounded-full bg-white w-[56px] h-[56px] flex justify-center cursor-pointer absolute inset-y-25 top-[45%] left-0"
+                className="rounded-full bg-white w-[40px] h-[40px] flex justify-center cursor-pointer absolute inset-y-25 top-[calc(50vw+150px)] left-2"
                 onClick={goToPreviousImage}
               >
                 <img
-                  className="w-[10px] h-[16px] mt-5"
+                  className="w-[10px] h-[16px] mt-3"
                   src="src\feature-eCommerce\images\icon-previous.svg"
                   alt=""
                   srcSet=""
@@ -137,11 +137,11 @@ const Gallery = () => {
                 className="]"
               />
               <div
-                className="rounded-full bg-white w-[56px] h-[56px] flex justify-center cursor-pointer absolute inset-y-25 top-[45%] right-0 "
+                className="rounded-full bg-white w-[40px] h-[40px] flex justify-center cursor-pointer absolute inset-y-25 top-[calc(50vw+150px)] right-2 "
                 onClick={goToNextImage}
               >
                 <img
-                  className="w-[10px] h-[16px] mt-5  "
+                  className="w-[10px] h-[16px] mt-3  "
                   src="src\feature-eCommerce\images\icon-next.svg"
                   alt=""
                   srcSet=""

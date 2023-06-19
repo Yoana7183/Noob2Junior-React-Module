@@ -23,7 +23,7 @@ const QuantityButton = () => {
   return (
     <div>
       <div className=" flex lg:justify-between flex-col lg:flex-row lg:mt-10 md:mt-5 ">
-        <div className="lg:w-[157px] w-[272px] h-[56px]  bg-[#ececec] flex p-5 justify-between rounded-xl">
+        <div className="lg:w-[157px] sm:w-[272px] w-[calc(80vw-1px)] h-[56px]  bg-[#ececec] flex p-5 justify-between rounded-xl">
           <div className="w-[15px] cursor-pointer " onClick={handleMinusClick}>
             <img
               className="bg-cover pt-1"
@@ -48,7 +48,7 @@ const QuantityButton = () => {
           </div>
         </div>
         <div
-          className="w-[272px] h-[56px] mt-2 lg:mt-0 bg-ecommerceOrangeColor hover:bg-hoverEcommerceOrangeColor flex justify-center rounded-xl text-white cursor-pointer"
+          className="lg:w-[272px] sm:w-[272px] w-[calc(80vw-1px)] h-[56px] mt-2 lg:mt-0 bg-ecommerceOrangeColor hover:bg-hoverEcommerceOrangeColor flex justify-center rounded-xl text-white cursor-pointer"
           onClick={() => {
             setinitialStateObject((prev) => ({
               ...prev,

@@ -28,7 +28,7 @@ const Cart = () => {
                 <img
                   className="rounded"
                   src="src\feature-eCommerce\images\image-product-1-thumbnail.jpg"
-                  alt=""
+                  alt="Product_image"
                   srcSet=""
                 />
               </div>
@@ -49,7 +49,7 @@ const Cart = () => {
               >
                 <img
                   src="src\feature-eCommerce\images\icon-delete.svg"
-                  alt=""
+                  alt="delete"
                   srcSet=""
                 />
               </div>

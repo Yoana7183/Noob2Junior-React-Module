@@ -19,11 +19,11 @@ const InformationContainer = () => {
       <div className="sm:w-[173px] w-full mt-5 sm:mb-5 flex  sm:inline-block">
         <div className="flex justify-between">
           <div className="text-2xl font-black">$125.00</div>
-          <div className="w-[51px] h-[27px] bg-orange-200 text-ecommerceOrangeColor font-black flex justify-center mr-5">
+          <div className="w-[51px] h-[27px] bg-orange-100 text-ecommerceOrangeColor font-black rounded-lg flex justify-center mr-5 ml-3">
             50%
           </div>
         </div>
-        <div className="line-through text-[#69707D] mt-2 pl-[calc(20vw+20px)] sm:pl-0">
+        <div className="line-through text-[#69707D] mt-2 pl-[calc(15vw+3px)] sm:pl-0">
           $250.00
         </div>
       </div>
