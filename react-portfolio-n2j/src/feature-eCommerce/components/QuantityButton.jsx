@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { InitialContext } from '../EcommerceShop';
 
 const QuantityButton = () => {
@@ -6,6 +6,11 @@ const QuantityButton = () => {
     useContext(InitialContext);
 
   const [inputQuantity, setInptQuantity] = useState(0);
+  useEffect(() => {
+    if (initialStateObject.quantity == 0) {
+      setInptQuantity(0);
+    }
+  }, [initialStateObject.quantity]);
 
   const handleMinusClick = () => {
     if (initialStateObject.quantity > 0) {
@@ -20,6 +25,7 @@ const QuantityButton = () => {
     const newQuantity = parseInt(event.target.value);
     setInptQuantity(newQuantity);
   };
+
   return (
     <div>
       <div className=" flex lg:justify-between flex-col lg:flex-row lg:mt-10 md:mt-5 ">
