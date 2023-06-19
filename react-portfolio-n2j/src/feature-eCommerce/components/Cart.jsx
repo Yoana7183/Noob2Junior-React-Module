@@ -55,17 +55,16 @@ const Cart = () => {
             </div>
           )}
           {initialStateObject.quantity > 0 && (
-            <div className="w-[312px] h-[56px] bg-ecommerceOrangeColor hover:bg-hoverEcommerceOrangeColor text-white flex justify-center rounded-xl mt-7 ml-5">
-              <button
-                onClick={() =>
-                  setinitialStateObject((prev) => ({
-                    ...prev,
-                    quantity: 0,
-                  }))
-                }
-              >
-                Checkout
-              </button>
+            <div
+              className="w-[312px] h-[56px] bg-ecommerceOrangeColor hover:bg-hoverEcommerceOrangeColor   text-white flex justify-center rounded-xl mt-7 ml-5"
+              onClick={() =>
+                setinitialStateObject((prev) => ({
+                  ...prev,
+                  quantity: 0,
+                }))
+              }
+            >
+              <button>Checkout</button>
             </div>
           )}
         </div>

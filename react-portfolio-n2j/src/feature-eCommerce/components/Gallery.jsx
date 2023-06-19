@@ -23,16 +23,25 @@ const Gallery = () => {
   const { initialStateObject, setinitialStateObject } =
     useContext(InitialContext);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isOpen, setIsOpen] = useState(false);
+  const [isModalMenuAboveSMClassOpen, setisModalMenuAboveSMClassOpen] =
+    useState(false);
 
   useEffect(() => {
     setinitialStateObject((prev) => ({
       ...prev,
-      isModal: isOpen,
+      isModal: isModalMenuAboveSMClassOpen,
     }));
     initialStateObject;
-  }, [isOpen]);
+  }, [isModalMenuAboveSMClassOpen]);
 
+  useEffect(() => {
+    if (isModalMenuAboveSMClassOpen) {
+      setinitialStateObject((prev) => ({
+        ...prev,
+        isCartOpen: false,
+      }));
+    }
+  }, [isModalMenuAboveSMClassOpen]);
   const goToPreviousImage = () => {
     setCurrentImageIndex((prevIndex) =>
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
@@ -46,7 +55,7 @@ const Gallery = () => {
   };
   const getCurrentTargetImage = (index) => {
     setCurrentImageIndex(index);
-    setIsOpen(true);
+    setisModalMenuAboveSMClassOpen(true);
   };
 
   const thumbnailImages = images.map((image, index) => (
@@ -61,7 +70,7 @@ const Gallery = () => {
 
   return (
     <div>
-      {isOpen && (
+      {isModalMenuAboveSMClassOpen && (
         <div className=" fixed top-0 left-0 w-full h-full  items-center justify-center hidden sm:flex ">
           <div className="w-full h-full rounded-lg p-8 absolute top-0 left-0 bg-gray-800 bg-opacity-50">
             <div className="flex items-center justify-center ">
@@ -84,7 +93,7 @@ const Gallery = () => {
                         className="w-8 cursor-pointer  text-orange-400"
                         src="src/feature-eCommerce/images/icon-close.png"
                         alt=""
-                        onClick={() => setIsOpen(false)}
+                        onClick={() => setisModalMenuAboveSMClassOpen(false)}
                       />
                     </div>
                     <img

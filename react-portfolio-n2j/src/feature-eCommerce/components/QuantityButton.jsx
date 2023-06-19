@@ -48,7 +48,7 @@ const QuantityButton = () => {
           </div>
         </div>
         <div
-          className="lg:w-[272px] sm:w-[272px] w-[calc(80vw-1px)] h-[56px] mt-2 lg:mt-0 bg-ecommerceOrangeColor hover:bg-hoverEcommerceOrangeColor flex justify-center rounded-xl text-white cursor-pointer"
+          className="lg:w-[272px] sm:w-[272px] w-[calc(80vw-1px)] h-[56px] mt-2 lg:mt-0 bg-ecommerceOrangeColor hover:bg-hoverEcommerceOrangeColor shadow-lg shadow-hoverEcommerceOrangeColor sm:shadow-none flex justify-center rounded-xl text-white cursor-pointer"
           onClick={() => {
             setinitialStateObject((prev) => ({
               ...prev,
