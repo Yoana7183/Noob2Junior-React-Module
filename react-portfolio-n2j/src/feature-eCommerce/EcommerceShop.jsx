@@ -5,6 +5,7 @@ import Gallery from './components/Gallery';
 import InformationContainer from './components/InformationContainer';
 
 export const InitialContext = createContext();
+// context wich keep values about quantity, boolean if shopping cart is open and boolean if modal gallery has been open
 const initialStateInfo = {
   quantity: 0,
   isCartOpen: false,
@@ -32,7 +33,6 @@ const EcommerceShop = () => {
           >
             <Header />
             <Cart />
-
             <div className="w-[1015px] h-[565px] md:flex md:justify-between sm:flex-col sm:gap-0 gap-44 md:flex-row">
               <Gallery />
               <div className="sm:pl-0 pl-5 ">

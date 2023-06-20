@@ -25,7 +25,6 @@ const ModalGallery = (props) => {
                   alt="Product Image"
                 />
               </div>
-
               <div
                 className="rounded-full bg-white w-[56px] h-[56px] flex justify-center cursor-pointer absolute inset-y-15 right-[-30px] bg-[url('/src/feature-eCommerce/images/icon-next.svg')] bg-no-repeat bg-center hover:bg-[url('/src/feature-eCommerce/images/icons8-next-26.png')] "
                 onClick={props.nextImg}

@@ -9,7 +9,7 @@ const Gallery = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isModalMenuAboveSMClassOpen, setisModalMenuAboveSMClassOpen] =
     useState(false);
-
+  // dynamically updating the context every time the modal gallery is opened or closed
   useEffect(() => {
     setinitialStateObject((prev) => ({
       ...prev,
@@ -17,7 +17,7 @@ const Gallery = () => {
     }));
     initialStateObject;
   }, [isModalMenuAboveSMClassOpen]);
-
+  //dynamically updating the context every time the modal gallery is opened or closed
   useEffect(() => {
     if (isModalMenuAboveSMClassOpen) {
       setinitialStateObject((prev) => ({
@@ -101,7 +101,7 @@ const Gallery = () => {
             <img
               className=" sm:rounded-2xl rounded-none sm:inline hidden "
               src="src\feature-eCommerce\images\image-product-1.jpg"
-              alt=""
+              alt="Main-Product"
               srcSet=""
             />
           </div>
