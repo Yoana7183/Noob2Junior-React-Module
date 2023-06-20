@@ -3,7 +3,9 @@ import { useState } from 'react';
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navLinkStyle = `font-sans font-base leading-8 border-b-[1px] border-transparent pt-1 hover:border-white  block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-5 ${
-    isOpen ? 'uppercase hover:border-b-[0px] text-2xl pt-0' : 'inline'
+    isOpen
+      ? 'uppercase hover:border-b-[0px] text-2xl pt-0'
+      : 'inline font-medium'
   }`;
 
   return (

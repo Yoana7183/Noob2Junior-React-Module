@@ -55,7 +55,9 @@ const Cards = () => {
             bg-[url('/src/feature-loopstudios/images/mobile/image-from-above.jpg')]
             lg:bg-[url('/src/feature-loopstudios/images/desktop/image-from-above.jpg')]`}
           >
-            <p className={paragraphCardsStyle}>FROM UP ABOVE VR</p>
+            <p className={` mt-[-1rem]${paragraphCardsStyle}`}>
+              FROM UP ABOVE VR
+            </p>
           </div>
           <div
             className={`${cardStyle}     
