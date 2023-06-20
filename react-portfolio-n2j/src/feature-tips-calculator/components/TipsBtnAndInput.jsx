@@ -44,7 +44,7 @@ const TipsBtnAndInput = () => {
   if (inputsInObject.tip === 0) {
     inputsInObject.tip = '';
   }
-  // only butttons logic
+  // only butttons tips logic
   let value = isTipComesFromBtn == 0 ? '' : inputsInObject.tip;
 
   function handleButtonClick(newPercent) {

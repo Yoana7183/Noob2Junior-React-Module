@@ -6,7 +6,7 @@ const InputBill = () => {
   const { inputsInObject, setinputsInObject } = useContext(BillConext);
   const [error, setError] = useState('');
   const [bill, setBill] = useState(0);
-
+  //checking for the value in the context, on reset the input value is set to 0
   useEffect(() => {
     if (inputsInObject.bill == 0) {
       inputsInObject.bill = '';
@@ -34,7 +34,7 @@ const InputBill = () => {
       setError('');
     }
   }, [bill]);
-
+  //clearing 0 as the value in the context so that it does not appear in the input when the calculation is reset
   if (inputsInObject.bill === 0) {
     inputsInObject.bill = '';
   }
@@ -52,7 +52,7 @@ const InputBill = () => {
         <img
           className="w-[25px] h-[16px] absolute inset-y-4 left-0 flex items-center pl-3 "
           src="src\feature-tips-calculator\images\icon-dollar.svg"
-          alt=""
+          alt="icon-dollar"
           srcSet=""
         />
 
