@@ -1,7 +1,7 @@
 const Cards = () => {
   const cardStyle = `bg-cover hover:bg-white hover:opacity-50 cursor-pointer fonr-thin lg:h-[450px] bg-no-repeat lg:text-2xl text-white lg:relative md:w-[100%] md:h-[250px] h-[7.5rem] m:h-[11rem]
       `;
-  const paragraphCardsStyle = `  hover:text-black  text-white font-normal font-sans lg:absolute  text-xl w-[20%] font-light sm:text-3xl lg:inset-x-0 lg:bottom-0  p-5 md:text-4xl md:font-thin md:w-[30%]`;
+  const paragraphCardsStyle = `  hover:text-black  text-white font-light font-sans lg:absolute  text-xl w-[20%] font-light sm:text-3xl lg:inset-x-0 lg:bottom-0  p-5 md:text-4xl md:font-thin md:w-[30%]`;
   return (
     <div
       className=" 
