@@ -21,10 +21,12 @@ const Article = () => {
         <h1 className="font-sans text-zinc-800 p-0 text-center uppercase text-2xl 2xl:text-5xl lg:text-5xl leading-10 mb-4 font-thin md:text-5xl sm:text-4xl">
           The leader in interactive VR
         </h1>
-        Founded in 2011, Loopstudios has been producing world-class virtual
-        reality projects for some of the best companies around the globe. Our
-        award-winning creations have transformed businesses through digital
-        experiences that bind to their brand.
+        <div className="sm:text-left text-center sm:pl-10 pl-0">
+          Founded in 2011, Loopstudios has been producing world-class virtual
+          reality projects for some of the best companies around the globe. Our
+          award-winning creations have transformed businesses through digital
+          experiences that bind to their brand.
+        </div>
       </div>
     </div>
   );
