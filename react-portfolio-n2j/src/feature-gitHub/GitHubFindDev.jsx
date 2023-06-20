@@ -29,6 +29,7 @@ const GitHubFindDev = () => {
 
   useEffect(() => {
     if (isInitial) {
+      // on initial load, the context will have these values loaded, but will not cause any error
       setUserData(() => ({
         urlUser: 'https://github.com/octocat',
         name: 'The Octocat',
@@ -51,6 +52,7 @@ const GitHubFindDev = () => {
     }
     if (userDataObject.data != null) {
       setUserData(() => ({
+        //if a successful fetch request, the data we need to use  will be loaded into the context
         urlUser: userDataObject.data.html_url,
         name: userDataObject.data.name,
         login: userDataObject.data.login,
@@ -67,6 +69,9 @@ const GitHubFindDev = () => {
     }
 
     if (userDataObject.data.message === 'Not Found') {
+      // on error, the initial data will be reloaded again,
+      // but this time an error will be thrown in the context object,
+      // which means that the user has entered wrong or invalid data, and such user does not have
       setUserData(() => ({
         urlUser: 'https://github.com/octocat',
         name: 'The Octocat',
@@ -122,7 +127,7 @@ const GitHubFindDev = () => {
                   <img
                     className="w-[20px] h-[20px] ml-2 "
                     src="src/feature-gitHub/assets/icon-moon.svg"
-                    alt=""
+                    alt="moon-icon"
                     srcSet=""
                   />
                 </div>
@@ -133,7 +138,7 @@ const GitHubFindDev = () => {
                 <img
                   className="w-[20px] h-[20px] ml-2"
                   src="src/feature-gitHub/assets/icon-sun.svg"
-                  alt=""
+                  alt="sun-icon"
                   srcSet=""
                 />
               </div>

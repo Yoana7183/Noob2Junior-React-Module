@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import {
   UserDataContext as UserCredentials,
   ThemeContext,
@@ -16,22 +16,13 @@ const PersonalUserInformation = () => {
       })
     : undefined;
 
-  if (userData === undefined || userData == null) {
-    console.log(typeof userData);
-    return;
-  }
-  useEffect(() => {
-    if (userData == undefined || userData == null || userData.error == true) {
-      return;
-    }
-  }, [userData]);
   const toggleText = initialTheme === 'dark' ? '  text-white' : 'text-black';
   return (
     <div className=" pt-3 sm:pt-6 pl-4 h-[95px] mb-[6rem]">
       <div className="grid lg:grid-cols-3 grid-cols-2">
         <div className=" w-[70px] h-[70px] sm:w-[117px] sm:h-[117px] rounded-full overflow-hidden col-start-1">
           <a href={userData.urlUser} target="_blank" rel="noopener noreferrer">
-            <img src={image} alt="" />
+            <img src={image} alt="user-url-to-profil" />
           </a>
         </div>
 
@@ -45,7 +36,7 @@ const PersonalUserInformation = () => {
             @{userData.login}
           </div>
           <div className=" lg:hidden text-sm sm:text-base ">
-            Joineed {formattedDate}
+            Joined {formattedDate}
           </div>
           <div className="lg:col-start-2 ml-[-6rem] md:col-start-1 pt-4  sm:ml-[-10rem] lg:ml-0 text-sm sm:text-base">
             <div className="line-clamp-2  md:w-[493px] text-sm sm:text-base">

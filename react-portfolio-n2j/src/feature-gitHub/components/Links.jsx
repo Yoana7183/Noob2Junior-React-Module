@@ -10,7 +10,7 @@ const LinksAndLocation = () => {
       <div className={`sm:w-[185px] lg:w-[200px] ${linksContainerStyle}`}>
         <img
           src="src/feature-gitHub/assets/icon-location.svg"
-          alt=""
+          alt="location-icon"
           srcSet=""
         />
         <div className="pl-3">{userData.location}</div>
@@ -21,7 +21,7 @@ const LinksAndLocation = () => {
         <div className=" text-slate-300 opacity-20">
           <img
             src="src/feature-gitHub/assets/icon-twitter.svg"
-            alt=""
+            alt="twitter-icon"
             srcSet=""
           />
         </div>
@@ -31,7 +31,7 @@ const LinksAndLocation = () => {
       <div className={`sm:w-[190px] lg:w-[210px] ${linksContainerStyle}`}>
         <img
           src="src/feature-gitHub/assets/icon-website.svg"
-          alt=""
+          alt="website-icon"
           srcSet=""
         />
         <div className="pl-2">
@@ -47,7 +47,7 @@ const LinksAndLocation = () => {
       <div className={`sm:w-[100px]  lg:w-[115px]${linksContainerStyle}`}>
         <img
           src="src/feature-gitHub/assets/icon-company.svg"
-          alt=""
+          alt="company-icon"
           srcSet=""
         />
         <div className="ml-3">@github</div>
