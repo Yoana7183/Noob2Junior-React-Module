@@ -49,7 +49,6 @@ const Cart = () => {
                 <img
                   src="src\feature-eCommerce\images\icon-delete.svg"
                   alt="delete"
-                  srcSet=""
                 />
               </div>
             </div>
@@ -74,4 +73,3 @@ const Cart = () => {
 };
 
 export default Cart;
-//[calc(10vw-1px)]//

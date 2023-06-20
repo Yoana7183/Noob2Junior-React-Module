@@ -6,6 +6,8 @@ const QuantityButton = () => {
     useContext(InitialContext);
 
   const [inputQuantity, setInptQuantity] = useState(0);
+  //this effect serves to update the quantity value when the quantities are reset from the shopping cart the value in the quantity field
+  // in this component will also reset to 0
   useEffect(() => {
     if (initialStateObject.quantity == 0) {
       setInptQuantity(0);
@@ -34,7 +36,7 @@ const QuantityButton = () => {
             <img
               className="bg-cover pt-1"
               src="src\feature-eCommerce\images\icon-minus.svg"
-              alt=""
+              alt="minus-quantity"
               srcSet=""
             />
           </div>
@@ -45,7 +47,7 @@ const QuantityButton = () => {
             <img
               className="bg-cover "
               src="src\feature-eCommerce\images\icon-plus.svg"
-              alt=""
+              alt="plus-quantity"
               srcSet=""
             />
           </div>
@@ -63,7 +65,7 @@ const QuantityButton = () => {
             <div>
               <img
                 src="src\feature-eCommerce\images\icon-cart.svg"
-                alt=""
+                alt="shopping-cart"
                 srcSet=""
               />
             </div>
