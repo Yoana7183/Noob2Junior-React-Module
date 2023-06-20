@@ -22,46 +22,20 @@ const Header = () => {
         >
           loopstudios
         </div>
-        <nav
-          className="
-      2xl:pl-[calc(10%-1.7rem)] 
-      2xl:pr-[calc(10%-1.7rem)] 
-      xl:pr-32
-      lg:pr-32
-      flex 
-      items-center
-       justify-between 
-       flex-wrap
-        p-6"
-        >
-          <div
-            className="
-      flex
-       items-center
-        flex-shrink-0
-         text-white
-         
-          mr-6
-           lg:mr-72"
-          ></div>
+        <nav className="2xl:pl-[calc(10%-1.7rem)] 2xl:pr-[calc(10%-1.7rem)] xl:pr-32 lg:pr-32 flex items-center justify-between flex-wrap p-6">
+          <div className="flex items-center flex-shrink-0 text-white mr-6 lg:mr-72"></div>
 
           <div className="block lg:hidden pt-7">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="flex 
-          items-center
-           px-3 
-           py-2 
-           rounded 
-           text-black-500 
-           hover:text-black-400 "
+              className="flex items-center px-3 py-2 rounded text-black-500 hover:text-black-400 "
             >
               <img
                 className={`fill-current h-10  w-10 mt-[-2.6rem] ${
                   isOpen ? 'hidden' : 'block'
                 }`}
                 src="/src/feature-loopstudios/images/hamburger.svg"
-                alt=""
+                alt="hamburge"
                 srcSet=""
               />
 
@@ -70,7 +44,7 @@ const Header = () => {
                   isOpen ? 'block' : 'hidden'
                 }`}
                 src="/src/feature-loopstudios/images/close.svg"
-                alt=""
+                alt="close"
                 srcSet=""
               />
             </button>
