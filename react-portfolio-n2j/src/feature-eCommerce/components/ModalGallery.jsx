@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ProductGallery from './images';
+
 const ModalGallery = (props) => {
   return (
     <div className=" fixed top-0 left-0 w-full h-full  items-center justify-center hidden sm:flex ">

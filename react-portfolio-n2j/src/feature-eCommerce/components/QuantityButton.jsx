@@ -38,12 +38,9 @@ const QuantityButton = () => {
               srcSet=""
             />
           </div>
-          <input
-            type="text"
-            className=" w-[20px] bg-[#ececec]"
-            value={inputQuantity}
-            onChange={handleInputChange}
-          />
+          <div className=" w-[20px] bg-[#ececec]" onChange={handleInputChange}>
+            {inputQuantity}
+          </div>
           <div className="w-[15px] cursor-pointer" onClick={handlePlusClick}>
             <img
               className="bg-cover "
