@@ -5,8 +5,6 @@ import useValidateNumberInput from '../hooks/useValidateNumberInput';
 const InputBill = () => {
   const [error, setError] = useState('');
   const [bill, setBill] = useState('');
-  console.log('🚀 ~ file: InputBill.jsx:8 ~ InputBill ~ bill:', bill);
-
   const handleChange = (event) => {
     setBill(event.target.value.trim());
   };

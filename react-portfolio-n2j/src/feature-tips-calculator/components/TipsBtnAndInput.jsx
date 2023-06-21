@@ -14,8 +14,7 @@ const TipsBtnAndInput = () => {
   }, [percentOfBtn]);
 
   const handleChange = (event) => {
-    let inputPercent = event.target.value.trim();
-    setpercentOfTitInput(inputPercent);
+    setpercentOfTitInput(event.target.value.trim());
   };
   const validInput = useValidateNumberInput(
     setError,

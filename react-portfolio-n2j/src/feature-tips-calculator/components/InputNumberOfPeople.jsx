@@ -7,8 +7,7 @@ const InputPeople = () => {
   const [people, setPeople] = useState(0);
 
   const handleClick = (event) => {
-    let numberOfPeople = event.target.value.trim();
-    setPeople(numberOfPeople);
+    setPeople(event.target.value.trim());
   };
   // custom hook for validation on input, and if is valid will update the context
   const validInput = useValidateNumberInput(setError, people, setPeople, [
