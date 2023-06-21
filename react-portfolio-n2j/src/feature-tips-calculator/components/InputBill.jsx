@@ -14,17 +14,10 @@ const InputBill = () => {
   // custom hook for validation on input, and if is valid will update the context
 
   let validInput = useValidateNumberInput(setError, bill, setBill);
-  console.log(
-    '🚀 ~ file: InputBill.jsx:17 ~ InputBill ~ validInput:',
-    validInput
-  );
-  if (validInput == 0) {
-    validInput = '';
-  }
 
   //clearing 0 as the value in the context so that it does not appear in the input when the calculation is reset
 
-  // let value = bill == 0 ? '' : validInput;
+  let value = bill == 0 ? '' : validInput;
   return (
     <div className="pb-10">
       <div className="flex justify-between">
@@ -47,7 +40,7 @@ const InputBill = () => {
           type="text"
           id="bill"
           name="bill"
-          value={validInput}
+          value={value}
           onChange={handleChange}
         />
       </div>

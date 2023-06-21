@@ -11,18 +11,26 @@ const useValidateNumberInput = (
   const { inputsInObject, setinputsInObject } = useContext(TipsContext);
 
   useEffect(() => {
+    if (inputsInObject.bill == 0) {
+      inputCleanFunc(0);
+      errorSetFunction('');
+    }
+    if (inputsInObject.bill == 0 && returnValue == 0) {
+      errorSetFunction('');
+      inputCleanFunc('');
+    }
+  }, [inputsInObject.bill]);
+  console.log(inputsInObject);
+
+  useEffect(() => {
     if (/^[a-zA-Z]+$/g.test(valueToValidate)) {
-      setReturnValue('');
       errorSetFunction(`Please enter a number`);
     }
     if (isNaN(valueToValidate)) {
-      setReturnValue('');
       errorSetFunction(`Please enter a number`);
     } else if (valueToValidate < 0) {
-      setReturnValue('');
       errorSetFunction(`Can't be negative`);
     } else if (valueToValidate === undefined) {
-      setReturnValue('');
       errorSetFunction('');
     } else {
       setReturnValue(valueToValidate);
@@ -32,14 +40,8 @@ const useValidateNumberInput = (
       }));
       errorSetFunction('');
     }
+    console.log(returnValue);
   }, [valueToValidate, returnValue]);
-
-  useEffect(() => {
-    if (inputsInObject.bill == 0) {
-      setReturnValue(0);
-      inputCleanFunc(0);
-    }
-  }, [inputsInObject.bill]);
 
   return returnValue;
 };
