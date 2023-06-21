@@ -3,7 +3,8 @@ import { TipsContext } from '../Tips_Calculator';
 import PropTypes from 'prop-types';
 const useValidateNumberInput = (
   errorSetFunction,
-  valueToValidate
+  valueToValidate,
+  inputCleanFunc
   //   contextPropertyToBeUpdated
 ) => {
   const [returnValue, setReturnValue] = useState(0);
@@ -31,12 +32,15 @@ const useValidateNumberInput = (
       }));
       errorSetFunction('');
     }
-  }, [valueToValidate]);
+  }, [valueToValidate, returnValue]);
+
   useEffect(() => {
-    if (inputsInObject.bill == 0) setReturnValue(0);
+    if (inputsInObject.bill == 0) {
+      setReturnValue(0);
+      inputCleanFunc(0);
+    }
   }, [inputsInObject.bill]);
-  console.log(returnValue);
-  console.log(inputsInObject);
+
   return returnValue;
 };
 
@@ -45,7 +49,7 @@ useValidateNumberInput.propTypes = {
   errorSetFunction: PropTypes.func.isRequired,
   contextValue: PropTypes.any.isRequired,
   valueToValidate: PropTypes.any.isRequired,
-  contextPropertyToBeUpdated: PropTypes.any.isRequired,
+  inputCleanFunc: PropTypes.func.isRequired,
 };
 
 export default useValidateNumberInput;
