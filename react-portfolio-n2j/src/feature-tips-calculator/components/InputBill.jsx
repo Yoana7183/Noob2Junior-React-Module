@@ -1,45 +1,25 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
-import { TipsContext as BillConext } from '../Tips_Calculator';
+import useValidateNumberInput from '../hooks/useValidateNumberInput';
 
 const InputBill = () => {
-  const { inputsInObject, setinputsInObject } = useContext(BillConext);
   const [error, setError] = useState('');
   const [bill, setBill] = useState(0);
   //checking for the value in the context, on reset the input value is set to 0
-  useEffect(() => {
-    if (inputsInObject.bill == 0) {
-      inputsInObject.bill = '';
-      setError('');
-    }
-  }, [inputsInObject]);
 
   const handleChange = (event) => {
-    let billAmount = event.target.value.trim();
-    setBill(billAmount);
+    setBill(event.target.value.trim());
   };
+  // custom hook for validation on input, and if is valid will update the context
 
-  useEffect(() => {
-    if (/^[a-zA-Z]+$/g.test(bill)) {
-      setError(`Please enter a number`);
-    }
-    if (isNaN(bill)) {
-      setError(`Please enter a number`);
-    } else if (bill < 0) {
-      setError(`Can't be negative`);
-    } else if (bill === undefined) {
-      setError('');
-    } else {
-      setinputsInObject((prev) => ({ ...prev, bill: bill }));
-      setError('');
-    }
-  }, [bill]);
-  //clearing 0 as the value in the context so that it does not appear in the input when the calculation is reset
-  if (inputsInObject.bill === 0) {
-    inputsInObject.bill = '';
+  let validInput = useValidateNumberInput(setError, bill);
+  if (validInput == 0) {
+    validInput = '';
   }
 
-  let value = bill == 0 ? '' : inputsInObject.bill;
+  //clearing 0 as the value in the context so that it does not appear in the input when the calculation is reset
+
+  let value = bill == 0 ? '' : validInput;
   return (
     <div className="pb-10">
       <div className="flex justify-between">
