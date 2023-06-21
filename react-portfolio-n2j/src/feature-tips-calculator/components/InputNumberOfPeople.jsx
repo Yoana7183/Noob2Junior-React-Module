@@ -1,44 +1,21 @@
-import { useContext, useState, useEffect } from 'react';
-import { TipsContext as PeopleContext } from '../Tips_Calculator';
+import { useState } from 'react';
 
-const Input = () => {
-  const { inputsInObject, setinputsInObject } = useContext(PeopleContext);
+import useValidateNumberInput from '../hooks/useValidateNumberInput';
+
+const InputPeople = () => {
   const [error, setError] = useState('');
   const [people, setPeople] = useState(0);
-
-  useEffect(() => {
-    if (inputsInObject.people == 0) {
-      inputsInObject.people = '';
-      setError('');
-    }
-  }, [inputsInObject]);
 
   const handleClick = (event) => {
     let numberOfPeople = event.target.value.trim();
     setPeople(numberOfPeople);
   };
+  // custom hook for validation on input, and if is valid will update the context
+  const validInput = useValidateNumberInput(setError, people, setPeople, [
+    'people',
+  ]);
 
-  useEffect(() => {
-    if (/^[a-zA-Z]+$/g.test(people)) {
-      setError(`Please enter a number`);
-    }
-    if (isNaN(people)) {
-      setError(`Please enter a number`);
-    } else if (people < 0) {
-      setError(`Can't be negative`);
-    } else if (people === undefined) {
-      setError('');
-    } else {
-      setinputsInObject((prev) => ({ ...prev, people: people }));
-      setError('');
-    }
-  }, [people]);
-
-  if (inputsInObject.people === 0) {
-    inputsInObject.people = '';
-  }
-
-  let value = people === 0 ? '' : inputsInObject.people;
+  let value = people === 0 ? '' : validInput;
   return (
     <div>
       <div className="flex justify-between">
@@ -71,4 +48,4 @@ const Input = () => {
   );
 };
 
-export default Input;
+export default InputPeople;

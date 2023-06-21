@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { TipsContext as PercentTipContext } from '../Tips_Calculator';
-
+import useValidateNumberInput from '../hooks/useValidateNumberInput';
 const TipsBtnAndInput = () => {
   const { inputsInObject, setinputsInObject } = useContext(PercentTipContext);
   const [percentOfBtn, setPercent] = useState(0);
@@ -9,43 +9,23 @@ const TipsBtnAndInput = () => {
   const [error, setError] = useState(false);
 
   useEffect(() => {
+    inputsInObject;
     setinputsInObject((prev) => ({ ...prev, tip: percentOfBtn }));
   }, [percentOfBtn]);
-
-  useEffect(() => {
-    if (inputsInObject.tip == 0) {
-      inputsInObject.tip = '';
-      setError(false);
-    }
-  }, [inputsInObject]);
 
   const handleChange = (event) => {
     let inputPercent = event.target.value.trim();
     setpercentOfTitInput(inputPercent);
   };
+  const validInput = useValidateNumberInput(
+    setError,
+    percentOfTitInput,
+    setpercentOfTitInput,
+    ['tip']
+  );
 
-  useEffect(() => {
-    if (/^[a-zA-Z]+$/g.test(percentOfTitInput)) {
-      setError(true);
-    }
-    if (isNaN(percentOfTitInput)) {
-      setError(true);
-    } else if (percentOfTitInput < 0) {
-      setError(true);
-    } else if (percentOfTitInput === undefined) {
-      setError(true);
-    } else {
-      setisTipComesFromBtn(1);
-      setinputsInObject((prev) => ({ ...prev, tip: percentOfTitInput }));
-      setError(false);
-    }
-  }, [percentOfTitInput]);
-
-  if (inputsInObject.tip === 0) {
-    inputsInObject.tip = '';
-  }
   // only butttons tips logic
-  let value = isTipComesFromBtn == 0 ? '' : inputsInObject.tip;
+  const value = isTipComesFromBtn ? '' : validInput;
 
   function handleButtonClick(newPercent) {
     setisTipComesFromBtn(0);

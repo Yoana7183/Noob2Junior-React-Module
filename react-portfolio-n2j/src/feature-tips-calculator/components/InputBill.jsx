@@ -4,20 +4,16 @@ import useValidateNumberInput from '../hooks/useValidateNumberInput';
 
 const InputBill = () => {
   const [error, setError] = useState('');
-  const [bill, setBill] = useState(0);
-  //checking for the value in the context, on reset the input value is set to 0
+  const [bill, setBill] = useState('');
+  console.log('🚀 ~ file: InputBill.jsx:8 ~ InputBill ~ bill:', bill);
 
   const handleChange = (event) => {
-    const inputVlaue = event.target.value.trim();
-    setBill(inputVlaue);
+    setBill(event.target.value.trim());
   };
   // custom hook for validation on input, and if is valid will update the context
+  const validInput = useValidateNumberInput(setError, bill, setBill, ['bill']);
+  const value = bill === 0 ? '' : validInput;
 
-  let validInput = useValidateNumberInput(setError, bill, setBill);
-
-  //clearing 0 as the value in the context so that it does not appear in the input when the calculation is reset
-
-  let value = bill == 0 ? '' : validInput;
   return (
     <div className="pb-10">
       <div className="flex justify-between">
@@ -33,7 +29,6 @@ const InputBill = () => {
           alt="icon-dollar"
           srcSet=""
         />
-
         <input
           inputMode="numeric"
           className=" bg-teal-50 rounded-md h-[48px] w-[100%] lg:h-[48px] text-2xl text-right pr-4 sm:h-[70px]"
