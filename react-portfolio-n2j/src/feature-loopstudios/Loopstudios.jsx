@@ -5,12 +5,12 @@ import Footer from '../feature-loopstudios/components/Footer';
 
 const Loopstudios = () => {
   return (
-    <div className=" font-alata overflow-hidden">
+    <main className=" font-alata overflow-hidden">
       <Header />
       <Article />
       <Cards />
       <Footer />
-    </div>
+    </main>
   );
 };
 export default Loopstudios;

@@ -9,7 +9,7 @@ const Header = () => {
   }`;
 
   return (
-    <div
+    <nav
       className={
         isOpen
           ? 'bg-black h-[50rem] lg:h-[650px]  md:h-[650px] mb-[5rem] sm:h-[600px] '
@@ -93,7 +93,7 @@ const Header = () => {
       >
         IMMERSIVE EXPERIENCES THAT DELIVER
       </div>
-    </div>
+    </nav>
   );
 };
 
