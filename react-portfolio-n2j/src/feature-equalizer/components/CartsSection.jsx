@@ -1,6 +1,6 @@
 const CartSection = () => {
   return (
-    <div
+    <section
       className="flex-col xl:flex-row lg:mr-16 lg:flex-row  lg:ml-0 lg:mt-[18rem] mt-[8rem] mr-[-5%] ml-[-5%] md:flex-row 
       md:mr-6 md:ml-1 md:mt-[15rem] sm:flex-row  sm:ml-[-3rem] sm:mt-[14rem] flex md:flex  "
     >
@@ -8,7 +8,7 @@ const CartSection = () => {
         className=" ml-[calc(50%-11.7rem)] w-[375px] h-[600px] xl:ml-[0] bg-black xl:h-[600px]  xl:w-[1110px] lg:w-[850px] 
           lg:ml-[0] lg:h-[500px] flex rounded-xl md:ml-[0] md:w-[696px] md:h-[600px] sm:ml-[0] sm:w-[600px] sm:h-[520px] sm-ml-[-2rem] "
       >
-        <div className=" z-40 w-[1150px] h-[600px] xl:w-[100%] lg:w-[100%] md:w-[100%] sm:w-[100%] md:z-40 sm:z-40 ">
+        <figure className=" z-40 w-[1150px] h-[600px] xl:w-[100%] lg:w-[100%] md:w-[100%] sm:w-[100%] md:z-40 sm:z-40 ">
           <img
             className="ml-[60%] mr-[30%] mt-[-4rem] w-[950px] h-[370px] bg-cover xl:h-[642px] xl:w-[312px] xl:ml-[4rem] xl:mt-[-180px]
              md:w-[270px] md:h-[556px] md:mt-[-120px] md:ml-[3rem] sm:h-[500px] sm:w-[220px] sm:mt-[-6rem]  sm:ml-6"
@@ -16,15 +16,15 @@ const CartSection = () => {
             alt="illustration-app-phone"
             srcSet=""
           />
-        </div>
-        <div className=" w-[90rem] h-[420px] lg:w-[350px] md:w-[280px] sm:w-[220px]">
+        </figure>
+        <figure className=" w-[90rem] h-[420px] lg:w-[350px] md:w-[280px] sm:w-[220px]">
           <img
             className="ml-[-40%] w-[500px] h-[420px  xl:ml-[-35rem] lg:bg-cover lg:ml-[-25rem] md:ml-[-16rem] sm:ml-[-15rem]  "
             src="/src/feature-equalizer/assets/bg-pattern-2.svg"
             alt="bg-pattern-2"
             srcSet=""
           />
-        </div>
+        </figure>
       </div>
       <div
         className=" ml-[calc(50%-11.7rem)] w-[375px] pb-[5rem] mt-[-15rem] rounded-xl bg-[#FA7453] p-10 text-white xl:w-[446px] 
@@ -82,7 +82,7 @@ const CartSection = () => {
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default CartSection;

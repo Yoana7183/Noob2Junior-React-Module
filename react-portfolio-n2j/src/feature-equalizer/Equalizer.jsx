@@ -3,7 +3,7 @@ import CartSection from './components/CartsSection';
 import Footer from './components/Footer';
 const Equalizer = () => {
   return (
-    <div className="w-full h-full">
+    <main className="w-full h-full">
       <div
         className="lg:bg-[url('/src/feature-equalizer/assets/bg-main-desktop.png')] md:bg-[url('/src/feature-equalizer/assets/bg-main-tablet.png')] 
        sm:bg-[url('/src/feature-equalizer/assets/bg-main-tablet.png')] bg-[url('/src/feature-equalizer/assets/bg-main-mobile.png')] 
@@ -13,7 +13,7 @@ const Equalizer = () => {
         <CartSection />
         <Footer />
       </div>
-    </div>
+    </main>
   );
 };
 export default Equalizer;
