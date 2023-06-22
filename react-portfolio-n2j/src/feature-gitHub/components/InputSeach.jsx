@@ -39,7 +39,7 @@ const SearchBarAndSubmitButton = ({ getValue }) => {
   };
 
   return (
-    <div
+    <section
       className={`flex items-center w-[330px] lg:w-[730px] md:w-[575px] sm:w-[575px] h-[69px] rounded-2xl p-4 ${
         initialTheme === 'dark'
           ? ' bg-gitContainerBlackBackground text-white'
@@ -73,7 +73,7 @@ const SearchBarAndSubmitButton = ({ getValue }) => {
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 SearchBarAndSubmitButton.propTypes = {

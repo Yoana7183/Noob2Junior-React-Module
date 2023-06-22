@@ -19,7 +19,7 @@ const TableInformation = () => {
       : ' text-black text-2xl font-bold md:text-lg sm:text-lg text-sm';
 
   return (
-    <div
+    <section
       className={`border pr-16 border-[#00000033] lg:ml-[10rem] text-sm mt-[-1.5rem] lg:mt-[0.5rem] md:mt-32 sm:mt-32 md:ml-8 sm:ml-8 lg:w-[480px] lg:h-[85px] px-10 p-3 rounded-2xl flex justify-between md:text-sm sm:text-sm ${toggleDarkToLightStyleContainers}`}
     >
       <div className="flex flex-col items-center">
@@ -38,7 +38,7 @@ const TableInformation = () => {
           {userData.following}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

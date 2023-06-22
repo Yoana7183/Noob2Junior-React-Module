@@ -18,7 +18,7 @@ const PersonalUserInformation = () => {
 
   const toggleText = initialTheme === 'dark' ? '  text-white' : 'text-black';
   return (
-    <div className=" pt-3 sm:pt-6 pl-4 h-[95px] mb-[6rem]">
+    <section className=" pt-3 sm:pt-6 pl-4 h-[95px] mb-[6rem]">
       <div className="grid lg:grid-cols-3 grid-cols-2">
         <div className=" w-[70px] h-[70px] sm:w-[117px] sm:h-[117px] rounded-full overflow-hidden col-start-1">
           <a href={userData.urlUser} target="_blank" rel="noopener noreferrer">
@@ -48,7 +48,7 @@ const PersonalUserInformation = () => {
           Joined {formattedDate}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default PersonalUserInformation;

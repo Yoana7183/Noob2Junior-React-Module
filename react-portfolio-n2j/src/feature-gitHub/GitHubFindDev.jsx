@@ -98,7 +98,7 @@ const GitHubFindDev = () => {
       : 'bg-white text-gitTextOnLight';
 
   return (
-    <div
+    <main
       className={`flex justify-center pt-16 lg:pt-[10rem] lg:h-[75rem] lg:pb-[30rem] md:h-[70rem] md:pb-[30rem] sm:pb-[30rem] sm:h-[65rem] h-[55rem] pb-[35rem] md:pt-[10rem] sm:pt-[10rem] font-mono ${toggleDarkToLightStyleBackground}`}
     >
       <div
@@ -107,7 +107,7 @@ const GitHubFindDev = () => {
         <div
           className={`flex justify-between pb-6 ${toggleDarkToLightStyleBackground}`}
         >
-          <div
+          <header
             className={`text-3xl font-black ${
               theme === 'dark'
                 ? ' bg-gitDarkSpaceBackground text-white'
@@ -115,7 +115,7 @@ const GitHubFindDev = () => {
             }`}
           >
             devfinder
-          </div>
+          </header>
           <button
             className={`flex justify-between  ${toggleDarkToLightStyleBackground}`}
             onClick={toggleTheme}
@@ -162,7 +162,7 @@ const GitHubFindDev = () => {
           </UserDataContext.Provider>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 
