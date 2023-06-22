@@ -36,7 +36,7 @@ const TipsBtnAndInput = () => {
     ? 'bg-red-800 rounded-md lg:w-[100%] lg:h-[48px] text-2xl text-right pr-4 sm:w-[220px] sm:h-[70px]'
     : 'bg-teal-50 rounded-md lg:w-[100%] lg:h-[48px] text-2xl text-right pr-4 sm:w-[220px] sm:h-[70px]';
   return (
-    <div className="pb-10 text-buttonOfCalculatorAndRightSideBackground font-bold ">
+    <section className="pb-10 text-buttonOfCalculatorAndRightSideBackground font-bold ">
       {'  Select Tip %'}
 
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 pt-4">
@@ -66,7 +66,7 @@ const TipsBtnAndInput = () => {
           onChange={handleChange}
         />
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -4,7 +4,7 @@ import TipsBtnAndInput from './TipsBtnAndInput';
 
 const LeftPart = () => {
   return (
-    <div className="p-6 lg:w-[420px]">
+    <main className="p-6 lg:w-[420px]">
       <div>
         <InputBill />
       </div>
@@ -14,7 +14,7 @@ const LeftPart = () => {
       <div>
         <InputNumberOfPeople />
       </div>
-    </div>
+    </main>
   );
 };
 

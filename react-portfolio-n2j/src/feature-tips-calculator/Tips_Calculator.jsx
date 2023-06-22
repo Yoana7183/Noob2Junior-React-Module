@@ -23,16 +23,16 @@ const TipsCalculator = () => {
   }, [inputsInObject]);
 
   return (
-    <div className="bg-teal-50 w-[100%] h-[100%]  lg:h-[70rem]  md:h-[100rem] m-0 font-mono">
+    <main className="bg-teal-50 w-[100%] h-[100%]  lg:h-[70rem]  md:h-[100rem] m-0 font-mono">
       <div className="flex flex-cols-1 pt-10 justify-center lg:pt-16 sm:pt-10">
-        <div>
+        <header>
           <div className="text-4xl  text-buttonOfCalculatorAndRightSideBackground">
             SPLI
           </div>
           <div className="text-4xl  text-buttonOfCalculatorAndRightSideBackground">
             TTER
           </div>
-        </div>
+        </header>
       </div>
       <div className="flex justify-center pt-10 ">
         <div className="flex rounded-3xl shadow-2xl h-[60rem] sm:h-[75rem]  lg:w-[920px]  lg:h-[481px] sm:mt-16 bg-white lg:mt-36 lg:p-6 sm:p-6">
@@ -48,7 +48,7 @@ const TipsCalculator = () => {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 export default TipsCalculator;

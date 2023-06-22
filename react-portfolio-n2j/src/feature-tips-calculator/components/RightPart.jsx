@@ -34,7 +34,7 @@ const RightPart = (total) => {
     'bg-buttonOfCalculatorAndRightSideBackground mt-[-6rem] lg:w-[420px] sm:mt-[-3rem] lg:mt-0 rounded-lg p-6 lg:h-[417px] mr-[5%] ml-[5%]';
 
   return (
-    <div className={backgroundStyleisEmpty}>
+    <section className={backgroundStyleisEmpty}>
       <div className="text-white flex justify-between pt-5">
         <div className="font-bold">
           Tip Amount
@@ -61,7 +61,7 @@ const RightPart = (total) => {
         </div>
       </div>
       <ResetBtn />
-    </div>
+    </section>
   );
 };
 

@@ -13,7 +13,7 @@ const InputBill = () => {
   const value = bill === 0 ? '' : validInput;
 
   return (
-    <div className="pb-10">
+    <section className="pb-10">
       <div className="flex justify-between">
         <p className="pb-2 text-buttonOfCalculatorAndRightSideBackground font-bold">
           Bill
@@ -37,7 +37,7 @@ const InputBill = () => {
           onChange={handleChange}
         />
       </div>
-    </div>
+    </section>
   );
 };
 
