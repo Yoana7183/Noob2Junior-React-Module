@@ -4,12 +4,24 @@ import useFetchData from './hooks/useFetchData';
 import PersonalUserInformation from './components/PersonalUserInformation';
 import TableInformation from './components/TableInformation';
 import LinksAndLocation from './components/Links';
-
 export const UserDataContext = createContext();
 export const ThemeContext = createContext();
 
 const initialState = {};
 const initialTheme = 'light';
+
+const dummyData = {
+  urlUser: 'https://github.com/octocat',
+  name: 'The Octocat',
+  avatar: 'https://avatars.githubusercontent.com/u/583231?v=4',
+  login: 'octocat',
+  timeStamp: '2011-01-25',
+  bio: '',
+  repos: 8,
+  followers: 9350,
+  following: 9,
+  location: 'San Francisco',
+};
 
 const GitHubFindDev = () => {
   const [inputValue, setInputValue] = useState('');
@@ -31,16 +43,7 @@ const GitHubFindDev = () => {
     if (isInitial) {
       // on initial load, the context will have these values loaded, but will not cause any error
       setUserData(() => ({
-        urlUser: 'https://github.com/octocat',
-        name: 'The Octocat',
-        avatar: 'https://avatars.githubusercontent.com/u/583231?v=4',
-        login: 'octocat',
-        timeStamp: '2011-01-25',
-        bio: '',
-        repos: 8,
-        followers: 9350,
-        following: 9,
-        location: 'San Francisco',
+        ...dummyData,
         error: 'firstLoad',
       }));
     }
@@ -73,17 +76,16 @@ const GitHubFindDev = () => {
       // but this time an error will be thrown in the context object,
       // which means that the user has entered wrong or invalid data, and such user does not have
       setUserData(() => ({
-        urlUser: 'https://github.com/octocat',
-        name: 'The Octocat',
-        avatar: 'https://avatars.githubusercontent.com/u/583231?v=4',
-        login: 'octocat',
-        timeStamp: '2011-01-25',
-        bio: '',
-        repos: 8,
-        followers: 9350,
-        following: 9,
-        location: 'San Francisco',
+        dummyData,
         error: true,
+      }));
+      setIsInitial(false);
+    }
+    if (userDataObject.data.message === 'Bad credentials') {
+      setUserData(() => ({
+        ...dummyData,
+        error: true,
+        expiredAPIkey: true,
       }));
       setIsInitial(false);
     }
@@ -104,6 +106,12 @@ const GitHubFindDev = () => {
       <div
         className={` w-[330px] lg:w-[730px] md:w-[575px] sm:w-[575px]  ${toggleDarkToLightStyleContainers}`}
       >
+        {userData.expiredAPIkey ? (
+          <div className={toggleDarkToLightStyleBackground}>
+            Ooops..A problem has occurred, most likely due to a problem with API
+            key!
+          </div>
+        ) : null}
         <div
           className={`flex justify-between pb-6 ${toggleDarkToLightStyleBackground}`}
         >
