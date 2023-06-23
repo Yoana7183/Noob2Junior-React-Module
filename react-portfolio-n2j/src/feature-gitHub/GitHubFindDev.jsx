@@ -7,9 +7,6 @@ import LinksAndLocation from './components/Links';
 export const UserDataContext = createContext();
 export const ThemeContext = createContext();
 
-const initialState = {};
-const initialTheme = 'light';
-
 const dummyData = {
   urlUser: 'https://github.com/octocat',
   name: 'The Octocat',
@@ -25,8 +22,8 @@ const dummyData = {
 
 const GitHubFindDev = () => {
   const [inputValue, setInputValue] = useState('');
-  const [userData, setUserData] = useState(initialState);
-  const [theme, setTheme] = useState(initialTheme);
+  const [userData, setUserData] = useState({});
+  const [theme, setTheme] = useState('light');
   const [isInitial, setIsInitial] = useState(true);
 
   const userDataObject = useFetchData(inputValue);
@@ -72,11 +69,11 @@ const GitHubFindDev = () => {
     }
 
     if (userDataObject.data.message === 'Not Found') {
-      // on error, the initial data will be reloaded again,
+      // on error, the dummy data will be reloaded again,
       // but this time an error will be thrown in the context object,
-      // which means that the user has entered wrong or invalid data, and such user does not have
+      // which means that the user has entered wrong or invalid data
       setUserData(() => ({
-        dummyData,
+        ...dummyData,
         error: true,
       }));
       setIsInitial(false);
