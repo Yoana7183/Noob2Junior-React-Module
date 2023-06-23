@@ -22,7 +22,7 @@ const EcommerceShop = () => {
       : `font-kumbhSans flex justify-center sm:pt-16 pt-5 `
   }`;
   return (
-    <div className={bodyBackgroundStyleInModal}>
+    <main className={bodyBackgroundStyleInModal}>
       <div className="xl:w-[1110px] xl:h-[940px] lg:w-[1000px] lg:h-[840px] md:w-[768px] sm:w-[640px] md:h-[840px] h-[calc(120vw+550px)] overflow-hidden ">
         <div className="">
           <InitialContext.Provider
@@ -42,7 +42,7 @@ const EcommerceShop = () => {
           </InitialContext.Provider>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

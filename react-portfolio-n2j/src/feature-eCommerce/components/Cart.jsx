@@ -10,7 +10,7 @@ const Cart = () => {
 
   const totalAmount = initialStateObject.quantity * 125.0;
   return (
-    <div className={cartContentStyle}>
+    <section className={cartContentStyle}>
       <div className="w-[360px] h-[256px] border-2shadow-2xl rounded-xl bg-white	shadow-2xl xl:ml-[47rem] lg:ml-[40rem] md:ml-[25rem] sm:ml-[18rem]  mt-0">
         <div className="">
           <div className="h-[67px] border-b-[1px] border-[#E4E9F2] pt-5 pl-3 ">
@@ -23,21 +23,21 @@ const Cart = () => {
           )}
           {initialStateObject.quantity > 0 && (
             <div className="flex justify-around mt-7 ">
-              <div className="w-[50px] h-[50px] ">
+              <figure className="w-[50px] h-[50px] ">
                 <img
                   className="rounded"
                   src="src\feature-eCommerce\images\image-product-1-thumbnail.jpg"
                   alt="Product_image"
                   srcSet=""
                 />
-              </div>
+              </figure>
               <div>
                 <div>Fall Limited Edition Sneakers</div>
                 <div>
                   $125.00 x {initialStateObject.quantity} ${totalAmount}.00
                 </div>
               </div>
-              <div
+              <figure
                 className="pt-5 cursor-pointer"
                 onClick={() =>
                   setinitialStateObject((prev) => ({
@@ -50,7 +50,7 @@ const Cart = () => {
                   src="src\feature-eCommerce\images\icon-delete.svg"
                   alt="delete"
                 />
-              </div>
+              </figure>
             </div>
           )}
           {initialStateObject.quantity > 0 && (
@@ -68,7 +68,7 @@ const Cart = () => {
           )}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

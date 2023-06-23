@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import ProductGallery from './images';
 const ModalGallery = (props) => {
   return (
-    <div className=" fixed top-0 left-0 w-full h-full  items-center justify-center hidden sm:flex ">
+    <section className=" fixed top-0 left-0 w-full h-full  items-center justify-center hidden sm:flex ">
       <div className="w-full h-full rounded-lg p-8 absolute top-0 left-0 bg-gray-800 bg-opacity-50">
         <div className="flex items-center justify-center ">
           <div className="relative">
@@ -36,7 +36,7 @@ const ModalGallery = (props) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -53,7 +53,7 @@ const Gallery = () => {
   ));
 
   return (
-    <div>
+    <section>
       {isModalMenuAboveSMClassOpen && (
         <ModalGallery
           prevImg={goToPreviousImage}
@@ -110,7 +110,7 @@ const Gallery = () => {
           {thumbnailImages}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default Gallery;
