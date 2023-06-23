@@ -53,7 +53,7 @@ const Header = () => {
           )}
         </button>
       </div>
-      <div className="flex justify-start">
+      <nav className="flex justify-start">
         <div className="sm:w-[200px] sm:h-[20px] sm:pr-0 sm:mr-[-1.5rem] h-[25px] md:mr-0 mr-[2rem] w-[150px] md:flex flex">
           <img src="/src/feature-eCommerce/images/logo.svg" alt="Logo" />
         </div>
@@ -88,8 +88,8 @@ const Header = () => {
             </div>
           </div>
         )}
-      </div>
-      <div
+      </nav>
+      <nav
         className={isMobileMenuOpen ? `hidden` : ` sm:flex sm:flex-row  hidden`}
       >
         <div className={eachLinkStyle}>Collections</div>
@@ -97,7 +97,7 @@ const Header = () => {
         <div className={eachLinkStyle}>Woman</div>
         <div className={eachLinkStyle}>About</div>
         <div className={eachLinkStyle}>Contact</div>
-      </div>
+      </nav>
       <div className="flex justify-center">
         <div
           className="cursor-pointer w-[22px] "
@@ -117,13 +117,13 @@ const Header = () => {
             alt="Cart"
           />
         </div>
-        <div className="pl-5  w-[60px] md:w-[70px] cursor-pointer mt-[-0.1rem] sm:w-[50px] sm:mt-[-0.1rem] md:mt-[-0.5rem]">
+        <figure className="pl-5  w-[60px] md:w-[70px] cursor-pointer mt-[-0.1rem] sm:w-[50px] sm:mt-[-0.1rem] md:mt-[-0.5rem]">
           <img
             className="hover:border-2 hover:border-ecommerceOrangeColor hover:rounded-full"
             src="/src/feature-eCommerce/images/image-avatar.png"
             alt="Avatar"
           />
-        </div>
+        </figure>
       </div>
     </div>
   );
