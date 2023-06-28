@@ -86,6 +86,14 @@ const GitHubFindDev = () => {
       }));
       setIsInitial(false);
     }
+    if (userDataObject.data.message === 'Service Unavailable') {
+      setUserData(() => ({
+        ...dummyData,
+        error: true,
+        serviceUnavailable: true,
+      }));
+      setIsInitial(false);
+    }
   }, [userDataObject.data, isInitial]);
   const toggleDarkToLightStyleBackground =
     theme === 'dark'
@@ -107,6 +115,12 @@ const GitHubFindDev = () => {
           <div className={toggleDarkToLightStyleBackground}>
             Ooops..A problem has occurred, most likely due to a problem with API
             key!
+          </div>
+        ) : null}
+        {userData.serviceUnavailable ? (
+          <div className={toggleDarkToLightStyleBackground}>
+            Ooops..503 Service Unavailable error status code try the request
+            again later!
           </div>
         ) : null}
         <div
