@@ -27,7 +27,6 @@ const GitHubFindDev = () => {
   const [isInitial, setIsInitial] = useState(true);
 
   const userDataObject = useFetchData(inputValue);
-  console.log(userDataObject);
 
   const getValue = (value) => {
     setInputValue(value);
@@ -113,6 +112,11 @@ const GitHubFindDev = () => {
       <div
         className={` w-[330px] lg:w-[730px] md:w-[575px] sm:w-[575px]  ${toggleDarkToLightStyleContainers}`}
       >
+        {userDataObject.loading ? (
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  ">
+            <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-blue-500"></div>
+          </div>
+        ) : null}
         {userData.expiredAPIkey ? (
           <div className={toggleDarkToLightStyleBackground}>
             Ooops..A problem has occurred, most likely due to a problem with API
