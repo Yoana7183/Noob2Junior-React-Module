@@ -27,6 +27,7 @@ const GitHubFindDev = () => {
   const [isInitial, setIsInitial] = useState(true);
 
   const userDataObject = useFetchData(inputValue);
+  console.log(userDataObject);
 
   const getValue = (value) => {
     setInputValue(value);
@@ -95,6 +96,7 @@ const GitHubFindDev = () => {
       setIsInitial(false);
     }
   }, [userDataObject.data, isInitial]);
+
   const toggleDarkToLightStyleBackground =
     theme === 'dark'
       ? 'bg-gitDarkSpaceBackground'
