@@ -29,7 +29,7 @@ const QuantityButton = () => {
   };
 
   return (
-    <section>
+    <>
       <div className=" flex lg:justify-between flex-col lg:flex-row lg:mt-10 md:mt-5 ">
         <div className="lg:w-[157px] sm:w-[272px] w-[calc(80vw-1px)] h-[56px]  bg-[#ececec] flex p-5 justify-between rounded-xl">
           <figure
@@ -76,7 +76,7 @@ const QuantityButton = () => {
           </button>
         </div>
       </div>
-    </section>
+    </>
   );
 };
 
