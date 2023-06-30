@@ -18,7 +18,7 @@ const SearchBarAndSubmitButton = ({ getValue }) => {
     if (userData.error == 'firstLoad') {
       setErrorMessage('');
     }
-    if (userData.error === true) {
+    if (userData.error == true) {
       setErrorMessage('No results');
     }
     if (!userData.error) {
