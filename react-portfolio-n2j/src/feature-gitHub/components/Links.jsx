@@ -1,7 +1,5 @@
 import React, { useContext } from 'react';
-
-import { UserDataContext as UserLocation } from '../GitHubFindDev';
-
+import { DataContext as UserLocation } from '../context/DataContext.jsx';
 const LinksAndLocation = () => {
   const userData = useContext(UserLocation);
   const linksContainerStyle = ` flex  h-[22px]  lg:text-base md:text-sm sm:text-sm text-xs pl-2 mt-3 sm:mt-0  sm:border-1 sm:border-white  sm:hover:border-b-[1px] sm:hover:border-black`;

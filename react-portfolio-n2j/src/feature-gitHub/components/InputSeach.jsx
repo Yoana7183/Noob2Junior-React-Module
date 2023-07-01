@@ -1,10 +1,11 @@
 import React, { useRef, useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { UserDataContext as UserError, ThemeContext } from '../GitHubFindDev';
+import { ThemeContext } from '../GitHubFindDev';
+import { DataContext } from '../context/DataContext.jsx';
 
 const SearchBarAndSubmitButton = ({ getValue }) => {
   const inputRef = useRef(null);
-  const userData = useContext(UserError);
+  const userData = useContext(DataContext);
   const initialTheme = useContext(ThemeContext);
   const [errorMessage, setErrorMessage] = useState('');
   const toggleDarkToLightStyleContainers =

@@ -1,8 +1,6 @@
 import { useContext } from 'react';
-import {
-  UserDataContext as UserCredentials,
-  ThemeContext,
-} from '../GitHubFindDev';
+import { ThemeContext } from '../GitHubFindDev';
+import { DataContext as UserCredentials } from '../context/DataContext.jsx';
 
 const PersonalUserInformation = () => {
   const userData = useContext(UserCredentials);

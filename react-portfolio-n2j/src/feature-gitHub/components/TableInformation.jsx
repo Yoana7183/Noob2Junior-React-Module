@@ -1,9 +1,6 @@
 import React, { useContext } from 'react';
-import {
-  UserDataContext as UserTableInformation,
-  ThemeContext,
-} from '../GitHubFindDev';
-
+import { ThemeContext } from '../GitHubFindDev';
+import { DataContext as UserTableInformation } from '../context/DataContext.jsx';
 const TableInformation = () => {
   const userData = useContext(UserTableInformation);
   const initialTheme = useContext(ThemeContext);
