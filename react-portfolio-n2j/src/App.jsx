@@ -8,7 +8,7 @@ import GitHub from './pages/GitHub';
 import LandingPage from './pages/LandingPage';
 import LandingPageEz from './pages/LandingPageEz';
 import TipsCalculator from './pages/TipsCalculator';
-import ErrorPage from './pages/ErrorPage';
+import { ErrorPage } from './pages/ErrorPage';
 
 function App() {
   return (
