@@ -62,7 +62,7 @@ const Header = () => {
             <div className="w-[50%] h-full bg-white pt-20">
               <button
                 onClick={toggleMenu}
-                className="absolute top-[2.5rem] left-[-15px] m-4 p-2 rounded-full text-black bg-white hover:bg-gray-200"
+                className="absolute top-[4.7rem] left-[-2px] m-4 p-2 rounded-full text-black bg-white hover:bg-gray-200"
               >
                 {isMobileMenuOpen ? (
                   <img
@@ -78,7 +78,7 @@ const Header = () => {
                   />
                 )}
               </button>
-              <div className="sm:flex sm:justify-between cursor-pointer lg:text-base md:px-3.5 pb-7 ml-5 pt-[4rem] md:text-sm sm:text-xs font-bold sm:px-2">
+              <div className="sm:flex sm:justify-between cursor-pointer lg:text-base md:px-3.5 pb-7 ml-7 pt-[6rem] md:text-sm sm:text-xs font-bold sm:px-2">
                 <div className="pt-2">Collections</div>
                 <div className="pt-2">Men</div>
                 <div className="pt-2">Woman</div>
