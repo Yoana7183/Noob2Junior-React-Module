@@ -1,6 +1,6 @@
-import React, { createContext, useState, useEffect } from 'react';
+import React, { createContext, useState } from 'react';
+
 import PropTypes from 'prop-types';
-import GitHubFindDev from '../GitHubFindDev';
 
 const dummyData = {
   urlUser: 'https://github.com/octocat',
@@ -13,84 +13,32 @@ const dummyData = {
   followers: 9350,
   following: 9,
   location: 'San Francisco',
+  error: 'firstLoad',
+  loading: false,
+  theme: {
+    theme: 'light',
+  },
 };
 
-export const getDataObject = (thisData) => {
-  dataProvider(thisData);
-};
-export const DataContext = createContext(dummyData);
+export const DataContext = createContext();
 
-export const dataProvider = (data) => {
+export const DataProvider = ({ children }) => {
   const [userData, setUserData] = useState(dummyData);
-  const [isInitial, setIsInitial] = useState(true);
 
-  useEffect(() => {
-    if (isInitial) {
-      // on initial load, the context will have these values loaded, but will not cause any error
-      setUserData(() => ({
-        ...dummyData,
-        error: 'firstLoad',
-      }));
-    }
-  }, []);
+  const resetToDefaultValue = () => setUserData(dummyData);
 
-  useEffect(() => {
-    if (data == null) {
-      return;
-    }
-    if (data != null) {
-      setUserData(() => ({
-        //if a successful fetch request, the data we need to use  will be loaded into the context
-        urlUser: data.html_url,
-        name: data.name,
-        login: data.login,
-        avatar: data.avatar_url,
-        timeStamp: data.created_at,
-        bio: data.bio,
-        repos: data.public_repos,
-        followers: data.followers,
-        following: data.following,
-        location: data.location,
-        loading: data.loading,
-        error: data.error,
-      }));
-    }
+  const loadFetchedUser = (userInfo) => setUserData(userInfo);
 
-    if (data.message === 'Not Found') {
-      // on error, the dummy data will be reloaded again,
-      // but this time an error will be thrown in the context object,
-      // which means that the user has entered wrong or invalid data
-      setUserData(() => ({
-        ...dummyData,
-        error: true,
-      }));
-      setIsInitial(false);
-    }
-    if (data.message === 'Bad credentials') {
-      setUserData(() => ({
-        ...dummyData,
-        error: true,
-        expiredAPIkey: true,
-      }));
-      setIsInitial(false);
-    }
-    if (data.message === 'Service Unavailable') {
-      setUserData(() => ({
-        ...dummyData,
-        error: true,
-        serviceUnavailable: true,
-      }));
-      setIsInitial(false);
-    }
-  }, [data, isInitial]);
   return (
-    <DataContext.Provider value={userData}>
-      <GitHubFindDev />
+    <DataContext.Provider
+      value={{ userData, resetToDefaultValue, loadFetchedUser }}
+    >
+      {children}
     </DataContext.Provider>
   );
 };
-dataProvider.propTypes = {
-  data: PropTypes.any.isRequired,
+DataProvider.propTypes = {
+  children: PropTypes.any.isRequired,
 };
 
-export default dataProvider;
+export default DataProvider;
