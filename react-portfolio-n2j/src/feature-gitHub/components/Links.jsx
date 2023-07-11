@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-
-import { UserDataContext as UserLocation } from '../GitHubFindDev';
+import { DataContext } from '../context/DataContext';
 
 const LinksAndLocation = () => {
-  const userData = useContext(UserLocation);
+  const userData = useContext(DataContext);
+  const data = userData.userData;
   const linksContainerStyle = ` flex  h-[22px]  lg:text-base md:text-sm sm:text-sm text-xs pl-2 mt-3 sm:mt-0  sm:border-1 sm:border-white  sm:hover:border-b-[1px] sm:hover:border-black`;
   return (
     <section className="lg:ml-[10rem]  mt-6  md:ml-8 sm:ml-8 sm:grid grid-cols-2 sm:gap-5">
@@ -13,7 +13,7 @@ const LinksAndLocation = () => {
           alt="location-icon"
           srcSet=""
         />
-        <div className="pl-3">{userData.location}</div>
+        <div className="pl-3">{data.location}</div>
       </div>
       <div
         className={` text-slate-300  sm:w-[147px] lg:w-[160px] ${linksContainerStyle}`}

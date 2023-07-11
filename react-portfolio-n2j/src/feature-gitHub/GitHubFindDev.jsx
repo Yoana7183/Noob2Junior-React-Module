@@ -1,107 +1,26 @@
-import React, { useEffect, useState, createContext } from 'react';
+import React, { useContext, useState } from 'react';
 import SearchBarAndSubmitButton from './components/InputSeach';
-import useFetchData from './hooks/useFetchData';
+
 import PersonalUserInformation from './components/PersonalUserInformation';
 import TableInformation from './components/TableInformation';
 import LinksAndLocation from './components/Links';
-export const UserDataContext = createContext();
-export const ThemeContext = createContext();
-
-const dummyData = {
-  urlUser: 'https://github.com/octocat',
-  name: 'The Octocat',
-  avatar: 'https://avatars.githubusercontent.com/u/583231?v=4',
-  login: 'octocat',
-  timeStamp: '2011-01-25',
-  bio: '',
-  repos: 8,
-  followers: 9350,
-  following: 9,
-  location: 'San Francisco',
-};
+import { DataContext } from './context/DataContext';
 
 const GitHubFindDev = () => {
-  const [inputValue, setInputValue] = useState('');
-  const [userData, setUserData] = useState({});
-  const [theme, setTheme] = useState('light');
-  const [isInitial, setIsInitial] = useState(true);
+  const { userData, loadFetchedUser } = useContext(DataContext);
 
-  const userDataObject = useFetchData(inputValue);
-
-  const getValue = (value) => {
-    setInputValue(value);
-  };
-
+  const [toggledTheme, setToggledTheme] = useState('light');
   const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
+    setToggledTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
+    loadFetchedUser(() => ({ ...userData, theme: toggledTheme }));
   };
-
-  useEffect(() => {
-    if (isInitial) {
-      // on initial load, the context will have these values loaded, but will not cause any error
-      setUserData(() => ({
-        ...dummyData,
-        error: 'firstLoad',
-      }));
-    }
-  }, []);
-
-  useEffect(() => {
-    if (userDataObject.data == null) {
-      return;
-    }
-    if (userDataObject.data != null) {
-      setUserData(() => ({
-        //if a successful fetch request, the data we need to use  will be loaded into the context
-        urlUser: userDataObject.data.html_url,
-        name: userDataObject.data.name,
-        login: userDataObject.data.login,
-        avatar: userDataObject.data.avatar_url,
-        timeStamp: userDataObject.data.created_at,
-        bio: userDataObject.data.bio,
-        repos: userDataObject.data.public_repos,
-        followers: userDataObject.data.followers,
-        following: userDataObject.data.following,
-        location: userDataObject.data.location,
-        loading: userDataObject.loading,
-        error: userDataObject.error,
-      }));
-    }
-
-    if (userDataObject.data.message === 'Not Found') {
-      // on error, the dummy data will be reloaded again,
-      // but this time an error will be thrown in the context object,
-      // which means that the user has entered wrong or invalid data
-      setUserData(() => ({
-        ...dummyData,
-        error: true,
-      }));
-      setIsInitial(false);
-    }
-    if (userDataObject.data.message === 'Bad credentials') {
-      setUserData(() => ({
-        ...dummyData,
-        error: true,
-        expiredAPIkey: true,
-      }));
-      setIsInitial(false);
-    }
-    if (userDataObject.data.message === 'Service Unavailable') {
-      setUserData(() => ({
-        ...dummyData,
-        error: true,
-        serviceUnavailable: true,
-      }));
-      setIsInitial(false);
-    }
-  }, [userDataObject.data, isInitial]);
 
   const toggleDarkToLightStyleBackground =
-    theme === 'dark'
+    userData.theme === 'dark'
       ? 'bg-gitDarkSpaceBackground'
       : 'bg-gitLightSpaceBackground';
   const toggleDarkToLightStyleContainers =
-    theme === 'dark'
+    userData.theme === 'dark'
       ? ' bg-gitContainerBlackBackground text-white'
       : 'bg-white text-gitTextOnLight';
 
@@ -112,7 +31,7 @@ const GitHubFindDev = () => {
       <div
         className={` w-[330px] lg:w-[730px] md:w-[575px] sm:w-[575px]  ${toggleDarkToLightStyleContainers}`}
       >
-        {userDataObject.loading ? (
+        {userData.loading ? (
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  ">
             <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-blue-500"></div>
           </div>
@@ -134,7 +53,7 @@ const GitHubFindDev = () => {
         >
           <header
             className={`text-3xl font-black ${
-              theme === 'dark'
+              userData.theme === 'dark'
                 ? ' bg-gitDarkSpaceBackground text-white'
                 : 'bg-gitLightSpaceBackground text-black'
             }`}
@@ -145,7 +64,7 @@ const GitHubFindDev = () => {
             className={`flex justify-between  ${toggleDarkToLightStyleBackground}`}
             onClick={toggleTheme}
           >
-            {theme === 'light' ? (
+            {userData.theme === 'light' ? (
               <div className="hover:text-black">
                 <div className="mt-[1rem] flex justify-center">
                   Dark
@@ -171,20 +90,16 @@ const GitHubFindDev = () => {
           </button>
         </div>
         <div className={` ${toggleDarkToLightStyleBackground}`}>
-          <UserDataContext.Provider value={userData}>
-            <ThemeContext.Provider value={theme}>
-              <div className=" rounded-2xl shadow-2xl mb-8">
-                <SearchBarAndSubmitButton getValue={getValue} />
-              </div>
-              <div
-                className={`rounded-2xl shadow-2xl mt-6 p-6 h-[444px] ${toggleDarkToLightStyleContainers}`}
-              >
-                <PersonalUserInformation />
-                <TableInformation />
-                <LinksAndLocation />
-              </div>
-            </ThemeContext.Provider>
-          </UserDataContext.Provider>
+          <div className=" rounded-2xl shadow-2xl mb-8">
+            <SearchBarAndSubmitButton />
+          </div>
+          <div
+            className={`rounded-2xl shadow-2xl mt-6 p-6 h-[444px] ${toggleDarkToLightStyleContainers}`}
+          >
+            <PersonalUserInformation />
+            <TableInformation />
+            <LinksAndLocation />
+          </div>
         </div>
       </div>
     </main>

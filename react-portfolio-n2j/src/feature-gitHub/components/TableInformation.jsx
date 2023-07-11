@@ -1,20 +1,17 @@
 import React, { useContext } from 'react';
-import {
-  UserDataContext as UserTableInformation,
-  ThemeContext,
-} from '../GitHubFindDev';
+import { DataContext } from '../context/DataContext';
 
 const TableInformation = () => {
-  const userData = useContext(UserTableInformation);
-  const initialTheme = useContext(ThemeContext);
+  const userData = useContext(DataContext);
+  const data = userData.userData;
 
   const toggleDarkToLightStyleContainers =
-    initialTheme === 'dark'
+    data.theme === 'dark'
       ? ' bg-gitDarkSpaceBackground text-white sm:text-base text-xs'
       : 'bg-gitLightSpaceBackground text-gitTextOnLight sm:text-base text-xs';
 
   const toggleNumbers =
-    initialTheme === 'dark'
+    data.theme === 'dark'
       ? '  text-white text-2xl font-bold md:text-lg sm:text-lg text-sm'
       : ' text-black text-2xl font-bold md:text-lg sm:text-lg text-sm';
 
@@ -24,18 +21,16 @@ const TableInformation = () => {
     >
       <div className="flex flex-col items-center">
         <div className={toggleDarkToLightStyleContainers}>Repos</div>
-        <div className={`  pr-0 sm:pr-8 ${toggleNumbers}`}>
-          {userData.repos}
-        </div>
+        <div className={`  pr-0 sm:pr-8 ${toggleNumbers}`}>{data.repos}</div>
       </div>
       <div className="flex flex-col items-center">
         <div className={toggleDarkToLightStyleContainers}>Followers</div>
-        <div className={toggleNumbers}>{userData.followers}</div>
+        <div className={toggleNumbers}>{data.followers}</div>
       </div>
       <div className="flex flex-col items-center">
         <div className={toggleDarkToLightStyleContainers}>Following</div>
         <div className={`  pr-0 sm:pr-10 ${toggleNumbers}`}>
-          {userData.following}
+          {data.following}
         </div>
       </div>
     </section>
