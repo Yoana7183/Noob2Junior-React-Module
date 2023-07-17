@@ -15,17 +15,20 @@ const dummyData = {
   location: 'San Francisco',
   error: 'firstLoad',
   loading: false,
-  theme: {
-    theme: 'light',
-  },
+  theme: 'light',
 };
 
 export const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
   const [userData, setUserData] = useState(dummyData);
-
-  const resetToDefaultValue = () => setUserData(dummyData);
+  const resetToDefaultValue = (addError) => {
+    setUserData(() => ({
+      ...dummyData,
+      error: addError,
+      theme: userData.theme,
+    }));
+  };
 
   const loadFetchedUser = (userInfo) => setUserData(userInfo);
 

@@ -4,10 +4,6 @@ import { DataContext } from '../context/DataContext';
 const PersonalUserInformation = () => {
   const userData = useContext(DataContext);
   const data = userData.userData;
-  console.log(
-    '🚀 ~ file: PersonalUserInformation.jsx:6 ~ PersonalUserInformation ~ userData:',
-    userData.userData
-  );
 
   const image = data.avatar;
   const formattedDate = data.timeStamp

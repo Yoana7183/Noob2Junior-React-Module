@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import SearchBarAndSubmitButton from './components/InputSeach';
 
 import PersonalUserInformation from './components/PersonalUserInformation';
@@ -8,12 +8,17 @@ import { DataContext } from './context/DataContext';
 
 const GitHubFindDev = () => {
   const { userData, loadFetchedUser } = useContext(DataContext);
+  const [toggledTheme, setToggledTheme] = useState(userData.theme);
 
-  const [toggledTheme, setToggledTheme] = useState('light');
   const toggleTheme = () => {
     setToggledTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
-    loadFetchedUser(() => ({ ...userData, theme: toggledTheme }));
   };
+  useEffect(() => {
+    loadFetchedUser(() => ({
+      ...userData,
+      theme: toggledTheme,
+    }));
+  }, [toggledTheme]);
 
   const toggleDarkToLightStyleBackground =
     userData.theme === 'dark'
@@ -64,7 +69,7 @@ const GitHubFindDev = () => {
             className={`flex justify-between  ${toggleDarkToLightStyleBackground}`}
             onClick={toggleTheme}
           >
-            {userData.theme === 'light' ? (
+            {userData.theme == 'light' ? (
               <div className="hover:text-black">
                 <div className="mt-[1rem] flex justify-center">
                   Dark
