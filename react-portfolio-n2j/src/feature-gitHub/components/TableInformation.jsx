@@ -2,16 +2,15 @@ import React, { useContext } from 'react';
 import { DataContext } from '../context/DataContext';
 
 const TableInformation = () => {
-  const userData = useContext(DataContext);
-  const data = userData.userData;
+  const { userData, theme } = useContext(DataContext);
 
   const toggleDarkToLightStyleContainers =
-    data.theme === 'dark'
+    theme === 'dark'
       ? ' bg-gitDarkSpaceBackground text-white sm:text-base text-xs'
       : 'bg-gitLightSpaceBackground text-gitTextOnLight sm:text-base text-xs';
 
   const toggleNumbers =
-    data.theme === 'dark'
+    theme === 'dark'
       ? '  text-white text-2xl font-bold md:text-lg sm:text-lg text-sm'
       : ' text-black text-2xl font-bold md:text-lg sm:text-lg text-sm';
 
@@ -21,16 +20,18 @@ const TableInformation = () => {
     >
       <div className="flex flex-col items-center">
         <div className={toggleDarkToLightStyleContainers}>Repos</div>
-        <div className={`  pr-0 sm:pr-8 ${toggleNumbers}`}>{data.repos}</div>
+        <div className={`  pr-0 sm:pr-8 ${toggleNumbers}`}>
+          {userData.repos}
+        </div>
       </div>
       <div className="flex flex-col items-center">
         <div className={toggleDarkToLightStyleContainers}>Followers</div>
-        <div className={toggleNumbers}>{data.followers}</div>
+        <div className={toggleNumbers}>{userData.followers}</div>
       </div>
       <div className="flex flex-col items-center">
         <div className={toggleDarkToLightStyleContainers}>Following</div>
         <div className={`  pr-0 sm:pr-10 ${toggleNumbers}`}>
-          {data.following}
+          {userData.following}
         </div>
       </div>
     </section>

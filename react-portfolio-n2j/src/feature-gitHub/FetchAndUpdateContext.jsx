@@ -44,22 +44,7 @@ const FetchAndUpdateContext = (userName) => {
       }));
     }
   }, [data.loading]);
-  useEffect(() => {
-    if (data.data.message === 'Bad credentials') {
-      loadFetchedUser(() => ({
-        ...userData,
-        error: true,
-        expiredAPIkey: true,
-      }));
-    }
-    if (data.data.message === 'Service Unavailable') {
-      loadFetchedUser(() => ({
-        ...userData,
-        error: true,
-        serviceUnavailable: true,
-      }));
-    }
-  }, [data.message]);
+
   return <div></div>;
 };
 FetchAndUpdateContext.propTypes = {

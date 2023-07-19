@@ -22,11 +22,11 @@ export const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
   const [userData, setUserData] = useState(dummyData);
+  const [theme, setTheme] = useState('light');
   const resetToDefaultValue = (addError) => {
     setUserData(() => ({
       ...dummyData,
       error: addError,
-      theme: userData.theme,
     }));
   };
 
@@ -34,7 +34,13 @@ export const DataProvider = ({ children }) => {
 
   return (
     <DataContext.Provider
-      value={{ userData, resetToDefaultValue, loadFetchedUser }}
+      value={{
+        userData,
+        resetToDefaultValue,
+        loadFetchedUser,
+        theme,
+        setTheme,
+      }}
     >
       {children}
     </DataContext.Provider>

@@ -4,24 +4,24 @@ import FetchAndUpdateContext from '../FetchAndUpdateContext';
 
 const SearchBarAndSubmitButton = () => {
   const inputRef = useRef(null);
-  const userData = useContext(DataContext);
+  const { userData, theme } = useContext(DataContext);
   const [errorMessage, setErrorMessage] = useState('');
   const [value, setValue] = useState('');
   const toggleDarkToLightStyleContainers =
-    userData.userData.theme === 'dark'
+    theme === 'dark'
       ? ' bg-gitContainerBlackBackground text-white'
       : 'text-black text-gitTextOnLight ';
   useEffect(() => {
     inputRef.current.blur();
   });
   useEffect(() => {
-    if (userData.userData.error == 'firstLoad') {
+    if (userData.error == 'firstLoad') {
       setErrorMessage('');
     }
-    if (userData.userData.error == true) {
+    if (userData.error == true) {
       setErrorMessage('No results');
     }
-    if (!userData.userData.error) {
+    if (!userData.error) {
       setErrorMessage('');
     }
   }, [userData]);
@@ -45,7 +45,7 @@ const SearchBarAndSubmitButton = () => {
       <FetchAndUpdateContext userName={value} />
       <section
         className={`flex items-center w-[330px] lg:w-[730px] md:w-[575px] sm:w-[575px] h-[69px] rounded-2xl p-4 ${
-          userData.userData.theme === 'dark'
+          theme === 'dark'
             ? ' bg-gitContainerBlackBackground text-white'
             : 'text-black bg-white '
         }`}
