@@ -1,21 +1,20 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { InitialContext } from '../EcommerceShop';
 
+import { EcommerceContext } from '../context/EcommerceContextFile';
 const QuantityButton = () => {
-  const { initialStateObject, setinitialStateObject } =
-    useContext(InitialContext);
+  const { quantity, setQuantity } = useContext(EcommerceContext);
 
   const [inputQuantity, setInptQuantity] = useState(0);
   //this effect serves to update the quantity value when the quantities are reset from the shopping cart the value in the quantity field
   // in this component will also reset to 0
   useEffect(() => {
-    if (initialStateObject.quantity == 0) {
+    if (quantity == 0) {
       setInptQuantity(0);
     }
-  }, [initialStateObject.quantity]);
+  }, [quantity]);
 
   const handleMinusClick = () => {
-    if (initialStateObject.quantity > 0) {
+    if (quantity > 0) {
       setInptQuantity((prevCount) => prevCount - 1);
     }
   };
@@ -58,10 +57,7 @@ const QuantityButton = () => {
         <div
           className="lg:w-[272px] sm:w-[272px] w-[calc(80vw-1px)] h-[56px] mt-2 lg:mt-0 bg-ecommerceOrangeColor hover:bg-hoverEcommerceOrangeColor shadow-lg shadow-hoverEcommerceOrangeColor sm:shadow-none flex justify-center rounded-xl text-white cursor-pointer"
           onClick={() => {
-            setinitialStateObject((prev) => ({
-              ...prev,
-              quantity: inputQuantity,
-            }));
+            setQuantity(inputQuantity);
           }}
         >
           <button className=" flex justify-center  pt-4">

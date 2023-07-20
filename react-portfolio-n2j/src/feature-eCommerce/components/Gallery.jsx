@@ -1,31 +1,25 @@
 import { useState, useEffect, useContext } from 'react';
-import { InitialContext } from '../EcommerceShop';
 import ModalGallery from './ModalGallery';
 import ProductGallery from './images';
-
+import { EcommerceContext } from '../context/EcommerceContextFile';
 const Gallery = () => {
-  const { initialStateObject, setinitialStateObject } =
-    useContext(InitialContext);
+  const { setcartStatus, setModalStatus } = useContext(EcommerceContext);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isModalMenuAboveSMClassOpen, setisModalMenuAboveSMClassOpen] =
     useState(false);
+
   // dynamically updating the context every time the modal gallery is opened or closed
   useEffect(() => {
-    setinitialStateObject((prev) => ({
-      ...prev,
-      isModal: isModalMenuAboveSMClassOpen,
-    }));
-    initialStateObject;
+    let newStatus = isModalMenuAboveSMClassOpen ? 'open' : 'closed';
+    setModalStatus(newStatus);
   }, [isModalMenuAboveSMClassOpen]);
-  //dynamically updating the context every time the modal gallery is opened or closed
+
   useEffect(() => {
     if (isModalMenuAboveSMClassOpen) {
-      setinitialStateObject((prev) => ({
-        ...prev,
-        isCartOpen: false,
-      }));
+      setcartStatus('closed');
     }
   }, [isModalMenuAboveSMClassOpen]);
+
   const goToPreviousImage = () => {
     setCurrentImageIndex((prevIndex) =>
       prevIndex === 0 ? ProductGallery.length - 1 : prevIndex - 1
