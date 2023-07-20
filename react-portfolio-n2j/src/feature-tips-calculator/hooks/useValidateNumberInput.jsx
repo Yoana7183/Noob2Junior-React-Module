@@ -1,5 +1,5 @@
 import { useEffect, useState, useContext } from 'react';
-import { TipsContext } from '../Tips_Calculator';
+import { TipsCalculatorContext } from '../context/TipsCalculatorContext-file';
 import PropTypes from 'prop-types';
 const useValidateNumberInput = (
   errorSetFunction,
@@ -8,8 +8,7 @@ const useValidateNumberInput = (
   contextPropertyToBeUpdated
 ) => {
   const [returnValue, setReturnValue] = useState(0);
-  const { inputsInObject, setinputsInObject } = useContext(TipsContext);
-
+  const { inputsInObject, updateContext } = useContext(TipsCalculatorContext);
   const contextObjectProperty = contextPropertyToBeUpdated[0];
 
   useEffect(() => {
@@ -35,10 +34,8 @@ const useValidateNumberInput = (
       errorSetFunction('');
     } else {
       setReturnValue(valueToValidate);
-      setinputsInObject((prev) => ({
-        ...prev,
-        [contextObjectProperty]: valueToValidate,
-      }));
+      updateContext(contextObjectProperty, valueToValidate);
+
       errorSetFunction('');
     }
   }, [valueToValidate, returnValue]);

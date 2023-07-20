@@ -1,8 +1,9 @@
 import ResetBtn from './ResetBtn';
+import PropTypes from 'prop-types';
 
-const RightPart = (total) => {
-  let totalByPerson = total.byPerson;
-  let totalAmount = total.total;
+const RightPart = ({ total, byPerson }) => {
+  let totalByPerson = byPerson;
+  let totalAmount = total;
 
   if (
     totalByPerson === null ||
@@ -63,6 +64,10 @@ const RightPart = (total) => {
       <ResetBtn />
     </section>
   );
+};
+RightPart.propTypes = {
+  total: PropTypes.any.isRequired,
+  byPerson: PropTypes.any.isRequired,
 };
 
 export default RightPart;

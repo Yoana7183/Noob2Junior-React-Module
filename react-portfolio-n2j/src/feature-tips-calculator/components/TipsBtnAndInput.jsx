@@ -1,16 +1,16 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { TipsContext as PercentTipContext } from '../Tips_Calculator';
+
+import { TipsCalculatorContext as PercentTipContext } from '../context/TipsCalculatorContext-file';
 import useValidateNumberInput from '../hooks/useValidateNumberInput';
 const TipsBtnAndInput = () => {
-  const { inputsInObject, setinputsInObject } = useContext(PercentTipContext);
+  const { updateContext } = useContext(PercentTipContext);
   const [percentOfBtn, setPercent] = useState(0);
   const [percentOfTitInput, setpercentOfTitInput] = useState(0);
   const [isTipComesFromBtn, setisTipComesFromBtn] = useState(0);
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    inputsInObject;
-    setinputsInObject((prev) => ({ ...prev, tip: percentOfBtn }));
+    updateContext(['tip'], percentOfBtn);
   }, [percentOfBtn]);
 
   const handleChange = (event) => {

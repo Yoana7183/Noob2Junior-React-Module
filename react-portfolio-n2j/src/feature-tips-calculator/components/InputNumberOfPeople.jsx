@@ -14,7 +14,7 @@ const InputPeople = () => {
     'people',
   ]);
 
-  let value = people === 0 ? '' : validInput;
+  let value = people == 0 ? '' : validInput;
   return (
     <>
       <div className="flex justify-between">

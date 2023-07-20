@@ -1,16 +1,9 @@
 import LeftPart from './components/LeftPart';
 import RightPart from './components/RightPart';
-import React, { createContext, useEffect, useState } from 'react';
-
-export const TipsContext = createContext();
-const initialState = {
-  bill: 0,
-  tip: 0,
-  people: 0,
-};
-
+import React, { useContext, useEffect, useState } from 'react';
+import { TipsCalculatorContext } from './context/TipsCalculatorContext-file';
 const TipsCalculator = () => {
-  const [inputsInObject, setinputsInObject] = useState(initialState);
+  const { inputsInObject } = useContext(TipsCalculatorContext);
   const [totalBill, setTotalBill] = useState(0);
   const [tipByPerson, setTipByPerson] = useState(0);
 
@@ -37,14 +30,12 @@ const TipsCalculator = () => {
       <div className="flex justify-center pt-10 ">
         <div className="flex rounded-3xl shadow-2xl h-[60rem] sm:h-[75rem]  lg:w-[920px]  lg:h-[481px] sm:mt-16 bg-white lg:mt-36 lg:p-6 sm:p-6">
           <div className="grid grid-cols-1 lg:grid-cols-2">
-            <TipsContext.Provider value={{ inputsInObject, setinputsInObject }}>
-              <div className=" ">
-                <LeftPart />
-              </div>
-              <div className="">
-                <RightPart total={totalBill} byPerson={tipByPerson} />
-              </div>
-            </TipsContext.Provider>
+            <div className=" ">
+              <LeftPart />
+            </div>
+            <div className="">
+              <RightPart total={totalBill} byPerson={tipByPerson} />
+            </div>
           </div>
         </div>
       </div>

@@ -10,7 +10,7 @@ const InputBill = () => {
   };
   // custom hook for validation on input, and if is valid will update the context
   const validInput = useValidateNumberInput(setError, bill, setBill, ['bill']);
-  const value = bill === 0 ? '' : validInput;
+  const value = bill == 0 ? '' : validInput;
 
   return (
     <section className="pb-10">
