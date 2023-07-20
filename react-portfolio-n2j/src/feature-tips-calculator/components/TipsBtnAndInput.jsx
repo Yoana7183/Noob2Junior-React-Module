@@ -4,6 +4,7 @@ import { TipsCalculatorContext as PercentTipContext } from '../context/TipsCalcu
 import useValidateNumberInput from '../hooks/useValidateNumberInput';
 const TipsBtnAndInput = () => {
   const { updateContext } = useContext(PercentTipContext);
+
   const [percentOfBtn, setPercent] = useState(0);
   const [percentOfTitInput, setpercentOfTitInput] = useState(0);
   const [isTipComesFromBtn, setisTipComesFromBtn] = useState(0);
