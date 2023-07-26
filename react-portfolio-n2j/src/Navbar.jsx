@@ -19,6 +19,9 @@ const Navbar = () => {
     case '/e-commerce':
       currentProject = 'E-Commerce Product Page';
       break;
+    case '/dictionary':
+      currentProject = 'Dictionary Page';
+      break;
     case '/':
       currentProject = 'Home Page';
       break;

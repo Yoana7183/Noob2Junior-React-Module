@@ -102,6 +102,25 @@ const Projects = () => {
               </div>
             </Link>
           </div>
+          <div>
+            <Link to="/dictionary">
+              <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+                <img
+                  src="\src\img-icons\dictionary.png"
+                  alt="Product"
+                  className="h-80 w-72 object-cover rounded-t-xl"
+                />
+                <div className="px-4 py-3 w-72">
+                  <span className="text-gray-400 mr-3 uppercase text-xs">
+                    Dictionary
+                  </span>
+                  <p className="text-lg font-bold text-black truncate block capitalize">
+                    IN DEVELOPMENT
+                  </p>
+                </div>
+              </div>
+            </Link>
+          </div>
         </div>
         <Footer />
       </div>
