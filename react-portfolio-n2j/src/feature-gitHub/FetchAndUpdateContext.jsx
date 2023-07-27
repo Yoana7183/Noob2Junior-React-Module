@@ -1,13 +1,15 @@
 import React, { useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import useFetchData from './hooks/useFetchData';
+import useFetchData from './hooks/useGetRequest';
 
 import { DataContext } from './context/DataContext';
 
-const FetchAndUpdateContext = (userName) => {
+const FetchAndUpdateContext = ({ userName }) => {
   const { userData, resetToDefaultValue, loadFetchedUser } =
     useContext(DataContext);
-  const data = useFetchData(userName.userName);
+  const apiKey = import.meta.env.VITE_GITHUB_API_KEY;
+  const url = `https://api.github.com/users/${userName}`;
+  const data = useFetchData(url, apiKey);
   useEffect(() => {
     if (data.data == null) {
       return;
