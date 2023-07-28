@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
 
-function useFetchData(url, apiKey = null) {
+function useFetchData(baseUrl, value, apiKey = null) {
   const [data, setData] = useState(null);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
+  const url = baseUrl + value;
 
   useEffect(() => {
-    if (url.length < 30) {
+    if (value.length == 0) {
       return;
     }
     const fetchData = async () => {
@@ -31,7 +32,7 @@ function useFetchData(url, apiKey = null) {
     };
 
     fetchData();
-  }, [url, apiKey]);
+  }, [value, apiKey]);
 
   return { data, loading, error };
 }
