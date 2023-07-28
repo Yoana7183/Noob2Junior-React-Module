@@ -47,7 +47,7 @@ const FetchAndUpdateContext = ({ userName }) => {
     }
   }, [data.loading]);
 
-  return <div></div>;
+  return <></>;
 };
 FetchAndUpdateContext.propTypes = {
   userName: PropTypes.string.isRequired,
