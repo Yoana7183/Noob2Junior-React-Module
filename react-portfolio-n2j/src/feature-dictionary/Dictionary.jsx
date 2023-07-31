@@ -1,10 +1,13 @@
 import React from 'react';
 import Header from './components/Header';
+import OnSubmitInput from './components/OnSubmitInput';
 const Dictionary = () => {
   return (
     <>
-      <Header />
-      <div> New project in development</div>
+      <div className="flex mt-[10rem] p-10 bg-slate-500">
+        <Header />
+        <OnSubmitInput />
+      </div>
     </>
   );
 };
