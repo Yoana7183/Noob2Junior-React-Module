@@ -17,8 +17,8 @@ const Dictionary = () => {
     if (data.data == null) {
       return;
     }
-    if (data.error) {
-      setWordObject(data);
+    if (data.error == true) {
+      setWordObject(data.error);
       console.log(data.data.title);
     }
     if (data.data[0] !== undefined) {
@@ -30,7 +30,7 @@ const Dictionary = () => {
     }
   }, [data.data]);
 
-  console.log(wordObject);
+  console.log(data);
   return (
     <>
       <div className="flex mt-[10rem] p-10 bg-slate-500">
