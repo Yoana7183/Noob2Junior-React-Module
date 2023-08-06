@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-const OnSubmitInput = ({ getWord }) => {
+
+import ManagingContext from '../ManagingContext';
+const OnSubmitInput = () => {
   const [value, setValue] = useState('');
+  const [valueToBubmit, setValueToSubmit] = useState('');
 
   const handleSubmit = () => {
     event.preventDefault();
-    getWord(value.trim());
+    setValueToSubmit(value.trim());
     setValue('');
   };
 
@@ -14,6 +16,7 @@ const OnSubmitInput = ({ getWord }) => {
   };
   return (
     <>
+      <ManagingContext value={valueToBubmit} />
       <form onSubmit={handleSubmit} className="flex">
         <div>
           <label htmlFor="">Enter word...</label>
@@ -30,7 +33,5 @@ const OnSubmitInput = ({ getWord }) => {
     </>
   );
 };
-OnSubmitInput.propTypes = {
-  getWord: PropTypes.func.isRequired,
-};
+
 export default OnSubmitInput;

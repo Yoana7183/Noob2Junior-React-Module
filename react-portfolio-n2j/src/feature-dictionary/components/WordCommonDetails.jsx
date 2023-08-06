@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 const WordCommonDetails = ({ data }) => {
-  if (data.data == undefined) {
-    return;
+  if (data == undefined) {
+    return <div>is undefined</div>;
   }
   return (
     <div>
