@@ -1,8 +1,12 @@
 import useGetRequest from '../feature-gitHub/hooks/useGetRequest';
-import React, { useState } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
-
+import { DictionaryDataContext } from './context/DictionaryContext';
 const ManagingContext = ({ value }) => {
+  const { word, updateContextWordDetails, error } = useContext(
+    DictionaryDataContext
+  );
+
   const [wordDefinitionObject, setWordDefinitionObject] = useState('');
   if (value == undefined) {
     return;
@@ -11,17 +15,30 @@ const ManagingContext = ({ value }) => {
   setWordDefinitionObject;
   const baseUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/`;
   const data = useGetRequest(baseUrl, value);
-  if (data.data == null || data.data[0] == undefined) {
-    return;
-  }
-  const partOfSpeechObject = data.data[0].meanings.map((definition) => {
-    return definition;
-  });
-  partOfSpeechObject;
-  console.log(
-    '🚀 ~ file: ManagingContext.jsx:16 ~ partOfSpeechObject ~ partOfSpeechObject:',
-    data.data[0]
-  );
+
+  useEffect(() => {
+    if (!data.data?.[0]) {
+      error();
+      return;
+    }
+    if (data.data.title === 'No Definitions Found') {
+      error();
+      return;
+    }
+    updateContextWordDetails(data);
+  }, [data.data]);
+
+  console.log(word);
+
+  //   const partOfSpeechObject = data.data[0].meanings.map((definition) => {
+  //     return definition;
+  //   });
+  //   partOfSpeechObject;
+  //   //   console.log(
+  //   //     '🚀 ~ file: ManagingContext.jsx:16 ~ partOfSpeechObject ~ partOfSpeechObject:',
+  //   //     data.data[0]
+  //   //   );
+
   return <></>;
 };
 export default ManagingContext;

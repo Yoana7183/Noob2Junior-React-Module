@@ -33,7 +33,9 @@ const Dictionary = () => {
         <Header />
         <OnSubmitInput />
       </div>
-      <div>{<WordCommonDetails />}</div>
+      <div>
+        <WordCommonDetails />
+      </div>
       {/* <div className="">
         {partOfSpeechObject.meanings.map((definition, index) => (
           <PartsOfSpeechContainer key={index} wordObject={definition} />

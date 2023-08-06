@@ -1,23 +1,20 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-const WordCommonDetails = ({ data }) => {
-  if (data == undefined) {
+import React, { useContext } from 'react';
+import { DictionaryDataContext } from '../context/DictionaryContext';
+const WordCommonDetails = () => {
+  const word = useContext(DictionaryDataContext);
+
+  if (word == undefined) {
     return <div>is undefined</div>;
   }
   return (
     <div>
-      <div>{data.data[0].word}</div>
-      {data.data[0].phonetic && <div>Phonetic:{data.data[0].phonetic} </div>}
+      Details:
+      {/* <div>{word.word}</div> */}
+      {/* {word.data[0].phonetic && <div>Phonetic:{word.data[0].phonetic} </div>} */}
       {/* {audio && <div>Audio: {audio} </div>}
       {source && <div>Source: {source} </div>} */}
     </div>
   );
-};
-WordCommonDetails.propTypes = {
-  data: PropTypes.object.isRequired,
-  // phonetic: PropTypes.string.isRequired,
-  // audio: PropTypes.string.isRequired,
-  // source: PropTypes.string.isRequired,
 };
 
 export default WordCommonDetails;
