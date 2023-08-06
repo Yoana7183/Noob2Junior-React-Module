@@ -1,20 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-const WordCommonDetails = ({ word, phonetic, audio, source }) => {
+const WordCommonDetails = ({ data }) => {
+  if (data.data == undefined) {
+    return;
+  }
   return (
     <div>
-      <div>{word}</div>
-      {phonetic && <div>Phonetic:{phonetic} </div>}
-      {audio && <div>Audio: {audio} </div>}
-      {source && <div>Source: {source} </div>}
+      <div>{data.data[0].word}</div>
+      {data.data[0].phonetic && <div>Phonetic:{data.data[0].phonetic} </div>}
+      {/* {audio && <div>Audio: {audio} </div>}
+      {source && <div>Source: {source} </div>} */}
     </div>
   );
 };
 WordCommonDetails.propTypes = {
-  word: PropTypes.string.isRequired,
-  phonetic: PropTypes.string.isRequired,
-  audio: PropTypes.string.isRequired,
-  source: PropTypes.string.isRequired,
+  data: PropTypes.object.isRequired,
+  // phonetic: PropTypes.string.isRequired,
+  // audio: PropTypes.string.isRequired,
+  // source: PropTypes.string.isRequired,
 };
 
 export default WordCommonDetails;
