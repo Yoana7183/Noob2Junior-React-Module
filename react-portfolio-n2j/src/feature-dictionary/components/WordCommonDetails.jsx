@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { DictionaryDataContext } from '../context/DictionaryContext';
 const WordCommonDetails = () => {
   const { wordContextDetails } = useContext(DictionaryDataContext);
-  console.log(wordContextDetails);
+
   if (wordContextDetails.error) {
     return (
       <div>
@@ -16,13 +16,16 @@ const WordCommonDetails = () => {
   }
   return (
     <div>
-      Details:
-      {wordContextDetails.word && <div>{wordContextDetails.word}</div>}
       {wordContextDetails.word && (
+        <div>
+          Details: <div>{wordContextDetails.word}</div>
+        </div>
+      )}
+      {wordContextDetails.phonetic && (
         <div>Phonetic: {wordContextDetails.phonetic}</div>
       )}
-      {wordContextDetails.word && <div>Audio: {wordContextDetails.audio}</div>}
-      {wordContextDetails.word && (
+      {wordContextDetails.audio && <div>Audio: {wordContextDetails.audio}</div>}
+      {wordContextDetails.source && (
         <div>Source: {wordContextDetails.source}</div>
       )}
     </div>

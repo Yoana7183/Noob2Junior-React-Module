@@ -5,7 +5,7 @@ const PartsOfSpeechContainer = ({ wordObject }) => {
   console.log(wordObject);
 
   return (
-    <div className="flex border-blue-500 border-8">
+    <div className="flex border-blue-500 border-4">
       <div className="text-red-800">{wordObject.partOfSpeech}</div>
       <div>Definitions:</div>
       <div className="w-[55%]">
@@ -22,7 +22,6 @@ const PartsOfSpeechContainer = ({ wordObject }) => {
   );
 };
 export default PartsOfSpeechContainer;
-
 PartsOfSpeechContainer.propTypes = {
   wordObject: PropTypes.object.isRequired,
 };

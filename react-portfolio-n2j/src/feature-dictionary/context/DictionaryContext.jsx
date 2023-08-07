@@ -7,7 +7,7 @@ const initialState = {
   phonetic: '',
   audio: '',
   source: '',
-  meanings: {},
+  meanings: null,
   error: '',
 };
 const DictionaryContextProvider = ({ children }) => {
