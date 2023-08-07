@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import Header from './components/Header';
 import OnSubmitInput from './components/OnSubmitInput';
 import WordCommonDetails from './components/WordCommonDetails';
-import PartsOfSpeechContainer from './components/PartsOfSpeechContainer';
+import MainContentContainer from './components/MainContentContainer';
 import { DictionaryDataContext } from './context/DictionaryContext';
 const Dictionary = () => {
   const { wordContextDetails } = useContext(DictionaryDataContext);
@@ -18,7 +18,7 @@ const Dictionary = () => {
       <div className="">
         {wordContextDetails.meanings !== null &&
           wordContextDetails.meanings.map((definition, index) => (
-            <PartsOfSpeechContainer key={index} wordObject={definition} />
+            <MainContentContainer key={index} wordObject={definition} />
           ))}
       </div>
     </>

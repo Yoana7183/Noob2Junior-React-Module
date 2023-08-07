@@ -24,9 +24,21 @@ const WordCommonDetails = () => {
       {wordContextDetails.phonetic && (
         <div>Phonetic: {wordContextDetails.phonetic}</div>
       )}
-      {wordContextDetails.audio && <div>Audio: {wordContextDetails.audio}</div>}
+      {wordContextDetails.audio && (
+        <div>
+          Audio:{' '}
+          <audio controls>
+            <source src={wordContextDetails.audio} type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+      )}
       {wordContextDetails.source && (
-        <div>Source: {wordContextDetails.source}</div>
+        <div>
+          <a href={wordContextDetails.source} target="_blank" rel="noreferrer">
+            {' Source'}
+          </a>
+        </div>
       )}
     </div>
   );

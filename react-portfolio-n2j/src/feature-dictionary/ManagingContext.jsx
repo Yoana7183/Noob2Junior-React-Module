@@ -24,17 +24,11 @@ const ManagingContext = ({ value }) => {
     }
 
     updateContextWordDetails({
-      word: data.data[0].word ? data.data[0].word : null,
-      phonetic: data.data[0].phonetics[0].text
-        ? data.data[0].phonetics[0].text
-        : null,
-      audio: data.data[0].phonetics[0].audio
-        ? data.data[0].phonetics[0].audio
-        : null,
-      source: data.data[0].phonetics[0].sourceUrl
-        ? data.data[0].phonetics[0].sourceUrl
-        : null,
-      meanings: data.data[0].meanings ? data.data[0].meanings : null,
+      word: data.data[0]?.word ?? null,
+      phonetic: data.data[0]?.phonetics[0]?.text ?? null,
+      audio: data.data[0]?.phonetics[0]?.audio ?? null,
+      source: data.data[0]?.phonetics[0]?.sourceUrl ?? null,
+      meanings: data.data[0]?.meanings ?? null,
       error: false,
     });
   }, [data.data, data.loading, data.error]);

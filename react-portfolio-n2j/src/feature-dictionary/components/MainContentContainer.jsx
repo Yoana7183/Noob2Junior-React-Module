@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import WordDataContainer from './WordDataContainer';
 import React, { useState } from 'react';
 
-const PartsOfSpeechContainer = ({ wordObject }) => {
+const MainContentContainer = ({ wordObject }) => {
   const [showButtons, setShowButtons] = useState({
     definition: 5,
     antonyms: 5,
@@ -44,6 +44,7 @@ const PartsOfSpeechContainer = ({ wordObject }) => {
             />
           ))}
         <div className="flex">
+          Antonyms:
           {wordObject.antonyms
             .slice(0, showButtons.antonyms)
             .map((definitionTexts, index) => (
@@ -75,7 +76,7 @@ const PartsOfSpeechContainer = ({ wordObject }) => {
   );
 };
 
-export default PartsOfSpeechContainer;
-PartsOfSpeechContainer.propTypes = {
+export default MainContentContainer;
+MainContentContainer.propTypes = {
   wordObject: PropTypes.object.isRequired,
 };
