@@ -6,26 +6,30 @@ const initialState = {
   word: '',
   phonetic: '',
   audio: '',
-  text: '',
   source: '',
   meanings: {},
   error: '',
 };
 const DictionaryContextProvider = ({ children }) => {
-  const [word, setWord] = useState(initialState);
-  const updateContextWordDetails = (word) => {
-    setWord(word);
+  const [wordContextDetails, setWord] = useState(initialState);
+  const updateContextWordDetails = (newWord) => {
+    setWord(newWord);
   };
-  const updateErrorContext = () => {
+  const updateErrorContext = (notFoundWord) => {
     setWord({
       ...initialState,
-      error: 'No Definitions Found',
+      word: notFoundWord,
+      error: true,
     });
   };
 
   return (
     <DictionaryDataContext.Provider
-      value={{ word, updateContextWordDetails, updateErrorContext }}
+      value={{
+        wordContextDetails,
+        updateContextWordDetails,
+        updateErrorContext,
+      }}
     >
       {children}
     </DictionaryDataContext.Provider>

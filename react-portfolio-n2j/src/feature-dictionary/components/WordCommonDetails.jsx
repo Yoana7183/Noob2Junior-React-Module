@@ -1,18 +1,30 @@
 import React, { useContext } from 'react';
 import { DictionaryDataContext } from '../context/DictionaryContext';
 const WordCommonDetails = () => {
-  const word = useContext(DictionaryDataContext);
-
-  if (word == undefined) {
-    return <div>is undefined</div>;
+  const { wordContextDetails } = useContext(DictionaryDataContext);
+  console.log(wordContextDetails);
+  if (wordContextDetails.error) {
+    return (
+      <div>
+        <div> No Definitions Found </div>
+        <div>
+          Sorry pal, we could not find definitions for the
+          <span> {`"${wordContextDetails.word}"`} </span> you were looking for.
+        </div>
+      </div>
+    );
   }
   return (
     <div>
       Details:
-      {/* <div>{word.word}</div> */}
-      {/* {word.data[0].phonetic && <div>Phonetic:{word.data[0].phonetic} </div>} */}
-      {/* {audio && <div>Audio: {audio} </div>}
-      {source && <div>Source: {source} </div>} */}
+      {wordContextDetails.word && <div>{wordContextDetails.word}</div>}
+      {wordContextDetails.word && (
+        <div>Phonetic: {wordContextDetails.phonetic}</div>
+      )}
+      {wordContextDetails.word && <div>Audio: {wordContextDetails.audio}</div>}
+      {wordContextDetails.word && (
+        <div>Source: {wordContextDetails.source}</div>
+      )}
     </div>
   );
 };
