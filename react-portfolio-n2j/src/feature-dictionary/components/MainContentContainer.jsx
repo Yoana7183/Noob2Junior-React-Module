@@ -1,77 +1,82 @@
 import PropTypes from 'prop-types';
-import WordDataContainer from './WordDataContainer';
+import WordDataContainerSentence from './WordDataContainerSentence';
+import WordDataContainerSingleWord from './WordDataContainerSingleWord';
 import React, { useState } from 'react';
 
 const MainContentContainer = ({ wordObject }) => {
   const [showButtons, setShowButtons] = useState({
-    definition: 5,
+    definition: 2,
     antonyms: 5,
     synonyms: 5,
   });
   console.log(wordObject);
-  const handleShowMoreDefinition = () => {
+  const handleShowMore = (showProperty) => {
     setShowButtons((prevShown) => ({
       ...prevShown,
-      definition: prevShown.definition + 5,
-    }));
-  };
-
-  const handleShowMoreAntonyms = () => {
-    setShowButtons((prevShown) => ({
-      ...prevShown,
-      antonyms: prevShown.antonyms + 5,
-    }));
-  };
-
-  const handleShowMoreSynonyms = () => {
-    setShowButtons((prevShown) => ({
-      ...prevShown,
-      synonyms: prevShown.synonyms + 5,
+      [showProperty]: prevShown[showProperty] + 5,
     }));
   };
 
   return (
-    <div className="flex border-blue-500 border-8">
+    <div className=" border-blue-500 border-8">
       <div className="text-red-800">{wordObject.partOfSpeech}</div>
-      <div>Definitions:</div>
-      <div className="w-[55%]">
+      <div>
+        {wordObject.definitions && 'Definitions:'}
         {wordObject.definitions
           .slice(0, showButtons.definition)
           .map((definitionTexts, index) => (
-            <WordDataContainer
+            <WordDataContainerSentence
               key={index}
               wordData={definitionTexts.definition}
             />
           ))}
-        <div className="flex">
-          Antonyms:
-          {wordObject.antonyms
-            .slice(0, showButtons.antonyms)
-            .map((definitionTexts, index) => (
-              <WordDataContainer key={index} wordData={definitionTexts} />
-            ))}
-        </div>
-        <div>
-          Synonyms:
-          {wordObject.synonyms
-            .slice(0, showButtons.synonyms)
-            .map((definitionTexts, index) => (
-              <WordDataContainer key={index} wordData={definitionTexts} />
-            ))}
-        </div>
+        {showButtons.definition < wordObject.definitions.length && (
+          <button
+            className="bg-grey border-4 border-r-slate-700"
+            onClick={() => handleShowMore('definition')}
+          >
+            Show More Definitions
+          </button>
+        )}
       </div>
-      {showButtons.definition < wordObject.definitions.length && (
-        <button onClick={handleShowMoreDefinition}>
-          Show More Definitions
-        </button>
-      )}
-      {showButtons.synonymss < wordObject.synonyms.length && (
-        <button onClick={handleShowMoreSynonyms}>Show More Synonyms</button>
-      )}
-
-      {showButtons.antonyms < wordObject.antonyms.length && (
-        <button onClick={handleShowMoreAntonyms}>Show More Antonyms</button>
-      )}
+      <div className="flex">
+        {wordObject.antonyms.length > 0 && 'Antonyms: '}
+        {wordObject.antonyms
+          .slice(0, showButtons.antonyms)
+          .map((definitionTexts, index) => (
+            <WordDataContainerSingleWord
+              key={index}
+              wordData={definitionTexts}
+            />
+          ))}
+        {showButtons.antonyms < wordObject.antonyms.length && (
+          <button
+            className="bg-grey border-4 border-r-slate-700"
+            onClick={() => handleShowMore('antonyms')}
+          >
+            Show More Antonyms
+          </button>
+        )}
+      </div>
+      <div className="flex">
+        {wordObject.synonyms.length > 0 && 'Synonyms: '}
+        {wordObject.synonyms
+          .slice(0, showButtons.synonyms)
+          .map((definitionTexts, index) => (
+            <WordDataContainerSingleWord
+              key={index}
+              wordData={definitionTexts}
+            />
+          ))}
+        {showButtons.synonyms < wordObject.synonyms.length && (
+          <button
+            className="bg-grey border-4 border-r-slate-700"
+            onClick={() => handleShowMore('synonyms')}
+          >
+            Show More Synonyms
+          </button>
+        )}
+      </div>
     </div>
   );
 };
