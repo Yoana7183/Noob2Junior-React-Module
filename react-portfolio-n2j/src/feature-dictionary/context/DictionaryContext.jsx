@@ -8,20 +8,24 @@ const initialState = {
   audio: '',
   text: '',
   source: '',
-  error: 'No Definitions Found',
+  meanings: {},
+  error: '',
 };
 const DictionaryContextProvider = ({ children }) => {
-  const [word, setWord] = useState({});
+  const [word, setWord] = useState(initialState);
   const updateContextWordDetails = (word) => {
     setWord(word);
   };
-  const error = () => {
-    setWord(initialState);
+  const updateErrorContext = () => {
+    setWord({
+      ...initialState,
+      error: 'No Definitions Found',
+    });
   };
 
   return (
     <DictionaryDataContext.Provider
-      value={{ word, updateContextWordDetails, error }}
+      value={{ word, updateContextWordDetails, updateErrorContext }}
     >
       {children}
     </DictionaryDataContext.Provider>
