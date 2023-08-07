@@ -3,7 +3,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { DictionaryDataContext } from './context/DictionaryContext';
 const ManagingContext = ({ value }) => {
-  const { word, updateContextWordDetails, error } = useContext(
+  const { word, updateContextWordDetails, updateErrorContext } = useContext(
     DictionaryDataContext
   );
 
@@ -18,11 +18,12 @@ const ManagingContext = ({ value }) => {
 
   useEffect(() => {
     if (!data.data?.[0]) {
-      error();
+      console.log(`this update`);
+      updateErrorContext();
       return;
     }
     if (data.data.title === 'No Definitions Found') {
-      error();
+      updateErrorContext();
       return;
     }
     updateContextWordDetails(data);
