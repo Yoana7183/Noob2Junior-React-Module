@@ -9,6 +9,7 @@ const initialState = {
   source: '',
   meanings: null,
   error: '',
+  loading: false,
 };
 const DictionaryContextProvider = ({ children }) => {
   const [wordContextDetails, setWord] = useState(initialState);

@@ -30,6 +30,7 @@ const ManagingContext = ({ value }) => {
       source: data.data[0]?.phonetics[0]?.sourceUrl ?? null,
       meanings: data.data[0]?.meanings ?? null,
       error: false,
+      loading: data.loading,
     });
   }, [data.data, data.loading, data.error]);
 

@@ -9,7 +9,7 @@ const MainContentContainer = ({ wordObject }) => {
     antonyms: 5,
     synonyms: 5,
   });
-  console.log(wordObject);
+
   const handleShowMore = (showProperty) => {
     setShowButtons((prevShown) => ({
       ...prevShown,
