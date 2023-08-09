@@ -18,11 +18,11 @@ const MainContentContainer = ({ wordObject }) => {
   };
 
   return (
-    <div className="border-teal-300 font-dictionary border-2 p-4 rounded-lg shadow-lg ">
+    <div className="border-teal-700 font-dictionary border-2 p-4 rounded-lg shadow-lg ">
       <div className="text-teal-950  text-lg  mb-2 uppercase font-bold">
         {wordObject.partOfSpeech}
       </div>
-      <div>
+      <div className="">
         {wordObject.definitions && (
           <p className="mb-2 font-medium  text-teal-950  text-lg uppercase text-teal-600  ">
             Definitions:
@@ -38,7 +38,7 @@ const MainContentContainer = ({ wordObject }) => {
           ))}
         {showButtons.definition < wordObject.definitions.length && (
           <button
-            className="bg-teal-400 hover:bg-teal-500 py-2 px-4 rounded-md text-sm mt-2 transition duration-300"
+            className="bg-teal-800 hover:bg-teal-500 py-2 px-4  text-white font-bold w-[220px] rounded-md text-sm mt-2 transition duration-300"
             onClick={() => handleShowMore('definition')}
           >
             Show More Definitions
@@ -61,7 +61,7 @@ const MainContentContainer = ({ wordObject }) => {
           ))}
         {showButtons.antonyms < wordObject.antonyms.length && (
           <button
-            className="bg-teal-400 hover:bg-teal-500 py-2 px-4 rounded-md text-sm mt-2 transition duration-300"
+            className="bg-teal-800 hover:bg-teal-500  text-white font-bold  w-[220px] py-2 px-4 rounded-md text-sm mt-2 transition duration-300"
             onClick={() => handleShowMore('antonyms')}
           >
             Show More Antonyms
@@ -84,7 +84,7 @@ const MainContentContainer = ({ wordObject }) => {
           ))}
         {showButtons.synonyms < wordObject.synonyms.length && (
           <button
-            className="bg-teal-400 hover:bg-teal-500 py-2 px-4 rounded-md text-sm mt-2 transition duration-300"
+            className="bg-teal-800 hover:bg-teal-500 py-2 px-4  text-white font-bold  rounded-md  w-[220px] text-sm mt-2 transition duration-300"
             onClick={() => handleShowMore('synonyms')}
           >
             Show More Synonyms
