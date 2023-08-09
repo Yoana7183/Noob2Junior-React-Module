@@ -18,10 +18,14 @@ const MainContentContainer = ({ wordObject }) => {
   };
 
   return (
-    <div className=" border-blue-500 border-8">
-      <div className="text-red-800">{wordObject.partOfSpeech}</div>
+    <div className="border-teal-300 border-2 p-4 rounded-lg shadow-lg ">
+      <div className="text-red-800 text-lg font-semibold mb-2">
+        {wordObject.partOfSpeech}
+      </div>
       <div>
-        {wordObject.definitions && 'Definitions:'}
+        {wordObject.definitions && (
+          <p className="mb-2 font-medium">Definitions:</p>
+        )}
         {wordObject.definitions
           .slice(0, showButtons.definition)
           .map((definitionTexts, index) => (
@@ -32,15 +36,17 @@ const MainContentContainer = ({ wordObject }) => {
           ))}
         {showButtons.definition < wordObject.definitions.length && (
           <button
-            className="bg-grey border-4 border-r-slate-700"
+            className="bg-teal-400 hover:bg-teal-500 py-2 px-4 rounded-md text-sm mt-2 transition duration-300"
             onClick={() => handleShowMore('definition')}
           >
             Show More Definitions
           </button>
         )}
       </div>
-      <div className="flex">
-        {wordObject.antonyms.length > 0 && 'Antonyms: '}
+      <div className="flex mt-3 flex-col">
+        {wordObject.antonyms.length > 0 && (
+          <p className="mr-2 font-medium">Antonyms:</p>
+        )}
         {wordObject.antonyms
           .slice(0, showButtons.antonyms)
           .map((definitionTexts, index) => (
@@ -51,15 +57,17 @@ const MainContentContainer = ({ wordObject }) => {
           ))}
         {showButtons.antonyms < wordObject.antonyms.length && (
           <button
-            className="bg-grey border-4 border-r-slate-700"
+            className="bg-teal-400 hover:bg-teal-500 py-2 px-4 rounded-md text-sm transition duration-300"
             onClick={() => handleShowMore('antonyms')}
           >
             Show More Antonyms
           </button>
         )}
       </div>
-      <div className="flex">
-        {wordObject.synonyms.length > 0 && 'Synonyms: '}
+      <div className="flex mt-3 flex-col">
+        {wordObject.synonyms.length > 0 && (
+          <p className="mr-2 font-medium">Synonyms:</p>
+        )}
         {wordObject.synonyms
           .slice(0, showButtons.synonyms)
           .map((definitionTexts, index) => (
@@ -70,7 +78,7 @@ const MainContentContainer = ({ wordObject }) => {
           ))}
         {showButtons.synonyms < wordObject.synonyms.length && (
           <button
-            className="bg-grey border-4 border-r-slate-700"
+            className="bg-teal-400 hover:bg-teal-500 py-2 px-4 rounded-md text-sm transition duration-300"
             onClick={() => handleShowMore('synonyms')}
           >
             Show More Synonyms

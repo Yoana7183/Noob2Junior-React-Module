@@ -21,7 +21,7 @@ const WordCommonDetails = () => {
     <div className="mt-10 mb-12">
       {wordContextDetails.word && (
         <div className="flex justify-center mb-5">
-          <div className="text-amber-700 font-bold text-3xl">
+          <div className="text-amber-700 font-bold text-3xl font-dictionary">
             {wordContextDetails.word}
           </div>
         </div>

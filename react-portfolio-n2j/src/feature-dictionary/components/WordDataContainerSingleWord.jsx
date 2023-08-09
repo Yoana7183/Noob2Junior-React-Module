@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const WordDataContainerSingleWord = ({ wordData }) => {
-  return <div>{`${wordData},  `}</div>;
+  return <div className="">{`${wordData},  `}</div>;
 };
 
 export default WordDataContainerSingleWord;

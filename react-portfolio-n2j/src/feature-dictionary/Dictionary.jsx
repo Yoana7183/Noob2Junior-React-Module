@@ -16,7 +16,7 @@ const Dictionary = () => {
         </div>
       ) : null}
       <div className="flex justify-center">
-        <div className="flex mt-[10rem] ">
+        <div className="flex mt-[10rem] border border-teal-600 rounded-lg shadow-lg p-4">
           <div className="flex justify-center">
             <WordCommonDetails />
           </div>
@@ -25,10 +25,12 @@ const Dictionary = () => {
       </div>
 
       <div className="flex justify-center">
-        {wordContextDetails.meanings !== null &&
-          wordContextDetails.meanings.map((definition, index) => (
-            <MainContentContainer key={index} wordObject={definition} />
-          ))}
+        <div className="flex justify-center flex-col w-[50%]">
+          {wordContextDetails.meanings !== null &&
+            wordContextDetails.meanings.map((definition, index) => (
+              <MainContentContainer key={index} wordObject={definition} />
+            ))}
+        </div>
       </div>
     </div>
   );
