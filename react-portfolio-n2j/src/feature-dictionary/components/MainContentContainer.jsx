@@ -61,7 +61,7 @@ const MainContentContainer = ({ wordObject }) => {
           ))}
         {showButtons.antonyms < wordObject.antonyms.length && (
           <button
-            className="bg-teal-400 hover:bg-teal-500 py-2 px-4 rounded-md text-sm transition duration-300"
+            className="bg-teal-400 hover:bg-teal-500 py-2 px-4 rounded-md text-sm mt-2 transition duration-300"
             onClick={() => handleShowMore('antonyms')}
           >
             Show More Antonyms
@@ -84,7 +84,7 @@ const MainContentContainer = ({ wordObject }) => {
           ))}
         {showButtons.synonyms < wordObject.synonyms.length && (
           <button
-            className="bg-teal-400 hover:bg-teal-500 py-2 px-4 rounded-md text-sm transition duration-300"
+            className="bg-teal-400 hover:bg-teal-500 py-2 px-4 rounded-md text-sm mt-2 transition duration-300"
             onClick={() => handleShowMore('synonyms')}
           >
             Show More Synonyms
