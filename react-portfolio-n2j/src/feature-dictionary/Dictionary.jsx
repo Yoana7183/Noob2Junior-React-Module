@@ -6,7 +6,7 @@ import MainContentContainer from './components/MainContentContainer';
 import { DictionaryDataContext } from './context/DictionaryContext';
 const Dictionary = () => {
   const { wordContextDetails } = useContext(DictionaryDataContext);
-  console.log(wordContextDetails);
+
   return (
     <div className="font-dictionary">
       <Header />

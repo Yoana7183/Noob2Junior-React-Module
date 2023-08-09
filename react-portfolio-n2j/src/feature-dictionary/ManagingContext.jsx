@@ -13,15 +13,14 @@ const ManagingContext = ({ value }) => {
   );
 
   useEffect(() => {
+    setwordOfTheDayShown(true);
     const randomIndex = Math.floor(Math.random() * words.length);
     setWordToFetch(words[randomIndex]);
-    setwordOfTheDayShown(true);
   }, []);
 
   useEffect(() => {
     if (wordOfTheDayShown) {
       setWordToFetch(value);
-      setwordOfTheDayShown(false);
     }
   }, [value]);
 
@@ -49,7 +48,7 @@ const ManagingContext = ({ value }) => {
       meanings: data.data[0]?.meanings ?? null,
       error: false,
       loading: data.loading,
-      ...(wordOfTheDayShown ? { wordOfTheDay: true } : {}),
+      ...(wordOfTheDayShown ? { wordOfTheDay: true } : { wordOfTheDay: false }),
     });
   }, [data.data, data.loading, data.error, wordOfTheDayShown]);
 
