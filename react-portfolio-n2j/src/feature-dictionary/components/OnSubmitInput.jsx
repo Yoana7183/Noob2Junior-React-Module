@@ -17,18 +17,24 @@ const OnSubmitInput = () => {
   return (
     <>
       <ManagingContext value={valueToBubmit} />
-      <form onSubmit={handleSubmit} className="flex">
-        <div>
-          <label htmlFor="">Enter word...</label>
+      <form
+        onSubmit={handleSubmit}
+        className="flex items-center max-w-md mx-auto"
+      >
+        <div className="relative w-full">
           <input
             onChange={handleOnChangeInput}
             value={value}
             type="text"
-            name=""
-            id=""
+            name="search"
+            id="search"
+            placeholder="Enter word..."
+            className="bg-white border border-teal-600 rounded-full py-2 pl-4 pr-12 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent w-full transition duration-300 ease-in-out transform hover:scale-105"
           />
         </div>
-        <button>Search</button>
+        <button className="bg-teal-600 hover:bg-teal-700 text-white rounded-lg px-4 py-2 ml-2 shadow-md transform hover:scale-105 transition duration-300 ease-in-out">
+          Search
+        </button>
       </form>
     </>
   );

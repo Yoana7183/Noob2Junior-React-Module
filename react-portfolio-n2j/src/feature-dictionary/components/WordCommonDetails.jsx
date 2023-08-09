@@ -9,35 +9,61 @@ const WordCommonDetails = () => {
         <div> No Definitions Found </div>
         <div>
           Sorry pal, we could not find definitions for the
-          <span> {`"${wordContextDetails.word}"`} </span> you were looking for.
+          <span className="text-amber-700 font-bold text-3xl ">
+            {`"${wordContextDetails.word}"`}{' '}
+          </span>{' '}
+          you were looking for.
         </div>
       </div>
     );
   }
   return (
-    <div>
+    <div className="mt-10 mb-12">
       {wordContextDetails.word && (
-        <div>
-          Details: <div>{wordContextDetails.word}</div>
+        <div className="flex justify-center mb-5">
+          <div className="text-amber-700 font-bold text-3xl">
+            {wordContextDetails.word}
+          </div>
         </div>
       )}
       {wordContextDetails.phonetic && (
-        <div>Phonetic: {wordContextDetails.phonetic}</div>
-      )}
-      {wordContextDetails.audio && (
-        <div>
-          Audio:{' '}
-          <audio controls>
-            <source src={wordContextDetails.audio} type="audio/mpeg" />
-            Your browser does not support the audio element.
-          </audio>
+        <div className="flex justify-center mb-5">
+          <div className="text-amber-700 font-bold group flex justify-center">
+            {'Phonetic: '}
+            <p className="text-amber-700 font-bold text-3xl group flex justify-center mt-[-0.5rem]">
+              {wordContextDetails.phonetic}
+            </p>
+          </div>
         </div>
       )}
+
       {wordContextDetails.source && (
-        <div>
-          <a href={wordContextDetails.source} target="_blank" rel="noreferrer">
-            {' Source'}
+        <div className="flex justify-center mb-5">
+          <a
+            href={wordContextDetails.source}
+            target="_blank"
+            rel="noreferrer"
+            className="text-amber-700"
+          >
+            <img src="src\feature-dictionary\assets\web.png" alt="" srcSet="" />
           </a>
+        </div>
+      )}
+
+      {wordContextDetails.audio && (
+        <div className=" flex justify-center mb-5">
+          <div className="flex items-center space-x-4">
+            <div className="flex-1">
+              <audio
+                controls
+                className="w-full bg-gray-200 rounded-lg"
+                style={{ appearance: 'none' }}
+              >
+                <source src={wordContextDetails.audio} type="audio/mpeg" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
         </div>
       )}
     </div>
