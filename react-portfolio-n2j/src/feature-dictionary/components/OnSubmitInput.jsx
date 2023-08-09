@@ -19,9 +19,9 @@ const OnSubmitInput = () => {
       <ManagingContext value={valueToBubmit} />
       <form
         onSubmit={handleSubmit}
-        className="flex items-center max-w-md mx-auto"
+        className="flex items-center  justify-center sm:flex-row flex-col mb-10 sm:mb-0 mx-auto"
       >
-        <div className="relative w-full">
+        <div className="flex sm:w-[320px] sm:flex-row flex-col w-[90%]">
           <input
             onChange={handleOnChangeInput}
             value={value}
@@ -29,10 +29,10 @@ const OnSubmitInput = () => {
             name="search"
             id="search"
             placeholder="Enter word..."
-            className="bg-white border border-teal-600 rounded-full py-2 pl-4 pr-12 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent w-full transition duration-300 ease-in-out transform hover:scale-105"
+            className="bg-white border sm:w border-teal-600 rounded-full py-2 pl-4 pr-12 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent sm:w-full transition duration-300 ease-in-out transform hover:scale-105"
           />
         </div>
-        <button className="  bg-teal-600 hover:bg-teal-700 text-white rounded-lg px-4 py-2 ml-2 shadow-md transform hover:scale-105 transition duration-300 ease-in-out">
+        <button className="mt-3 sm:mt-0 w-[160px]  bg-teal-600 hover:bg-teal-700 text-white rounded-lg px-4 py-2 sm:ml-2 shadow-md transform hover:scale-105 transition duration-300 ease-in-out">
           Search
         </button>
       </form>

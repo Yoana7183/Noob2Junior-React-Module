@@ -16,16 +16,16 @@ const Dictionary = () => {
         </div>
       ) : null}
       <div className="flex justify-center">
-        <div className="flex mt-[5rem] mb-[5rem] border border-teal-600 rounded-lg shadow-lg p-24 flex-col ">
-          <div className="flex justify-center">
+        <div className="flex mt-[5rem] mb-[5rem] border border-teal-600 rounded-lg shadow-lg  p-0 sm:p-24 flex-col w-[80%] sm:w-[60%] ">
+          <div className="flex justify-center  flex-col">
             <WordCommonDetails />
+            <OnSubmitInput />
           </div>
-          <OnSubmitInput />
         </div>
       </div>
 
       <div className="flex justify-center mb-[5rem]">
-        <div className="flex justify-center flex-col w-[50%]">
+        <div className="flex justify-center flex-col w-[80%] sm:w-[60%]">
           {wordContextDetails.meanings !== null &&
             wordContextDetails.meanings.map((definition, index) => (
               <MainContentContainer key={index} wordObject={definition} />

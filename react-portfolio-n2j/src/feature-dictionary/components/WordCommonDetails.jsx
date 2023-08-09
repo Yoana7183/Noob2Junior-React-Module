@@ -8,7 +8,7 @@ const WordCommonDetails = () => {
   };
   if (wordContextDetails.error) {
     return (
-      <div className="mt-10 mb-12 p-8 rounded-lg shadow-lg border-2 border-teal-700">
+      <div className="mt-10 mb-12 sm:p-8 p-3 rounded-lg shadow-lg border-2 border-teal-700">
         <div className="text-teal-700 font-bold text-2xl mb-3">
           No Definitions Found
         </div>
@@ -23,11 +23,18 @@ const WordCommonDetails = () => {
     );
   }
   return (
-    <div className="mt-10 mb-12 p-8 rounded-lg shadow-xl border border-transparent border-opacity-0 text-teal-950">
+    <div className="mt-10 mb-12 p-8 rounded-lg shadow-xl border border-transparent border-opacity-0 text-teal-950  ">
       {wordContextDetails.word && (
-        <div className="flex justify-center mb-5">
-          <div className="text-3xl font-bold uppercase text-teal-800">
-            {wordContextDetails.word}
+        <div>
+          <div className="flex justify-center mb-5 flex-col">
+            {wordContextDetails.wordOfTheDay && (
+              <div className="text-teal-700 text-3xl font-light pb-5">
+                {'This is your word of the day:'}
+              </div>
+            )}
+            <div className="text-3xl font-bold uppercase text-teal-800 flex justify-center">
+              {wordContextDetails.word}
+            </div>
           </div>
         </div>
       )}

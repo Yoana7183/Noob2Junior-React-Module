@@ -18,16 +18,18 @@ const ManagingContext = ({ value }) => {
     setWordToFetch(words[randomIndex]);
   }, []);
 
-  useEffect(() => {
-    if (wordOfTheDayShown) {
-      setWordToFetch(value);
-    }
-  }, [value]);
-
   if (value == undefined) {
     return;
   }
-
+  useEffect(() => {
+    if (wordOfTheDayShown) {
+      setwordOfTheDayShown(false);
+      setWordToFetch(value);
+    }
+    if (!wordOfTheDayShown && value.length > 0) {
+      setWordToFetch(value);
+    }
+  }, [value]);
   const data = useGetRequest(baseUrl, wordToFetch);
 
   useEffect(() => {
@@ -48,7 +50,7 @@ const ManagingContext = ({ value }) => {
       meanings: data.data[0]?.meanings ?? null,
       error: false,
       loading: data.loading,
-      ...(wordOfTheDayShown ? { wordOfTheDay: true } : { wordOfTheDay: false }),
+      wordOfTheDay: wordOfTheDayShown,
     });
   }, [data.data, data.loading, data.error, wordOfTheDayShown]);
 
