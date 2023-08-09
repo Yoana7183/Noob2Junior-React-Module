@@ -12,15 +12,7 @@ module.exports = {
         alata: ['Alata'],
         josefin: ['Josefin-Sans'],
         kumbhSans: ['Kumbh Sans'],
-        dictionary: [
-          'Alata',
-          'Amatic SC',
-          'Courgette',
-          'IBM Plex Sans',
-          'Kumbh Sans',
-          'Nanum Myeongjo',
-          'sans-serif',
-        ],
+        dictionary: ['Playfair Display'],
       },
       colors: {
         buttonOfCalculatorAndRightSideBackground: '#00474B',

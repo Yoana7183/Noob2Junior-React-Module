@@ -18,13 +18,15 @@ const MainContentContainer = ({ wordObject }) => {
   };
 
   return (
-    <div className="border-teal-300 border-2 p-4 rounded-lg shadow-lg ">
-      <div className="text-red-800 text-lg font-semibold mb-2">
+    <div className="border-teal-300 font-dictionary border-2 p-4 rounded-lg shadow-lg ">
+      <div className="text-teal-950  text-lg  mb-2 uppercase font-bold">
         {wordObject.partOfSpeech}
       </div>
       <div>
         {wordObject.definitions && (
-          <p className="mb-2 font-medium">Definitions:</p>
+          <p className="mb-2 font-medium  text-teal-950  text-lg uppercase text-teal-600  ">
+            Definitions:
+          </p>
         )}
         {wordObject.definitions
           .slice(0, showButtons.definition)
@@ -45,7 +47,9 @@ const MainContentContainer = ({ wordObject }) => {
       </div>
       <div className="flex mt-3 flex-col">
         {wordObject.antonyms.length > 0 && (
-          <p className="mr-2 font-medium">Antonyms:</p>
+          <p className="mr-2 font-semibold text-teal-950  text-lg  mb-2 ">
+            Antonyms:
+          </p>
         )}
         {wordObject.antonyms
           .slice(0, showButtons.antonyms)
@@ -66,7 +70,9 @@ const MainContentContainer = ({ wordObject }) => {
       </div>
       <div className="flex mt-3 flex-col">
         {wordObject.synonyms.length > 0 && (
-          <p className="mr-2 font-medium">Synonyms:</p>
+          <p className="mr-2 font-semibold text-teal-950  text-lg  mb-2 ">
+            Synonyms:
+          </p>
         )}
         {wordObject.synonyms
           .slice(0, showButtons.synonyms)
