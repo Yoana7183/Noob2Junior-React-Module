@@ -3,7 +3,9 @@ import React, { useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { DictionaryDataContext } from './context/DictionaryContext';
 import { words } from './components/words';
-
+/**
+ PropTypes:
+ */
 const baseUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/`;
 const ManagingContext = ({ value }) => {
   const [wordToFetch, setWordToFetch] = useState('');

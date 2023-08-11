@@ -11,12 +11,15 @@
     "lint:fix": "eslint --fix",
     "format": "prettier --write \"src/**/*.{jsx,js,css,html}\" --config ./.prettierrc.json",
     "eslint": "eslint -c .eslintrc.json --ext .js,.jsx,.cjs src/ --fix",
-    "tailwind": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+    "tailwind": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "docs": "jsdoc -c jsdoc.conf.json"
   },
   "dependencies": {
     "@tailwindcss/line-clamp": "^0.4.4",
     "@tailwindcss/typography": "^0.5.9",
+    "better-docs": "^2.7.2",
     "dotenv": "^16.0.3",
+    "jsdoc": "^4.0.2",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

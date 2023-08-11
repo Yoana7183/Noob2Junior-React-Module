@@ -8,7 +8,10 @@ const Dictionary = () => {
   const { wordContextDetails } = useContext(DictionaryDataContext);
 
   return (
-    <div className="font-dictionary bg-gradient-to-b from-white to-yellow-50">
+    <div
+      className="font-dictionary 
+    "
+    >
       <Header />
       {wordContextDetails.loading ? (
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  ">
