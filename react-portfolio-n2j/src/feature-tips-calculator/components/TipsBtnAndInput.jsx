@@ -9,7 +9,7 @@ const TipsBtnAndInput = () => {
   const [percentOfTitInput, setpercentOfTitInput] = useState(0);
   const [isTipComesFromBtn, setisTipComesFromBtn] = useState(0);
   const [error, setError] = useState(false);
-
+  const buttonTipsPercent = [5, 10, 15, 25, 50];
   useEffect(() => {
     updateContext(['tip'], percentOfBtn);
   }, [percentOfBtn]);
@@ -41,21 +41,15 @@ const TipsBtnAndInput = () => {
       {'  Select Tip %'}
 
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 pt-4">
-        <button className={btnStyle} onClick={() => handleButtonClick(5)}>
-          5%
-        </button>
-        <button className={btnStyle} onClick={() => handleButtonClick(10)}>
-          10%
-        </button>
-        <button className={btnStyle} onClick={() => handleButtonClick(15)}>
-          15%
-        </button>
-        <button className={btnStyle} onClick={() => handleButtonClick(25)}>
-          25%
-        </button>
-        <button className={btnStyle} onClick={() => handleButtonClick(50)}>
-          50%
-        </button>
+        {buttonTipsPercent.map((percent) => (
+          <button
+            key={percent}
+            className={btnStyle}
+            onClick={() => handleButtonClick(percent)}
+          >
+            {percent}%
+          </button>
+        ))}
         <input
           inputMode="numeric"
           className={errorInInputStyle}
