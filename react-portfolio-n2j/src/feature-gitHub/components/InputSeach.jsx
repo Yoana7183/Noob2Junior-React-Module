@@ -11,9 +11,6 @@ const SearchBarAndSubmitButton = () => {
     theme === 'dark'
       ? ' bg-gitContainerBlackBackground text-white'
       : 'text-black text-gitTextOnLight ';
-  // useEffect(() => {
-  //   inputRef.current.blur();
-  // });
   useEffect(() => {
     if (userData.error == 'firstLoad') {
       setErrorMessage('');

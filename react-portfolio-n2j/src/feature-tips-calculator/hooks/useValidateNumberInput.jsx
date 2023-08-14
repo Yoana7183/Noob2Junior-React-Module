@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
  * @param {Function} errorSetFunction - Function to set errors.
  * @param {number} valueToValidate - Value to be validated.
  * @param {Function} inputCleanFunc - Function to clean input.
- * @param {number} contextPropertyToBeUpdated - Property in context to be updated.
+ * @param {string} contextPropertyToBeUpdated - Property in context to be updated.
  * @returns {number} - Returns the validated value.
  */
 const useValidateNumberInput = (
@@ -20,7 +20,6 @@ const useValidateNumberInput = (
   const [returnValue, setReturnValue] = useState(0);
   const { inputsInObject, updateContext } = useContext(TipsCalculatorContext);
   const contextObjectProperty = contextPropertyToBeUpdated[0];
-  console.log(valueToValidate);
   useEffect(() => {
     if (inputsInObject[contextObjectProperty] === 0) {
       inputCleanFunc('');
