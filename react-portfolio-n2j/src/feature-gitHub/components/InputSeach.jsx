@@ -1,9 +1,9 @@
-import React, { useRef, useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { DataContext } from '../context/DataContext';
 import FetchAndUpdateContext from '../FetchAndUpdateContext';
 
 const SearchBarAndSubmitButton = () => {
-  const inputRef = useRef(null);
+  const [inputValue, setInputValue] = useState('');
   const { userData, theme } = useContext(DataContext);
   const [errorMessage, setErrorMessage] = useState('');
   const [value, setValue] = useState('');
@@ -11,9 +11,9 @@ const SearchBarAndSubmitButton = () => {
     theme === 'dark'
       ? ' bg-gitContainerBlackBackground text-white'
       : 'text-black text-gitTextOnLight ';
-  useEffect(() => {
-    inputRef.current.blur();
-  });
+  // useEffect(() => {
+  //   inputRef.current.blur();
+  // });
   useEffect(() => {
     if (userData.error == 'firstLoad') {
       setErrorMessage('');
@@ -25,18 +25,17 @@ const SearchBarAndSubmitButton = () => {
       setErrorMessage('');
     }
   }, [userData]);
+  const handleOnChange = (event) => {
+    setInputValue(event.target.value.trim());
+  };
   const handleSubmit = () => {
-    let value = inputRef.current.value.trim();
-    setValue(value);
-
-    inputRef.current.focus();
+    setValue(inputValue);
+    setInputValue('');
   };
   const handleKeyPress = (event) => {
     if (event.key === 'Enter') {
-      let value = inputRef.current.value.trim();
-      setValue(value);
-
-      inputRef.current.focus();
+      setValue(inputValue);
+      setInputValue('');
     }
   };
 
@@ -59,9 +58,10 @@ const SearchBarAndSubmitButton = () => {
           <input
             className={` focus:outline-none rounded-2xl w-[270px] lg:w-[520px] md:w-[420px] sm:w-[350px] lg:text-lg md:text-base sm:text-sm text-xs h-14 px-2 ${toggleDarkToLightStyleContainers}`}
             type="text"
-            ref={inputRef}
+            value={inputValue}
             placeholder="Search GitHub username..."
             onKeyPress={handleKeyPress}
+            onChange={handleOnChange}
           />
 
           <div className="relative flex items-center">
