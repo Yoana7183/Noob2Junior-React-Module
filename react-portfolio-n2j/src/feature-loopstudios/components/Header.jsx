@@ -91,7 +91,7 @@ const Header = () => {
             : 'text-3xl font-thin font-sans border border-white text-white w-[90%] h-[12.5rem] p-8 ml-[calc(10%-1rem)] mt-[10rem] lg:w-[600px] lg:h-[300px] lg:ml-32 lg:text-7xl lg:mt-32 lg:p-10 md:h-[220px] md:w-[400px] md:ml-32 md:mr-24 md:text-4xl md:p-10 md:mt-[6rem] sm:mt-[2rem]'
         }
       >
-        IMMERSIVE EXPERIENCES THAT DELIVER
+        <p>IMMERSIVE EXPERIENCES THAT DELIVER</p>
       </div>
     </nav>
   );
