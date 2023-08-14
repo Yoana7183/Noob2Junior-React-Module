@@ -1,15 +1,23 @@
-import React, { useContext, useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import useFetchData from './hooks/useGetRequest';
 
 import { DataContext } from './context/DataContext';
 
+/**
+ * A React component that fetches user data from GitHub API and updates the context.
+ * @param {Object} props - The component props.
+ * @param {string} props.userName - The GitHub username to fetch data for.
+ */
 const FetchAndUpdateContext = ({ userName }) => {
+  // Get relevant context and initialize variables
   const { userData, resetToDefaultValue, loadFetchedUser } =
     useContext(DataContext);
   const apiKey = import.meta.env.VITE_GITHUB_API_KEY;
   const url = `https://api.github.com/users/`;
   const data = useFetchData(url, userName, apiKey);
+
+  // Update user data when fetching is successful or errors occur
   useEffect(() => {
     if (data.data == null) {
       return;
@@ -38,6 +46,8 @@ const FetchAndUpdateContext = ({ userName }) => {
       resetToDefaultValue(true);
     }
   }, [userName.userName, data.data, data.error]);
+
+  // Update user data when loading changes
   useEffect(() => {
     if (data.loading) {
       loadFetchedUser(() => ({
@@ -46,10 +56,13 @@ const FetchAndUpdateContext = ({ userName }) => {
       }));
     }
   }, [data.loading]);
-
-  return <></>;
 };
+
 FetchAndUpdateContext.propTypes = {
+  /**
+   * The GitHub username to fetch data for.
+   */
   userName: PropTypes.string.isRequired,
 };
+
 export default FetchAndUpdateContext;
