@@ -24,13 +24,24 @@ const Cards = () => {
         </div>
         <div className=" 2xl:gap-20 grid gap-5 lg:grid-cols-4 lg:gap-10 lg:w-[100%] md:grid-cols-1 md:gap-7 sm:gap-6">
           {cardsImagesAndTitles.map((cardData) => (
-            <div
-              key={cardData.id}
-              className={`${cardStyle} bg-[url('/${cardData.mobile}')] lg:bg-[url('${cardData.desktop}')]`}
-            >
-              <figcaption className={paragraphCardsStyle}>
-                {cardData.title}
-              </figcaption>
+            <div key={cardData.id}>
+              <div className="lg:hidden">
+                <img
+                  src={`${cardData.mobile}`}
+                  className={`${cardStyle} lg:hidden`}
+                  alt=""
+                  srcSet=""
+                />
+                <figcaption className={paragraphCardsStyle}>
+                  {cardData.title}
+                </figcaption>
+              </div>
+              <div className="hidden lg:block">
+                <img src={`${cardData.desktop}`} alt="" srcSet="" />
+                <figcaption className={paragraphCardsStyle}>
+                  {cardData.title}
+                </figcaption>
+              </div>
             </div>
           ))}
         </div>
