@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
  * Context for managing e-commerce related state.
  */
 export const EcommerceContext = createContext();
-
 /**
  * Context provider component for e-commerce state management.
  * @param {Object} props - The component props.
