@@ -3,7 +3,7 @@ import Header from './components/Header';
 import Cart from './components/Cart';
 import Gallery from './components/Gallery';
 import InformationContainer from './components/InformationContainer';
-import { EcommerceContext } from './context/EcommerceContextFile';
+import { EcommerceContext } from './context/EcommerceContext';
 
 const EcommerceShop = () => {
   const modalStatus = useContext(EcommerceContext);

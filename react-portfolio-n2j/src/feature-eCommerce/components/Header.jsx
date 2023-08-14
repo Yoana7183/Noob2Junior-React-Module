@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { EcommerceContext } from '../context/EcommerceContextFile';
+import { EcommerceContext } from '../context/EcommerceContext';
 const Header = () => {
   const { setcartStatus, quantity } = useContext(EcommerceContext);
   const [isCartHasBeenOpen, setIsCartHasBeenOpen] = useState(true);

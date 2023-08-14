@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from 'react';
 import ModalGallery from './ModalGallery';
 import ProductGallery from './images';
-import { EcommerceContext } from '../context/EcommerceContextFile';
+import { EcommerceContext } from '../context/EcommerceContext';
 const Gallery = () => {
   const { setcartStatus, setModalStatus } = useContext(EcommerceContext);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

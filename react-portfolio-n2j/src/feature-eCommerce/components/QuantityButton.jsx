@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 
-import { EcommerceContext } from '../context/EcommerceContextFile';
+import { EcommerceContext } from '../context/EcommerceContext';
 const QuantityButton = () => {
   const { quantity, setQuantity } = useContext(EcommerceContext);
 

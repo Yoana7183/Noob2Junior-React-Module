@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { EcommerceContext } from '../context/EcommerceContextFile';
+import { EcommerceContext } from '../context/EcommerceContext';
 
 const Cart = () => {
   const { quantity, setQuantity, cartStatus } = useContext(EcommerceContext);
