@@ -3,18 +3,18 @@ import { useEffect, useState } from 'react';
 /**
  * Custom hook for fetching data from an API - GET REQUEST.
  * @param {string} baseUrl - The base URL of the API.
- * @param {string} value - The value to append to the base URL for fetching.
+ * @param {string} queryParameter - The value to append to the base URL for fetching.
  * @param {string|null} apiKey - Optional API key for authorization.
  * @returns {Object} - An object containing fetched data, loading state, and error state.
  */
-function useFetchData(baseUrl, value, apiKey = null) {
+function useFetchData(baseUrl, queryParameter, apiKey = null) {
   const [data, setData] = useState(null);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
-  const url = baseUrl + value;
+  const url = baseUrl + queryParameter;
 
   useEffect(() => {
-    if (value.length === 0) {
+    if (queryParameter.length === 0) {
       return;
     }
     const fetchData = async () => {
@@ -39,7 +39,7 @@ function useFetchData(baseUrl, value, apiKey = null) {
     };
 
     fetchData();
-  }, [value, apiKey]);
+  }, [queryParameter, apiKey]);
 
   return { data, loading, error };
 }
