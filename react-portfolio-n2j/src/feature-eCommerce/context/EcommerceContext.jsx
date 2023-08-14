@@ -17,7 +17,11 @@ export const EcommerceContextProvider = ({ children }) => {
   const [quantity, setQuantity] = useState(0);
   const [cartStatus, setcartStatus] = useState('closed');
   const [modalStatus, setModalStatus] = useState('closed');
-
+  /**
+   *cartStatus && modalStatus store values in the form of a string to make it easier to access the status 
+   *and to know at any moment which of the two is open. so that they can self-close 
+   /they cannot both be open/ and not break the mobile view especially!
+   */
   return (
     <EcommerceContext.Provider
       value={{
