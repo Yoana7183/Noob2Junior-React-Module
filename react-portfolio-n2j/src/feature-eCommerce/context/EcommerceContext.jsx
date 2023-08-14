@@ -1,27 +1,25 @@
 import React, { createContext, useState } from 'react';
 import PropTypes from 'prop-types';
 
-/**
- * Context for managing e-commerce related state.
- * @type {React.Context}
- */
 export const EcommerceContext = createContext();
 
 /**
- * Context provider component for e-commerce state management.
+ * Provides e-commerce state management.
  * @param {Object} props - The component props.
- * @param {React.ReactNode} props.children - The child components to be wrapped.
- * @returns {JSX.Element} - A JSX element wrapping the children with the e-commerce context.
+ * @param {React.ReactNode} props.children - The wrapped child components.
+ * @returns {JSX.Element} - A JSX element wrapping children with e-commerce context.
  */
 export const EcommerceContextProvider = ({ children }) => {
   const [quantity, setQuantity] = useState(0);
   const [cartStatus, setcartStatus] = useState('closed');
   const [modalStatus, setModalStatus] = useState('closed');
+
   /**
-   *cartStatus && modalStatus store values in the form of a string to make it easier to access the status 
-   *and to know at any moment which of the two is open. so that they can self-close 
-   /they cannot both be open/ and not break the mobile view especially!
+   * Stores the values of cart and modal statuses as strings for easier status access and identification.
+   * This approach ensures that only one of them can be open at a time,
+   * preventing conflicts and maintaining a smooth mobile view experience.
    */
+
   return (
     <EcommerceContext.Provider
       value={{
