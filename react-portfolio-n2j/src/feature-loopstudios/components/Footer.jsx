@@ -1,3 +1,4 @@
+import links from '../links';
 const Footer = () => {
   const linksStyle = ` ml-[35%] mr-[35%] lg:ml-0 lg:mr-0 lg:ml-6 block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4 border-b-[1px] border-transparent  hover:border-white`;
   const iconsStyle = `pr-3 pb-2 pl-3 border-b-[2px] border-transparent  hover:border-white`;
@@ -6,7 +7,7 @@ const Footer = () => {
       <div className="mx-auto lg:mx-0 lg:w-[100%] lg:flex lg:justify-between ">
         <div className="flex flex-col ">
           <div className="text-white  font-bold text-3xl pb-6 ">
-            loopstudios
+            <p>loopstudios</p>
           </div>
           <div className="">
             <nav className="">
@@ -14,26 +15,13 @@ const Footer = () => {
 
               <div className="lg:bg-none">
                 <div className="text-sm lg:flex-grow text-white ">
-                  <a href="#" className={linksStyle}>
-                    About
-                  </a>
-                  <a href="#" className={linksStyle}>
-                    Careers
-                  </a>
-                  <a href="#" className={linksStyle}>
-                    LinkedIn
-                  </a>
-                  <a href="#" className={linksStyle}>
-                    Events
-                  </a>
-
-                  <a href="#" className={linksStyle}>
-                    Products
-                  </a>
-
-                  <a href="#" className={linksStyle}>
-                    Support
-                  </a>
+                  {links.map((link) => {
+                    return (
+                      <a href="#" key={Math.random()} className={linksStyle}>
+                        {link}
+                      </a>
+                    );
+                  })}
                 </div>
               </div>
             </nav>
