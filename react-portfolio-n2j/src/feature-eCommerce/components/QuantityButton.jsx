@@ -58,11 +58,13 @@ const QuantityButton = () => {
           }}
         >
           <button className=" flex justify-center  pt-4">
-            <img
-              src="src\feature-eCommerce\images\icon-cart.svg"
-              alt="shopping-cart"
-              srcSet=""
-            />
+            <div>
+              <img
+                src="src\feature-eCommerce\images\icon-cart.svg"
+                alt="shopping-cart"
+                srcSet=""
+              />
+            </div>
             Add to cart
           </button>
         </div>
