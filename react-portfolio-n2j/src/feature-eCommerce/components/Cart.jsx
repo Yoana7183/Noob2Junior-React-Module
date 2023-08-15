@@ -33,9 +33,11 @@ const Cart = () => {
                 />
               </figure>
               <div>
-                <div>Fall Limited Edition Sneakers</div>
+                <h2>Fall Limited Edition Sneakers</h2>
                 <div>
-                  $125.00 x {quantity} ${quantity * 125.0}.00
+                  <p>
+                    $125.00 x {quantity} ${quantity * 125.0}.00
+                  </p>
                 </div>
               </div>
               <figure

@@ -31,28 +31,25 @@ const QuantityButton = () => {
     <>
       <div className=" flex lg:justify-between flex-col lg:flex-row lg:mt-10 md:mt-5 ">
         <div className="lg:w-[157px] sm:w-[272px] w-[calc(80vw-1px)] h-[56px]  bg-[#ececec] flex p-5 justify-between rounded-xl">
-          <figure
-            className="w-[15px] cursor-pointer "
-            onClick={handleMinusClick}
-          >
+          <div className="w-[15px] cursor-pointer " onClick={handleMinusClick}>
             <img
               className="bg-cover pt-1"
               src="src\feature-eCommerce\images\icon-minus.svg"
               alt="minus-quantity"
               srcSet=""
             />
-          </figure>
+          </div>
           <div className=" w-[20px] bg-[#ececec]" onChange={handleInputChange}>
             {inputQuantity}
           </div>
-          <figure className="w-[15px] cursor-pointer" onClick={handlePlusClick}>
+          <div className="w-[15px] cursor-pointer" onClick={handlePlusClick}>
             <img
               className="bg-cover "
               src="src\feature-eCommerce\images\icon-plus.svg"
               alt="plus-quantity"
               srcSet=""
             />
-          </figure>
+          </div>
         </div>
         <div
           className="lg:w-[272px] sm:w-[272px] w-[calc(80vw-1px)] h-[56px] mt-2 lg:mt-0 bg-ecommerceOrangeColor hover:bg-hoverEcommerceOrangeColor shadow-lg shadow-hoverEcommerceOrangeColor sm:shadow-none flex justify-center rounded-xl text-white cursor-pointer"
@@ -61,13 +58,11 @@ const QuantityButton = () => {
           }}
         >
           <button className=" flex justify-center  pt-4">
-            <figure>
-              <img
-                src="src\feature-eCommerce\images\icon-cart.svg"
-                alt="shopping-cart"
-                srcSet=""
-              />
-            </figure>
+            <img
+              src="src\feature-eCommerce\images\icon-cart.svg"
+              alt="shopping-cart"
+              srcSet=""
+            />
             Add to cart
           </button>
         </div>
