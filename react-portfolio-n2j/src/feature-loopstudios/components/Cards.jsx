@@ -1,9 +1,9 @@
 import cardsImagesAndTitles from './cardsImg';
 
 const Cards = () => {
-  const cardStyle = `bg-cover hover:bg-white hover:opacity-50 cursor-pointer fonr-thin lg:h-[450px] bg-no-repeat lg:text-2xl text-white lg:relative md:w-[100%] md:h-[250px] h-[7.5rem] m:h-[11rem]
+  const cardStyle = `bg-cover hover:bg-white hover:opacity-50 cursor-pointer font-thin lg:h-[450px] bg-no-repeat lg:text-2xl text-white lg:relative md:w-[100%] md:h-[250px] h-[7.5rem] m:h-[11rem]
       `;
-  const paragraphCardsStyle = `  hover:text-black  text-white font-light font-sans lg:absolute  text-xl w-[20%] font-light sm:text-3xl lg:inset-x-0 lg:bottom-0  p-5 md:text-4xl md:font-thin md:w-[30%]`;
+  const paragraphCardsStyle = `  hover:text-black  text-white font-light font-sans lg:absolute  text-lg w-[20%] font-light sm:text-3xl lg:inset-x-0 lg:bottom-0  p-5 md:text-3xl font-thin md:w-[30%]`;
   return (
     <section
       className=" 
@@ -25,22 +25,17 @@ const Cards = () => {
         <div className=" 2xl:gap-20 grid gap-5 lg:grid-cols-4 lg:gap-10 lg:w-[100%] md:grid-cols-1 md:gap-7 sm:gap-6">
           {cardsImagesAndTitles.map((cardData) => (
             <div key={cardData.id}>
-              <div className="lg:hidden">
-                <img
-                  src={`${cardData.mobile}`}
-                  className={`${cardStyle} lg:hidden`}
-                  alt=""
-                  srcSet=""
-                />
-                <figcaption className={paragraphCardsStyle}>
-                  {cardData.title}
-                </figcaption>
+              <div
+                className={`${cardStyle} hidden lg:block`}
+                style={{ backgroundImage: `url(${cardData.desktop})` }}
+              >
+                <p className={paragraphCardsStyle}>{cardData.title}</p>
               </div>
-              <div className="hidden lg:block">
-                <img src={`${cardData.desktop}`} alt="" srcSet="" />
-                <figcaption className={paragraphCardsStyle}>
-                  {cardData.title}
-                </figcaption>
+              <div
+                className={`${cardStyle} block lg:hidden`}
+                style={{ backgroundImage: `url(${cardData.mobile})` }}
+              >
+                <p className={paragraphCardsStyle}>{cardData.title}</p>
               </div>
             </div>
           ))}
