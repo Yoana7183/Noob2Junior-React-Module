@@ -33,12 +33,14 @@ const CartSection = () => {
         sm:ml-[-25rem] sm:z-40"
       >
         <div className=" font-titleEqualizer text-4xl font-bold xl:text-4xl xl:font-bold xl:mb-[1.5rem] md:text-3xl md:font-bold md:mb-[1rem]">
-          Premium EQ
+          <h1>Premium EQ</h1>
         </div>
         <div className="leading-9 font-Equalizer mb-[1.5rem]">
-          Get expert-level control with a robust equalizer, volume mixer, and
-          spatial audio. Take your listening experience to a whole new level and
-          access all our incredible features!
+          <h2>
+            Get expert-level control with a robust equalizer, volume mixer, and
+            spatial audio. Take your listening experience to a whole new level
+            and access all our incredible features!
+          </h2>
         </div>
         <div className="flex mb-[1.5rem]">
           <div
@@ -47,10 +49,11 @@ const CartSection = () => {
            pr-5
             font-bold"
           >
-            {' '}
-            $4{' '}
+            <p>$4</p>
           </div>
-          <div className="mt-[1.5rem]"> / month</div>
+          <div className="mt-[1.5rem]">
+            <p> / month</p>
+          </div>
         </div>
         <div
           className="flex

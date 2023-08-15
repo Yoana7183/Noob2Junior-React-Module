@@ -13,11 +13,11 @@ const Footer = () => {
         />
       </figure>
       <div className="">
-        <div>All rights reserved © Equalizer 2021</div>
-        <div>Have any problems? Contact us via social media or</div>
-        <div className=" mb-[2rem] md:mb-[3rem] sm:mb-[1rem]">
+        <p>All rights reserved © Equalizer 2021</p>
+        <p>Have any problems? Contact us via social media or</p>
+        <p className=" mb-[2rem] md:mb-[3rem] sm:mb-[1rem]">
           email us at <strong>equalizer@example.com</strong>
-        </div>
+        </p>
       </div>
       <div className="flex xl:mt-0 lg:mt-0 md:justify-end md:mt-[-6rem] ">
         <div className="flex items-center mr-4 ">
