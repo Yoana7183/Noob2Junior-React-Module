@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import WordDataContainerSentence from './WordDataContainerSentence';
 import WordDataContainerSingleWord from './WordDataContainerSingleWord';
 import React, { useState } from 'react';
-
+import ShowMoreBtn from './ShowMoreBtn';
 const MainContentContainer = ({ wordObject }) => {
   const [showButtons, setShowButtons] = useState({
     definition: 2,
@@ -37,12 +37,10 @@ const MainContentContainer = ({ wordObject }) => {
             />
           ))}
         {showButtons.definition < wordObject.definitions.length && (
-          <button
-            className="bg-gradient-to-r from-teal-800 to-teal-600 hover:from-teal-700 hover:to-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-300 focus:border-transparent py-3 px-6 text-white font-normal w-[240px] rounded-md text-sm mt-3 transition duration-500 ease-in-out transform hover:scale-105 shadow-md ring-2 ring-teal-700"
-            onClick={() => handleShowMore('definition')}
-          >
-            <span className="shadow-inner">Show More Definitions</span>
-          </button>
+          <ShowMoreBtn
+            handlerPropery={handleShowMore}
+            PropertyName={'definition'}
+          />
         )}
       </div>
       <div className="flex mt-3 flex-col">
@@ -60,12 +58,10 @@ const MainContentContainer = ({ wordObject }) => {
             />
           ))}
         {showButtons.antonyms < wordObject.antonyms.length && (
-          <button
-            className="bg-gradient-to-r from-teal-800 to-teal-600 hover:from-teal-700 hover:to-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-300 focus:border-transparent py-2 px-4 text-white font-bold w-[220px] rounded-md text-sm mt-2 transition duration-300 shadow-md ring-2 ring-teal-700"
-            onClick={() => handleShowMore('antonyms')}
-          >
-            <span className="shadow-inner">Show More Antonyms</span>
-          </button>
+          <ShowMoreBtn
+            handlerPropery={handleShowMore}
+            PropertyName={'antonyms'}
+          />
         )}
       </div>
       <div className="flex mt-3 flex-col">
@@ -83,12 +79,10 @@ const MainContentContainer = ({ wordObject }) => {
             />
           ))}
         {showButtons.synonyms < wordObject.synonyms.length && (
-          <button
-            className="bg-gradient-to-r from-teal-800 to-teal-600 hover:from-teal-700 hover:to-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-300 focus:border-transparent py-2 px-4 text-white font-bold rounded-md w-[220px] text-sm mt-2 transition duration-300 shadow-md ring-2 ring-teal-700"
-            onClick={() => handleShowMore('synonyms')}
-          >
-            <span className="shadow-inner">Show More Synonyms</span>
-          </button>
+          <ShowMoreBtn
+            handlerPropery={handleShowMore}
+            PropertyName={'synonyms'}
+          />
         )}
       </div>
     </div>
