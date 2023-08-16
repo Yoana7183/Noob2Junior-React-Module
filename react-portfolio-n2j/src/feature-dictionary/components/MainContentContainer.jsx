@@ -18,13 +18,13 @@ const MainContentContainer = ({ wordObject }) => {
   };
 
   return (
-    <div className="border-teal-700 font-dictionary border-2 p-4 rounded-lg shadow-lg ">
+    <div className="border-teal-700 font-dictionary border-2 rounded-lg shadow-2xl mb-5 p-10 ">
       <div className="text-teal-950  text-lg  mb-2 uppercase font-bold">
         {wordObject.partOfSpeech}
       </div>
       <div className="">
         {wordObject.definitions && (
-          <p className="mb-2 font-medium  text-teal-950  text-lg uppercase text-teal-600  ">
+          <p className="mb-2 font-medium  text-teal-950  text-lg uppercase text-teal-600 ">
             Definitions:
           </p>
         )}
@@ -38,16 +38,16 @@ const MainContentContainer = ({ wordObject }) => {
           ))}
         {showButtons.definition < wordObject.definitions.length && (
           <button
-            className="bg-teal-800 hover:bg-teal-500 py-2 px-4  text-white font-bold w-[220px] rounded-md text-sm mt-2 transition duration-300"
+            className="bg-gradient-to-r from-teal-800 to-teal-600 hover:from-teal-700 hover:to-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-300 focus:border-transparent py-3 px-6 text-white font-normal w-[240px] rounded-md text-sm mt-3 transition duration-500 ease-in-out transform hover:scale-105 shadow-md ring-2 ring-teal-700"
             onClick={() => handleShowMore('definition')}
           >
-            Show More Definitions
+            <span className="shadow-inner">Show More Definitions</span>
           </button>
         )}
       </div>
       <div className="flex mt-3 flex-col">
         {wordObject.antonyms.length > 0 && (
-          <p className="mr-2 font-semibold text-teal-950  text-lg  mb-2 ">
+          <p className="mb-2 font-medium  text-teal-950  text-lg uppercase text-teal-600 ">
             Antonyms:
           </p>
         )}
@@ -61,16 +61,16 @@ const MainContentContainer = ({ wordObject }) => {
           ))}
         {showButtons.antonyms < wordObject.antonyms.length && (
           <button
-            className="bg-teal-800 hover:bg-teal-500  text-white font-bold  w-[220px] py-2 px-4 rounded-md text-sm mt-2 transition duration-300"
+            className="bg-gradient-to-r from-teal-800 to-teal-600 hover:from-teal-700 hover:to-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-300 focus:border-transparent py-2 px-4 text-white font-bold w-[220px] rounded-md text-sm mt-2 transition duration-300 shadow-md ring-2 ring-teal-700"
             onClick={() => handleShowMore('antonyms')}
           >
-            Show More Antonyms
+            <span className="shadow-inner">Show More Antonyms</span>
           </button>
         )}
       </div>
       <div className="flex mt-3 flex-col">
         {wordObject.synonyms.length > 0 && (
-          <p className="mr-2 font-semibold text-teal-950  text-lg  mb-2 ">
+          <p className="mb-2 font-medium  text-teal-950  text-lg uppercase text-teal-600 ">
             Synonyms:
           </p>
         )}
@@ -84,10 +84,10 @@ const MainContentContainer = ({ wordObject }) => {
           ))}
         {showButtons.synonyms < wordObject.synonyms.length && (
           <button
-            className="bg-teal-800 hover:bg-teal-500 py-2 px-4  text-white font-bold  rounded-md  w-[220px] text-sm mt-2 transition duration-300"
+            className="bg-gradient-to-r from-teal-800 to-teal-600 hover:from-teal-700 hover:to-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-300 focus:border-transparent py-2 px-4 text-white font-bold rounded-md w-[220px] text-sm mt-2 transition duration-300 shadow-md ring-2 ring-teal-700"
             onClick={() => handleShowMore('synonyms')}
           >
-            Show More Synonyms
+            <span className="shadow-inner">Show More Synonyms</span>
           </button>
         )}
       </div>

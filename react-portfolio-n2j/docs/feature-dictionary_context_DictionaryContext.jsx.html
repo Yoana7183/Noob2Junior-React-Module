@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: feature-gitHub/context/DataContext.jsx</title>
+    <title>JSDoc: Source: feature-dictionary/context/DictionaryContext.jsx</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: feature-gitHub/context/DataContext.jsx</h1>
+    <h1 class="page-title">Source: feature-dictionary/context/DictionaryContext.jsx</h1>
 
     
 
@@ -27,81 +27,71 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>import React, { createContext, useState } from 'react';
-
 import PropTypes from 'prop-types';
 
 /**
- * Dummy data for the initial state of the context.
- * @type {Object}
+ * Context for managing dictionary-related state.
+ * @type {React.Context}
  */
-const dummyData = {
-  urlUser: 'https://github.com/octocat',
-  name: 'The Octocat',
-  avatar: 'https://avatars.githubusercontent.com/u/583231?v=4',
-  login: 'octocat',
-  timeStamp: '2011-01-25',
-  bio: '',
-  repos: 8,
-  followers: 9350,
-  following: 9,
-  location: 'San Francisco',
-  error: 'firstLoad',
+export const DictionaryDataContext = createContext();
+
+const initialState = {
+  word: '',
+  phonetic: '',
+  audio: '',
+  source: '',
+  meanings: null,
+  error: '',
   loading: false,
-  theme: 'light',
 };
 
 /**
- * Data context for storing user data and theme.
- */
-export const DataContext = createContext();
-
-/**
- * Data provider component for wrapping the application and providing data context.
+ * Context provider component for dictionary state management.
  * @param {Object} props - The component props.
  * @param {React.ReactNode} props.children - The child components to be wrapped.
- * @returns {JSX.Element} - A JSX element wrapping the children with data context.
+ * @returns {JSX.Element} - A JSX element wrapping the children with the dictionary context.
  */
-export const DataProvider = ({ children }) => {
-  const [userData, setUserData] = useState(dummyData);
-  const [theme, setTheme] = useState('light');
+const DictionaryContextProvider = ({ children }) => {
+  const [wordContextDetails, setWord] = useState(initialState);
 
   /**
-   * Reset user data to default values.
-   * @param {string|boolean} addError - The error value to set in user data.
+   * Updates the context with new word details.
+   * @param {Object} newWord - The new word details.
    */
-  const resetToDefaultValue = (addError) => {
-    setUserData(() => ({
-      ...dummyData,
-      error: addError,
-    }));
+  const updateContextWordDetails = (newWord) => {
+    setWord(newWord);
   };
 
   /**
-   * Load fetched user information into user data.
-   * @param {Object} userInfo - The user information to load.
+   * Updates the context with an error state for a not found word.
+   * @param {string} notFoundWord - The word that was not found.
    */
-  const loadFetchedUser = (userInfo) => setUserData(userInfo);
+  const updateErrorContext = (notFoundWord) => {
+    setWord({
+      ...initialState,
+      word: notFoundWord,
+      error: true,
+    });
+  };
 
   return (
-    &lt;DataContext.Provider
+    &lt;DictionaryDataContext.Provider
       value={{
-        userData,
-        resetToDefaultValue,
-        loadFetchedUser,
-        theme,
-        setTheme,
+        wordContextDetails,
+        updateContextWordDetails,
+        updateErrorContext,
       }}
     >
       {children}
-    &lt;/DataContext.Provider>
+    &lt;/DictionaryDataContext.Provider>
   );
 };
 
-DataProvider.propTypes = {
+DictionaryContextProvider.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default DataProvider;
+export default DictionaryContextProvider;
 </code></pre>
         </article>
     </section>
