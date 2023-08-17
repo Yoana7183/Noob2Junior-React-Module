@@ -11,5 +11,5 @@ const WordDataContainerSentence = ({ wordData }) => {
 
 export default WordDataContainerSentence;
 WordDataContainerSentence.propTypes = {
-  wordData: PropTypes.string.isRequired,
+  wordData: PropTypes.string,
 };

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: feature-dictionary/components/MainContentContainer.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: feature-dictionary/components/MainContentContainer.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import PropTypes from 'prop-types';
+import WordDataContainerSentence from './WordDataContainerSentence';
+import WordDataContainerSingleWord from './WordDataContainerSingleWord';
+import React, { useState } from 'react';
+import ShowMoreBtn from './ShowMoreBtn';
+const MainContentContainer = ({ wordObject }) => {
+  const [showButtons, setShowButtons] = useState({
+    definition: 2,
+    antonyms: 5,
+    synonyms: 5,
+  });
+
+  const handleShowMore = (showProperty) => {
+    setShowButtons((prevShown) => ({
+      ...prevShown,
+      [showProperty]: prevShown[showProperty] + 5,
+    }));
+  };
+  /**
+   * Renders a list of components generated from mapping an array of objects.
+   *
+   * @param {Array} props.objectToBeMaped - The array of objects to be mapped.
+   * @param {string|null} [props.propertyOfObject=null] - The property of the objects to use for data mapping.
+   * @param {number} props.quantityOfShownWords - The maximum number of items to show.
+   * @param {React.ComponentType} props.componentToBeGenerated - The component to generate for each item.
+   * @returns {JSX.Element|null} The rendered component list, or null if prop validation fails.
+   */
+  const MappingResultContainer = ({
+    objectToBeMaped,
+    propertyOfObject = null,
+    quantityOfShownWords,
+    componentToBeGenerated: Component,
+  }) => {
+    if (
+      objectToBeMaped === undefined ||
+      objectToBeMaped === null ||
+      quantityOfShownWords === undefined ||
+      quantityOfShownWords === null ||
+      Component === undefined ||
+      Component === null
+    ) {
+      return;
+    }
+
+    return (
+      &lt;div>
+        {objectToBeMaped.slice(0, quantityOfShownWords).map((part) => (
+          &lt;Component
+            key={Math.random()}
+            wordData={propertyOfObject ? part[propertyOfObject] : part}
+          />
+        ))}
+      &lt;/div>
+    );
+  };
+
+  return (
+    &lt;div className="border-teal-700 font-dictionary border-2 rounded-lg shadow-2xl mb-5 p-10 ">
+      &lt;div className="text-teal-950  text-lg  mb-2 uppercase font-bold">
+        {wordObject.partOfSpeech}
+      &lt;/div>
+      &lt;div className="">
+        {wordObject.definitions &amp;&amp; (
+          &lt;div>
+            &lt;p className="mb-2 font-medium  text-teal-950  text-lg uppercase text-teal-600 ">
+              Definitions:
+            &lt;/p>
+
+            &lt;MappingResultContainer
+              objectToBeMaped={wordObject.definitions}
+              propertyOfObject={`definition`}
+              quantityOfShownWords={showButtons.definition}
+              componentToBeGenerated={WordDataContainerSentence}
+            />
+          &lt;/div>
+        )}
+        {showButtons.definition &lt; wordObject.definitions.length &amp;&amp; (
+          &lt;ShowMoreBtn
+            handlerPropery={handleShowMore}
+            PropertyName={'definition'}
+          />
+        )}
+      &lt;/div>
+      &lt;div className="flex mt-3 flex-col">
+        {wordObject.antonyms.length > 0 &amp;&amp; (
+          &lt;div>
+            &lt;p className="mb-2 font-medium  text-teal-950  text-lg uppercase text-teal-600 ">
+              Antonyms:
+            &lt;/p>
+            &lt;MappingResultContainer
+              objectToBeMaped={wordObject.antonyms}
+              quantityOfShownWords={showButtons.antonyms}
+              componentToBeGenerated={WordDataContainerSingleWord}
+            />
+          &lt;/div>
+        )}
+        {showButtons.antonyms &lt; wordObject.antonyms.length &amp;&amp; (
+          &lt;ShowMoreBtn
+            handlerPropery={handleShowMore}
+            PropertyName={'antonyms'}
+          />
+        )}
+      &lt;/div>
+      &lt;div className="flex mt-3 flex-col">
+        {wordObject.synonyms.length > 0 &amp;&amp; (
+          &lt;div>
+            {' '}
+            &lt;p className="mb-2 font-medium  text-teal-950  text-lg uppercase text-teal-600 ">
+              Synonyms:
+            &lt;/p>
+            &lt;MappingResultContainer
+              objectToBeMaped={wordObject.synonyms}
+              quantityOfShownWords={showButtons.synonyms}
+              componentToBeGenerated={WordDataContainerSingleWord}
+            />
+          &lt;/div>
+        )}
+        {showButtons.synonyms &lt; wordObject.synonyms.length &amp;&amp; (
+          &lt;ShowMoreBtn
+            handlerPropery={handleShowMore}
+            PropertyName={'synonyms'}
+          />
+        )}
+      &lt;/div>
+    &lt;/div>
+  );
+};
+
+export default MainContentContainer;
+MainContentContainer.propTypes = {
+  wordObject: PropTypes.object.isRequired,
+  objectToBeMaped: PropTypes.array,
+  quantityOfShownWords: PropTypes.number,
+  componentToBeGenerated: PropTypes.func,
+  propertyOfObject: PropTypes.string,
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="ModalGallery.html">ModalGallery</a></li></ul><h3>Global</h3><ul><li><a href="global.html#DictionaryContextProvider">DictionaryContextProvider</a></li><li><a href="global.html#FetchAndUpdateContext">FetchAndUpdateContext</a></li><li><a href="global.html#ManagingContext">ManagingContext</a></li><li><a href="global.html#TipsCalculatorContextProvider">TipsCalculatorContextProvider</a></li><li><a href="global.html#useFetchData">useFetchData</a></li><li><a href="global.html#useValidateNumberInput">useValidateNumberInput</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Thu Aug 17 2023 12:16:07 GMT+0300 (Eastern European Summer Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

@@ -8,5 +8,5 @@ const WordDataContainerSingleWord = ({ wordData }) => {
 export default WordDataContainerSingleWord;
 
 WordDataContainerSingleWord.propTypes = {
-  wordData: PropTypes.string.isRequired,
+  wordData: PropTypes.string,
 };
