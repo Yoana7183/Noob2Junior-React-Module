@@ -56,7 +56,7 @@ const MainContentContainer = ({ wordObject }) => {
 
   return (
     <div className="border-teal-700 font-dictionary border-2 rounded-lg shadow-2xl mb-5 p-10 ">
-      <div className="text-teal-950  text-lg  mb-2 uppercase font-bold">
+      <div className="text-teal-950  text-lg  mb-8 uppercase font-bold ">
         {wordObject.partOfSpeech}
       </div>
       <div className="">
@@ -104,7 +104,6 @@ const MainContentContainer = ({ wordObject }) => {
       <div className="flex mt-3 flex-col">
         {wordObject.synonyms.length > 0 && (
           <div>
-            {' '}
             <p className="mb-2 font-medium  text-teal-950  text-lg uppercase text-teal-600 ">
               Synonyms:
             </p>
