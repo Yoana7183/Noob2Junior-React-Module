@@ -33,9 +33,9 @@ const Projects = () => {
           </div>
         </div>
         <div className="flex justify-center  flex-col sm:flex-row items-center mt-[5rem]">
-          <div className="w-4 h-4 mt-2 bg-gray-400 rounded-full mb-1 sm:mb-0 sm:mr-2 animate-grow"></div>
-          <div className="w-4 h-4 mt-2 bg-gray-400 rounded-full mb-1 sm:mb-0 sm:mr-2 animate-grow"></div>
-          <div className="w-4 h-4 mt-2 bg-gray-400 rounded-full mb-1 sm:mb-0 sm:mr-2 animate-grow"></div>
+          <div className="w-4 h-4 mt-2  mb-1 sm:mb-0 sm:mr-2">
+            <img src="/src/CV_Component/img/down.gif" alt="" srcSet="" />
+          </div>
         </div>
 
         <div className="flex justify-center mt-[5rem] text-gray-400 mr-3 uppercase text-2xl relative">
