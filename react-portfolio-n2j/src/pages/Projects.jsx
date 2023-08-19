@@ -6,7 +6,37 @@ const Projects = () => {
   return (
     <>
       <div>
-        <div className="w-fit mx-auto grid grid-cols-3 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 pt-10 mb-56 sm:grid-cols-1 sms:grid-cols-1">
+        <div className="flex justify-center mt-16 text-gray-400 mr-3 uppercase text-2xl relative">
+          <p>My Resume</p>
+          <div className="absolute bottom-0 left-1/5 w-3/5 h-[1px] bg-gray-400"></div>
+        </div>
+
+        <div className="flex justify-center">
+          <div>
+            <Link to="/cv">
+              <div className="lg:w-[40rem] md:w-[30rem] sm:w-[25rem] w-[18rem] sm:mt-5 mt-8 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+                <img
+                  src="\src\img-icons\github.jpg"
+                  alt="Product"
+                  className="h-80 w-72 object-cover rounded-t-xl"
+                />
+                <div className="px-4 py-3 w-72">
+                  <span className="text-gray-400 mr-3 uppercase text-xs">
+                    My Cv
+                  </span>
+                  <p className="text-lg font-bold text-black truncate block capitalize">
+                    MyCv
+                  </p>
+                </div>
+              </div>
+            </Link>
+          </div>
+        </div>
+        <div className="flex justify-center mt-[12rem] text-gray-400 mr-3 uppercase text-2xl relative">
+          <p>My Projects</p>
+          <div className="absolute bottom-0 left-1/5 w-3/5 h-[1px] bg-gray-400"></div>
+        </div>
+        <div className="  w-fit mx-auto grid grid-cols-3 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 pt-10 mb-56 sm:grid-cols-1 sms:grid-cols-1">
           <div>
             <Link to="/git">
               <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">

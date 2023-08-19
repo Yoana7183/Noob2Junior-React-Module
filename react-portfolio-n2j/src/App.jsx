@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
 import Navbar from './Navbar';
 import Projects from './pages/Projects';
+import MyResume from './pages/MyResume';
 import ECommerce from './pages/E-CommerceShop';
 import GitHub from './pages/GitHub';
 import LandingPage from './pages/LandingPage';
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Navbar />}>
             <Route index element={<Projects />} />
+            <Route path="cv" element={<MyResume />} />
             <Route path="e-commerce" element={<ECommerce />} />
             <Route path="git" element={<GitHub />} />
             <Route path="loopstudio" element={<LandingPage />} />

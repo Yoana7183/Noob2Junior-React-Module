@@ -4,6 +4,9 @@ const Navbar = () => {
   let currentProject = useLocation();
 
   switch (currentProject.pathname) {
+    case '/cv':
+      currentProject = 'My Resume';
+      break;
     case '/loopstudio':
       currentProject = 'Landing Page Loopstudios';
       break;
