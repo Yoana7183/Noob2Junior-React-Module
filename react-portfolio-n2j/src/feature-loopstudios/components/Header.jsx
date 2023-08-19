@@ -2,17 +2,13 @@ import { useState } from 'react';
 import links from '../links';
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navLinkStyle = `font-sans font-base leading-8 border-b-[1px] border-transparent pt-1 hover:border-white  block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-5 ${
-    isOpen
-      ? 'uppercase hover:border-b-[0px] text-2xl pt-0'
-      : 'inline font-medium'
-  }`;
+  const navLinkStyle = `font-sans text-2xl lg:text-base leading-8 lg:border-b-[1px] lg:border-transparent pt-1 hover:border-white  block mt-4 lg:inline-block lg:mt-0 text-white-200 lg:mr-5 lg:normal-case uppercase`;
 
   return (
     <nav
       className={
         isOpen
-          ? 'bg-black h-[50rem] lg:h-[650px]  md:h-[650px] mb-[5rem] sm:h-[600px] '
+          ? 'bg-black lg:bg h-[50rem] lg:h-[650px]  md:h-[650px] mb-[5rem] sm:h-[600px]  lg:bg-[url("/src/feature-loopstudios/images/desktop/image-hero.jpg")] lg:bg-cover lg:'
           : '2xl:pl-[calc(10%-1.7rem)]  2xl:pr-[calc(10%-1.7rem)] lg:h-[650px]  md:h-[650px] sm:h-[600px] bg-[url("/src/feature-loopstudios/images/mobile/image-hero.jpg")] bg-cover h-[50rem] w-[100%] xl:pl-0 xl:pr-0  lg:bg-[url("/src/feature-loopstudios/images/desktop/image-hero.jpg")] lg:w-[100%] lg:bg-cover  mb-[5rem] md:bg-[url("/src/feature-loopstudios/images/desktop/image-hero.jpg")] md:bg-no-repeat  md:w-[100%] sm:bg-[url("/src/feature-loopstudios/images/desktop/image-hero.jpg")] sm:w-[100%]  '
       }
     >
@@ -53,11 +49,11 @@ const Header = () => {
           </div>
 
           <div
-            className={`w-full block ml-[-22rem] font-sans font-thin sm:ml-[-35rem] md:ml-[-30rem] md:mt-24 mt-24 lg:mt-0 flex-grow lg:flex lg:items-center lg:w-auto ${
+            className={`w-full block ml-[-20rem] font-sans font-thin sm:ml-[-35rem] md:ml-[-30rem] md:mt-24 mt-24 lg:mt-0 flex-grow lg:flex lg:items-center lg:w-auto ${
               isOpen ? 'block' : 'hidden'
             }`}
           >
-            <div className="text-sm  lg:flex-grow text-white ">
+            <div className="text-base lg:flex-grow text-white ">
               {links.map((link) => {
                 return (
                   <a key={Math.random()} href="#" className={navLinkStyle}>
