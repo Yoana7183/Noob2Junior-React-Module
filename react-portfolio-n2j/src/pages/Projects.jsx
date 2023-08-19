@@ -32,7 +32,13 @@ const Projects = () => {
             </Link>
           </div>
         </div>
-        <div className="flex justify-center mt-[12rem] text-gray-400 mr-3 uppercase text-2xl relative">
+        <div className="flex justify-center  flex-col sm:flex-row items-center mt-[5rem]">
+          <div className="w-4 h-4 mt-2 bg-gray-400 rounded-full mb-1 sm:mb-0 sm:mr-2 animate-grow"></div>
+          <div className="w-4 h-4 mt-2 bg-gray-400 rounded-full mb-1 sm:mb-0 sm:mr-2 animate-grow"></div>
+          <div className="w-4 h-4 mt-2 bg-gray-400 rounded-full mb-1 sm:mb-0 sm:mr-2 animate-grow"></div>
+        </div>
+
+        <div className="flex justify-center mt-[5rem] text-gray-400 mr-3 uppercase text-2xl relative">
           <p>My Projects</p>
           <div className="absolute bottom-0 left-1/5 w-3/5 h-[1px] bg-gray-400"></div>
         </div>
