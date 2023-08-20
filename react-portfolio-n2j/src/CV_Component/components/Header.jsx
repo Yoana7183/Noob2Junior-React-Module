@@ -3,7 +3,7 @@ import PersonalDetails from './PersonalDetails';
 
 const Header = () => {
   return (
-    <div className="p-5 font-serif mt-[-16rem]">
+    <div className="p-5 font-serif mt-[6rem]">
       <div className="flex justify-between px-16">
         <div className="mt-10">
           <h1 className="lg:text-4xl tracking-tight mb-10">Yoana Nakova</h1>

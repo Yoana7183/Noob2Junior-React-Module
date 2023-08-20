@@ -9,7 +9,8 @@ const Experience = () => {
       <div className="flex flex-wrap mx-5">
         <div className="mt-3">
           <h1 className="text-xl font-bold mb-1">
-            Javascript /ReactJS Developer Intership
+            Javascript / ReactJS Developer
+            <span className="underline  text-sky-500 ml-2">Intership</span>
           </h1>
           <div className="flex flex-row mb-2">
             <h2 className="mr-5 font-bold text-sky-500 tracking-tight">
