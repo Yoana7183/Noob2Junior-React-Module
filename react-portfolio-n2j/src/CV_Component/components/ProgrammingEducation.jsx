@@ -4,7 +4,7 @@ import { coursesAndSkills } from '../programmingEducation';
 const ProgrammingEducation = () => {
   return (
     <section>
-      <div className="mt-5">
+      <div className="mt-10">
         <h1 className=" border-b-4 border-slate-500 pb-2 font-bold text-slate-500 mx-2 shadow-lg">
           PROGRAMMING EDUCATION
         </h1>

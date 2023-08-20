@@ -15,17 +15,19 @@ const Projects = () => {
           <div>
             <Link to="/cv">
               <div className="lg:w-[40rem] md:w-[30rem] sm:w-[25rem] w-[18rem] sm:mt-5 mt-8 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
-                <img
-                  src="\src\img-icons\github.jpg"
-                  alt="Product"
-                  className="h-80 w-72 object-cover rounded-t-xl"
-                />
+                <div className="flex justify-center">
+                  <img
+                    src="\src\img-icons\cv.png"
+                    alt="Product"
+                    className="h-80 w-80 ml-[0.2rem]  object-cover rounded-t-xl"
+                  />
+                </div>
                 <div className="px-4 py-3 w-72">
                   <span className="text-gray-400 mr-3 uppercase text-xs">
-                    My Cv
+                    CV
                   </span>
                   <p className="text-lg font-bold text-black truncate block capitalize">
-                    MyCv
+                    Resume
                   </p>
                 </div>
               </div>
