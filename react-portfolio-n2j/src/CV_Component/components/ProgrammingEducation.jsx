@@ -19,7 +19,7 @@ const ProgrammingEducation = () => {
                   <img
                     src="src/CV_Component/img/book.png"
                     alt="Phone Icon"
-                    className="w-7 h-7 mr-2"
+                    className="w-7 h-7 mr-2 mt-1"
                   />
                   {info.courseName}
                 </h1>
