@@ -48,7 +48,7 @@ const Header = () => {
       </div>
       <nav className="flex justify-start">
         <div className="sm:w-[200px] sm:h-[20px] sm:pr-0 sm:mr-[-1.5rem] h-[25px] md:mr-0 mr-[2rem] w-[150px] md:flex flex">
-          <img src="/src/feature-eCommerce/images/logo.svg" alt="Logo" />
+          <img src="\assetsECommerce\logo.svg" alt="Logo" />
         </div>
         {isBurgerMenuOnMobileViewIsOpen && (
           <div className="fixed top-0 left-0 w-screen h-screen bg-gray-800 bg-opacity-40 z-10 flex justify-start items-center">
