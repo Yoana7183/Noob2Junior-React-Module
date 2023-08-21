@@ -33,7 +33,7 @@ const Education = () => {
               </h2>
               <div className="flex flex-row mx-2">
                 <img
-                  src="src/CV_Component/img/calendar.png"
+                  src="../../../public/img_cv/calendar.png"
                   alt="Phone Icon"
                   className={icon}
                 />
