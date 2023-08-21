@@ -15,19 +15,19 @@ const ProgrammingEducation = () => {
                 key={Math.random()}
                 className="mr-4 border-b-2 border-slate-300 pb-1 text-sm pl-1 pt-2 shadow-sm"
               >
-                <h1 className="text-xl font-bold mb-1 mt-2 flex flex-row ">
+                <h1 className="sm:text-xl text-lg font-bold mb-1 mt-2 flex flex-row ">
                   <img
                     src="src/CV_Component/img/book.png"
                     alt="Phone Icon"
-                    className="w-7 h-7 mr-2 mt-1"
+                    className="sm:w-7 sm:h-7 w-5 h-5 mr-2 mt-1"
                   />
                   {info.courseName}
                 </h1>
                 <div className="mb-5">
-                  <h1 className="font-bold text-sky-500 tracking-tight mb-3 mt-3">
+                  <h1 className="font-bold text-base sm:text-md text-sky-500 tracking-tight mb-3 mt-3">
                     Main course topics:
                   </h1>
-                  <ul className="font-base text-black font-light">
+                  <ul className="font-base text-slate-500 font-light">
                     {info.skills.map((skill) => (
                       <li className="mb-1" key={skill.id}>
                         {skill.name}

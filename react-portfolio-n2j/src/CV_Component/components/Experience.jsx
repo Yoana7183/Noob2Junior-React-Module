@@ -1,8 +1,8 @@
 import React from 'react';
 import { jobPositions } from '../jobPosition';
 const Experience = () => {
-  const nameOfPositionStyle = `sm:text-xl text-base font-bold mb-1`;
-  const nameOfCompanyStyle = `mr-5 font-bold text-sm sm:text-base text-sky-500 tracking-tight`;
+  const nameOfPositionStyle = `sm:text-xl text-lg font-bold mb-1`;
+  const nameOfCompanyStyle = `mr-5 font-bold text-base sm:text-md text-sky-500 tracking-tight`;
   const period = ` text-slate-500 text-[10px] sm:text-[11px] px-1`;
   const icon = `sm:w-5 sm:h-5 w-3 h-3 mb-2 mt-2 sm:ml-[-10px] sm:mr-[5px] mt-[1px] sm:mt-[-4px] `;
   const link = ` text-slate-500 sm:text-xs text-[8px]`;

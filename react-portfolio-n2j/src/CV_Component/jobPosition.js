@@ -1,7 +1,7 @@
 export const jobPositions = [
   {
     id: 1,
-    position: 'Javascript / ReactJS Developer',
+    position: 'Javascript / ReactJS Developer-intership',
     company: 'Noob2Junior - Dev Academy',
     date: '02/2023 - 08/2023',
     location: 'Sofia, Bulgaria',
