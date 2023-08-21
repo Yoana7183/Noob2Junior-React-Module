@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "jsdoc": "^4.0.2",
-    "build": "vite build && npx tailwindcss build ./src/input.css -o ./dist/output.css",
+    "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
