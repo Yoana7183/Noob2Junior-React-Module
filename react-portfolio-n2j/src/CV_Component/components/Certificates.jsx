@@ -16,7 +16,7 @@ const Certificates = () => {
             >
               <div className="flex flex-row">
                 <img
-                  src="../../assets/img_cv/certificate.png"
+                  src="/assetsCv/certificate.png"
                   alt="Phone Icon"
                   className="sm:w-7 sm:h-7 w-5 h-5 mr-2 mt-1"
                 />

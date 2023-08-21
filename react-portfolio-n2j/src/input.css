@@ -28,7 +28,8 @@
 }
 
 .animate-grow {
-  animation: grow 3s ease-in-out 40s 1 normal both paused, grow-hover 0.5s ease-in-out alternate infinite;
+  animation: grow 3s ease-in-out 40s 1 normal both paused,
+    grow-hover 0.5s ease-in-out alternate infinite;
 }
 
 @keyframes grow-hover {
@@ -36,4 +37,3 @@
     transform: scale(0.8);
   }
 }
-

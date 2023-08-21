@@ -18,7 +18,7 @@ const Header = () => {
         <div className=" flex items-center justify-center md:block">
           <div className="">
             <img
-              src="../../assets/img_cv/myImg.jpg"
+              src="/assetsCv/myImg.jpg"
               alt=""
               srcSet=""
               className="w-[10rem] border-2 rounded-3xl border-gray-300 transition duration-300 hover:border-sky-500 hover:shadow-2xl"

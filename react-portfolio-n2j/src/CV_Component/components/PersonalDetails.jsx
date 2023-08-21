@@ -9,7 +9,7 @@ const PersonalDetails = () => {
       <section className="flex lg:flex-row flex-col mt-5 px-5 sm:px-10 md:px-16">
         <div className={divStyle}>
           <img
-            src="src/CV_Component/img/phone.png"
+            src="/assetsCv/phone.png"
             alt="Phone Icon"
             className={iconStyle}
           />
@@ -20,7 +20,7 @@ const PersonalDetails = () => {
 
         <div className={divStyle}>
           <img
-            src="src/CV_Component/img/mail.png"
+            src="/assetsCv/mail.png"
             alt="Phone Icon"
             className={iconStyle}
           />
@@ -30,7 +30,7 @@ const PersonalDetails = () => {
         </div>
         <div className={divStyle}>
           <img
-            src="src/CV_Component/img/link.png"
+            src="/assetsCv/link.png"
             alt="Phone Icon"
             className={iconStyle}
           />
@@ -40,7 +40,7 @@ const PersonalDetails = () => {
         </div>
         <div className={divStyle}>
           <img
-            src="src/CV_Component/img/location.png"
+            src="/assetsCv/location.png"
             alt="Phone Icon"
             className={iconStyle}
           />
