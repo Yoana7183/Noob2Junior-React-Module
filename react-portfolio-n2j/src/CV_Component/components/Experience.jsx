@@ -40,7 +40,7 @@ const Experience = () => {
             </div>
             <div className="flex flex-row mx-2">
               <img
-                src="/assetsCv/assets/link.png"
+                src="/assetsCv/link.png"
                 alt="Link Icon"
                 className={`${icon} mt-[1px]`}
               />
