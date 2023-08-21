@@ -31,26 +31,26 @@ const Footer = () => {
           <div className="flex pb-5">
             <img
               className={iconsStyle}
-              src="src\feature-loopstudios\images\icon-facebook.svg"
-              alt=""
+              src="\assetsLoopstudios\icon-facebook.svg"
+              alt="facebook"
               srcSet=""
             />
             <img
               className={iconsStyle}
-              src="src\feature-loopstudios\images\icon-twitter.svg"
-              alt=""
+              src="\assetsLoopstudios\icon-twitter.svg"
+              alt="twitter"
               srcSet=""
             />
             <img
               className={iconsStyle}
-              src="src\feature-loopstudios\images\icon-pinterest.svg"
-              alt=""
+              src="\assetsLoopstudios\icon-pinterest.svg"
+              alt="pinterest"
               srcSet=""
             />
             <img
               className={iconsStyle}
-              src="src\feature-loopstudios\images\icon-instagram.svg"
-              alt=""
+              src="\assetsLoopstudios\icon-instagram.svg"
+              alt="instagram"
               srcSet=""
             />
           </div>

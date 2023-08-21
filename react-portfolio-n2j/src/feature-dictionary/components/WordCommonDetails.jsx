@@ -56,10 +56,7 @@ const WordCommonDetails = () => {
             rel="noreferrer"
             className="text-teal-500"
           >
-            <img
-              src="src\feature-dictionary\assets\icons8-external-link-80.png"
-              alt=""
-            />
+            <img src="\assetsDictionary\icons8-external-link-80.png" alt="" />
           </a>
         </div>
       )}
@@ -71,7 +68,7 @@ const WordCommonDetails = () => {
             className="flex items-center justify-center bg-teal-500 p-2 rounded-lg shadow-md"
           >
             <img
-              src="src\feature-dictionary\assets\icons8-sound-50.png"
+              src="\assetsDictionary\icons8-sound-50.png"
               alt="Play Audio"
               className="w-8 h-8"
             />

@@ -34,7 +34,7 @@ const QuantityButton = () => {
           <div className="w-[15px] cursor-pointer " onClick={handleMinusClick}>
             <img
               className="bg-cover pt-1"
-              src="src\feature-eCommerce\images\icon-minus.svg"
+              src="\assetsECommerce\icon-minus.svg"
               alt="minus-quantity"
               srcSet=""
             />
@@ -45,7 +45,7 @@ const QuantityButton = () => {
           <div className="w-[15px] cursor-pointer" onClick={handlePlusClick}>
             <img
               className="bg-cover "
-              src="src\feature-eCommerce\images\icon-plus.svg"
+              src="\assetsECommerce\icon-plus.svg"
               alt="plus-quantity"
               srcSet=""
             />
@@ -60,7 +60,7 @@ const QuantityButton = () => {
           <button className=" flex justify-center  pt-4">
             <div>
               <img
-                src="src\feature-eCommerce\images\icon-cart.svg"
+                src="\assetsECommerce\icon-cart.svg"
                 alt="shopping-cart"
                 srcSet=""
               />

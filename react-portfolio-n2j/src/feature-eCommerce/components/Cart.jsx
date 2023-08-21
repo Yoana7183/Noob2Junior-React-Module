@@ -27,7 +27,7 @@ const Cart = () => {
               <figure className="w-[50px] h-[50px] ">
                 <img
                   className="rounded"
-                  src="src\feature-eCommerce\images\image-product-1-thumbnail.jpg"
+                  src="\assetsECommerce\image-product-1-thumbnail.jpg"
                   alt="Product_image"
                   srcSet=""
                 />
@@ -44,10 +44,7 @@ const Cart = () => {
                 className="pt-5 cursor-pointer"
                 onClick={() => setQuantity(0)}
               >
-                <img
-                  src="src\feature-eCommerce\images\icon-delete.svg"
-                  alt="delete"
-                />
+                <img src="\assetsECommerce\icon-delete.svg" alt="delete" />
               </figure>
             </div>
           )}

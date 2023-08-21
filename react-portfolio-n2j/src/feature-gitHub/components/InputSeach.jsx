@@ -49,7 +49,7 @@ const SearchBarAndSubmitButton = () => {
         <div className="relative flex items-center">
           <img
             className="w-6 h-6 lg:mr-4 md:mr-0 sm:mr-0 "
-            src="src/feature-gitHub/assets/icon-search.svg"
+            src="\assetsGit\icon-search.svg"
             alt="Search Icon"
           />
           <input

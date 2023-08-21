@@ -34,13 +34,13 @@ const Header = () => {
           {isBurgerMenuOnMobileViewIsOpen ? (
             <img
               className="fill-current mt-[-2.6rem] "
-              src="/src/feature-eCommerce/images/icon-close.png"
+              src="\assetsECommerce\icon-close.png"
               alt="Close"
             />
           ) : (
             <img
               className="fill-current mt-[-2.6rem]"
-              src="/src/feature-eCommerce/images/icon-menu.svg"
+              src="\assetsECommerce\icon-menu.svg"
               alt="Menu"
             />
           )}
@@ -60,13 +60,13 @@ const Header = () => {
                 {isBurgerMenuOnMobileViewIsOpen ? (
                   <img
                     className="w-8 h-8 fill-current"
-                    src="/src/feature-eCommerce/images/icon-close.svg"
+                    src="\assetsECommerce\icon-close.svg"
                     alt="Close"
                   />
                 ) : (
                   <img
                     className="w-4 h-4 fill-current"
-                    src="/src/feature-eCommerce/images/icon-menu.svg"
+                    src="\assetsECommerce\icon-menu.svg"
                     alt="Menu"
                   />
                 )}
@@ -114,14 +114,14 @@ const Header = () => {
           )}
           <img
             className="lg:mt-[0.2rem] mt-[0.5rem] sm:pt-2   ml-[-0.5rem] md:mt-[0.1rem] sm:mt-[-0.2rem]  sm:ml-[-0.7rem] "
-            src="/src/feature-eCommerce/images/icon-cart.svg"
+            src="\assetsECommerce\icon-cart.svg"
             alt="Cart"
           />
         </div>
         <figure className="pl-5  w-[60px] md:w-[70px] cursor-pointer mt-[-0.1rem] sm:w-[50px] sm:mt-[-0.1rem] md:mt-[-0.5rem]">
           <img
             className="hover:border-2 hover:border-ecommerceOrangeColor hover:rounded-full"
-            src="/src/feature-eCommerce/images/image-avatar.png"
+            src="\assetsECommerce\image-avatar.png"
             alt="Avatar"
           />
         </figure>

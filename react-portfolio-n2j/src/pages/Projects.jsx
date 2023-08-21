@@ -17,7 +17,7 @@ const Projects = () => {
               <div className="lg:w-[40rem] md:w-[30rem] sm:w-[25rem] w-[18rem] sm:mt-5 mt-8 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
                 <div className="flex justify-center">
                   <img
-                    src="\src\img-icons\cv.png"
+                    src="\img-icons\cv.png"
                     alt="Product"
                     className="h-80 w-80 ml-[0.2rem]  object-cover rounded-t-xl"
                   />
@@ -49,7 +49,7 @@ const Projects = () => {
             <Link to="/git">
               <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
                 <img
-                  src="\src\img-icons\github.jpg"
+                  src="\img-icons\github.jpg"
                   alt="Product"
                   className="h-80 w-72 object-cover rounded-t-xl"
                 />
@@ -68,7 +68,7 @@ const Projects = () => {
             <Link to="/loopstudio">
               <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
                 <img
-                  src="\src\img-icons\loopstudios.jpg"
+                  src="\img-icons\loopstudios.jpg"
                   alt="Product"
                   className="h-80 w-72 object-cover rounded-t-xl"
                 />
@@ -87,7 +87,7 @@ const Projects = () => {
             <Link to="/e-commerce">
               <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
                 <img
-                  src="\src\img-icons\e-commerce.jpg"
+                  src="\img-icons\e-commerce.jpg"
                   alt="Product"
                   className="h-80 w-72 object-cover rounded-t-xl"
                 />
@@ -106,7 +106,7 @@ const Projects = () => {
             <Link to="/equalize">
               <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl col-span-3">
                 <img
-                  src="\src\img-icons\equalizer.jpg"
+                  src="\img-icons\equalizer.jpg"
                   alt="Product"
                   className="h-80 w-72 object-cover rounded-t-xl"
                 />
@@ -125,7 +125,7 @@ const Projects = () => {
             <Link to="/tipscalc">
               <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
                 <img
-                  src="\src\img-icons\tipsCalculator.jpg"
+                  src="\img-icons\tipsCalculator.jpg"
                   alt="Product"
                   className="h-80 w-72 object-cover rounded-t-xl"
                 />
@@ -144,7 +144,7 @@ const Projects = () => {
             <Link to="/dictionary">
               <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
                 <img
-                  src="\src\img-icons\dictionary.png"
+                  src="\img-icons\dictionary.png"
                   alt="Product"
                   className="h-80 w-72 object-cover rounded-t-xl"
                 />

@@ -69,7 +69,7 @@ const Gallery = () => {
               >
                 <img
                   className="w-[10px] h-[16px] mt-3"
-                  src="src\feature-eCommerce\images\icon-previous.svg"
+                  src="\assetsECommerce\icon-previous.svg"
                   alt="Prev"
                   srcSet=""
                 ></img>
@@ -86,7 +86,7 @@ const Gallery = () => {
               >
                 <img
                   className="w-[10px] h-[16px] mt-3  "
-                  src="src\feature-eCommerce\images\icon-next.svg"
+                  src="\assetsECommerce\icon-next.svg"
                   alt="Next"
                   srcSet=""
                 ></img>
@@ -94,7 +94,7 @@ const Gallery = () => {
             </div>
             <img
               className=" sm:rounded-2xl rounded-none sm:inline hidden "
-              src="src\feature-eCommerce\images\image-product-1.jpg"
+              src="\assetsECommerce\image-product-1.jpg"
               alt="Main-Product"
               srcSet=""
             />

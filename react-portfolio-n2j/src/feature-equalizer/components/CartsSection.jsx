@@ -12,7 +12,7 @@ const CartSection = () => {
           <img
             className="ml-[60%] mr-[30%] mt-[-4rem] w-[950px] h-[370px] bg-cover xl:h-[642px] xl:w-[312px] xl:ml-[4rem] xl:mt-[-180px]
              md:w-[270px] md:h-[556px] md:mt-[-120px] md:ml-[3rem] sm:h-[500px] sm:w-[220px] sm:mt-[-6rem]  sm:ml-6"
-            src="/src/feature-equalizer/assets/illustration-app.png"
+            src="\assetsEqualizer\illustration-app.png"
             alt="illustration-app-phone"
             srcSet=""
           />
@@ -20,7 +20,7 @@ const CartSection = () => {
         <figure className=" w-[90rem] h-[420px] lg:w-[350px] md:w-[280px] sm:w-[220px]">
           <img
             className="ml-[-40%] w-[500px] h-[420px  xl:ml-[-35rem] lg:bg-cover lg:ml-[-25rem] md:ml-[-16rem] sm:ml-[-15rem]  "
-            src="/src/feature-equalizer/assets/bg-pattern-2.svg"
+            src="\assetsEqualizer\bg-pattern-2.svg"
             alt="bg-pattern-2"
             srcSet=""
           />
@@ -65,7 +65,7 @@ const CartSection = () => {
           >
             <img
               className="w-[30px] h-[22px]  pr-[10px]"
-              src="\src\feature-equalizer\assets\icon-apple.svg"
+              src="\assetsEqualizer\icon-apple.svg"
               alt=""
               srcSet=""
             />
@@ -77,7 +77,7 @@ const CartSection = () => {
           >
             <img
               className=" w-[30px] h-[22px] pr-[10px] "
-              src="\src\feature-equalizer\assets\icon-android.svg"
+              src="\assetsEqualizer\icon-android.svg"
               alt=""
               srcSet=""
             />

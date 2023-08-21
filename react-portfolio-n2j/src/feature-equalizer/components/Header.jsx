@@ -4,7 +4,7 @@ const Header = () => {
       <div className="">
         <img
           className="pt-12"
-          src="/src/feature-equalizer/assets/logo.svg"
+          src="\assetsEqualizer\logo.svg"
           alt=""
           srcSet=""
         />
@@ -13,7 +13,7 @@ const Header = () => {
         <img
           className="
           mt-[-5rem] hidden lg:w-[20%] lg:inline md:inline md:w-[35%] sm:inline sm:w-[30%]"
-          src="/src/feature-equalizer/assets/bg-pattern-1.svg"
+          src="\assetsEqualizer\bg-pattern-1.svg"
           alt=""
           srcSet=""
         />

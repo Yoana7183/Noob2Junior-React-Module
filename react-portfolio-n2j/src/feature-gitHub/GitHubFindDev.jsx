@@ -57,7 +57,7 @@ const GitHubFindDev = () => {
                   Dark
                   <img
                     className="w-[20px] h-[20px] ml-2 "
-                    src="src/feature-gitHub/assets/icon-moon.svg"
+                    src="\assetsGit\icon-moon.svg"
                     alt="moon-icon"
                     srcSet=""
                   />
@@ -68,7 +68,7 @@ const GitHubFindDev = () => {
                 Light
                 <img
                   className="w-[20px] h-[20px] ml-2"
-                  src="src/feature-gitHub/assets/icon-sun.svg"
+                  src="\assetsGit\icon-sun.svg"
                   alt="sun-icon"
                   srcSet=""
                 />

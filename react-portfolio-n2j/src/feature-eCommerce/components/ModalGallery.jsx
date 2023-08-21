@@ -25,7 +25,7 @@ const ModalGallery = (props) => {
             <div className="flex items-center">
               {/* Previous Image Button */}
               <div
-                className="rounded-full bg-white w-[56px] h-[56px] flex justify-center cursor-pointer absolute inset-y-15 left-[-30px] hover:bg-center bg-[url('/src/feature-eCommerce/images/icon-previous.svg')] bg-no-repeat bg-center hover:bg-[url('/src/feature-eCommerce/images/icons8-previous-26.png')]"
+                className="rounded-full bg-white w-[56px] h-[56px] flex justify-center cursor-pointer absolute inset-y-15 left-[-30px] hover:bg-center bg-[url('\assetsECommerce\icon-previous.svg')] bg-no-repeat bg-center hover:bg-[url('\assetsECommerce\icons8-previous-26.png')]"
                 onClick={props.prevImg}
               ></div>
 
@@ -36,7 +36,7 @@ const ModalGallery = (props) => {
                   onClick={() => props.setIsModal(false)}
                 >
                   {/* Close Icon */}
-                  <div className="w-[34px] h-[36px] mb-3 bg-no-repeat bg-cover bg-[url('/src/feature-eCommerce/images/icon-close.svg')] hover:bg-[url('/src/feature-eCommerce/images/icon-close_hover.png')] "></div>
+                  <div className="w-[34px] h-[36px] mb-3 bg-no-repeat bg-cover bg-[url('\assetsECommerce\icon-close.svg')] hover:bg-[url('\assetsECommerce\icon-close_hover.png')] "></div>
                 </div>
                 {/* Product Image */}
                 <img
@@ -48,7 +48,7 @@ const ModalGallery = (props) => {
 
               {/* Next Image Button */}
               <div
-                className="rounded-full bg-white w-[56px] h-[56px] flex justify-center cursor-pointer absolute inset-y-15 right-[-30px] bg-[url('/src/feature-eCommerce/images/icon-next.svg')] bg-no-repeat bg-center hover:bg-[url('/src/feature-eCommerce/images/icons8-next-26.png')] "
+                className="rounded-full bg-white w-[56px] h-[56px] flex justify-center cursor-pointer absolute inset-y-15 right-[-30px] bg-[url('\assetsECommerce\icon-next.svg')] bg-no-repeat bg-center hover:bg-[url('\assetsECommerce\icons8-next-26.png')] "
                 onClick={props.nextImg}
               ></div>
             </div>

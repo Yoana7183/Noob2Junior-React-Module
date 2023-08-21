@@ -23,7 +23,7 @@ const InputBill = () => {
       <div className="relative">
         <img
           className="w-[25px] h-[16px] absolute inset-y-4 left-0 flex items-center pl-3 "
-          src="src\feature-tips-calculator\images\icon-dollar.svg"
+          src="\assetsTipsCalc\icon-dollar.svg"
           alt="icon-dollar"
           srcSet=""
         />

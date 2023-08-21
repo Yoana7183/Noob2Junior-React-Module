@@ -8,7 +8,7 @@ const Article = () => {
     >
       <figure className="lg:w-[730px] md:w-[650px]  lg:h-[500px] z-10 ">
         <img
-          src="/src/feature-loopstudios/images/desktop/image-interactive.jpg"
+          src="\assetsLoopstudios\desktop/image-interactive.jpg"
           alt="image-interactive"
           srcSet=""
         />

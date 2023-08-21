@@ -8,8 +8,8 @@ const Header = () => {
     <nav
       className={
         isOpen
-          ? 'bg-black lg:bg h-[50rem] lg:h-[650px]  md:h-[650px] mb-[5rem] sm:h-[600px]  lg:bg-[url("/src/feature-loopstudios/images/desktop/image-hero.jpg")] lg:bg-cover lg:'
-          : '2xl:pl-[calc(10%-1.7rem)]  2xl:pr-[calc(10%-1.7rem)] lg:h-[650px]  md:h-[650px] sm:h-[600px] bg-[url("/src/feature-loopstudios/images/mobile/image-hero.jpg")] bg-cover h-[50rem] w-[100%] xl:pl-0 xl:pr-0  lg:bg-[url("/src/feature-loopstudios/images/desktop/image-hero.jpg")] lg:w-[100%] lg:bg-cover  mb-[5rem] md:bg-[url("/src/feature-loopstudios/images/desktop/image-hero.jpg")] md:bg-no-repeat  md:w-[100%] sm:bg-[url("/src/feature-loopstudios/images/desktop/image-hero.jpg")] sm:w-[100%]  '
+          ? 'bg-black lg:bg h-[50rem] lg:h-[650px]  md:h-[650px] mb-[5rem] sm:h-[600px]  lg:bg-[url("/assetsLoopstudios/desktop/image-hero.jpg")] lg:bg-cover lg:'
+          : '2xl:pl-[calc(10%-1.7rem)]  2xl:pr-[calc(10%-1.7rem)] lg:h-[650px]  md:h-[650px] sm:h-[600px] bg-[url("/assetsLoopstudios/mobile/image-hero.jpg")] bg-cover h-[50rem] w-[100%] xl:pl-0 xl:pr-0  lg:bg-[url("/assetsLoopstudios/desktop/image-hero.jpg")] lg:w-[100%] lg:bg-cover  mb-[5rem] md:bg-[url("/assetsLoopstudios/desktop/image-hero.jpg")] md:bg-no-repeat  md:w-[100%] sm:bg-[url("/assetsLoopstudios/desktop/image-hero.jpg")] sm:w-[100%]  '
       }
     >
       <div className="flex justify-between content-center pt-10">
@@ -32,7 +32,7 @@ const Header = () => {
                 className={`fill-current h-10  w-10 mt-[-2.6rem] ${
                   isOpen ? 'hidden' : 'block'
                 }`}
-                src="/src/feature-loopstudios/images/hamburger.svg"
+                src="\assetsLoopstudios\hamburger.svg"
                 alt="hamburge"
                 srcSet=""
               />
@@ -41,7 +41,7 @@ const Header = () => {
                 className={`fill-current h-10 w-10 mt-[-26rem] mr-10 ${
                   isOpen ? 'block' : 'hidden'
                 }`}
-                src="/src/feature-loopstudios/images/close.svg"
+                src="\assetsLoopstudios\close.svg"
                 alt="close"
                 srcSet=""
               />
