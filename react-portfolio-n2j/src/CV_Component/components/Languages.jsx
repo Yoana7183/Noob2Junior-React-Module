@@ -4,14 +4,16 @@ const Languages = () => {
   return (
     <section>
       <div>
-        <h1 className=" border-b-4 border-slate-500 pb-2 font-bold text-slate-500 mx-2 shadow-lg mt-[4rem]">
+        <h1 className=" border-b-4 border-slate-500 pb-2 font-bold text-slate-500 mx-2 shadow-lg mt-10 sm:mt-[4rem]">
           LANGUAGES
         </h1>
         <div className="flex flex-wrap mx-5 mt-3">
           <div>
-            <p className="text-xl font-bold mb-1">English B2 </p>
+            <p className="sm:text-xl text-lg font-bold">English B2 </p>
             <div className="flex ">
-              <p className="font-bold text-sky-500 tracking-tight ">Advanced</p>
+              <p className="font-bold text-base sm:text-md text-sky-500 tracking-tight ">
+                Advanced
+              </p>
               <div className="flex items-center ml-[7rem]">
                 <div className="w-[12px] h-3 rounded-full bg-black mx-[1px]"></div>
                 <div className="w-[12px] h-3 rounded-full bg-black mx-[1px]"></div>

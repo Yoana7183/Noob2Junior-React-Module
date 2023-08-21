@@ -4,7 +4,7 @@ import { certificates } from '../certificates';
 const Certificates = () => {
   return (
     <div>
-      <h1 className=" border-b-4 border-slate-500 pb-2 font-bold text-slate-500 mx-2 shadow-lg mt-[4rem]">
+      <h1 className=" border-b-4 border-slate-500 pb-2 font-bold text-slate-500 mx-2 shadow-lg mt-10 sm:mt-[4rem]">
         CERTIFICATES
       </h1>
       <div className="flex flex-wrap mx-5 mt-5">
@@ -18,13 +18,15 @@ const Certificates = () => {
                 <img
                   src="src/CV_Component/img/certificate.png"
                   alt="Phone Icon"
-                  className="w-7 h-7 mr-2 mt-1"
+                  className="sm:w-7 sm:h-7 w-5 h-5 mr-2 mt-1"
                 />
-                <h1 className="text-lg font-bold mb-1">
+                <h1 className="sm:text-xl text-lg font-bold mb-1">
                   {certificateInfo.name}
                 </h1>
               </div>
-              <p className="my-2"> - {certificateInfo.certifiedBy}</p>
+              <p className="font-base text-slate-500 font-light mb-5">
+                - {certificateInfo.certifiedBy}
+              </p>
             </div>
           );
         })}
