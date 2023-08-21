@@ -153,7 +153,7 @@ const Projects = () => {
                     Dictionary
                   </span>
                   <p className="text-lg font-bold text-black truncate block capitalize">
-                    IN DEVELOPMENT
+                    Simple English Dictionary
                   </p>
                 </div>
               </div>
