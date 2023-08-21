@@ -23,7 +23,7 @@ const Experience = () => {
             <div className="flex flex-row">
               <div className="flex flex-row  sm:mx-2">
                 <img
-                  src="../../../public/img_cv/calendar.png"
+                  src="src/CV_Component/img/calendar.png"
                   alt="Calendar Icon"
                   className={`${icon} `}
                 />
@@ -31,7 +31,7 @@ const Experience = () => {
               </div>
               <div className="flex flex-row ">
                 <img
-                  src="../../../public/img_cv/location.png"
+                  src="src/CV_Component/img/location.png"
                   alt="Location Icon"
                   className={`${icon} mt-[1px]`}
                 />
@@ -40,7 +40,7 @@ const Experience = () => {
             </div>
             <div className="flex flex-row mx-2">
               <img
-                src="../../../public/img_cv/link.png"
+                src="src/CV_Component/img/link.png"
                 alt="Link Icon"
                 className={`${icon} mt-[1px]`}
               />

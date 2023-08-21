@@ -17,7 +17,7 @@ const ProgrammingEducation = () => {
               >
                 <h1 className="sm:text-xl text-lg font-bold mb-1 mt-2 flex flex-row ">
                   <img
-                    src="../../../public/img_cv/book.png"
+                    src="src/CV_Component/img/book.png"
                     alt="Phone Icon"
                     className="sm:w-7 sm:h-7 w-5 h-5 mr-2 mt-1"
                   />
