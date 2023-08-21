@@ -1,7 +1,7 @@
 const ProductGallery = [
   {
     origin: '/assetsECommerce/image-product-1.jpg',
-    thumbnail: 'src/feature-eCommerce/images/image-product-1-thumbnail.jpg',
+    thumbnail: '/assetsECommerce/image-product-1-thumbnail.jpg',
   },
   {
     origin: '/assetsECommerce/image-product-2.jpg',
