@@ -4,7 +4,7 @@ import PersonalDetails from './PersonalDetails';
 const Header = () => {
   return (
     <div className="p-5 font-serif md:mt-[4rem] flex justify-center flex-col">
-      <div className="flex md:justify-between  flex-col sm:flex-row sm:px-10 lg:px-36 md:px-16 sm:ml-[3rem] md:mb-[2rem] md:border-none md:shadow-none border-b border-slate-500 font-bold mx-2 shadow-sm sm:pb-[4rem] md:pb-[2rem] px-0 pb-[3rem] sm:mt-10 ">
+      <div className="flex md:justify-between  flex-col sm:flex-row sm:px-10 lg:px-36 md:px-16 sm:ml-[3rem] md:mb-[-2rem] lg:mb-[2rem] md:border-none md:shadow-none border-b border-slate-500 font-bold mx-2 shadow-sm sm:pb-[4rem] md:pb-[2rem] px-0 pb-[3rem] sm:mt-10 ">
         <div className="mt-10 flex justify-center sm:block">
           <div className="sm:mr-5 mr-0">
             <h1 className="sm:text-4xl text-3xl tracking-tight md:mb-6 pb-5 sm:pb-5 md:pb-2">

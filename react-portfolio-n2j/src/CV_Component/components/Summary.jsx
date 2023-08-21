@@ -6,7 +6,7 @@ const Summary = () => {
       <h1 className="border-b-4 border-slate-500 pb-2 font-bold text-slate-500 mx-2 shadow-lg">
         SUMMARY
       </h1>
-      <p className="mt-3 font-serif px-5">
+      <p className="mt-3 font-serif px-5 text-sm sm:text-base">
         A driven and focused person able to work and perform well in a team
         environment. I am looking for new challenges in my career path. I will
         be glad to meet you!
