@@ -25,7 +25,7 @@ const Skills = () => {
               key={Math.random()}
               className="mr-4 border-b-2 border-slate-300 pb-1 text-sm pl-1 pt-2 cursor-pointer shadow-sm"
             >
-              {skill}
+              <p className=" tracking-tight text-slate-600">{skill}</p>
             </div>
           );
         })}

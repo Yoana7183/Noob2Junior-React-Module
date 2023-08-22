@@ -7,7 +7,7 @@ const Experience = () => {
   const icon = `sm:w-5 sm:h-5 w-3 h-3 mb-2 mt-2 sm:ml-[-10px] sm:mr-[5px] mt-[1px] sm:mt-[-1px] `;
   const link = ` text-slate-500 sm:text-xs text-[8px]`;
   return (
-    <section className=" mt-10 sm:mt-[4rem]">
+    <section className="  sm:mt-[4rem]">
       <h1 className="border-b-4 border-slate-500 pb-2 font-bold text-slate-500 mx-2 shadow-lg">
         EXPERIENCE
       </h1>
@@ -42,7 +42,7 @@ const Experience = () => {
               <img
                 src="/assetsCv/link.png"
                 alt="Link Icon"
-                className={`${icon} mt-[1px]`}
+                className={`${icon} mt-[-1px]`}
               />
               <a className={link} href={position.link}>
                 {position.link}
