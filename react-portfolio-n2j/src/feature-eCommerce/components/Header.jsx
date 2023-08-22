@@ -59,7 +59,7 @@ const Header = () => {
               >
                 {isBurgerMenuOnMobileViewIsOpen ? (
                   <img
-                    className="w-8 h-8 fill-current"
+                    className="w-6 h-6 fill-current mt-[-2.2rem]"
                     src="\assetsECommerce\icon-close.svg"
                     alt="Close"
                   />
