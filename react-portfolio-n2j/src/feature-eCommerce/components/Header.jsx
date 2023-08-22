@@ -107,13 +107,13 @@ const Header = () => {
         >
           {quantity > 0 && (
             <div
-              className={` w-[20px] h-[15px] absolute  bg-ecommerceOrangeColor text-white text-xs flex font-black rounded-xl justify-center`}
+              className={` w-[20px] h-[15px] relative mt-[-15px]  bg-ecommerceOrangeColor text-white text-xs flex font-black rounded-xl justify-center`}
             >
-              <p>{quantity}</p>
+              <p className=" ">{quantity}</p>
             </div>
           )}
           <img
-            className="lg:mt-[0.2rem] mt-[0.5rem] sm:pt-2   ml-[-0.5rem] md:mt-[0.1rem] sm:mt-[-0.2rem]  sm:ml-[-0.7rem] "
+            className="lg:mt-[0.2rem] mt-[5px] sm:pt-2   ml-[-0.5rem] md:mt-[0.1rem] sm:mt-[-0.2rem]  sm:ml-[-0.7rem] "
             src="\assetsECommerce\icon-cart.svg"
             alt="Cart"
           />
