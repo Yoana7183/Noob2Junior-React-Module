@@ -38,7 +38,7 @@ const Experience = () => {
                 <p className={period}>{position.location}</p>
               </div>
             </div>
-            <div className="flex flex-row mx-2">
+            <div className="flex flex-row ">
               <img
                 src="/assetsCv/link.png"
                 alt="Link Icon"

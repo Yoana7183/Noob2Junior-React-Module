@@ -53,7 +53,7 @@ const SearchBarAndSubmitButton = () => {
             alt="Search Icon"
           />
           <input
-            className={` focus:outline-none rounded-2xl w-[270px] lg:w-[520px] md:w-[420px] sm:w-[350px] lg:text-lg md:text-base sm:text-sm text-[10px] h-14 px-2 ${toggleDarkToLightStyleContainers}`}
+            className={` focus:outline-none rounded-2xl w-[270px] lg:w-[520px] md:w-[420px] sm:w-[350px] lg:text-lg md:text-base sm:text-sm text-[8px] h-14 px-2 ${toggleDarkToLightStyleContainers}`}
             type="text"
             value={inputValue}
             placeholder="Search GitHub username..."

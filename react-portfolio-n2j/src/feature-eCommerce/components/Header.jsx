@@ -55,7 +55,7 @@ const Header = () => {
             <div className="w-[50%] h-full bg-white pt-20">
               <button
                 onClick={toggleMenu}
-                className="absolute top-[4.7rem] left-[-2px] m-4 p-2 rounded-full text-black bg-white hover:bg-gray-200"
+                className="absolute top-[7rem] left-[-9px] m-4 p-2 rounded-full text-black bg-white hover:bg-gray-200"
               >
                 {isBurgerMenuOnMobileViewIsOpen ? (
                   <img
