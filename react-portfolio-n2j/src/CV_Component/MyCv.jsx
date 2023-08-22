@@ -18,7 +18,7 @@ const MyCv = () => {
   return (
     <main
       ref={contentRef}
-      className="flex justify-center  h-screen overflow-y-auto  mt-[5rem]  font-serif "
+      className="flex justify-center  h-screen overflow-y-auto  pt-[5rem]  font-serif "
     >
       <div className="flex justify-center border border-sky-500 rounded-2xl shadow-2xl flex-col h-max w-[90%] sm:w-[90%] lg:w-[891px] mb-16 p-0 md:pb-32 ">
         <Header />
