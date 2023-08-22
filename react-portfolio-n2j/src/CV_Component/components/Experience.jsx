@@ -42,7 +42,7 @@ const Experience = () => {
               <img
                 src="/assetsCv/link.png"
                 alt="Link Icon"
-                className={`${icon} mt-[3px]`}
+                className={`${icon} mt-[-3px] sm:mt-[1px]`}
               />
               <a className={link} href={position.link}>
                 {position.link}
