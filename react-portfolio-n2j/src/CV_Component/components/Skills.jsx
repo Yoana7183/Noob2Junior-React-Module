@@ -2,18 +2,16 @@ import React from 'react';
 
 const Skills = () => {
   const skills = [
+    'React Hooks',
+    'Custom Hook',
+    'Tailwindcss',
+    'Vite',
+    'Design Patterns',
+    'HTTP Protocol',
     'JavaScript',
     'OOP',
     'Data Structures',
-    'Design Patterns',
-    'HTTP Protocol',
-    'ReactJS',
-    'JavaScript',
-    'OOP',
-    'Data Structures',
-    'Design Patterns',
-    'HTTP Protocol',
-    'ReactJS',
+    'MySQL Basic',
   ];
   return (
     <div className="mt-10 sm:mt-[4rem]">

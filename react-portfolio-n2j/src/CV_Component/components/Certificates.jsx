@@ -3,8 +3,8 @@ import { certificates } from '../certificates';
 
 const Certificates = () => {
   return (
-    <div>
-      <h1 className=" border-b-4 border-slate-500 pb-2 font-bold text-slate-500 mx-2 shadow-lg mt-10 sm:mt-[4rem]">
+    <div className="mt-10 sm:mt-[4rem]">
+      <h1 className=" border-b-4 border-slate-500 pb-2 font-bold text-slate-500 mx-2 shadow-lg ">
         CERTIFICATES
       </h1>
       <div className="flex flex-wrap mx-5 mt-5">
