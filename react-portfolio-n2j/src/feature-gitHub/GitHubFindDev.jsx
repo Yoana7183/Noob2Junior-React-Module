@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useRef, useEffect } from 'react';
 import SearchBarAndSubmitButton from './components/InputSeach';
 
 import PersonalUserInformation from './components/PersonalUserInformation';
@@ -12,6 +12,11 @@ const GitHubFindDev = () => {
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
   };
+  const contentRef = useRef(null);
+
+  useEffect(() => {
+    contentRef.current.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
 
   const toggleDarkToLightStyleBackground =
     theme === 'dark'
@@ -23,69 +28,71 @@ const GitHubFindDev = () => {
       : 'bg-white text-gitTextOnLight';
 
   return (
-    <main
-      className={`flex justify-center pt-16 lg:pt-[10rem] lg:h-[75rem] lg:pb-[30rem] md:h-[70rem] md:pb-[30rem] sm:pb-[30rem] sm:h-[65rem] h-[55rem] pb-[35rem] md:pt-[10rem] sm:pt-[10rem] font-mono ${toggleDarkToLightStyleBackground}`}
-    >
+    <main ref={contentRef} className=" h-screen overflow-y-auto">
       <div
-        className={` w-[330px] lg:w-[730px] md:w-[575px] sm:w-[575px]  ${toggleDarkToLightStyleContainers}`}
+        className={`flex justify-center pt-16 lg:pt-[10rem] lg:h-[75rem] lg:pb-[30rem] md:h-[70rem] md:pb-[30rem] sm:pb-[30rem] sm:h-[65rem] h-[55rem] pb-[35rem] md:pt-[10rem] sm:pt-[10rem] font-mono ${toggleDarkToLightStyleBackground}`}
       >
-        {userData.loading ? (
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  ">
-            <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-blue-500"></div>
-          </div>
-        ) : null}
-
         <div
-          className={`flex justify-between pb-6 ${toggleDarkToLightStyleBackground}`}
+          className={` w-[330px] lg:w-[730px] md:w-[575px] sm:w-[575px]  ${toggleDarkToLightStyleContainers}`}
         >
-          <header
-            className={`text-3xl font-black ${
-              theme === 'dark'
-                ? ' bg-gitDarkSpaceBackground text-white'
-                : 'bg-gitLightSpaceBackground text-black'
-            }`}
+          {userData.loading ? (
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  ">
+              <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-blue-500"></div>
+            </div>
+          ) : null}
+
+          <div
+            className={`flex justify-between pb-6 ${toggleDarkToLightStyleBackground}`}
           >
-            devfinder
-          </header>
-          <button
-            className={`flex justify-between  ${toggleDarkToLightStyleBackground}`}
-            onClick={toggleTheme}
-          >
-            {theme == 'light' ? (
-              <div className="hover:text-black">
+            <header
+              className={`text-3xl font-black ${
+                theme === 'dark'
+                  ? ' bg-gitDarkSpaceBackground text-white'
+                  : 'bg-gitLightSpaceBackground text-black'
+              }`}
+            >
+              devfinder
+            </header>
+            <button
+              className={`flex justify-between  ${toggleDarkToLightStyleBackground}`}
+              onClick={toggleTheme}
+            >
+              {theme == 'light' ? (
+                <div className="hover:text-black">
+                  <div className="mt-[1rem] flex justify-center">
+                    Dark
+                    <img
+                      className="w-[20px] h-[20px] ml-2 "
+                      src="\assetsGit\icon-moon.svg"
+                      alt="moon-icon"
+                      srcSet=""
+                    />
+                  </div>
+                </div>
+              ) : (
                 <div className="mt-[1rem] flex justify-center">
-                  Dark
+                  Light
                   <img
-                    className="w-[20px] h-[20px] ml-2 "
-                    src="\assetsGit\icon-moon.svg"
-                    alt="moon-icon"
+                    className="w-[20px] h-[20px] ml-2"
+                    src="\assetsGit\icon-sun.svg"
+                    alt="sun-icon"
                     srcSet=""
                   />
                 </div>
-              </div>
-            ) : (
-              <div className="mt-[1rem] flex justify-center">
-                Light
-                <img
-                  className="w-[20px] h-[20px] ml-2"
-                  src="\assetsGit\icon-sun.svg"
-                  alt="sun-icon"
-                  srcSet=""
-                />
-              </div>
-            )}
-          </button>
-        </div>
-        <div className={` ${toggleDarkToLightStyleBackground}`}>
-          <div className=" rounded-2xl shadow-2xl mb-8">
-            <SearchBarAndSubmitButton />
+              )}
+            </button>
           </div>
-          <div
-            className={`rounded-2xl shadow-2xl mt-6 p-6 h-[444px] ${toggleDarkToLightStyleContainers}`}
-          >
-            <PersonalUserInformation />
-            <TableInformation />
-            <LinksAndLocation />
+          <div className={` ${toggleDarkToLightStyleBackground}`}>
+            <div className=" rounded-2xl shadow-2xl mb-8">
+              <SearchBarAndSubmitButton />
+            </div>
+            <div
+              className={`rounded-2xl shadow-2xl mt-6 p-6 h-[444px] ${toggleDarkToLightStyleContainers}`}
+            >
+              <PersonalUserInformation />
+              <TableInformation />
+              <LinksAndLocation />
+            </div>
           </div>
         </div>
       </div>

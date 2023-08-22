@@ -1,9 +1,15 @@
 import Header from './components/Header';
 import CartSection from './components/CartsSection';
 import Footer from './components/Footer';
+import { useRef, useEffect } from 'react';
 const Equalizer = () => {
+  const contentRef = useRef(null);
+
+  useEffect(() => {
+    contentRef.current.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
   return (
-    <main className="w-full h-full">
+    <main ref={contentRef} className="w-full h-screen overflow-y-auto">
       <div
         className="lg:bg-[url('\assetsEqualizer\bg-main-desktop.png')] md:bg-[url('\assetsEqualizer\bg-main-tablet.png')] 
        sm:bg-[url('\assetsEqualizer\bg-main-tablet.png')] bg-[url('\assetsEqualizer\bg-main-mobile.png')] 

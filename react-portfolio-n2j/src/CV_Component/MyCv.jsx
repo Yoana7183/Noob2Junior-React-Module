@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import Header from './components/Header';
 import Summary from './components/Summary';
 import Skills from './components/Skills';
@@ -9,8 +9,17 @@ import Languages from './components/Languages';
 import Certificates from './components/Certificates';
 
 const MyCv = () => {
+  const contentRef = useRef(null);
+
+  useEffect(() => {
+    contentRef.current.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
   return (
-    <main className="flex justify-center  h-screen mt-[5rem]  font-serif ">
+    <main
+      ref={contentRef}
+      className="flex justify-center  h-screen overflow-y-auto  mt-[5rem]  font-serif "
+    >
       <div className="flex justify-center border border-sky-500 rounded-2xl shadow-2xl flex-col h-max w-[90%] sm:w-[90%] lg:w-[891px] mb-16 p-0 md:pb-32 ">
         <Header />
         <div className="flex md:px-16  px-6 mt-5  flex-col lg:flex-row mb-[80px]">

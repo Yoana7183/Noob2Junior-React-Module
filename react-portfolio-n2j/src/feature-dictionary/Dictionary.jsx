@@ -1,15 +1,21 @@
-import React, { useContext } from 'react';
+import React, { useContext, useRef, useEffect } from 'react';
 import Header from './components/Header';
 import OnSubmitInput from './components/OnSubmitInput';
 import WordCommonDetails from './components/WordCommonDetails';
 import MainContentContainer from './components/MainContentContainer';
 import { DictionaryDataContext } from './context/DictionaryContext';
+
 const Dictionary = () => {
   const { wordContextDetails } = useContext(DictionaryDataContext);
+  const contentRef = useRef(null);
 
+  useEffect(() => {
+    contentRef.current.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
   return (
     <div
-      className="font-dictionary 
+      ref={contentRef}
+      className="font-dictionary  h-screen overflow-y-auto
     "
     >
       <Header />
