@@ -29,10 +29,10 @@ const OnSubmitInput = () => {
             name="search"
             id="search"
             placeholder="Enter word..."
-            className="bg-white border sm:w border-teal-600 rounded-full py-2 pl-4 pr-12 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent sm:w-full transition duration-300 ease-in-out transform hover:scale-105"
+            className="bg-white border sm:w border-teal-600 rounded-md py-2 pl-4 pr-12 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent sm:w-full transition duration-300 ease-in-out transform hover:scale-105"
           />
         </div>
-        <button className="mt-3 lg:mt-0 w-[160px]  bg-teal-600 hover:bg-teal-700 text-white rounded-lg px-4 py-2 sm:ml-2 shadow-md transform hover:scale-105 transition duration-300 ease-in-out">
+        <button className="mt-3 lg:mt-0 w-[160px]  bg-teal-600 hover:bg-teal-700 text-white rounded-md px-4 py-2 sm:ml-2 shadow-md transform hover:scale-105 transition duration-300 ease-in-out">
           Search
         </button>
       </form>
