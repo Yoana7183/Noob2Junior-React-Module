@@ -26,7 +26,7 @@ const Header = () => {
 
   return (
     <div className="flex justify-between border-b-[1px] border-[#E4E9F2] pt-4 px-1 sm:px-0">
-      <div className="block lg:hidden pt-7">
+      <div className="block sm:hidden pt-7">
         <button
           onClick={toggleMenu}
           className="sm:hidden flex items-center px-3 py-2 rounded text-black-500 hover:text-black-400"
@@ -51,15 +51,15 @@ const Header = () => {
           <img src="\assetsECommerce\logo.svg" alt="Logo" />
         </div>
         {isBurgerMenuOnMobileViewIsOpen && (
-          <div className="fixed top-0 left-0 w-screen h-screen bg-gray-800 bg-opacity-40 z-10 flex justify-start items-center">
-            <div className="w-[50%] h-full bg-white pt-20">
+          <div className="sm:hidden fixed top-0 left-0 w-screen h-screen bg-gray-800 bg-opacity-40 z-10 flex justify-start items-center">
+            <div className="w-[50%]  sm:w-0 h-full bg-white pt-20">
               <button
                 onClick={toggleMenu}
-                className="absolute top-[7rem] left-[-9px] m-4 p-2 rounded-full text-black bg-white hover:bg-gray-200"
+                className="  absolute top-[7rem] left-[-9px] m-4 p-2 rounded-full text-black bg-white hover:bg-gray-200"
               >
                 {isBurgerMenuOnMobileViewIsOpen ? (
                   <img
-                    className="w-6 h-6 fill-current mt-[-2.2rem]"
+                    className="w-6 h-6 fill-current mt-[-2.2rem]  "
                     src="\assetsECommerce\icon-close.svg"
                     alt="Close"
                   />
@@ -71,7 +71,7 @@ const Header = () => {
                   />
                 )}
               </button>
-              <div className="sm:flex sm:justify-between cursor-pointer lg:text-base md:px-3.5 pb-7 ml-7 pt-[6rem] md:text-sm sm:text-xs font-bold sm:px-2">
+              <div className=" sm:flex sm:justify-between cursor-pointer lg:text-base md:px-3.5 pb-7 ml-7 pt-[6rem] md:text-sm sm:text-xs font-bold sm:px-2">
                 {categories.map((category) => {
                   return (
                     <div key={Math.random()} className="pt-2">
@@ -84,13 +84,7 @@ const Header = () => {
           </div>
         )}
       </nav>
-      <nav
-        className={
-          isBurgerMenuOnMobileViewIsOpen
-            ? `hidden`
-            : ` sm:flex sm:flex-row  hidden`
-        }
-      >
+      <nav className="hidden sm:flex sm:flex-row">
         {categories.map((category) => {
           return (
             <div key={Math.random()} className={eachLinkStyle}>
