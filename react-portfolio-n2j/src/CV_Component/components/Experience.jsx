@@ -39,11 +39,11 @@ const Experience = () => {
               </div>
             </div>
             <div className="flex flex-row ">
-              <img
+              {/* <img
                 src="/assetsCv/link.png"
                 alt="Link Icon"
                 className={`${icon} mt-[2px] sm:mt-[-2px]`}
-              />
+              /> */}
               <a className={link} href={position.link}>
                 {position.link}
               </a>
