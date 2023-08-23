@@ -53,16 +53,16 @@ const SearchBarAndSubmitButton = () => {
             alt="Search Icon"
           />
           <input
-            className={` focus:outline-none rounded-2xl w-[270px] lg:w-[520px] md:w-[420px] sm:w-[350px] lg:text-lg md:text-base sm:text-sm text-[8px] h-14 px-2 ${toggleDarkToLightStyleContainers}`}
+            className={` focus:outline-none rounded-2xl w-[270px] lg:w-[520px] md:w-[420px] sm:w-[350px] lg:text-lg md:text-base sm:text-sm text-xs h-14 px-2 ${toggleDarkToLightStyleContainers}`}
             type="text"
             value={inputValue}
-            placeholder="Search GitHub username..."
+            placeholder="Search GitHub username.."
             onKeyPress={handleKeyPress}
             onChange={handleOnChange}
           />
 
           <div className="relative flex items-center">
-            <div className="text-red-500 lg:ml-[-3rem] lg:text-base md:text-base sm:text-sm lg:w-[90px] md:ml-[-5rem] sm:ml-[-1rem] sm:w-[120px] md:w-[150px] w-[80px] ml-[-8rem] mr-[4rem] text-xs ">
+            <div className="text-red-500 lg:ml-[-3rem] mt-[35px] sm:mt-0 lg:text-base md:text-base sm:text-sm lg:w-[90px] p md:ml-[-5rem] sm:ml-[-1rem] sm:w-[120px] md:w-[150px] w-[80px] ml-[-8rem] mr-[4rem] text-[13px] ">
               {errorMessage}
             </div>
 
