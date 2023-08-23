@@ -62,7 +62,7 @@ const SearchBarAndSubmitButton = () => {
           />
 
           <div className="relative flex items-center">
-            <div className="text-red-500 lg:ml-[-3rem] mt-[35px] sm:mt-0 lg:text-base md:text-base sm:text-sm lg:w-[90px] p md:ml-[-5rem] sm:ml-[-1rem] sm:w-[120px] md:w-[150px] w-[80px] ml-[-8rem] mr-[4rem] text-[13px] ">
+            <div className="text-red-500 lg:ml-[-3rem] mt-[35px] sm:mt-0 lg:text-base md:text-base sm:text-sm lg:w-[90px] p md:ml-[-5rem] sm:ml-[-1rem] sm:w-[120px] md:w-[150px] w-[80px] ml-[-8rem] mr-[4rem] text-[10px] ">
               {errorMessage}
             </div>
 
