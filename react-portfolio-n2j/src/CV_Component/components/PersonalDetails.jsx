@@ -6,7 +6,7 @@ const PersonalDetails = () => {
   const iconStyle = `w-5 h-5 lg:mt-[3px]`;
   return (
     <>
-      <section className="mt-10 sm:mt-[4rem] flex lg:flex-row flex-col px-5 sm:px-10 md:px-16">
+      <section className="mt-10 sm:mt-[1rem] flex lg:flex-row flex-col px-5 sm:px-10 md:px-16">
         <div className={divStyle}>
           <img
             src="/assetsCv/phone.png"
