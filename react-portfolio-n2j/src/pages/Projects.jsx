@@ -19,7 +19,7 @@ const Projects = () => {
                   <img
                     src="\img-icons\cv.png"
                     alt="Product"
-                    className="h-80 w-80 ml-[0.2rem]  object-cover rounded-t-xl"
+                    className="h-100 w-100 ml-[0.2rem]  bg-cover rounded-t-xl"
                   />
                 </div>
                 <div className="px-4 py-3 w-72">
