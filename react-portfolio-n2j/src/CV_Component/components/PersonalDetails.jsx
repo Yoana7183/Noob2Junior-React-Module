@@ -13,7 +13,7 @@ const PersonalDetails = () => {
             alt="Phone Icon"
             className={iconStyle}
           />
-          <a className={textStyle} href="tel:+359 886793109">
+          <a className={textStyle} target="a_blank" href="tel:+359 886793109">
             +359 886793109
           </a>
         </div>
@@ -24,7 +24,11 @@ const PersonalDetails = () => {
             alt="Phone Icon"
             className={iconStyle}
           />
-          <a className={textStyle} href="mailto: yoana.nakova@yahoo.com">
+          <a
+            className={textStyle}
+            target="a_blank"
+            href="mailto: yoana.nakova@yahoo.com"
+          >
             yoana.nakova@yahoo.com
           </a>
         </div>
@@ -34,7 +38,11 @@ const PersonalDetails = () => {
             alt="Phone Icon"
             className={iconStyle}
           />
-          <a className={textStyle} href="https://github.com/Yoana7183">
+          <a
+            className={textStyle}
+            target="a_blank"
+            href="https://github.com/Yoana7183"
+          >
             https://github.com/Yoana7183
           </a>
         </div>
