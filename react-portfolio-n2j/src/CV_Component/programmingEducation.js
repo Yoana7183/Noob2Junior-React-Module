@@ -28,6 +28,7 @@ export const coursesAndSkills = [
       { id: 7, name: 'Prettier' },
       { id: 8, name: 'JSDoc' },
       { id: 9, name: 'Yarn' },
+      { id: 10, name: 'Figma' },
     ],
   },
   {

@@ -36,7 +36,7 @@ const Projects = () => {
         </div>
         <div className="flex justify-center  flex-col sm:flex-row items-center mt-[5rem]">
           <div className="w-4 h-4 mt-2  mb-1 sm:mb-0 sm:mr-2">
-            <img src="/src/CV_Component/img/down.gif" alt="" srcSet="" />
+            <img src="\assetsCv\down.gif" alt="" srcSet="" />
           </div>
         </div>
 
