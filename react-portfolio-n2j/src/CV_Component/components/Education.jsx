@@ -17,14 +17,17 @@ const Education = () => {
   const period = ` text-slate-500 text-[10px] sm:text-[11px] px-1`;
   const icon = `sm:w-5 sm:h-5 w-3 h-3 mb-2 mt-2 sm:ml-[-10px] sm:mr-[5px] mt-[1px] sm:mt-[-4px] `;
   return (
-    <div className="mt-10 sm:mt-[4rem]">
+    <section className="mt-10 sm:mt-[4rem]">
       <div className="">
         <h1 className="border-b-4 border-slate-500 pb-2 font-bold text-slate-500 mx-2 shadow-lg mb-3">
           EDUCATION
         </h1>
         <div className="flex flex-col mx-5">
           {educationData.map((education) => (
-            <div key={education.id} className="mb-4">
+            <div
+              key={education.id}
+              className="mb-4 border-b-2 border-slate-300 pb-2  shadow-sm"
+            >
               <h1 className="sm:text-xl text-lg font-bold">
                 {education.title}
               </h1>
@@ -43,7 +46,7 @@ const Education = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
