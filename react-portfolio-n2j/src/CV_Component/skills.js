@@ -12,7 +12,6 @@ export const skills = [
   { id: 11, name: 'Figma' },
   { id: 12, name: 'REST API ' },
   { id: 13, name: 'AJAX' },
-  { id: 14, name: 'CRUD' },
   { id: 15, name: 'JSON' },
   { id: 16, name: 'Promises' },
   { id: 17, name: 'Async/Await' },
