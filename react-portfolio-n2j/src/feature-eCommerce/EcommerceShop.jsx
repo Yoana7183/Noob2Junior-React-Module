@@ -10,7 +10,7 @@ const EcommerceShop = () => {
   const contentRef = useRef(null);
 
   useEffect(() => {
-    contentRef.current.scrollTo({ top: -2000, behavior: 'smooth' });
+    contentRef.current.scrollTo({ top: -1000, behavior: 'smooth' });
   }, []);
   const bodyBackgroundStyleInModal = `${
     modalStatus === 'open'
