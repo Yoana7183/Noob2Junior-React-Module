@@ -3,6 +3,8 @@ export const jobPositions = [
     id: 1,
     position: 'Javascript / ReactJS Developer-intership',
     company: 'Noob2Junior - Dev Academy',
+    description:
+      'During the internship, I successfully completed projects from my portfolio while meeting technical requirements and deadlines. This experience improved my problem-solving skills and enhanced my ability to collaborate effectively within a team.',
     date: '02/2023 - 08/2023',
     location: 'Sofia, Bulgaria',
     link: 'https://www.linkedin.com/company/noob2junior-devacademy/',
@@ -11,7 +13,7 @@ export const jobPositions = [
     id: 2,
     position: 'System Analyst',
     company: 'CloudBM',
-    date: '08/2020 - Ongoing',
+    date: '08/2020 - PRESENT',
     location: 'Sofia, Bulgaria',
     link: 'https://cloudbm.com/',
   },

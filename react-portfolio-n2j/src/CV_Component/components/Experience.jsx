@@ -11,14 +11,22 @@ const Experience = () => {
       <h1 className="border-b-4 border-slate-500 pb-2 font-bold text-slate-500 mx-2 shadow-lg">
         EXPERIENCE
       </h1>
-      <div className="flex flex-col mx-5">
+      <div className="flex flex-col mx-5 ">
         {jobPositions.map((position) => (
-          <div key={position.id} className="mt-3">
+          <div
+            key={position.id}
+            className="mt-3 border-b-2 border-slate-300 pb-2  shadow-sm"
+          >
             <div className="flex flex-col items-start mb-2">
               <h1 className={nameOfPositionStyle}>{position.position}</h1>
               <div className="flex flex-col">
                 <h2 className={nameOfCompanyStyle}>{position.company}</h2>
               </div>
+              {position.description && (
+                <p className="w-[90%] py-2 text-slate-500 text-xs">
+                  {position.description}
+                </p>
+              )}
             </div>
             <div className="flex flex-row">
               <div className="flex flex-row  sm:mx-2">
