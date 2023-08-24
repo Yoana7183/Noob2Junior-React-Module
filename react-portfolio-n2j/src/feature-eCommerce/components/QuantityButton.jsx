@@ -14,7 +14,7 @@ const QuantityButton = () => {
   }, [quantity]);
 
   const handleMinusClick = () => {
-    if (quantity > 0) {
+    if (inputQuantity > 0) {
       setInptQuantity((prevCount) => prevCount - 1);
     }
   };
@@ -24,6 +24,7 @@ const QuantityButton = () => {
 
   const handleInputChange = (event) => {
     const newQuantity = parseInt(event.target.value);
+
     setInptQuantity(newQuantity);
   };
 
