@@ -99,20 +99,22 @@ const Header = () => {
           id="cart"
           onClick={handleClick}
         >
-          {quantity > 0 && (
-            <div
-              className={` w-[20px] h-[15px] absolute mt-[3px]  bg-ecommerceOrangeColor text-white text-xs flex font-black rounded-xl justify-center`}
-            >
-              <p className=" ">{quantity}</p>
-            </div>
-          )}
+          <div className="w-[20px] h-[15px] ">
+            {quantity > 0 && (
+              <div
+                className={` relative  bg-ecommerceOrangeColor text-white text-xs flex font-black rounded-xl justify-center`}
+              >
+                <p className="  ">{quantity}</p>
+              </div>
+            )}
+          </div>
           <img
-            className="lg:mt-[0.2rem] mt-[15px] sm:pt-2   ml-[-0.5rem] md:mt-[0.1rem] sm:mt-[-0.2rem]  sm:ml-[-0.7rem] "
+            className="lg:mt-[-0.5rem]  sm:pt-2   ml-[-0.5rem] md:mt-[-0.5rem] sm:mt-[-1rem]  sm:ml-[-0.7rem] "
             src="\assetsECommerce\icon-cart.svg"
             alt="Cart"
           />
         </div>
-        <figure className="pl-5  w-[60px] md:w-[70px] cursor-pointer mt-[-0.1rem] sm:w-[50px] sm:mt-[-0.1rem] md:mt-[-0.5rem]">
+        <figure className="pl-5  w-[60px] md:w-[70px] cursor-pointer sm:w-[50px] sm:mt-[-0.1rem] md:mt-[-0.5rem]">
           <img
             className="hover:border-2 hover:border-ecommerceOrangeColor hover:rounded-full"
             src="\assetsECommerce\image-avatar.png"
