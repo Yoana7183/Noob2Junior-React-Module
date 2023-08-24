@@ -2,7 +2,7 @@ import React from 'react';
 
 const Languages = () => {
   return (
-    <section className="mt-10 sm:mt-[4rem]">
+    <section className="mt-10 sm:mt-[-1rem]">
       <div>
         <h1 className=" border-b-4 border-slate-500 pb-2 font-bold text-slate-500 mx-2 shadow-lg mt-10 sm:mt-[4rem]">
           LANGUAGES

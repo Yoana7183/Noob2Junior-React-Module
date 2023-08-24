@@ -2,8 +2,8 @@ import React from 'react';
 
 const PersonalDetails = () => {
   const divStyle = `flex flex-row mx-2 pb-2 lg:pb-0`;
-  const textStyle = ` text-slate-500 text-xs sm:text-base ml-3 lg:ml-0`;
-  const iconStyle = `w-5 h-5 lg:mt-[3px]`;
+  const textStyle = ` text-slate-500 text-xs sm:text-[14px] ml-3 lg:ml-0`;
+  const iconStyle = `w-5 h-5 lg:mt-[-3px]`;
   return (
     <>
       <section className="mt-10 sm:mt-[1rem] flex lg:flex-row flex-col px-5 sm:px-10 md:px-16">
