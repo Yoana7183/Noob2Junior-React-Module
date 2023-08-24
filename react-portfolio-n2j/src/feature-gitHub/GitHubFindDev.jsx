@@ -33,7 +33,7 @@ const GitHubFindDev = () => {
       className={`h-screen overflow-y-auto ${toggleDarkToLightStyleBackground}`}
     >
       <div
-        className={`flex justify-center pt-16  font-mono ${toggleDarkToLightStyleBackground}`}
+        className={`flex justify-center pt-16 lg:pt-[10rem] lg:h-[75rem] lg:pb-[30rem] md:h-[70rem] md:pb-[30rem] sm:pb-[30rem] sm:h-[65rem] h-[55rem] pb-[35rem] md:pt-[10rem] sm:pt-[10rem] font-mono ${toggleDarkToLightStyleBackground}`}
       >
         <div
           className={` w-[330px] lg:w-[730px] md:w-[575px] sm:w-[575px]  ${toggleDarkToLightStyleContainers}`}

@@ -67,7 +67,7 @@ const SearchBarAndSubmitButton = () => {
             </div>
 
             <button
-              className="lg:ml-[-3rem] sm:h-[50px] sm:w-[106px] h-[46px] w-[80px]  md:ml-[-7rem] sm:ml-[-6rem] ml-[-4rem] py-2 px-3  bg-blue-600 hover:bg-blue-500 text-white rounded-lg"
+              className="lg:ml-[-3rem] sm:h-[50px] sm:w-[106px] h-[46px] w-[80px]  md:ml-[-7rem] sm:ml-[-6rem] ml-[-4rem] py-1 px-3  bg-blue-600 hover:bg-blue-500 text-white rounded-lg"
               onClick={handleSubmit}
             >
               Search

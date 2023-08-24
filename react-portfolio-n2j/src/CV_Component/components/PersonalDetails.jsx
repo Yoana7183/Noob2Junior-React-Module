@@ -14,7 +14,7 @@ const PersonalDetails = () => {
             className={iconStyle}
           />
           <a className={textStyle} target="a_blank" href="tel:+359 886793109">
-            +359 886793109
+            +359 88 679 3109
           </a>
         </div>
 
