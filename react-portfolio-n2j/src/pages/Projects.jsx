@@ -54,12 +54,14 @@ const Projects = () => {
                   className="h-80 w-72 object-cover rounded-t-xl"
                 />
                 <div className="px-4 py-3 w-72">
-                  <span className="text-gray-400 mr-3 uppercase text-xs">
-                    GitHub
-                  </span>
-                  <p className="text-lg font-bold text-black truncate block capitalize">
-                    GitHub
+                  <p className="text-lg  font-bold text-black truncate block capitalize">
+                    GitHub Search
                   </p>
+                  <span className="text-gray-400 mr-3 text-xs">
+                    A GitHub search app enabling users to find profiles via
+                    usernames, featuring dark and light modes for user
+                    preference.
+                  </span>
                 </div>
               </div>
             </Link>
@@ -73,12 +75,13 @@ const Projects = () => {
                   className="h-80 w-72 object-cover rounded-t-xl"
                 />
                 <div className="px-4 py-3 w-72">
-                  <span className="text-gray-400 mr-3 uppercase text-xs">
-                    Loopstudios
-                  </span>
                   <p className="text-lg font-bold text-black truncate block capitalize">
                     Loopstudios
                   </p>
+                  <span className="text-gray-400 mr-3  text-xs">
+                    An engaging, fully responsive landing page with captivating
+                    design.
+                  </span>
                 </div>
               </div>
             </Link>
@@ -92,12 +95,14 @@ const Projects = () => {
                   className="h-80 w-72 object-cover rounded-t-xl"
                 />
                 <div className="px-4 py-3 w-72">
-                  <span className="text-gray-400 mr-3 uppercase text-xs">
-                    E-commerce
-                  </span>
                   <p className="text-lg font-bold text-black truncate block capitalize">
                     E-commerce
                   </p>
+                  <span className="text-gray-400 mr-3 text-xs">
+                    A fully responsive e-commerce webpage for an online store,
+                    equipped with a user-friendly shopping cart and an immersive
+                    modal gallery.
+                  </span>
                 </div>
               </div>
             </Link>
@@ -111,12 +116,14 @@ const Projects = () => {
                   className="h-80 w-72 object-cover rounded-t-xl"
                 />
                 <div className="px-4 py-3 w-72">
-                  <span className="text-gray-400 mr-3 uppercase text-xs">
-                    Equalizer
-                  </span>
                   <p className="text-lg font-bold text-black truncate block capitalize">
                     Equalizer
                   </p>
+                  <span className="text-gray-400 mr-3  text-xs">
+                    An engaging and visually appealing landing page,
+                    meticulously designed to ensure a seamless experience on a
+                    wide range of devices through full responsiveness.
+                  </span>
                 </div>
               </div>
             </Link>
@@ -130,12 +137,15 @@ const Projects = () => {
                   className="h-80 w-72 object-cover rounded-t-xl"
                 />
                 <div className="px-4 py-3 w-72">
-                  <span className="text-gray-400 mr-3 uppercase text-xs">
-                    Tips Calculator
-                  </span>
                   <p className="text-lg font-bold text-black truncate block capitalize">
                     Tips Calculator
                   </p>
+                  <span className="text-gray-400 mr-3  text-xs">
+                    A visually appealing and fully responsive tip calculator
+                    app, featuring a customizable tip percentage function,
+                    empowering users to precisely divide percent of bill /
+                    amount according to their personal preferences.
+                  </span>
                 </div>
               </div>
             </Link>
@@ -149,12 +159,15 @@ const Projects = () => {
                   className="h-80 w-72 object-cover rounded-t-xl"
                 />
                 <div className="px-4 py-3 w-72">
-                  <span className="text-gray-400 mr-3 uppercase text-xs">
-                    Dictionary
-                  </span>
                   <p className="text-lg font-bold text-black truncate block capitalize">
                     Simple English Dictionary
                   </p>
+                  <span className="text-gray-400 mr-3  text-xs">
+                    A user-friendly English dictionary application with a daily
+                    `Word of the Day` feature, delivering short information
+                    about searched words, all presented within a simple, fully
+                    responsive design
+                  </span>
                 </div>
               </div>
             </Link>
