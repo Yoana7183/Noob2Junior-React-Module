@@ -4,7 +4,7 @@ export const skills = [
   { id: 3, name: 'Custom Hook' },
   { id: 4, name: 'State Management' },
   { id: 5, name: 'Tailwindcss' },
-  { id: 6, name: 'VCS - Git Hub' },
+  { id: 6, name: 'Git' },
   { id: 7, name: 'Eslint' },
   { id: 8, name: 'Prettier' },
   { id: 9, name: 'JSDoc' },
