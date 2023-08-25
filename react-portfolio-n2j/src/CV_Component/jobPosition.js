@@ -13,7 +13,7 @@ export const jobPositions = [
     id: 2,
     position: 'System Analyst',
     company: 'CloudBM',
-    date: '08/2020 - PRESENT',
+    date: '08/2020 - Ongoing',
     location: 'Sofia, Bulgaria',
     link: 'https://cloudbm.com/',
   },
