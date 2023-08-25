@@ -1,13 +1,13 @@
 export const jobPositions = [
   {
     id: 1,
-    position: 'Javascript / ReactJS Developer-intership',
+    position: 'React JS Developer-intership',
     company: 'Noob2Junior - Dev Academy',
     description:
       'During the internship, I successfully completed projects from my portfolio while meeting technical requirements and deadlines. This experience improved my problem-solving skills and enhanced my ability to collaborate effectively within a team.',
     date: '02/2023 - 08/2023',
     location: 'Sofia, Bulgaria',
-    link: 'https://www.linkedin.com/company/noob2junior-devacademy/',
+    link: 'https://www.n2j-academy.com/',
   },
   {
     id: 2,
