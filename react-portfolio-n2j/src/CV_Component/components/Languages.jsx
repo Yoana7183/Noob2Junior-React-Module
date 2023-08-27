@@ -26,6 +26,12 @@ const Languages = () => {
               </div>
             </div>
           </div>
+          <div>
+            <p className="sm:text-xl text-lg font-bold pt-5">Bulgarian </p>
+            <p className="font-bold text-base sm:text-md text-sky-500 tracking-tight ">
+              Native
+            </p>
+          </div>
         </div>
       </div>
     </section>

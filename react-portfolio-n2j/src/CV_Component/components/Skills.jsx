@@ -11,9 +11,9 @@ const Skills = () => {
           return (
             <div
               key={skill.id}
-              className="mr-4 border-b-2 border-slate-300 pb-1 text-sm pl-1 pt-2 cursor-pointer shadow-sm"
+              className="mr-4 border-b-2 border-slate-300 hover:border-sky-500 pb-1 text-sm pl-1 pt-2 cursor-pointer shadow-sm transition duration-300 ease-in-out delay-200"
             >
-              <p className=" tracking-tight text-slate-600">{skill.name}</p>
+              <p className="tracking-tight text-slate-600">{skill.name}</p>
             </div>
           );
         })}
