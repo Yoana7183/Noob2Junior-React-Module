@@ -63,7 +63,21 @@ const PersonalDetails = () => {
               target="a_blank"
               href="https://github.com/Yoana7183"
             >
-              https://github.com/Yoana7183
+              Yoana7183
+            </a>
+          </div>
+          <div className={divStyle}>
+            <img
+              src="/assetsCv/linkedin.png"
+              alt="Phone Icon"
+              className={iconStyle}
+            />
+            <a
+              className={textStyle}
+              target="a_blank"
+              href="https://www.linkedin.com/in/yoana-nakova-ba0049193"
+            >
+              Yoana Nakova
             </a>
           </div>
         </div>
