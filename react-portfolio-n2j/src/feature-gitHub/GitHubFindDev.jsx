@@ -57,8 +57,13 @@ const GitHubFindDev = () => {
               devfinder
             </header>
             <button
-              className={`flex justify-between focus:outline-none ${toggleDarkToLightStyleBackground}`}
+              className={`flex justify-between ${toggleDarkToLightStyleBackground}`}
               onClick={toggleTheme}
+              style={{
+                outline: 'none',
+                boxShadow: 'none',
+                WebkitTapHighlightColor: 'transparent',
+              }}
             >
               {theme == 'light' ? (
                 <div className="hover:text-black">
