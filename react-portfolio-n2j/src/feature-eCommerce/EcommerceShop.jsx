@@ -25,7 +25,7 @@ const EcommerceShop = () => {
           <Cart />
           <div className="w-[1015px] h-[565px] md:flex md:justify-between sm:flex-col sm:gap-0 gap-44 md:flex-row">
             <Gallery />
-            <div className="sm:pl-0 pl-5 ">
+            <div className="sm:pl-0 pl-9 ">
               <InformationContainer />
             </div>
           </div>
