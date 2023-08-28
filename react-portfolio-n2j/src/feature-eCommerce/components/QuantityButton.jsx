@@ -61,9 +61,10 @@ const QuantityButton = () => {
           <button className=" flex justify-center  pt-4">
             <div>
               <img
-                src="\assetsECommerce\icon-cart.svg"
+                src="/assetsECommerce/icons8-cart-64.png"
                 alt="shopping-cart"
                 srcSet=""
+                className="w- h-7"
               />
             </div>
             Add to cart
