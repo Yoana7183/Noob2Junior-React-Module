@@ -57,7 +57,7 @@ const GitHubFindDev = () => {
               devfinder
             </header>
             <button
-              className={`flex justify-between  ${toggleDarkToLightStyleBackground}`}
+              className={`flex justify-between focus:outline-none ${toggleDarkToLightStyleBackground}`}
               onClick={toggleTheme}
             >
               {theme == 'light' ? (
