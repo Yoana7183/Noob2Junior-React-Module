@@ -10,7 +10,7 @@ const CartSection = () => {
       >
         <figure className=" z-40 w-[1150px] h-[600px] xl:w-[100%] lg:w-[100%] md:w-[100%] sm:w-[100%] md:z-40 sm:z-40 ">
           <img
-            className="ml-[60%] mr-[30%] mt-[-4rem] w-[950px] h-[370px] bg-cover xl:h-[642px] xl:w-[312px] xl:ml-[4rem] xl:mt-[-180px]
+            className="ml-[60%] mr-[30%] mt-[-4rem] w-full h-[390px] bg-cover xl:h-[642px] xl:w-[312px] xl:ml-[4rem] xl:mt-[-180px]
              md:w-[270px] md:h-[556px] md:mt-[-120px] md:ml-[3rem] sm:h-[500px] sm:w-[220px] sm:mt-[-6rem]  sm:ml-6"
             src="\assetsEqualizer\illustration-app.png"
             alt="illustration-app-phone"
@@ -35,7 +35,7 @@ const CartSection = () => {
         <div className=" font-titleEqualizer text-4xl font-bold xl:text-4xl xl:font-bold xl:mb-[1.5rem] md:text-3xl md:font-bold md:mb-[1rem]">
           <h1>Premium EQ</h1>
         </div>
-        <div className="leading-9 font-Equalizer mb-[1.5rem]">
+        <div className="leading-9 font-Equalizer mb-[1.5rem] text-lg mt-2">
           <h2>
             Get expert-level control with a robust equalizer, volume mixer, and
             spatial audio. Take your listening experience to a whole new level
@@ -51,7 +51,7 @@ const CartSection = () => {
           >
             <p>$4</p>
           </div>
-          <div className="mt-[1.5rem]">
+          <div className="mt-[1.5rem] text-lg">
             <p> / month</p>
           </div>
         </div>

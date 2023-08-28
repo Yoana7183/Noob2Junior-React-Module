@@ -21,13 +21,13 @@ const Footer = () => {
       </div>
       <div className="flex xl:mt-0 lg:mt-0 md:justify-end md:mt-[-6rem] ">
         <div className="flex items-center mr-4 ">
-          <div className="bg-[url('/assetsEqualizer/icon-facebook.svg')] w-[25px] h-[25px] bg-cover hover:bg-[url('/assetsEqualizer/facebook-hover.svg')]  hover:w-[25px] hover:h-[25px]"></div>
+          <div className="bg-[url('/assetsEqualizer/icons8-facebook(1).svg')] w-[25px] h-[25px] bg-cover hover:bg-[url('/assetsEqualizer/icons8-facebook(2).svg')]  "></div>
         </div>
         <div className="flex items-center mr-4 ">
-          <div className="bg-[url('/assetsEqualizer/icon-instagram.svg')] w-[25px] h-[25px] bg-cover hover:bg-[url('/assetsEqualizer/instagram-hover.svg')]   hhover:w-[25px] hover:h-[25px]"></div>
+          <div className="bg-[url('/assetsEqualizer/icons8-instagram(1).svg')] w-[25px] h-[25px] bg-cover hover:bg-[url('/assetsEqualizer/icons8-instagram(2).svg')]   "></div>
         </div>
         <div className="flex items-center mr-4">
-          <div className="bg-[url('/assetsEqualizer/icon-twitter.svg')] w-[25px] h-[25px] bg-cover hover:bg-[url('/assetsEqualizer/twitter-hover.svg')]   hover:w-[25px] hover:h-[25px]"></div>
+          <div className="bg-[url('/assetsEqualizer/icons8-twitter.svg')] w-[25px] h-[25px] bg-cover hover:bg-[url('/assetsEqualizer/icons8-twitter(1).svg')]   "></div>
         </div>
       </div>
     </footer>
