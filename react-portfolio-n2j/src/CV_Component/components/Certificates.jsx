@@ -1,6 +1,6 @@
 import React from 'react';
 import { certificates } from '../certificates';
-
+import { v4 as uuidv4 } from 'uuid';
 const Certificates = () => {
   return (
     <div className="mt-10 sm:mt-[4rem]">
@@ -11,7 +11,7 @@ const Certificates = () => {
         {certificates.map((certificateInfo) => {
           return (
             <div
-              key={Math.random()}
+              key={uuidv4()}
               className="mr-4 border-b-2 border-slate-300 pb-1 text-sm pl-1 pt-2 shadow-sm"
             >
               <div className="flex flex-row">

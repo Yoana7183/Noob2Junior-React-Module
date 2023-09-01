@@ -4,7 +4,7 @@ import OnSubmitInput from './components/OnSubmitInput';
 import WordCommonDetails from './components/WordCommonDetails';
 import MainContentContainer from './components/MainContentContainer';
 import { DictionaryDataContext } from './context/DictionaryContext';
-
+import { v4 as uuidv4 } from 'uuid';
 const Dictionary = () => {
   const { wordContextDetails } = useContext(DictionaryDataContext);
   const contentRef = useRef(null);
@@ -36,8 +36,8 @@ const Dictionary = () => {
       <div className="flex justify-center pb-[5rem]">
         <div className="flex justify-center flex-col w-[80%]  sm:w-[60%]">
           {wordContextDetails.meanings !== null &&
-            wordContextDetails.meanings.map((definition, index) => (
-              <MainContentContainer key={index} wordObject={definition} />
+            wordContextDetails.meanings.map((definition) => (
+              <MainContentContainer key={uuidv4()} wordObject={definition} />
             ))}
         </div>
       </div>

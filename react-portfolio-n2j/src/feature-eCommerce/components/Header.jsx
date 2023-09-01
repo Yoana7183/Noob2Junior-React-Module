@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { EcommerceContext } from '../context/EcommerceContext';
 import OutsideClickHandler from './OutsideClickHandler';
+import { v4 as uuidv4 } from 'uuid';
 const Header = () => {
   const { setcartStatus, quantity } = useContext(EcommerceContext);
   const [isCartHasBeenOpen, setIsCartHasBeenOpen] = useState(true);
@@ -82,7 +83,7 @@ const Header = () => {
                 <div className=" sm:flex sm:justify-between cursor-pointer lg:text-base md:px-3.5 pb-7 ml-7 pt-[6rem] md:text-sm sm:text-xs font-bold sm:px-2">
                   {categories.map((category) => {
                     return (
-                      <div key={Math.random()} className="pt-2">
+                      <div key={uuidv4()} className="pt-2">
                         {category}
                       </div>
                     );
@@ -96,7 +97,7 @@ const Header = () => {
       <nav className="hidden sm:flex sm:flex-row">
         {categories.map((category) => {
           return (
-            <div key={Math.random()} className={eachLinkStyle}>
+            <div key={uuidv4()} className={eachLinkStyle}>
               {category}
             </div>
           );

@@ -1,4 +1,5 @@
 import links from '../links';
+import { v4 as uuidv4 } from 'uuid';
 const Footer = () => {
   const linksStyle = ` ml-[35%] mr-[35%] lg:ml-0 lg:mr-0 lg:ml-6 block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4 border-b-[1px] border-transparent  hover:border-white`;
   const iconsStyle = `pr-3 pb-2 pl-3 border-b-[2px] border-transparent  hover:border-white`;
@@ -17,7 +18,7 @@ const Footer = () => {
                 <div className="text-sm lg:flex-grow text-white ">
                   {links.map((link) => {
                     return (
-                      <a href="#" key={Math.random()} className={linksStyle}>
+                      <a href="#" key={uuidv4()} className={linksStyle}>
                         {link}
                       </a>
                     );

@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from 'react';
 
 import { TipsCalculatorContext as PercentTipContext } from '../context/TipsCalculatorContext-file';
 import useValidateNumberInput from '../hooks/useValidateNumberInput';
+import { v4 as uuidv4 } from 'uuid';
 const TipsBtnAndInput = () => {
   const { updateContext } = useContext(PercentTipContext);
 
@@ -43,7 +44,7 @@ const TipsBtnAndInput = () => {
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 pt-4">
         {buttonTipsPercent.map((percent) => (
           <button
-            key={percent}
+            key={uuidv4()}
             className={btnStyle}
             onClick={() => handleButtonClick(percent)}
           >

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import links from '../links';
+import { v4 as uuidv4 } from 'uuid';
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navLinkStyle = `font-sans text-2xl lg:text-base leading-8 lg:border-b-[1px] lg:border-transparent pt-1 hover:border-white  block mt-4 lg:inline-block lg:mt-0 text-white-200 lg:mr-5 lg:normal-case uppercase`;
@@ -56,7 +57,7 @@ const Header = () => {
             <div className="text-base lg:flex-grow text-white ">
               {links.map((link) => {
                 return (
-                  <a key={Math.random()} href="#" className={navLinkStyle}>
+                  <a key={uuidv4()} href="#" className={navLinkStyle}>
                     {link}
                   </a>
                 );

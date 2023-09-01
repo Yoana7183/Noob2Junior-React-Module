@@ -2,6 +2,7 @@ import { useState, useEffect, useContext } from 'react';
 import ModalGallery from './ModalGallery';
 import ProductGallery from './images';
 import { EcommerceContext } from '../context/EcommerceContext';
+import { v4 as uuidv4 } from 'uuid';
 const Gallery = () => {
   const { setcartStatus, setModalStatus } = useContext(EcommerceContext);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -38,7 +39,7 @@ const Gallery = () => {
 
   const thumbnailImages = ProductGallery.map((image, index) => (
     <img
-      key={index}
+      key={uuidv4()}
       className="lg:w-[88px] lg:h-[88px] sm:w-[66px] sm:h-[66px] sm:ml-1 md:ml-5 rounded-xl cursor-pointer ml-6 hover:border-2 hover:border-ecommerceOrangeColor hover:opacity-60"
       src={image.thumbnail}
       alt="Gallery Image"

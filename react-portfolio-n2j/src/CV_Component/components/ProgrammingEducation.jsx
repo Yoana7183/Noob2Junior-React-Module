@@ -1,6 +1,6 @@
 import React from 'react';
 import { coursesAndSkills } from '../programmingEducation';
-
+import { v4 as uuidv4 } from 'uuid';
 const ProgrammingEducation = () => {
   return (
     <section>
@@ -12,7 +12,7 @@ const ProgrammingEducation = () => {
           {coursesAndSkills.map((info) => {
             return (
               <div
-                key={Math.random()}
+                key={uuidv4()}
                 className="mr-4 border-b-2 border-slate-300 pb-1 text-sm pl-1 pt-2 shadow-sm"
               >
                 <h1 className="sm:text-xl text-lg font-bold mb-1 mt-2 flex flex-row ">

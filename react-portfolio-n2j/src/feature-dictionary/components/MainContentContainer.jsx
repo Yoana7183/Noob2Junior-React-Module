@@ -3,6 +3,7 @@ import WordDataContainerSentence from './WordDataContainerSentence';
 import WordDataContainerSingleWord from './WordDataContainerSingleWord';
 import React, { useState } from 'react';
 import ShowMoreBtn from './ShowMoreBtn';
+import { v4 as uuidv4 } from 'uuid';
 const MainContentContainer = ({ wordObject }) => {
   const [showButtons, setShowButtons] = useState({
     definition: 2,
@@ -46,7 +47,7 @@ const MainContentContainer = ({ wordObject }) => {
       <div>
         {objectToBeMaped.slice(0, quantityOfShownWords).map((part) => (
           <Component
-            key={Math.random()}
+            key={uuidv4()}
             wordData={propertyOfObject ? part[propertyOfObject] : part}
           />
         ))}
