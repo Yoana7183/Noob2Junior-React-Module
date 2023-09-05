@@ -2,12 +2,12 @@ import LeftPart from './components/LeftPart';
 import RightPart from './components/RightPart';
 import React, { useContext, useEffect, useState, useRef } from 'react';
 import { TipsCalculatorContext } from './context/TipsCalculatorContext-file';
+import ModalHistoryResults from './components/ModalHistoryResults';
 const TipsCalculator = () => {
   const { inputsInObject } = useContext(TipsCalculatorContext);
   const [totalBill, setTotalBill] = useState(0);
   const [tipByPerson, setTipByPerson] = useState(0);
   const contentRef = useRef(null);
-
   useEffect(() => {
     contentRef.current.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
@@ -44,6 +44,7 @@ const TipsCalculator = () => {
               </div>
             </div>
           </div>
+          <ModalHistoryResults />
         </div>
       </div>
     </main>
