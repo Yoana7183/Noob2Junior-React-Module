@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import useValidateNumberInput from '../hooks/useValidateNumberInput';
 
 const InputBill = () => {
