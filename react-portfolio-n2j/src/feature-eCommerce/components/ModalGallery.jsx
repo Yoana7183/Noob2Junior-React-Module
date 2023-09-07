@@ -30,7 +30,7 @@ const ModalGallery = (props) => {
               ></div>
 
               {/* Main Image */}
-              <div className="md:w-[550px] sm:w-[450px]">
+              <div className="w-[450px]">
                 <div
                   className="flex justify-end mb-1 "
                   onClick={() => props.setIsModal(false)}
@@ -40,7 +40,7 @@ const ModalGallery = (props) => {
                 </div>
                 {/* Product Image */}
                 <img
-                  className="md:w-[550px] sm:w-[450px] rounded-xl"
+                  className="w-[450px] rounded-xl"
                   src={ProductGallery[props.imageIndex].origin}
                   alt="Product Image"
                 />
@@ -48,13 +48,13 @@ const ModalGallery = (props) => {
 
               {/* Next Image Button */}
               <div
-                className="rounded-full bg-white w-[56px] h-[56px] flex justify-center cursor-pointer absolute inset-y-15 right-[-30px] bg-[url('/assetsECommerce/icon-next.svg')] bg-no-repeat bg-center hover:bg-[url('/assetsECommerce/icons8-next-26.png')] "
+                className="rounded-full bg-white w-[56px] h-[56px] flex justify-center cursor-pointer absolute inset-y-15 sm:right-[-30px] md:right-[-30px] lg:right-[-20px] right-[70px] bg-[url('/assetsECommerce/icon-next.svg')] bg-no-repeat bg-center hover:bg-[url('/assetsECommerce/icons8-next-26.png')] "
                 onClick={props.nextImg}
               ></div>
             </div>
 
             {/* Thumbnail Section */}
-            <div className="sm:flex mt-4 px-4 lg:ml-[5%] sm:ml-[4rem] md:ml-10 hidden">
+            <div className="sm:flex mt-4 px-4 lg:ml-[-5%] sm:ml-[3.5rem] md:ml-10 hidden">
               {props.thumbNail}
             </div>
           </div>
