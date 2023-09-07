@@ -1,19 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import useLocalStorageManaging from '../useLocalStorageManaging';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
+
 const ModalHistoryResults = ({
   historyContainerStatus,
   setHistoryContainerStatus,
 }) => {
-  const { clearLocalStorage, getLocalStorageItems } = useLocalStorageManaging();
-  const result = getLocalStorageItems();
-
-  if (result.length > 5) {
-    clearLocalStorage();
-  }
   if (!historyContainerStatus) {
     return null;
+  }
+
+  const { clearLocalStorage, getLocalStorageItems, dequeueLocalStorageList } =
+    useLocalStorageManaging();
+
+  const [localStorageData, setLocalStorageData] = useState(
+    getLocalStorageItems()
+  );
+
+  if (localStorageData.length > 5) {
+    dequeueLocalStorageList();
+
+    setLocalStorageData(getLocalStorageItems());
   }
 
   return (
@@ -30,7 +38,7 @@ const ModalHistoryResults = ({
             </button>
             <div className="flex justify-center">
               <div className="w-[250px] h-full bg-white">
-                {result.map((item) => {
+                {localStorageData.map((item) => {
                   return (
                     <div
                       key={uuidv4()}
@@ -40,7 +48,7 @@ const ModalHistoryResults = ({
                       <li>Percent Tip: {item.tip} %</li>
                       <li>People: {item.people}</li>
                       <li>
-                        Total: {item.total.toFixed(2)} / By Person:{' '}
+                        Total: {item.total.toFixed(2)} / By Person:
                         {item.perPerson.toFixed(2)}
                       </li>
                     </div>
@@ -49,6 +57,7 @@ const ModalHistoryResults = ({
                 <button
                   onClick={() => {
                     clearLocalStorage();
+                    setLocalStorageData(getLocalStorageItems());
                   }}
                 >
                   Delete history
@@ -66,4 +75,5 @@ export default ModalHistoryResults;
 ModalHistoryResults.propTypes = {
   setHistoryContainerStatus: PropTypes.func.isRequired,
   historyContainerStatus: PropTypes.bool,
+  dequeueLocalStorageList: PropTypes.func,
 };
