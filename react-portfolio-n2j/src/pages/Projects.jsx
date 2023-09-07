@@ -145,6 +145,8 @@ const Projects = () => {
                     app, featuring a customizable tip percentage function,
                     empowering users to precisely divide percent of bill /
                     amount according to their personal preferences.
+                    Additionally, it includes a historical records menu
+                    displaying the most recent 4 calculations.
                   </span>
                 </div>
               </div>
