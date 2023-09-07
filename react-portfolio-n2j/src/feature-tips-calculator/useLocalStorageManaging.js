@@ -5,16 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 const useLocalStorageManaging = (total, perPerson) => {
   const { inputsInObject } = useContext(TipsCalculatorContext);
   const localStorageData = { ...inputsInObject, total, perPerson };
-  console.log(total, perPerson);
-  //   localStorage.clear();
-  useEffect(() => {
-    if (total > 0 || perPerson > 0) {
-      localStorage.setItem(
-        `TipsCalculator/${uuidv4()}`,
-        JSON.stringify(localStorageData)
-      );
-    }
-  }, [total, perPerson]);
+
   const clearLocalStorage = () => {
     localStorage.clear();
   };
@@ -32,7 +23,24 @@ const useLocalStorageManaging = (total, perPerson) => {
     return items;
   };
 
-  return { clearLocalStorage, getLocalStorageItems };
+  useEffect(() => {
+    if (total > 0 && perPerson > 0) {
+      localStorage.setItem(
+        `TipsCalculator/${uuidv4()}`,
+        JSON.stringify(localStorageData)
+      );
+    }
+  }, [total, perPerson]);
+
+  const dequeueLocalStorageList = () => {
+    const localStorageKeys = Object.keys(localStorage);
+
+    if (localStorageKeys.length > 0) {
+      const firstKey = localStorageKeys[0];
+      localStorage.removeItem(firstKey);
+    }
+  };
+  return { clearLocalStorage, getLocalStorageItems, dequeueLocalStorageList };
 };
 
 export default useLocalStorageManaging;
