@@ -1,6 +1,6 @@
 import ResetBtn from './ResetBtn';
 import PropTypes from 'prop-types';
-
+import useLocalStorageManaging from '../useLocalStorageManaging';
 const RightPart = ({ total, byPerson }) => {
   let totalByPerson = byPerson;
   let totalAmount = total;
@@ -33,6 +33,7 @@ const RightPart = ({ total, byPerson }) => {
   const resultNumStyle = `text-hoverbuttonOfCalculatorAndRightSideBackground text-3xl lg:text-6xl  sm:text-6xl flex bold `;
   const backgroundStyleisEmpty =
     'bg-buttonOfCalculatorAndRightSideBackground mt-[-6rem] lg:w-[420px] sm:mt-[-3rem] lg:mt-0 rounded-lg p-6 lg:h-[417px] mr-[5%] ml-[5%]';
+  useLocalStorageManaging(totalAmount, totalByPerson);
 
   return (
     <section className={backgroundStyleisEmpty}>
