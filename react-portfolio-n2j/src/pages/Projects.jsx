@@ -67,26 +67,6 @@ const Projects = () => {
             </Link>
           </div>
           <div>
-            <Link to="/loopstudio">
-              <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
-                <img
-                  src="\img-icons\loopstudios.jpg"
-                  alt="Product"
-                  className="h-80 w-72 object-cover rounded-t-xl"
-                />
-                <div className="px-4 py-3 w-72">
-                  <p className="text-lg font-bold text-black truncate block capitalize">
-                    Loopstudios
-                  </p>
-                  <span className="text-gray-400 mr-3  text-xs">
-                    An engaging, fully responsive landing page with captivating
-                    design.
-                  </span>
-                </div>
-              </div>
-            </Link>
-          </div>
-          <div>
             <Link to="/e-commerce">
               <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
                 <img
@@ -99,30 +79,9 @@ const Projects = () => {
                     E-commerce
                   </p>
                   <span className="text-gray-400 mr-3 text-xs">
-                    A fully responsive e-commerce webpage for an online store,
-                    equipped with a user-friendly shopping cart and an immersive
-                    modal gallery.
-                  </span>
-                </div>
-              </div>
-            </Link>
-          </div>
-          <div>
-            <Link to="/equalize">
-              <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl col-span-3">
-                <img
-                  src="\img-icons\equalizer.jpg"
-                  alt="Product"
-                  className="h-80 w-72 object-cover rounded-t-xl"
-                />
-                <div className="px-4 py-3 w-72">
-                  <p className="text-lg font-bold text-black truncate block capitalize">
-                    Equalizer
-                  </p>
-                  <span className="text-gray-400 mr-3  text-xs">
-                    An engaging and visually appealing landing page,
-                    meticulously designed to ensure a seamless experience on a
-                    wide range of devices through full responsiveness.
+                    A fully responsive e-commerce webpage / ONLY PRODUCT page /
+                    for an online store, equipped with a user-friendly shopping
+                    cart and an immersive modal gallery.
                   </span>
                 </div>
               </div>
@@ -169,6 +128,48 @@ const Projects = () => {
                     `Word of the Day` feature, delivering short information
                     about searched words, all presented within a simple, fully
                     responsive design
+                  </span>
+                </div>
+              </div>
+            </Link>
+          </div>
+          <div>
+            <Link to="/loopstudio">
+              <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+                <img
+                  src="\img-icons\loopstudios.jpg"
+                  alt="Product"
+                  className="h-80 w-72 object-cover rounded-t-xl"
+                />
+                <div className="px-4 py-3 w-72">
+                  <p className="text-lg font-bold text-black truncate block capitalize">
+                    Loopstudios
+                  </p>
+                  <span className="text-gray-400 mr-3  text-xs">
+                    An engaging, fully responsive STATIC landing page with
+                    captivating design.
+                  </span>
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          <div>
+            <Link to="/equalize">
+              <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl col-span-3">
+                <img
+                  src="\img-icons\equalizer.jpg"
+                  alt="Product"
+                  className="h-80 w-72 object-cover rounded-t-xl"
+                />
+                <div className="px-4 py-3 w-72">
+                  <p className="text-lg font-bold text-black truncate block capitalize">
+                    Equalizer
+                  </p>
+                  <span className="text-gray-400 mr-3  text-xs">
+                    An engaging and visually appealing STATIC landing page,
+                    meticulously designed to ensure a seamless experience on a
+                    wide range of devices through full responsiveness.
                   </span>
                 </div>
               </div>
