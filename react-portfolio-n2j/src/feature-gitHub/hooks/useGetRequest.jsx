@@ -28,8 +28,8 @@ function useFetchData(baseUrl, queryParameter, apiKey = null) {
       setData(response.data);
       setLoading(false);
     } catch (error) {
-      setError(true);
       setLoading(false);
+      setError(true);
     }
   };
 
@@ -37,6 +37,7 @@ function useFetchData(baseUrl, queryParameter, apiKey = null) {
     if (queryParameter.length === 0) {
       return;
     }
+    setError(false);
     fetchData();
   }, [queryParameter, apiKey]);
 
