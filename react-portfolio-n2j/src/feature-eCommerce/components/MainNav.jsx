@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { EcommerceContext } from '../context/EcommerceContext';
-import OutsideClickHandler from './OutsideClickHandler';
+// import OutsideClickHandler from './OutsideClickHandler';
 import { v4 as uuidv4 } from 'uuid';
 const MainNavigation = () => {
   const { setcartStatus, quantity } = useContext(EcommerceContext);
@@ -9,17 +9,17 @@ const MainNavigation = () => {
   const [isBurgerMenuOnMobileViewIsOpen, setisBurgerMenuOnMobileViewIsOpen] =
     useState();
   const categories = ['Collections', 'Men', 'Woman', 'About', 'Contact'];
-  const eachLinkStyle = `cursor-pointer lg:text-base md:px-3.5 border-b-4 border-transparent rounded-sm pb-10 hover:border-ecommerceOrangeColor md:text-sm sm:text-xs sm:px-2`;
+  const eachLinkStyle = ` w-full h-full cursor-pointer lg:text-base md:px-3.5 border-b-4 border-transparent rounded-sm pb-10 hover:border-ecommerceOrangeColor md:text-sm sm:text-xs sm:px-2`;
 
   const toggleMenu = () => {
     setisBurgerMenuOnMobileViewIsOpen(!isBurgerMenuOnMobileViewIsOpen);
   };
 
-  const handleOutsideClick = () => {
-    if (isBurgerMenuOnMobileViewIsOpen) {
-      toggleMenu();
-    }
-  };
+  // const handleOutsideClick = () => {
+  //   if (isBurgerMenuOnMobileViewIsOpen) {
+  //     toggleMenu();
+  //   }
+  // };
 
   useEffect(() => {
     if (isBurgerMenuOnMobileViewIsOpen) {
@@ -60,49 +60,51 @@ const MainNavigation = () => {
           <img src="\assetsECommerce\logo.svg" alt="Logo" />
         </div>
         {isBurgerMenuOnMobileViewIsOpen && (
-          <OutsideClickHandler onOutsideClick={handleOutsideClick}>
-            <div className="sm:hidden fixed top-0 left-0 w-screen h-screen bg-gray-800 bg-opacity-40 z-10 flex justify-start items-center">
-              <div className="w-[50%]  sm:w-0 h-full bg-white pt-20">
-                <button
-                  onClick={toggleMenu}
-                  className="  absolute top-[7rem] left-[-9px] m-4 p-2 rounded-full text-black bg-white hover:bg-gray-200"
-                >
-                  {isBurgerMenuOnMobileViewIsOpen ? (
-                    <img
-                      className="w-6 h-6 fill-current mt-[-2.2rem]  "
-                      src="\assetsECommerce\icon-close.svg"
-                      alt="Close"
-                    />
-                  ) : (
-                    <img
-                      className="w-4 h-4 fill-current"
-                      src="\assetsECommerce\icon-menu.svg"
-                      alt="Menu"
-                    />
-                  )}
-                </button>
-                <div className=" sm:flex sm:justify-between cursor-pointer lg:text-base md:px-3.5 pb-7 ml-7 pt-[6rem] md:text-sm sm:text-xs font-bold sm:px-2">
-                  {categories.map((category) => {
-                    return (
-                      <div key={uuidv4()} className="pt-2">
-                        <NavLink to={`/e-commerce/${category}`}>
-                          {category}
-                        </NavLink>
-                      </div>
-                    );
-                  })}
-                </div>
+          <div className="sm:hidden fixed top-0 left-0 w-screen h-screen bg-gray-800 bg-opacity-40 z-10 flex justify-start items-center">
+            <div className="w-[50%]  sm:w-0 h-full bg-white pt-20">
+              <button
+                onClick={toggleMenu}
+                className="  absolute top-[7rem] left-[-9px] m-4 p-2 rounded-full text-black bg-white hover:bg-gray-200"
+              >
+                {isBurgerMenuOnMobileViewIsOpen ? (
+                  <img
+                    className="w-6 h-6 fill-current mt-[-2.2rem]  "
+                    src="\assetsECommerce\icon-close.svg"
+                    alt="Close"
+                  />
+                ) : (
+                  <img
+                    className="w-4 h-4 fill-current"
+                    src="\assetsECommerce\icon-menu.svg"
+                    alt="Menu"
+                  />
+                )}
+              </button>
+              <div className=" sm:flex sm:justify-between cursor-pointer lg:text-base md:px-3.5 pb-7 ml-7 pt-[6rem] md:text-sm sm:text-xs font-bold sm:px-2">
+                {categories.map((category) => {
+                  return (
+                    <div key={uuidv4()} className="pt-2">
+                      <NavLink to={`/e-commerce/${category}`}>
+                        {category}
+                      </NavLink>
+                    </div>
+                  );
+                })}
               </div>
             </div>
-          </OutsideClickHandler>
+          </div>
         )}
       </nav>
       <nav className="hidden sm:flex sm:flex-row">
         {categories.map((category) => {
           return (
-            <div key={uuidv4()} className={eachLinkStyle}>
-              <NavLink to={`/e-commerce/${category}`}> {category}</NavLink>
-            </div>
+            <NavLink
+              key={uuidv4()}
+              className={eachLinkStyle}
+              to={`/e-commerce/${category}`}
+            >
+              {category}
+            </NavLink>
           );
         })}
       </nav>
