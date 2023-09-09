@@ -1,8 +1,9 @@
 import React, { useContext, useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import { EcommerceContext } from '../context/EcommerceContext';
 import OutsideClickHandler from './OutsideClickHandler';
 import { v4 as uuidv4 } from 'uuid';
-const Header = () => {
+const MainNavigation = () => {
   const { setcartStatus, quantity } = useContext(EcommerceContext);
   const [isCartHasBeenOpen, setIsCartHasBeenOpen] = useState(true);
   const [isBurgerMenuOnMobileViewIsOpen, setisBurgerMenuOnMobileViewIsOpen] =
@@ -84,7 +85,9 @@ const Header = () => {
                   {categories.map((category) => {
                     return (
                       <div key={uuidv4()} className="pt-2">
-                        {category}
+                        <NavLink to={`/e-commerce/${category}`}>
+                          {category}
+                        </NavLink>
                       </div>
                     );
                   })}
@@ -98,7 +101,7 @@ const Header = () => {
         {categories.map((category) => {
           return (
             <div key={uuidv4()} className={eachLinkStyle}>
-              {category}
+              <NavLink to={`/e-commerce/${category}`}> {category}</NavLink>
             </div>
           );
         })}
@@ -136,4 +139,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default MainNavigation;
