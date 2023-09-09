@@ -1,6 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { ErrorBoundary } from 'react-error-boundary';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Navbar from './Navbar';
 import Projects from './pages/Projects';
 import MyResume from './pages/MyResume';
@@ -11,27 +10,62 @@ import LandingPageEz from './pages/LandingPageEz';
 import TipsCalculator from './pages/TipsCalculator';
 import DictionaryBasic from './pages/Dictionary';
 import { ErrorPage } from './pages/ErrorPage';
+import HomePage from '../src/feature-eCommerce/pages/Home';
+import ProductsPage from '../src/feature-eCommerce/pages/Products';
+import ProductDetailPage from '../src/feature-eCommerce/pages/ProductDetail';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Navbar />,
+    children: [
+      {
+        path: '/',
+        element: <Projects />,
+      },
+      {
+        path: '/cv',
+        element: <MyResume />,
+      },
+      {
+        path: '/e-commerce',
+        element: <ECommerce />,
+        children: [
+          { path: '', element: <HomePage /> },
+          { path: 'products', element: <ProductsPage /> },
+          { path: 'products/:productId', element: <ProductDetailPage /> },
+        ],
+      },
+      {
+        path: '/git',
+        element: <GitHub />,
+      },
+      {
+        path: '/loopstudio',
+        element: <LandingPage />,
+      },
+      {
+        path: '/equalize',
+        element: <LandingPageEz />,
+      },
+      {
+        path: '/tipscalc',
+        element: <TipsCalculator />,
+      },
+      {
+        path: '/dictionary',
+        element: <DictionaryBasic />,
+      },
+    ],
+  },
+  {
+    path: '*',
+    element: <ErrorPage />,
+  },
+]);
 
 function App() {
-  return (
-    <BrowserRouter>
-      <ErrorBoundary fallback={<ErrorPage />}>
-        <Routes>
-          <Route path="/" element={<Navbar />}>
-            <Route index element={<Projects />} />
-            <Route path="cv" element={<MyResume />} />
-            <Route path="e-commerce" element={<ECommerce />} />
-            <Route path="git" element={<GitHub />} />
-            <Route path="loopstudio" element={<LandingPage />} />
-            <Route path="equalize" element={<LandingPageEz />} />
-            <Route path="tipscalc" element={<TipsCalculator />} />
-            <Route path="dictionary" element={<DictionaryBasic />} />
-            <Route path="*" element={<ErrorPage />} />
-          </Route>
-        </Routes>
-      </ErrorBoundary>
-    </BrowserRouter>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
