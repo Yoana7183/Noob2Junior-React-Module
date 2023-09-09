@@ -4,7 +4,7 @@ import { DataContext } from '../context/DataContext';
 const LinksAndLocation = () => {
   const userData = useContext(DataContext);
   const data = userData.userData;
-  const linksContainerStyle = ` flex  h-[22px]  lg:text-base md:text-sm sm:text-sm text-xs pl-2 mt-3 sm:mt-0  sm:border-1 sm:border-white  sm:hover:border-b-[1px] sm:hover:border-black`;
+  const linksContainerStyle = ` cursor-pointer flex  h-[22px]  lg:text-base md:text-sm sm:text-sm text-xs pl-2 mt-3 sm:mt-0`;
   return (
     <section className="lg:ml-[10rem]  mt-6  md:ml-8 sm:ml-8 sm:grid grid-cols-2 sm:gap-5">
       <div className={`sm:w-[185px] lg:w-[200px] ${linksContainerStyle}`}>

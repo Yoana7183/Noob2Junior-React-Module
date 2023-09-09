@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 /**
  * Custom hook for fetching data from an API - GET REQUEST.
@@ -13,31 +14,30 @@ function useFetchData(baseUrl, queryParameter, apiKey = null) {
   const [loading, setLoading] = useState(false);
   const url = baseUrl + queryParameter;
 
+  const fetchData = async () => {
+    setLoading(true);
+    try {
+      const headers = {};
+      if (apiKey) {
+        headers['Authorization'] = `Bearer ${apiKey}`;
+      }
+      const response = await axios.get(url, { headers });
+      if (response.status !== 200) {
+        setError(true);
+      }
+      setData(response.data);
+      setLoading(false);
+    } catch (error) {
+      setLoading(false);
+      setError(true);
+    }
+  };
+
   useEffect(() => {
     if (queryParameter.length === 0) {
       return;
     }
-    const fetchData = async () => {
-      setLoading(true);
-      try {
-        const headers = {};
-        if (apiKey) {
-          headers['Authorization'] = `Bearer ${apiKey}`;
-        }
-        const response = await fetch(url, { headers });
-        if (!response.ok) {
-          setError(true);
-        }
-        const jsonData = await response.json();
-        setData(jsonData);
-        setError(false);
-        setLoading(false);
-      } catch (error) {
-        setError(true);
-        setLoading(false);
-      }
-    };
-
+    setError(false);
     fetchData();
   }, [queryParameter, apiKey]);
 

@@ -1,9 +1,12 @@
 import { Outlet, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
-  let currentProject = useLocation();
+  const location = useLocation();
+  const currentPathname = location.pathname;
 
-  switch (currentProject.pathname) {
+  let currentProject = '';
+
+  switch (currentPathname) {
     case '/cv':
       currentProject = 'My Resume';
       break;
@@ -28,6 +31,8 @@ const Navbar = () => {
     case '/':
       currentProject = 'Home Page';
       break;
+    default:
+      currentProject = 'Page Not Found';
   }
 
   return (
