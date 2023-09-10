@@ -26,7 +26,6 @@ const Gallery = ({ id }) => {
     (product) => product.id === parseInt(id, 10)
   );
 
-  console.log(ProductGallery);
   if (!ProductGallery) {
     return <div>Product not found.</div>;
   }
@@ -57,7 +56,7 @@ const Gallery = ({ id }) => {
       onClick={() => getCurrentTargetImage(index)}
     />
   ));
-
+  console.log(ProductGallery.images[0]);
   return (
     <section>
       {isModalMenuAboveSMClassOpen && (
@@ -71,7 +70,7 @@ const Gallery = ({ id }) => {
         />
       )}
 
-      <div className="lg:w-[445px] lg:h-[565px] xl:w-[445px] xl:h-[565px] md:w-[345px] md:h-[465px] sm:mt-[-12rem] mt-[-16rem] lg:pl-16 md:pl-0">
+      <div className="lg:w-[445px] lg:h-[565px] xl:w-[445px] xl:h-[565px] md:w-[345px] md:h-[465px] sm:mt-[-12rem] mt-[12rem] lg:pl-16 md:pl-0">
         <div className="sm:h-[445px] h-[calc(100vw-1px)]">
           <div className="sm:w-[445px] sm:h-[445px] w-screen h-[300px] ">
             <div className="sm:hidden relative">
@@ -103,7 +102,7 @@ const Gallery = ({ id }) => {
             </div>
             <img
               className=" sm:rounded-2xl rounded-none sm:inline hidden "
-              src="/assetsECommerce/image-product-1.jpg"
+              src={ProductGallery.images[0]}
               alt="Main-Product"
             />
           </div>
