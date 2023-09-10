@@ -19,11 +19,11 @@ const EcommerceShop = () => {
   }`;
   return (
     <main ref={contentRef} className={bodyBackgroundStyleInModal}>
-      <div className="xl:w-[1110px] xl:h-[940px] lg:w-[1000px] lg:h-[840px] md:w-[768px] sm:w-[640px] h-max overflow-hidden ">
-        <div className="">
+      <div className="xl:w-[1110px] xl:h-[940px] lg:w-[1000px] lg:h-[840px] md:w-[768px]  sm:w-[640px] h-max overflow-hidden ">
+        <div className="h-[calc(120vw+550px)] sm:h-max ">
           <MainNavigation />
-          <Outlet />
           <Cart />
+          <Outlet />
         </div>
       </div>
     </main>

@@ -42,8 +42,8 @@ const MainNavigation = () => {
         >
           {isBurgerMenuOnMobileViewIsOpen ? (
             <img
-              className="fill-current mt-[-2.6rem] "
-              src="\assetsECommerce\icon-close.png"
+              className="fill-current  mt-[-2.6rem] "
+              src="\assetsECommerce\icons8-close.svg"
               alt="Close"
             />
           ) : (
@@ -69,7 +69,7 @@ const MainNavigation = () => {
                 {isBurgerMenuOnMobileViewIsOpen ? (
                   <img
                     className="w-6 h-6 fill-current mt-[-2.2rem]  "
-                    src="\assetsECommerce\icon-close.svg"
+                    src="\assetsECommerce\icons8-close.svg"
                     alt="Close"
                   />
                 ) : (
