@@ -10,8 +10,8 @@ import LandingPageEz from './pages/LandingPageEz';
 import TipsCalculator from './pages/TipsCalculator';
 import DictionaryBasic from './pages/Dictionary';
 import { ErrorPage } from './pages/ErrorPage';
-import ProductsPage from '../src/feature-eCommerce/pages/Products';
-import ProductDetailPage from '../src/feature-eCommerce/pages/ProductDetail';
+import Collections from './feature-eCommerce/pages/Collections';
+import ProductDetailPage from './feature-eCommerce/pages/ProductDetail';
 // import RootLayout from './feature-eCommerce/pages/Root';
 
 const router = createBrowserRouter([
@@ -31,10 +31,14 @@ const router = createBrowserRouter([
         path: '/e-commerce',
         element: <ECommerce />,
         children: [
-          { path: '/e-commerce/Woman', element: <ProductDetailPage /> },
           {
-            path: '/e-commerce/products/:productId',
-            element: <ProductsPage />,
+            index: true,
+            path: '/e-commerce/Collections',
+            element: <Collections />,
+          },
+          {
+            path: '/e-commerce/Collections/:productId',
+            element: <ProductDetailPage />,
           },
         ],
       },

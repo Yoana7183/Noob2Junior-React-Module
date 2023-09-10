@@ -1,11 +1,10 @@
 import React, { useContext, useRef, useEffect } from 'react';
 import MainNavigation from './components/MainNav';
 import Cart from './components/Cart';
-import Gallery from './components/Gallery';
-import InformationContainer from './components/InformationContainer';
+
 import { EcommerceContext } from './context/EcommerceContext';
 import { Outlet } from 'react-router-dom';
-
+// h-[calc(120vw+550px)]
 const EcommerceShop = () => {
   const modalStatus = useContext(EcommerceContext);
   const contentRef = useRef(null);
@@ -20,17 +19,11 @@ const EcommerceShop = () => {
   }`;
   return (
     <main ref={contentRef} className={bodyBackgroundStyleInModal}>
-      <div className="xl:w-[1110px] xl:h-[940px] lg:w-[1000px] lg:h-[840px] md:w-[768px] sm:w-[640px] md:h-[840px] h-[calc(120vw+550px)] overflow-hidden ">
+      <div className="xl:w-[1110px] xl:h-[940px] lg:w-[1000px] lg:h-[840px] md:w-[768px] sm:w-[640px] h-max overflow-hidden ">
         <div className="">
           <MainNavigation />
           <Outlet />
           <Cart />
-          <div className="w-[1015px] h-[565px] md:flex md:justify-between sm:flex-col sm:gap-0 gap-44 md:flex-row">
-            <Gallery />
-            <div className="sm:pl-0 pl-9 ">
-              <InformationContainer />
-            </div>
-          </div>
         </div>
       </div>
     </main>
