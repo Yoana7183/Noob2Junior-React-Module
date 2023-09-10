@@ -16,7 +16,6 @@ import PropTypes from 'prop-types';
  * @returns {JSX.Element} - A JSX element representing the modal gallery.
  */
 const ModalGallery = (props) => {
-  const ProductGallery = [1, 2, 3];
   return (
     <section className="fixed top-0 left-0 w-full h-full items-center justify-center hidden sm:flex">
       <div className="w-full h-full rounded-lg p-8 absolute top-0 left-0 bg-gray-800 bg-opacity-50">
@@ -41,7 +40,7 @@ const ModalGallery = (props) => {
                 {/* Product Image */}
                 <img
                   className="w-[450px] rounded-xl"
-                  src={ProductGallery[props.imageIndex].origin}
+                  src={props.ProductGallery[props.imageIndex]}
                   alt="Product Image"
                 />
               </div>
@@ -55,7 +54,7 @@ const ModalGallery = (props) => {
 
             {/* Thumbnail Section */}
             <div className="sm:flex mt-4 px-4 lg:ml-[-5%] sm:ml-[3.5rem] md:ml-10 hidden">
-              {props.thumbNail}
+              {props.ProductGallery}
             </div>
           </div>
         </div>
@@ -72,6 +71,7 @@ ModalGallery.propTypes = {
   setIsModal: PropTypes.func.isRequired,
   imageIndex: PropTypes.number.isRequired,
   thumbNail: PropTypes.any.isRequired,
+  ProductGallery: PropTypes.any.isRequired,
 };
 
 export default ModalGallery;

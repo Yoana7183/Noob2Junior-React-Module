@@ -61,6 +61,7 @@ const Gallery = ({ id }) => {
     <section>
       {isModalMenuAboveSMClassOpen && (
         <ModalGallery
+          ProductGallery={ProductGallery}
           prevImg={goToPreviousImage}
           nextImg={goToNextImage}
           getCurrentImage={getCurrentTargetImage}
@@ -70,7 +71,7 @@ const Gallery = ({ id }) => {
         />
       )}
 
-      <div className="lg:w-[445px] lg:h-[565px] xl:w-[445px] xl:h-[565px] md:w-[345px] md:h-[465px] sm:mt-[-12rem] mt-[12rem] lg:pl-16 md:pl-0">
+      <div className="lg:w-[445px] lg:h-[565px] xl:w-[445px] xl:h-[565px] md:w-[345px] md:h-[465px] sm:mt-[-12rem] mt-[1rem] lg:pl-16 md:pl-0">
         <div className="sm:h-[445px] h-[calc(100vw-1px)]">
           <div className="sm:w-[445px] sm:h-[445px] w-screen h-[300px] ">
             <div className="sm:hidden relative">
@@ -85,7 +86,7 @@ const Gallery = ({ id }) => {
                 />
               </div>
               <img
-                src={ProductGallery[currentImageIndex]}
+                src={ProductGallery.images[currentImageIndex]}
                 alt="ProductImage"
                 className=""
               />
