@@ -31,15 +31,11 @@ const Gallery = ({ id }) => {
   }
 
   const goToPreviousImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? ProductGallery.length - 1 : prevIndex - 1
-    );
+    setCurrentImageIndex((prevIndex) => (prevIndex === 0 ? 2 : prevIndex - 1));
   };
 
   const goToNextImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === ProductGallery.length - 1 ? 0 : prevIndex + 1
-    );
+    setCurrentImageIndex((prevIndex) => (prevIndex === 2 ? 0 : prevIndex + 1));
   };
 
   const getCurrentTargetImage = (index) => {
