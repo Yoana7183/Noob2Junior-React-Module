@@ -2,31 +2,44 @@ import React from 'react';
 
 const About = () => {
   return (
-    <div className="bg-gray-100 py-12">
-      <div className="container mx-auto px-4">
-        <h1 className="text-3xl font-semibold mb-6">About Our Shoe Store</h1>
-        <p className="text-gray-700 leading-relaxed mb-8">
-          Welcome to our online shoe store, where style meets comfort. We are
-          passionate about footwear and believe that the right pair of shoes can
-          make all the difference in your day. Our mission is to provide
-          high-quality shoes that not only look great but also feel great on
-          your feet.
+    <div className="bg-[#FF7E1B] h-screen flex flex-col items-center justify-center text-white">
+      <div className="bg-white p-8 rounded-lg shadow-md text-center">
+        <h1 className="text-4xl font-bold text-[#FF7E1B] mb-4">About Us</h1>
+        <p className="text-lg text-gray-700 mb-6">
+          Welcome to our world of footwear fashion! We are passionate about
+          shoes and dedicated to helping you find the perfect pair for every
+          occasion.
         </p>
-        <p className="text-gray-700 leading-relaxed mb-8">
-          Our collection includes a wide range of shoes for men and women,
-          carefully curated to suit various styles and occasions. Whether you
-          need casual sneakers for a weekend adventure or elegant heels for a
-          special event, we have got you covered.
+        <p className="text-lg text-gray-700">
+          Our extensive collection features everything from trendy sneakers to
+          elegant boots. Explore our selection and step into style and comfort.
         </p>
-        <p className="text-gray-700 leading-relaxed mb-8">
-          We take pride in our commitment to customer satisfaction. Our team is
-          dedicated to providing excellent service and helping you find the
-          perfect pair of shoes. If you have any questions or need assistance,
-          please dont hesitate to reach out to us.
+      </div>
+      <div className="mt-8">
+        <h2 className="text-2xl font-semibold mb-2">Our Mission</h2>
+        <p className="text-lg text-gray-200">
+          At ShoeHub, we strive to provide high-quality footwear that reflects
+          your individuality and suits your lifestyle. Our mission is to keep
+          your feet fashionable and comfortable, one step at a time.
         </p>
-        <p className="text-gray-700 leading-relaxed mb-8">
-          Thank you for choosing our shoe store for your footwear needs. We look
-          forward to helping you step out in style and comfort.
+      </div>
+      <div className="mt-8">
+        <h2 className="text-2xl font-semibold mb-2">Contact Us</h2>
+        <p className="text-lg text-gray-200">
+          Have questions or need assistance? Feel free to reach out to our
+          friendly customer support team at{' '}
+          <a href="mailto:info@shoehub.com">info@shoehub.com</a>.
+        </p>
+      </div>
+      <div className="mt-8">
+        <h2 className="text-2xl font-semibold mb-2">Visit Our Stores</h2>
+        <p className="text-lg text-gray-200">
+          We have stores located in major cities across the country. Come visit
+          us and explore our latest collections. Find a store near you:{' '}
+          <a href="/stores" className="text-[#FF7E1B hover:underline">
+            Store Locations
+          </a>
+          .
         </p>
       </div>
     </div>

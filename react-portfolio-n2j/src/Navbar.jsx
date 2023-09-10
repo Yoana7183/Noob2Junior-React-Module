@@ -22,9 +22,10 @@ const Navbar = () => {
     case '/tipscalc':
       currentProject = 'Tips Calculator App';
       break;
-    case '/e-commerce':
+    case 'e-commerce/:Collections':
       currentProject = 'E-Commerce Product Page';
       break;
+
     case '/dictionary':
       currentProject = 'Dictionary Page';
       break;
@@ -32,7 +33,7 @@ const Navbar = () => {
       currentProject = 'Home Page';
       break;
     default:
-      currentProject = 'Page Not Found';
+      currentProject = '';
   }
 
   return (
