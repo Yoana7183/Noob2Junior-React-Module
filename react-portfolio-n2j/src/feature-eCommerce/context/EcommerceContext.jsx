@@ -13,7 +13,7 @@ export const EcommerceContextProvider = ({ children }) => {
   const [quantity, setQuantity] = useState(0);
   const [cartStatus, setCartStatus] = useState('closed');
   const [modalStatus, setModalStatus] = useState('closed');
-  const [products, setPoducts] = useState({});
+  const [productsInOrder, setProductsInOrder] = useState({});
 
   /**
    * Stores the values of cart and modal statuses as strings for easier status access and identification.
@@ -30,8 +30,8 @@ export const EcommerceContextProvider = ({ children }) => {
         setCartStatus,
         modalStatus,
         setModalStatus,
-        products,
-        setPoducts,
+        productsInOrder,
+        setProductsInOrder,
       }}
     >
       {children}

@@ -21,7 +21,7 @@ function ProductDetailPage() {
       <div className="w-[1015px] h-[565px] md:flex md:justify-between sm:flex-col sm:gap-0 gap-44 md:flex-row sm:pt-[16rem]">
         <Gallery id={params.productId} />
         <div className="sm:pl-0 pl-9 ">
-          <InformationContainer />
+          <InformationContainer id={params.productId} />
         </div>
       </div>
     </section>
