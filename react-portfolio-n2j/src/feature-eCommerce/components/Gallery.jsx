@@ -117,7 +117,7 @@ const Gallery = ({ id }) => {
 };
 
 Gallery.propTypes = {
-  id: PropTypes.number,
+  id: PropTypes.string,
 };
 
 export default Gallery;
