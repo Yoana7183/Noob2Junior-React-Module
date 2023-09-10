@@ -11,7 +11,7 @@ export const EcommerceContext = createContext();
  */
 export const EcommerceContextProvider = ({ children }) => {
   const [quantity, setQuantity] = useState(0);
-  const [cartStatus, setcartStatus] = useState('closed');
+  const [cartStatus, setCartStatus] = useState('closed');
   const [modalStatus, setModalStatus] = useState('closed');
   const [products, setPoducts] = useState({});
 
@@ -27,7 +27,7 @@ export const EcommerceContextProvider = ({ children }) => {
         quantity,
         setQuantity,
         cartStatus,
-        setcartStatus,
+        setCartStatus,
         modalStatus,
         setModalStatus,
         products,

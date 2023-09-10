@@ -52,7 +52,7 @@ const Gallery = ({ id }) => {
       onClick={() => getCurrentTargetImage(index)}
     />
   ));
-  console.log(ProductGallery.images[0]);
+
   return (
     <section>
       {isModalMenuAboveSMClassOpen && (
@@ -63,7 +63,7 @@ const Gallery = ({ id }) => {
           getCurrentImage={getCurrentTargetImage}
           setIsModal={setIsModalMenuAboveSMClassOpen}
           imageIndex={currentImageIndex}
-          thumbNail={thumbnailImages}
+          thumbNail={ProductGallery.images}
         />
       )}
 

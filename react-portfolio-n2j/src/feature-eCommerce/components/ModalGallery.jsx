@@ -16,6 +16,7 @@ import PropTypes from 'prop-types';
  * @returns {JSX.Element} - A JSX element representing the modal gallery.
  */
 const ModalGallery = (props) => {
+  console.log(props.ProductGallery.images[props.imageIndex]);
   return (
     <section className="fixed top-0 left-0 w-full h-full items-center justify-center hidden sm:flex">
       <div className="w-full h-full rounded-lg p-8 absolute top-0 left-0 bg-gray-800 bg-opacity-50">
@@ -40,7 +41,7 @@ const ModalGallery = (props) => {
                 {/* Product Image */}
                 <img
                   className="w-[450px] rounded-xl"
-                  src={props.ProductGallery[props.imageIndex]}
+                  src={props.ProductGallery.images[props.imageIndex]}
                   alt="Product Image"
                 />
               </div>
@@ -50,11 +51,6 @@ const ModalGallery = (props) => {
                 className="rounded-full bg-white w-[56px] h-[56px] flex justify-center cursor-pointer absolute inset-y-15 sm:right-[-30px] md:right-[-30px] lg:right-[-20px] right-[70px] bg-[url('/assetsECommerce/icon-next.svg')] bg-no-repeat bg-center hover:bg-[url('/assetsECommerce/icons8-next-26.png')] "
                 onClick={props.nextImg}
               ></div>
-            </div>
-
-            {/* Thumbnail Section */}
-            <div className="sm:flex mt-4 px-4 lg:ml-[-5%] sm:ml-[3.5rem] md:ml-10 hidden">
-              {props.ProductGallery}
             </div>
           </div>
         </div>
