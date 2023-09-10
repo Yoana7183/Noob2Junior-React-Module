@@ -1,4 +1,4 @@
-const STORE = [
+const Store = [
   {
     id: 1,
     category: 'man',
@@ -113,4 +113,4 @@ const STORE = [
   },
 ];
 
-export default STORE;
+export default Store;
