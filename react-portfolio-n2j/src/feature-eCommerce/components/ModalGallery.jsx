@@ -36,7 +36,7 @@ const ModalGallery = (props) => {
                   onClick={() => props.setIsModal(false)}
                 >
                   {/* Close Icon */}
-                  <div className="w-[34px] h-[36px] mb-3 bg-no-repeat bg-cover bg-[url('/assetsECommerce/icon-close.svg')] hover:bg-[url('/assetsECommerce/icon-close_hover.png')] "></div>
+                  <div className="w-[34px] h-[36px] mb-3 bg-no-repeat bg-cover bg-[url('/assetsECommerce/icons8-close.svg')] hover:bg-[url('/assetsECommerce/icon-close_hover.png')] "></div>
                 </div>
                 {/* Product Image */}
                 <img

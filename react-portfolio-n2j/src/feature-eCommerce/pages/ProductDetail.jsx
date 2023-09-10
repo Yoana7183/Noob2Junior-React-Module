@@ -7,7 +7,15 @@ function ProductDetailPage() {
   return (
     <section className="">
       <Link to=".." relative="path">
-        Back
+        <div className="flex">
+          <img
+            src="\assetsECommerce\icons8-back-30.png"
+            className="w-6 h-6"
+            alt="back"
+            srcSet=""
+          />
+          <p className="text-xs mt-1"> Back</p>
+        </div>
       </Link>
 
       <div className="w-[1015px] h-[565px] md:flex md:justify-between sm:flex-col sm:gap-0 gap-44 md:flex-row sm:pt-[16rem]">
