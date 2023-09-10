@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from 'react';
 import ModalGallery from './ModalGallery';
-import ProductGallery from './images';
+import ProductGallery from './store';
 import { EcommerceContext } from '../context/EcommerceContext';
 import { v4 as uuidv4 } from 'uuid';
 const Gallery = () => {

@@ -5,6 +5,7 @@ import Gallery from './components/Gallery';
 import InformationContainer from './components/InformationContainer';
 import { EcommerceContext } from './context/EcommerceContext';
 import { Outlet } from 'react-router-dom';
+
 const EcommerceShop = () => {
   const modalStatus = useContext(EcommerceContext);
   const contentRef = useRef(null);
