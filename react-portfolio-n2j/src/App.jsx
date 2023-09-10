@@ -12,6 +12,10 @@ import DictionaryBasic from './pages/Dictionary';
 import { ErrorPage } from './pages/ErrorPage';
 import Collections from './feature-eCommerce/pages/Collections';
 import ProductDetailPage from './feature-eCommerce/pages/ProductDetail';
+import ManCollections from './feature-eCommerce/pages/ManCollections';
+import WomanCollection from './feature-eCommerce/pages/WomanCollection';
+import About from './feature-eCommerce/pages/About';
+import Contact from './feature-eCommerce/pages/Contacts';
 // import RootLayout from './feature-eCommerce/pages/Root';
 
 const router = createBrowserRouter([
@@ -35,6 +39,22 @@ const router = createBrowserRouter([
             index: true,
             path: '/e-commerce/Collections',
             element: <Collections />,
+          },
+          {
+            path: '/e-commerce/Men',
+            element: <ManCollections />,
+          },
+          {
+            path: '/e-commerce/Contact',
+            element: <Contact />,
+          },
+          {
+            path: '/e-commerce/About',
+            element: <About />,
+          },
+          {
+            path: '/e-commerce/Woman',
+            element: <WomanCollection />,
           },
           {
             path: '/e-commerce/Collections/:productId',

@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import ProductCollectionContainer from '../components/ProductCollectionContainer';
 import Store from '../Store';
 
-function ManCollections() {
-  const manProducts = Store.filter((prod) => prod.category === 'man');
+function WomanCollection() {
+  const manProducts = Store.filter((prod) => prod.category === 'woman');
 
   return (
     <section className="py-6 px-4 lg:px-0">
@@ -22,4 +22,4 @@ function ManCollections() {
   );
 }
 
-export default ManCollections;
+export default WomanCollection;

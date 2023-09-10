@@ -2,9 +2,9 @@ const Store = [
   {
     id: 1,
     category: 'man',
-    title: 'Fall Limited Edition Sneakers',
+    title: 'Spring Limited Edition Sneakers (Men)',
     description:
-      'These low-profile sneakers are your perfect casual wear companion.Featuring a durable rubber outer sole, they/’ll withstand everythingthe weather can offer.',
+      "Step into spring with our limited edition men's sneakers. These low-profile sneakers are the perfect companions for your casual style. With a durable rubber outsole, they will withstand whatever the weather throws at them.",
     price: 175,
     images: [
       '/assetsECommerce/store/image-product-1.jpg',
@@ -16,9 +16,9 @@ const Store = [
   {
     id: 2,
     category: 'man',
-    title: 'Fall Limited Edition Sneakers',
+    title: 'Superstar XLG Shoes (Men)',
     description:
-      'These low-profile sneakers are your perfect casual wear companion.Featuring a durable rubber outer sole, they/’ll withstand everythingthe weather can offer.',
+      "When you thought adidas Superstar shoes couldn't get any bolder, this pair takes the classic 70s trainer and gives it a modern twist. The enlarged proportions and iconic serrated 3-Stripes make a big statement. The full leather upper stays true to its vintage roots while reimagining the silhouette for a fresh look. Step confidently with the shell toe leading the way.",
     price: 175,
     images: [
       '/assetsECommerce/store/man-1-1.webp',
@@ -30,9 +30,9 @@ const Store = [
   {
     id: 3,
     category: 'man',
-    title: 'Fall Limited Edition Sneakers',
+    title: 'Urban Explorer Sneakers (Men)',
     description:
-      'These low-profile sneakers are your perfect casual wear companion.Featuring a durable rubber outer sole, they/’ll withstand everythingthe weather can offer.',
+      'Discover the city in style with our Urban Explorer sneakers for men. These low-profile sneakers are designed for the modern urban adventurer. Featuring a rugged rubber outsole, they can handle the toughest city streets while keeping your look fresh and comfortable.',
     price: 175,
     images: [
       '/assetsECommerce/store/man-2-1.webp',
@@ -44,9 +44,9 @@ const Store = [
   {
     id: 4,
     category: 'man',
-    title: 'Fall Limited Edition Sneakers',
+    title: 'Classic Comfort Sneakers (Men)',
     description:
-      'These low-profile sneakers are your perfect casual wear companion.Featuring a durable rubber outer sole, they/’ll withstand everythingthe weather can offer.',
+      "Experience classic comfort with our men's sneakers. These low-profile sneakers are your go-to choice for everyday wear. With a cushioned rubber outsole, they provide all-day comfort without compromising on style.",
     price: 175,
     images: [
       '/assetsECommerce/store/man-3-1.webp',
@@ -58,9 +58,9 @@ const Store = [
   {
     id: 5,
     category: 'woman',
-    title: 'Fall Limited Edition Sneakers',
+    title: 'Spring Blossom Sneakers (Women)',
     description:
-      'These low-profile sneakers are your perfect casual wear companion.Featuring a durable rubber outer sole, they/’ll withstand everythingthe weather can offer.',
+      'Step into spring with style in our Spring Blossom sneakers for women. These low-profile sneakers are your perfect companions for a casual and floral look. With a sturdy rubber outsole, they can handle any weather condition while keeping your style in full bloom.',
     price: 175,
     images: [
       '/assetsECommerce/store/woman-1-1.webp',
@@ -72,9 +72,9 @@ const Store = [
   {
     id: 6,
     category: 'woman',
-    title: 'Fall Limited Edition Sneakers',
+    title: 'Summer Breeze Sneakers (Women)',
     description:
-      'These low-profile sneakers are your perfect casual wear companion.Featuring a durable rubber outer sole, they/’ll withstand everythingthe weather can offer.',
+      "Experience the summer breeze with our women's sneakers. These low-profile sneakers are your ideal choice for warm-weather adventures. Featuring a breathable design and a durable rubber outsole, they keep your feet cool and comfortable on your sunny excursions.",
     price: 175,
     images: [
       '/assetsECommerce/store/woman-2-1.webp',
@@ -86,9 +86,9 @@ const Store = [
   {
     id: 7,
     category: 'woman',
-    title: 'Fall Limited Edition Sneakers',
+    title: 'City Chic Sneakers (Women)',
     description:
-      'These low-profile sneakers are your perfect casual wear companion.Featuring a durable rubber outer sole, they/’ll withstand everythingthe weather can offer.',
+      'Elevate your city style with our City Chic sneakers for women. These low-profile sneakers are designed for the modern urban fashionista. With a trendy design and a sturdy rubber outsole, they are the perfect blend of style and functionality for your urban adventures.',
     price: 175,
     images: [
       '/assetsECommerce/store/woman-3-1.webp',
@@ -100,9 +100,9 @@ const Store = [
   {
     id: 8,
     category: 'woman',
-    title: 'Fall Limited Edition Sneakers',
+    title: 'Classic Elegance Sneakers (Women)',
     description:
-      'These low-profile sneakers are your perfect casual wear companion.Featuring a durable rubber outer sole, they/’ll withstand everythingthe weather can offer.',
+      "Achieve classic elegance with our women's sneakers. These low-profile sneakers are your versatile choice for timeless style. Featuring a refined design and a cushioned rubber outsole, they offer both sophistication and comfort for your everyday wear.",
     price: 175,
     images: [
       '/assetsECommerce/store/woman-4-1.webp',

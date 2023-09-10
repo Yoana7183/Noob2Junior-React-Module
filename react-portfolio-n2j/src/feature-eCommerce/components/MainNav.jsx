@@ -4,7 +4,7 @@ import { EcommerceContext } from '../context/EcommerceContext';
 // import OutsideClickHandler from './OutsideClickHandler';
 import { v4 as uuidv4 } from 'uuid';
 const MainNavigation = () => {
-  const { setcartStatus, quantity } = useContext(EcommerceContext);
+  const { setCartStatus, quantity } = useContext(EcommerceContext);
   const [isCartHasBeenOpen, setIsCartHasBeenOpen] = useState(true);
   const [isBurgerMenuOnMobileViewIsOpen, setisBurgerMenuOnMobileViewIsOpen] =
     useState();
@@ -23,14 +23,14 @@ const MainNavigation = () => {
 
   useEffect(() => {
     if (isBurgerMenuOnMobileViewIsOpen) {
-      setcartStatus('closed');
+      setCartStatus('closed');
     }
   }, [isBurgerMenuOnMobileViewIsOpen]);
 
   const handleClick = () => {
     setIsCartHasBeenOpen(!isCartHasBeenOpen);
     let newStatus = isCartHasBeenOpen ? 'open' : 'closed';
-    setcartStatus(newStatus);
+    setCartStatus(newStatus);
   };
 
   return (
