@@ -46,27 +46,6 @@ const Projects = () => {
         </div>
         <div className="  w-fit mx-auto grid grid-cols-3 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 pt-10 mb-56 sm:grid-cols-1 sms:grid-cols-1">
           <div>
-            <Link to="/git">
-              <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
-                <img
-                  src="\img-icons\github.jpg"
-                  alt="Product"
-                  className="h-80 w-72 object-cover rounded-t-xl"
-                />
-                <div className="px-4 py-3 w-72">
-                  <p className="text-lg  font-bold text-black truncate block capitalize">
-                    GitHub Search
-                  </p>
-                  <span className="text-gray-400 mr-3 text-xs">
-                    A GitHub search app enabling users to find profiles via
-                    usernames, featuring dark and light modes for user
-                    preference.
-                  </span>
-                </div>
-              </div>
-            </Link>
-          </div>
-          <div>
             <Link to="/e-commerce">
               <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
                 <img
@@ -87,6 +66,28 @@ const Projects = () => {
               </div>
             </Link>
           </div>
+          <div>
+            <Link to="/git">
+              <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+                <img
+                  src="\img-icons\github.jpg"
+                  alt="Product"
+                  className="h-80 w-72 object-cover rounded-t-xl"
+                />
+                <div className="px-4 py-3 w-72">
+                  <p className="text-lg  font-bold text-black truncate block capitalize">
+                    GitHub Search
+                  </p>
+                  <span className="text-gray-400 mr-3 text-xs">
+                    A GitHub search app enabling users to find profiles via
+                    usernames, featuring dark and light modes for user
+                    preference.
+                  </span>
+                </div>
+              </div>
+            </Link>
+          </div>
+
           <div>
             <Link to="/tipscalc">
               <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
