@@ -14,13 +14,13 @@ const EcommerceShop = () => {
   }, []);
   const bodyBackgroundStyleInModal = `${
     modalStatus === 'open'
-      ? `bg-grey-800 font-kumbhSans flex justify-center pt-16 h-[1200px] z-10 h-screen overflow-y-auto  `
-      : `font-kumbhSans flex justify-center sm:pt-16 pt-5 h-screen overflow-y-auto `
+      ? `bg-grey-800 font-kumbhSans flex justify-center pt-16 h-max z-10 h-screen overflow-y-auto  `
+      : `font-kumbhSans flex justify-center sm:pt-16 pt-5 h-max overflow-y-auto `
   }`;
   return (
     <main ref={contentRef} className={bodyBackgroundStyleInModal}>
-      <div className="xl:w-[1110px] xl:h-[940px] lg:w-[1000px] lg:h-[840px]  md:w-[850px]  sm:w-[640px] h-max overflow-hidden ">
-        <div className="mb-[50%] h-max sm:h-max  sm:mb-[25rem] md:mb-[15rem]">
+      <div className="xl:w-[1110px] xl:h-max lg:w-[1000px] lg:h-[840px]  md:w-[850px]  sm:w-[640px] h-max overflow-hidden ">
+        <div className="mb-[50%] h-max sm:h-max  sm:mb-[25rem] md:mb-[15rem] ">
           <MainNavigation />
           <Cart />
           <Outlet />
