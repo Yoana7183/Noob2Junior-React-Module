@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { EcommerceContext } from '../context/EcommerceContext';
-
+import { NavLink } from 'react-router-dom';
 const Cart = () => {
-  const { quantity, setQuantity, cartStatus } = useContext(EcommerceContext);
-
+  const { setQuantity, cartStatus } = useContext(EcommerceContext);
+  const quantity = 10;
   return (
     <section
       className={`${
@@ -49,12 +49,11 @@ const Cart = () => {
             </div>
           )}
           {quantity > 0 && (
-            <div
-              className="w-[312px] h-[56px] bg-ecommerceOrangeColor hover:bg-hoverEcommerceOrangeColor   text-white flex justify-center rounded-xl mt-7 ml-5"
-              onClick={() => setQuantity(0)}
-            >
-              <button>Checkout</button>
-            </div>
+            <NavLink to={`/e-commerce/shopping-cart`}>
+              <div className="w-[312px] h-[56px] bg-ecommerceOrangeColor hover:bg-hoverEcommerceOrangeColor   text-white flex justify-center rounded-xl mt-7 ml-5">
+                <button>Checkout</button>
+              </div>
+            </NavLink>
           )}
         </div>
       </div>

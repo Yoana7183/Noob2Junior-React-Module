@@ -16,7 +16,7 @@ import ManCollections from './feature-eCommerce/pages/ManCollections';
 import WomanCollection from './feature-eCommerce/pages/WomanCollection';
 import About from './feature-eCommerce/pages/About';
 import Contact from './feature-eCommerce/pages/Contacts';
-// import RootLayout from './feature-eCommerce/pages/Root';
+import ShoppingCart from './feature-eCommerce/pages/ShoppingCart';
 
 const router = createBrowserRouter([
   {
@@ -62,6 +62,11 @@ const router = createBrowserRouter([
           {
             path: '/e-commerce/Collections/:productId',
             element: <ProductDetailPage />,
+          },
+
+          {
+            path: '/e-commerce/shopping-cart',
+            element: <ShoppingCart />,
           },
         ],
       },

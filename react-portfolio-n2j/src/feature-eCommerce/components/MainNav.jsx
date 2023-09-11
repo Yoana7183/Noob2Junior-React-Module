@@ -1,7 +1,7 @@
-import React, { useContext, useState, useEffect, useRef } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { EcommerceContext } from '../context/EcommerceContext';
-// import OutsideClickHandler from './OutsideClickHandler';
+
 import { v4 as uuidv4 } from 'uuid';
 const MainNavigation = () => {
   const { setCartStatus, quantity } = useContext(EcommerceContext);
@@ -15,11 +15,12 @@ const MainNavigation = () => {
     setisBurgerMenuOnMobileViewIsOpen(!isBurgerMenuOnMobileViewIsOpen);
   };
 
-  // const handleOutsideClick = () => {
-  //   if (isBurgerMenuOnMobileViewIsOpen) {
-  //     toggleMenu();
-  //   }
-  // };
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }, []);
 
   useEffect(() => {
     if (isBurgerMenuOnMobileViewIsOpen) {
@@ -32,16 +33,9 @@ const MainNavigation = () => {
     let newStatus = isCartHasBeenOpen ? 'open' : 'closed';
     setCartStatus(newStatus);
   };
-  const contentRef = useRef(null);
 
-  useEffect(() => {
-    contentRef.current.scrollTo({ top: 0, behavior: 'smooth' });
-  }, []);
   return (
-    <div
-      ref={contentRef}
-      className="flex justify-between border-b-[1px] border-[#E4E9F2] pt-4 px-1 sm:px-0"
-    >
+    <div className="flex justify-between border-b-[1px]  border-[#E4E9F2] pt-4 px-1 sm:px-0">
       <div className="block sm:hidden pt-7">
         <button
           onClick={toggleMenu}
@@ -69,9 +63,9 @@ const MainNavigation = () => {
         {isBurgerMenuOnMobileViewIsOpen && (
           <div
             className="sm:hidden fixed top-0 left-0 w-screen h-screen bg-gray-800 bg-opacity-40 z-10 flex justify-start items-center"
-            onClick={toggleMenu} // Затваря менюто при клик върху фоновия панел
+            onClick={toggleMenu}
           >
-            <div className="w-[50%] sm:w-0 h-full bg-white pt-20">
+            <div className="w-[50%] sm:w-0 h-full bg-white pt-20 ">
               <button
                 onClick={toggleMenu}
                 className="absolute top-[7rem] left-[-9px] m-4 p-2 rounded-full text-black bg-white hover:bg-gray-200"
@@ -93,7 +87,15 @@ const MainNavigation = () => {
               <div className="sm:flex sm:justify-between cursor-pointer lg:text-base md:px-3.5 pb-7 ml-7 pt-[6rem] md:text-sm sm:text-xs font-bold sm:px-2">
                 {categories.map((category) => {
                   return (
-                    <div key={uuidv4()} className="pt-2">
+                    <div
+                      key={uuidv4()}
+                      style={{
+                        outline: 'none',
+                        boxShadow: 'none',
+                        WebkitTapHighlightColor: 'transparent',
+                      }}
+                      className="pt-2"
+                    >
                       <NavLink to={`/e-commerce/${category}`}>
                         {category}
                       </NavLink>
