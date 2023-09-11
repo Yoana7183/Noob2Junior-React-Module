@@ -1,17 +1,19 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ProductCollectionContainer from '../components/ProductCollectionContainer';
 import Store from '../store';
 
 function WomanCollection() {
   const manProducts = Store.filter((prod) => prod.category === 'woman');
-  const contentRef = useRef(null);
-
   useEffect(() => {
-    contentRef.current.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
   }, []);
+
   return (
-    <section ref={contentRef} className="py-6 px-4 lg:px-0  mt-[-15rem]">
+    <section className="py-6 px-4 lg:px-0  mt-[-15rem]">
       <h1 className="text-2xl font-bold mb-4"> Woman`s Products</h1>
       <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {manProducts.map((prod) => (

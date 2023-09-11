@@ -1,17 +1,14 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 function Contact() {
-  const contentRef = useRef(null);
-
   useEffect(() => {
-    contentRef.current.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
   }, []);
-
   return (
-    <div
-      ref={contentRef}
-      className="sm:bg-gray-100 py-12 md:mt-[-25%] sm:mt-[-40%] mt-[-50%]"
-    >
+    <div className="sm:bg-gray-100 py-12 md:mt-[-25%] sm:mt-[-40%] mt-[-50%]">
       <div className="container mx-auto px-4">
         <h1 className="text-3xl font-semibold mb-8 text-center">Contact Us</h1>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
