@@ -31,7 +31,7 @@ const InformationContainer = ({ id }) => {
             <p>{productInformation.discount}%</p>
           </div>
         </div>
-        <div className="line-through text-[#69707D] mt-2 pl-[calc(15vw+3px)] sm:pl-0">
+        <div className="line-through text-[#69707D] text-2xl mt-2 pl-[calc(15vw+3px)] sm:pl-0">
           <p> {productInformation.price}$</p>
         </div>
       </div>
