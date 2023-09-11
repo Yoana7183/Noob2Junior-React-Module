@@ -87,7 +87,15 @@ const MainNavigation = () => {
               <div className="sm:flex sm:justify-between cursor-pointer lg:text-base md:px-3.5 pb-7 ml-7 pt-[6rem] md:text-sm sm:text-xs font-bold sm:px-2">
                 {categories.map((category) => {
                   return (
-                    <div key={uuidv4()} className="pt-2">
+                    <div
+                      key={uuidv4()}
+                      style={{
+                        outline: 'none',
+                        boxShadow: 'none',
+                        WebkitTapHighlightColor: 'transparent',
+                      }}
+                      className="pt-2"
+                    >
                       <NavLink to={`/e-commerce/${category}`}>
                         {category}
                       </NavLink>

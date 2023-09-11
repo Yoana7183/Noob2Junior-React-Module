@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import SearchBarAndSubmitButton from './components/InputSeach';
 
 import PersonalUserInformation from './components/PersonalUserInformation';
@@ -12,10 +12,11 @@ const GitHubFindDev = () => {
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
   };
-  const contentRef = useRef(null);
-
   useEffect(() => {
-    contentRef.current.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
   }, []);
 
   const toggleDarkToLightStyleBackground =
@@ -29,7 +30,6 @@ const GitHubFindDev = () => {
 
   return (
     <main
-      ref={contentRef}
       className={`h-screen overflow-y-auto ${toggleDarkToLightStyleBackground}`}
     >
       <div

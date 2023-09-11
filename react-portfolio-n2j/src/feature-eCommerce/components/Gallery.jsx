@@ -33,14 +33,14 @@ const Gallery = ({ id }) => {
   const goToPreviousImage = () => {
     setCurrentImageIndex((prevIndex) => {
       const newIndex = prevIndex - 1;
-      return newIndex < 0 ? 2 : newIndex;
+      return newIndex < 0 ? 3 : newIndex;
     });
   };
 
   const goToNextImage = () => {
     setCurrentImageIndex((prevIndex) => {
       const newIndex = prevIndex + 1;
-      return newIndex > 2 ? 0 : newIndex;
+      return newIndex > 3 ? 0 : newIndex;
     });
   };
 

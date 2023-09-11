@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import MainNavigation from './components/MainNav';
 
-import Cart from './components/Cart';
+import Cart from './components/PopUpCart';
 
 import { EcommerceContext } from './context/EcommerceContext';
 import { Outlet, Link } from 'react-router-dom';
