@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ProductCollectionContainer from '../components/ProductCollectionContainer';
-import Store from '../Store';
+import Store from '../store';
 
 function WomanCollection() {
   const manProducts = Store.filter((prod) => prod.category === 'woman');

@@ -1,7 +1,7 @@
 import React from 'react';
 import QuantityButton from './QuantityButton';
 import PropTypes from 'prop-types';
-import Store from '../Store';
+import Store from '../store';
 const InformationContainer = ({ id }) => {
   const productInformation = Store.find(
     (product) => product.id === parseInt(id, 10)
