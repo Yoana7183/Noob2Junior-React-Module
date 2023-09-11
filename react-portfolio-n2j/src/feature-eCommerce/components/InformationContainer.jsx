@@ -13,7 +13,7 @@ const InformationContainer = ({ id }) => {
         <div className="text-ecommerceOrangeColor sm:font-black font-base">
           <h3> SNEAKER COMPANY</h3>
         </div>
-        <div className="sm:text-4xl font-medium mt-5 text-4xl w-[420px]">
+        <div className="sm:text-4xl font-medium mt-5 text-4xl w-[350px] sm:w-[420px]">
           <h2>{productInformation.title}</h2>
         </div>
         <p className="text-[#69707D] mt-5 text-sm text-fit leading-6 w-[320px] h-max ">
