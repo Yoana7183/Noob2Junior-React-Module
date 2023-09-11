@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ProductGallery from './images';
 
 /**
  * Modal gallery component for displaying images in a modal.
@@ -36,12 +35,12 @@ const ModalGallery = (props) => {
                   onClick={() => props.setIsModal(false)}
                 >
                   {/* Close Icon */}
-                  <div className="w-[34px] h-[36px] mb-3 bg-no-repeat bg-cover bg-[url('/assetsECommerce/icon-close.svg')] hover:bg-[url('/assetsECommerce/icon-close_hover.png')] "></div>
+                  <div className="w-[34px] h-[36px] mb-3 bg-no-repeat bg-cover bg-[url('/assetsECommerce/icons8-close.svg')] hover:bg-[url('/assetsECommerce/icon-close_hover.png')] "></div>
                 </div>
                 {/* Product Image */}
                 <img
                   className="w-[450px] rounded-xl"
-                  src={ProductGallery[props.imageIndex].origin}
+                  src={props.ProductGallery.images[props.imageIndex]}
                   alt="Product Image"
                 />
               </div>
@@ -51,11 +50,6 @@ const ModalGallery = (props) => {
                 className="rounded-full bg-white w-[56px] h-[56px] flex justify-center cursor-pointer absolute inset-y-15 sm:right-[-30px] md:right-[-30px] lg:right-[-20px] right-[70px] bg-[url('/assetsECommerce/icon-next.svg')] bg-no-repeat bg-center hover:bg-[url('/assetsECommerce/icons8-next-26.png')] "
                 onClick={props.nextImg}
               ></div>
-            </div>
-
-            {/* Thumbnail Section */}
-            <div className="sm:flex mt-4 px-4 lg:ml-[-5%] sm:ml-[3.5rem] md:ml-10 hidden">
-              {props.thumbNail}
             </div>
           </div>
         </div>
@@ -72,6 +66,7 @@ ModalGallery.propTypes = {
   setIsModal: PropTypes.func.isRequired,
   imageIndex: PropTypes.number.isRequired,
   thumbNail: PropTypes.any.isRequired,
+  ProductGallery: PropTypes.any.isRequired,
 };
 
 export default ModalGallery;

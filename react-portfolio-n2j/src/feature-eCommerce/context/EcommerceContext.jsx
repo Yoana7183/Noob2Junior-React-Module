@@ -5,16 +5,25 @@ export const EcommerceContext = createContext();
 
 /**
  * Provides e-commerce state management.
- * @param {Object} props - The component props.
+
  * @param {React.ReactNode} props.children - The wrapped child components.
  * @returns {JSX.Element} - A JSX element wrapping children with e-commerce context.
  */
+const initialEmptyCart = {
+  ID: null,
+  IMG: null,
+  TITLE: null,
+  SIZE: null,
+  PRICE: null,
+  DISCOUNT: null,
+  QUANTITY: null,
+  TOTAL: null,
+};
 export const EcommerceContextProvider = ({ children }) => {
-  const [quantity, setQuantity] = useState(0);
-  const [cartStatus, setcartStatus] = useState('closed');
+  const [cartStatus, setCartStatus] = useState('closed');
   const [modalStatus, setModalStatus] = useState('closed');
-  const [products, setPoducts] = useState({});
-
+  const [cartContent, setProductsInOrder] = useState(initialEmptyCart);
+  console.log(initialEmptyCart);
   /**
    * Stores the values of cart and modal statuses as strings for easier status access and identification.
    * This approach ensures that only one of them can be open at a time,
@@ -24,14 +33,12 @@ export const EcommerceContextProvider = ({ children }) => {
   return (
     <EcommerceContext.Provider
       value={{
-        quantity,
-        setQuantity,
+        cartContent,
+        setProductsInOrder,
         cartStatus,
-        setcartStatus,
+        setCartStatus,
         modalStatus,
         setModalStatus,
-        products,
-        setPoducts,
       }}
     >
       {children}

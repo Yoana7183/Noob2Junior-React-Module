@@ -6,12 +6,12 @@ const Projects = () => {
   return (
     <>
       <div>
-        <div className="flex justify-center mt-16 text-gray-400 mr-3 uppercase text-2xl relative">
+        {/* <div className="flex justify-center mt-16 text-gray-400 mr-3 uppercase text-2xl relative">
           <p>My Resume</p>
           <div className="absolute bottom-0 left-1/5 w-3/5 h-[1px] bg-gray-400"></div>
-        </div>
+        </div> */}
 
-        <div className="flex justify-center">
+        {/* <div className="flex justify-center">
           <div>
             <Link to="/cv">
               <div className="lg:w-[40rem] md:w-[30rem] sm:w-[25rem] w-[18rem] sm:mt-5 mt-8 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
@@ -33,12 +33,12 @@ const Projects = () => {
               </div>
             </Link>
           </div>
-        </div>
-        <div className="flex justify-center  flex-col sm:flex-row items-center mt-[5rem]">
+        </div> */}
+        {/* <div className="flex justify-center  flex-col sm:flex-row items-center mt-[5rem]">
           <div className="w-4 h-4 mt-2  mb-1 sm:mb-0 sm:mr-2">
             <img src="\assetsCv\down.gif" alt="" srcSet="" />
           </div>
-        </div>
+        </div> */}
 
         <div className="flex justify-center mt-[5rem] text-gray-400 mr-3 uppercase text-2xl relative">
           <p>My Projects</p>

@@ -10,8 +10,12 @@ import LandingPageEz from './pages/LandingPageEz';
 import TipsCalculator from './pages/TipsCalculator';
 import DictionaryBasic from './pages/Dictionary';
 import { ErrorPage } from './pages/ErrorPage';
-import ProductsPage from '../src/feature-eCommerce/pages/Products';
-import ProductDetailPage from '../src/feature-eCommerce/pages/ProductDetail';
+import Collections from './feature-eCommerce/pages/Collections';
+import ProductDetailPage from './feature-eCommerce/pages/ProductDetail';
+import ManCollections from './feature-eCommerce/pages/ManCollections';
+import WomanCollection from './feature-eCommerce/pages/WomanCollection';
+import About from './feature-eCommerce/pages/About';
+import Contact from './feature-eCommerce/pages/Contacts';
 // import RootLayout from './feature-eCommerce/pages/Root';
 
 const router = createBrowserRouter([
@@ -31,10 +35,33 @@ const router = createBrowserRouter([
         path: '/e-commerce',
         element: <ECommerce />,
         children: [
-          { path: '/e-commerce/Woman', element: <ProductDetailPage /> },
           {
-            path: '/e-commerce/products/:productId',
-            element: <ProductsPage />,
+            path: '',
+            element: <Collections />,
+          },
+          {
+            path: '/e-commerce/Collections',
+            element: <Collections />,
+          },
+          {
+            path: '/e-commerce/Men',
+            element: <ManCollections />,
+          },
+          {
+            path: '/e-commerce/Contact',
+            element: <Contact />,
+          },
+          {
+            path: '/e-commerce/About',
+            element: <About />,
+          },
+          {
+            path: '/e-commerce/Woman',
+            element: <WomanCollection />,
+          },
+          {
+            path: '/e-commerce/Collections/:productId',
+            element: <ProductDetailPage />,
           },
         ],
       },

@@ -4,7 +4,7 @@ import { EcommerceContext } from '../context/EcommerceContext';
 // import OutsideClickHandler from './OutsideClickHandler';
 import { v4 as uuidv4 } from 'uuid';
 const MainNavigation = () => {
-  const { setcartStatus, quantity } = useContext(EcommerceContext);
+  const { setCartStatus, quantity } = useContext(EcommerceContext);
   const [isCartHasBeenOpen, setIsCartHasBeenOpen] = useState(true);
   const [isBurgerMenuOnMobileViewIsOpen, setisBurgerMenuOnMobileViewIsOpen] =
     useState();
@@ -23,14 +23,14 @@ const MainNavigation = () => {
 
   useEffect(() => {
     if (isBurgerMenuOnMobileViewIsOpen) {
-      setcartStatus('closed');
+      setCartStatus('closed');
     }
   }, [isBurgerMenuOnMobileViewIsOpen]);
 
   const handleClick = () => {
     setIsCartHasBeenOpen(!isCartHasBeenOpen);
     let newStatus = isCartHasBeenOpen ? 'open' : 'closed';
-    setcartStatus(newStatus);
+    setCartStatus(newStatus);
   };
 
   return (
@@ -42,8 +42,8 @@ const MainNavigation = () => {
         >
           {isBurgerMenuOnMobileViewIsOpen ? (
             <img
-              className="fill-current mt-[-2.6rem] "
-              src="\assetsECommerce\icon-close.png"
+              className="fill-current  mt-[-2.6rem] "
+              src="\assetsECommerce\icons8-close.svg"
               alt="Close"
             />
           ) : (
@@ -60,16 +60,19 @@ const MainNavigation = () => {
           <img src="\assetsECommerce\logo.svg" alt="Logo" />
         </div>
         {isBurgerMenuOnMobileViewIsOpen && (
-          <div className="sm:hidden fixed top-0 left-0 w-screen h-screen bg-gray-800 bg-opacity-40 z-10 flex justify-start items-center">
-            <div className="w-[50%]  sm:w-0 h-full bg-white pt-20">
+          <div
+            className="sm:hidden fixed top-0 left-0 w-screen h-screen bg-gray-800 bg-opacity-40 z-10 flex justify-start items-center"
+            onClick={toggleMenu} // Затваря менюто при клик върху фоновия панел
+          >
+            <div className="w-[50%] sm:w-0 h-full bg-white pt-20">
               <button
                 onClick={toggleMenu}
-                className="  absolute top-[7rem] left-[-9px] m-4 p-2 rounded-full text-black bg-white hover:bg-gray-200"
+                className="absolute top-[7rem] left-[-9px] m-4 p-2 rounded-full text-black bg-white hover:bg-gray-200"
               >
                 {isBurgerMenuOnMobileViewIsOpen ? (
                   <img
                     className="w-6 h-6 fill-current mt-[-2.2rem]  "
-                    src="\assetsECommerce\icon-close.svg"
+                    src="\assetsECommerce\icons8-close.svg"
                     alt="Close"
                   />
                 ) : (
@@ -80,7 +83,7 @@ const MainNavigation = () => {
                   />
                 )}
               </button>
-              <div className=" sm:flex sm:justify-between cursor-pointer lg:text-base md:px-3.5 pb-7 ml-7 pt-[6rem] md:text-sm sm:text-xs font-bold sm:px-2">
+              <div className="sm:flex sm:justify-between cursor-pointer lg:text-base md:px-3.5 pb-7 ml-7 pt-[6rem] md:text-sm sm:text-xs font-bold sm:px-2">
                 {categories.map((category) => {
                   return (
                     <div key={uuidv4()} className="pt-2">

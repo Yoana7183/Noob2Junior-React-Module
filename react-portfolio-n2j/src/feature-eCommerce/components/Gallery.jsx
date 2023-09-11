@@ -1,48 +1,60 @@
-import { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import ModalGallery from './ModalGallery';
-import ProductGallery from './images';
 import { EcommerceContext } from '../context/EcommerceContext';
 import { v4 as uuidv4 } from 'uuid';
-const Gallery = () => {
-  const { setcartStatus, setModalStatus } = useContext(EcommerceContext);
+import Store from '../Store';
+import PropTypes from 'prop-types';
+
+const Gallery = ({ id }) => {
+  const { setCartStatus, setModalStatus } = useContext(EcommerceContext);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isModalMenuAboveSMClassOpen, setisModalMenuAboveSMClassOpen] =
+  const [isModalMenuAboveSMClassOpen, setIsModalMenuAboveSMClassOpen] =
     useState(false);
 
-  // dynamically updating the context every time the modal gallery is opened or closed
   useEffect(() => {
     let newStatus = isModalMenuAboveSMClassOpen ? 'open' : 'closed';
     setModalStatus(newStatus);
-  }, [isModalMenuAboveSMClassOpen]);
+  }, [isModalMenuAboveSMClassOpen, setModalStatus]);
 
   useEffect(() => {
     if (isModalMenuAboveSMClassOpen) {
-      setcartStatus('closed');
+      setCartStatus('closed');
     }
-  }, [isModalMenuAboveSMClassOpen]);
+  }, [isModalMenuAboveSMClassOpen, setCartStatus]);
+
+  const ProductGallery = Store.find(
+    (product) => product.id === parseInt(id, 10)
+  );
+
+  if (!ProductGallery) {
+    return <div>Product not found.</div>;
+  }
 
   const goToPreviousImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? ProductGallery.length - 1 : prevIndex - 1
-    );
+    setCurrentImageIndex((prevIndex) => {
+      const newIndex = prevIndex - 1;
+      return newIndex < 0 ? 2 : newIndex;
+    });
   };
 
   const goToNextImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === ProductGallery.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-  const getCurrentTargetImage = (index) => {
-    setCurrentImageIndex(index);
-    setisModalMenuAboveSMClassOpen(true);
+    setCurrentImageIndex((prevIndex) => {
+      const newIndex = prevIndex + 1;
+      return newIndex > 2 ? 0 : newIndex;
+    });
   };
 
-  const thumbnailImages = ProductGallery.map((image, index) => (
+  const getCurrentTargetImage = (index) => {
+    setCurrentImageIndex(index);
+    setIsModalMenuAboveSMClassOpen(true);
+  };
+
+  const thumbnailImages = ProductGallery.images.map((image, index) => (
     <img
       key={uuidv4()}
       className="lg:w-[88px] lg:h-[88px] sm:w-[66px] sm:h-[66px] sm:ml-1 md:ml-5 rounded-xl cursor-pointer ml-6 hover:border-2 hover:border-ecommerceOrangeColor hover:opacity-60"
-      src={image.thumbnail}
-      alt="Gallery Image"
+      src={image}
+      alt={`Gallery Image ${index}`}
       onClick={() => getCurrentTargetImage(index)}
     />
   ));
@@ -51,16 +63,16 @@ const Gallery = () => {
     <section>
       {isModalMenuAboveSMClassOpen && (
         <ModalGallery
+          ProductGallery={ProductGallery}
           prevImg={goToPreviousImage}
           nextImg={goToNextImage}
           getCurrentImage={getCurrentTargetImage}
-          setIsModal={setisModalMenuAboveSMClassOpen}
+          setIsModal={setIsModalMenuAboveSMClassOpen}
           imageIndex={currentImageIndex}
-          thumbNail={thumbnailImages}
+          thumbNail={ProductGallery.images}
         />
       )}
-
-      <div className="lg:w-[445px] lg:h-[565px] xl:w-[445px] xl:h-[565px] md:w-[345px] md:h-[465px]  sm:mt-[-12rem]  mt-[-16rem] lg:pl-16 md:pl-0">
+      <div className="lg:w-[445px] lg:h-[565px] xl:w-[445px] xl:h-[565px] md:w-[345px] md:h-[465px] mt-[-16rem] lg:mt-[-27rem] md:mt-[-27rem] sm:mt-[-28rem] lg:pl-16 md:pl-0">
         <div className="sm:h-[445px] h-[calc(100vw-1px)]">
           <div className="sm:w-[445px] sm:h-[445px] w-screen h-[300px] ">
             <div className="sm:hidden relative">
@@ -70,15 +82,13 @@ const Gallery = () => {
               >
                 <img
                   className="w-[10px] h-[16px] mt-3"
-                  src="\assetsECommerce\icon-previous.svg"
+                  src="/assetsECommerce/icon-previous.svg"
                   alt="Prev"
-                  srcSet=""
-                ></img>
+                />
               </div>
               <img
-                src={ProductGallery[currentImageIndex].origin}
+                src={ProductGallery.images[currentImageIndex]}
                 alt="ProductImage"
-                srcSet=""
                 className=""
               />
               <div
@@ -87,17 +97,15 @@ const Gallery = () => {
               >
                 <img
                   className="w-[10px] h-[16px] mt-3  "
-                  src="\assetsECommerce\icon-next.svg"
+                  src="/assetsECommerce/icon-next.svg"
                   alt="Next"
-                  srcSet=""
-                ></img>
+                />
               </div>
             </div>
             <img
               className=" sm:rounded-2xl rounded-none sm:inline hidden "
-              src="\assetsECommerce\image-product-1.jpg"
+              src={ProductGallery.images[0]}
               alt="Main-Product"
-              srcSet=""
             />
           </div>
         </div>
@@ -108,4 +116,9 @@ const Gallery = () => {
     </section>
   );
 };
+
+Gallery.propTypes = {
+  id: PropTypes.string,
+};
+
 export default Gallery;
