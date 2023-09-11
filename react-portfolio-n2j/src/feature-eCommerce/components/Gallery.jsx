@@ -31,11 +31,17 @@ const Gallery = ({ id }) => {
   }
 
   const goToPreviousImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex === 0 ? 2 : prevIndex - 1));
+    setCurrentImageIndex((prevIndex) => {
+      const newIndex = prevIndex - 1;
+      return newIndex < 0 ? 2 : newIndex;
+    });
   };
 
   const goToNextImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex === 2 ? 0 : prevIndex + 1));
+    setCurrentImageIndex((prevIndex) => {
+      const newIndex = prevIndex + 1;
+      return newIndex > 2 ? 0 : newIndex;
+    });
   };
 
   const getCurrentTargetImage = (index) => {

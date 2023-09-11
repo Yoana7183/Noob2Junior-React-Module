@@ -16,7 +16,6 @@ import PropTypes from 'prop-types';
  * @returns {JSX.Element} - A JSX element representing the modal gallery.
  */
 const ModalGallery = (props) => {
-  console.log(props.ProductGallery.images[props.imageIndex]);
   return (
     <section className="fixed top-0 left-0 w-full h-full items-center justify-center hidden sm:flex">
       <div className="w-full h-full rounded-lg p-8 absolute top-0 left-0 bg-gray-800 bg-opacity-50">
