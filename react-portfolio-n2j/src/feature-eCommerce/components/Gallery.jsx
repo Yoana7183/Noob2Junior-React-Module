@@ -66,7 +66,7 @@ const Gallery = ({ id }) => {
           thumbNail={ProductGallery.images}
         />
       )}
-      <div className="lg:w-[445px] lg:h-[565px] xl:w-[445px] xl:h-[565px] md:w-[345px] md:h-[465px] mt-[-17.2rem] sm:mt-[-32rem] lg:pl-16 md:pl-0">
+      <div className="lg:w-[445px] lg:h-[565px] xl:w-[445px] xl:h-[565px] md:w-[345px] md:h-[465px] mt-[-16rem] lg:mt-[-27rem] md:mt-[-27rem] sm:mt-[-28rem] lg:pl-16 md:pl-0">
         <div className="sm:h-[445px] h-[calc(100vw-1px)]">
           <div className="sm:w-[445px] sm:h-[445px] w-screen h-[300px] ">
             <div className="sm:hidden relative">

@@ -8,15 +8,15 @@ const InformationContainer = ({ id }) => {
   );
 
   return (
-    <section className=" lg:mt-[-31rem] lg:w-[445px] sm:w-[445px] lg:h-[426px] xl:w-[445px] xl:h-[426px] md:w-[245px] md:h-[326px]  md:mt-[-28rem] md:mr-[18rem] lg:mr-0 ">
+    <section className=" lg:w-[445px] sm:w-[445px] lg:h-[426px] xl:w-[445px] xl:h-[426px] md:w-[245px] h-max lg:mt-[-27rem]  md:mt-[-28rem] md:mr-[17rem] md:ml-[7rem] lg:mr-0 ">
       <div className="w-screen pr-[4rem] lg:w-[445px] sm:w-[445px]">
         <div className="text-ecommerceOrangeColor sm:font-black font-base">
           <h3> SNEAKER COMPANY</h3>
         </div>
-        <div className="sm:text-5xl font-medium mt-5 text-4xl">
+        <div className="sm:text-4xl font-medium mt-5 text-4xl w-[420px]">
           <h2>{productInformation.title}</h2>
         </div>
-        <p className="text-[#69707D] mt-5 text-sm  leading-6  ">
+        <p className="text-[#69707D] mt-5 text-sm text-fit leading-6 w-[320px] h-max ">
           {productInformation.description}
         </p>
       </div>
