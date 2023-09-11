@@ -21,7 +21,7 @@ const EcommerceShop = () => {
   }`;
   return (
     <main ref={contentRef} className={bodyBackgroundStyleInModal}>
-      <div className="xl:w-[1110px] xl:h-max lg:w-[1000px] lg:h-[840px]  md:w-[850px]  sm:w-[640px] h-max overflow-hidden ">
+      <div className="xl:w-[1110px] xl:h-max lg:w-[1000px] lg:h-max  md:w-[850px]  sm:w-[640px]  w-full h-max overflow-hidden ">
         <div className="mb-[50%] h-max sm:h-max  sm:mb-[25rem] md:mb-[15rem] ">
           <MainNavigation />
           <Link to=".." relative="path">

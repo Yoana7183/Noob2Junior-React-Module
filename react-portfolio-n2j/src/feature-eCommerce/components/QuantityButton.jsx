@@ -1,18 +1,31 @@
 import React, { useContext, useEffect, useState } from 'react';
-
+import PropTypes from 'prop-types';
 import { EcommerceContext } from '../context/EcommerceContext';
-const QuantityButton = () => {
-  const { quantity, setQuantity } = useContext(EcommerceContext);
-
+import getTotalPriceAfterDescount from '../getTotalPrice';
+const QuantityButton = ({ product }) => {
+  const { cartContent, setProductsInOrder } = useContext(EcommerceContext);
   const [inputQuantity, setInptQuantity] = useState(0);
   //this effect serves to update the quantity value when the quantities are reset from the shopping cart the value in the quantity field
   // in this component will also reset to 0
+  console.log(product);
   useEffect(() => {
-    if (quantity == 0) {
+    if (cartContent.QUANTITY == 0) {
       setInptQuantity(0);
     }
-  }, [quantity]);
+  }, [cartContent.QUANTITY]);
 
+  const addInCart = () => {
+    setProductsInOrder({
+      ID: product.id,
+      IMG: product.images[0],
+      TITLE: product.title,
+      SIZE: null,
+      PRICE: product.price,
+      DISCOUNT: product.discount,
+      QUANTITY: inputQuantity,
+      TOTAL: getTotalPriceAfterDescount(product),
+    });
+  };
   const handleMinusClick = () => {
     if (inputQuantity > 0) {
       setInptQuantity((prevCount) => prevCount - 1);
@@ -54,9 +67,7 @@ const QuantityButton = () => {
         </div>
         <div
           className="lg:w-[272px] sm:w-[600px] md:w-[300px]  w-[calc(80vw-1px)] h-[56px] mt-2 lg:mt-0 bg-ecommerceOrangeColor hover:bg-hoverEcommerceOrangeColor shadow-lg shadow-hoverEcommerceOrangeColor sm:shadow-none flex justify-center rounded-xl text-white cursor-pointer"
-          onClick={() => {
-            setQuantity(inputQuantity);
-          }}
+          onClick={addInCart}
         >
           <button className=" flex justify-center  pt-4">
             <div>
@@ -76,3 +87,7 @@ const QuantityButton = () => {
 };
 
 export default QuantityButton;
+
+QuantityButton.propTypes = {
+  product: PropTypes.any,
+};

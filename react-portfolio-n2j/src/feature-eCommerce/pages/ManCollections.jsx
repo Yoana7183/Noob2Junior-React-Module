@@ -13,7 +13,7 @@ function ManCollections() {
   return (
     <section ref={contentRef} className="py-6 px-4 lg:px-0  mt-[-15rem]">
       <h1 className="text-2xl font-bold mb-4">Men`s Products</h1>
-      <ul className="grid grid-cols-1 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4">
+      <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {manProducts.map((prod) => (
           <li key={prod.id} className="border rounded overflow-hidden">
             <Link to={`/e-commerce/Collections/${prod.id}`}>

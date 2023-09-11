@@ -1,15 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import getTotalPriceAfterDescount from '../getTotalPrice';
 
 const ProductCollectionContainer = ({ product }) => {
-  const priceIfDiscount = () => {
-    if (product.discount && product.discount > 0) {
-      const discountedPrice =
-        product.price - product.price * (product.discount / 100);
-      return discountedPrice.toFixed(2);
-    }
-    return product.price;
-  };
   return (
     <div className="border rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
       <div className="relative h-64 overflow-hidden">
@@ -32,7 +25,7 @@ const ProductCollectionContainer = ({ product }) => {
           </div>
         </div>
         <p className="text-black  text-bold text-lg mb-2">
-          {priceIfDiscount()}$
+          {getTotalPriceAfterDescount(product)}$
         </p>
         <button className="bg-gray-300 text-gray-700 py-2 px-6 rounded-lg shadow-md hover:shadow-sm hover:bg-orange-500 hover:text-white transition duration-300">
           See More

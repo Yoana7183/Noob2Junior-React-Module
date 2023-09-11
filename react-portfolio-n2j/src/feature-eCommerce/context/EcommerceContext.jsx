@@ -22,7 +22,7 @@ const initialEmptyCart = {
 export const EcommerceContextProvider = ({ children }) => {
   const [cartStatus, setCartStatus] = useState('closed');
   const [modalStatus, setModalStatus] = useState('closed');
-  const [cartContent, setProductsInOrder] = useState(initialEmptyCart);
+  const [cartContent, setProductsInOrder] = useState([initialEmptyCart]);
   console.log(initialEmptyCart);
   /**
    * Stores the values of cart and modal statuses as strings for easier status access and identification.
