@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext, useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { EcommerceContext } from '../context/EcommerceContext';
 // import OutsideClickHandler from './OutsideClickHandler';
@@ -32,9 +32,16 @@ const MainNavigation = () => {
     let newStatus = isCartHasBeenOpen ? 'open' : 'closed';
     setCartStatus(newStatus);
   };
+  const contentRef = useRef(null);
 
+  useEffect(() => {
+    contentRef.current.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
   return (
-    <div className="flex justify-between border-b-[1px] border-[#E4E9F2] pt-4 px-1 sm:px-0">
+    <div
+      ref={contentRef}
+      className="flex justify-between border-b-[1px] border-[#E4E9F2] pt-4 px-1 sm:px-0"
+    >
       <div className="block sm:hidden pt-7">
         <button
           onClick={toggleMenu}

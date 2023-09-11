@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }, []);
   return (
     <div className="bg-[#FF7E1B] h-screen flex flex-col items-center justify-center text-white md:mt-[-25%] sm:mt-[-40%] mt-[-40%]">
       <div className="bg-white p-8 rounded-lg shadow-md text-center">

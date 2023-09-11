@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 function Contact() {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }, []);
   return (
     <div className="sm:bg-gray-100 py-12 md:mt-[-25%] sm:mt-[-40%] mt-[-50%]">
       <div className="container mx-auto px-4">
