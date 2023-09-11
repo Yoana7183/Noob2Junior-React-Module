@@ -1,9 +1,15 @@
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Gallery from '../components/Gallery';
 import InformationContainer from '../components/InformationContainer';
 function ProductDetailPage() {
   const params = useParams();
-
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }, []);
   return (
     <section>
       <div className=" flex flex-row ">

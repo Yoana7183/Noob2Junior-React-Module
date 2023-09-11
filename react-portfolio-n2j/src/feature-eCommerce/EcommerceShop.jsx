@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import MainNavigation from './components/MainNav';
 
 import Cart from './components/Cart';
@@ -8,10 +8,12 @@ import { Outlet, Link } from 'react-router-dom';
 
 const EcommerceShop = () => {
   const modalStatus = useContext(EcommerceContext);
-  const contentRef = useRef(null);
 
   useEffect(() => {
-    contentRef.current.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
   }, []);
 
   const bodyBackgroundStyleInModal = `${
@@ -20,7 +22,7 @@ const EcommerceShop = () => {
       : `font-kumbhSans flex justify-center sm:pt-16 pt-5 h-max overflow-y-auto `
   }`;
   return (
-    <main ref={contentRef} className={bodyBackgroundStyleInModal}>
+    <main className={bodyBackgroundStyleInModal}>
       <div className="xl:w-[1110px] xl:h-max lg:w-[1000px] lg:h-max  md:w-[850px]  sm:w-[640px]  w-full h-max overflow-hidden ">
         <div className="mb-[50%] h-max sm:h-max  sm:mb-[25rem] md:mb-[15rem] ">
           <MainNavigation />

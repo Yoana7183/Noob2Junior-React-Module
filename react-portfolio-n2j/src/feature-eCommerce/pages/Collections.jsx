@@ -9,6 +9,7 @@ function Collections() {
   useEffect(() => {
     contentRef.current.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
+
   return (
     <section
       ref={contentRef}
