@@ -6,6 +6,7 @@ function Contact() {
   useEffect(() => {
     contentRef.current.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
+
   return (
     <div
       ref={contentRef}

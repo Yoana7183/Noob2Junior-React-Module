@@ -1,10 +1,11 @@
 import React, { useContext, useRef, useEffect } from 'react';
 import MainNavigation from './components/MainNav';
+
 import Cart from './components/Cart';
 
 import { EcommerceContext } from './context/EcommerceContext';
-import { Outlet } from 'react-router-dom';
-// h-[calc(120vw+550px)]
+import { Outlet, Link } from 'react-router-dom';
+
 const EcommerceShop = () => {
   const modalStatus = useContext(EcommerceContext);
   const contentRef = useRef(null);
@@ -23,6 +24,17 @@ const EcommerceShop = () => {
       <div className="xl:w-[1110px] xl:h-max lg:w-[1000px] lg:h-[840px]  md:w-[850px]  sm:w-[640px] h-max overflow-hidden ">
         <div className="mb-[50%] h-max sm:h-max  sm:mb-[25rem] md:mb-[15rem] ">
           <MainNavigation />
+          <Link to=".." relative="path">
+            <div className="flex">
+              <img
+                src="\assetsECommerce\icons8-back-30.png"
+                className="w-6 h-6"
+                alt="back"
+                srcSet=""
+              />
+              <p className="text-[10px] mt-1 ">Back</p>
+            </div>
+          </Link>
           <Cart />
           <Outlet />
         </div>
