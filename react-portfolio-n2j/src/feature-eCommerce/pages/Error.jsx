@@ -1,4 +1,4 @@
-import MainNavigation from '../components/MainNavigation';
+import MainNavigation from '../components/MainNav';
 
 function ErrorPage() {
   return (
