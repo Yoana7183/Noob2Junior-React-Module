@@ -2,6 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ProductCollectionContainer = ({ product }) => {
+  const priceIfDiscount = () => {
+    if (product.discount && product.discount > 0) {
+      const discountedPrice =
+        product.price - product.price * (product.discount / 100);
+      return discountedPrice.toFixed(2);
+    }
+    return product.price;
+  };
   return (
     <div className="border rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
       <div className="relative h-64 overflow-hidden">
@@ -15,9 +23,19 @@ const ProductCollectionContainer = ({ product }) => {
         <h2 className="text-xl font-semibold text-gray-900 mb-2">
           {product.title}
         </h2>
-        <p className="text-gray-700 text-lg mb-2">${product.price}</p>
+        <div className="flex items-center mb-2">
+          <div className="w-[51px] h-[27px] bg-orange-100 text-ecommerceOrangeColor font-black rounded-lg flex justify-center mr-3">
+            <p>{product.discount}%</p>
+          </div>
+          <div className="text-[#69707D] line-through">
+            <p className="text-gray-400 text-lg">${product.price}</p>
+          </div>
+        </div>
+        <p className="text-black  text-bold text-lg mb-2">
+          {priceIfDiscount()}$
+        </p>
         <button className="bg-gray-300 text-gray-700 py-2 px-6 rounded-lg shadow-md hover:shadow-sm hover:bg-orange-500 hover:text-white transition duration-300">
-          Add to Cart
+          See More
         </button>
       </div>
     </div>
