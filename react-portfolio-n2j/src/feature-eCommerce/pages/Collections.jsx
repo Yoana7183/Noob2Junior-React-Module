@@ -9,7 +9,7 @@ function Collections() {
       <h1 className="text-2xl font-bold mb-4">The Products Page</h1>
       <ul className="grid grid-cols-1 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 ">
         {Store.map((prod) => (
-          <li key={prod.id} className="border rounded overflow-hidden">
+          <li key={prod.id} className="overflow-hidden">
             <Link to={`/e-commerce/Collections/${prod.id}`}>
               <ProductCollectionContainer product={prod} />
             </Link>

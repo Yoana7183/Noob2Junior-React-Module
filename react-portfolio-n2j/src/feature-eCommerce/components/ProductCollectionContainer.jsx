@@ -7,7 +7,7 @@ const ProductCollectionContainer = ({ product }) => {
       <img
         src={product.images[0]}
         alt={`Image 1`}
-        className="w-full h-48 object-cover"
+        className="w-full h-full object-cover"
       />
       <div className="p-4">
         <h2 className="text-lg font-semibold mb-2">{product.title}</h2>

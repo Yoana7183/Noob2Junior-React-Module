@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import Gallery from '../components/Gallery';
 import InformationContainer from '../components/InformationContainer';
 function ProductDetailPage() {
@@ -6,7 +6,7 @@ function ProductDetailPage() {
 
   return (
     <section className=" flex flex-row ">
-      {/* <div className="mt-[-16rem]">
+      <div className="mt-[-16rem] relative">
         <Link to=".." relative="path">
           <div className="flex">
             <img
@@ -15,10 +15,10 @@ function ProductDetailPage() {
               alt="back"
               srcSet=""
             />
-            <p className="text-xs mt-1"> Back</p>
+            <p className="text-[10px] mt-1 ">Back</p>
           </div>
         </Link>
-      </div> */}
+      </div>
       <div className="w-[1015px] h-[565px] md:flex md:justify-between sm:flex-col sm:gap-0 gap-44 md:flex-row sm:pt-[16rem]">
         <Gallery id={params.productId} />
         <div className="sm:pl-0 pl-9 ">
