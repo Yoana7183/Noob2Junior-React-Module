@@ -12,6 +12,7 @@ const EcommerceShop = () => {
   useEffect(() => {
     contentRef.current.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
+
   const bodyBackgroundStyleInModal = `${
     modalStatus === 'open'
       ? `bg-grey-800 font-kumbhSans flex justify-center pt-16 h-max z-10 h-screen overflow-y-auto  `

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import ModalGallery from './ModalGallery';
 import { EcommerceContext } from '../context/EcommerceContext';
 import { v4 as uuidv4 } from 'uuid';
-import Store from '../Store';
+import Store from '../store';
 import PropTypes from 'prop-types';
 
 const Gallery = ({ id }) => {
