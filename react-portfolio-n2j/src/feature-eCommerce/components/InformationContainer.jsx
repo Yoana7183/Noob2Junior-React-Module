@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import QuantityButton from './QuantityButton';
 import PropTypes from 'prop-types';
 import Store from '../store';
 import getTotalPriceAfterDescount from '../getTotalPrice';
 
 const InformationContainer = ({ id }) => {
+  const [selectedSize, setSelectedSize] = useState(0);
   const productInformation = Store.find(
     (product) => product.id === parseInt(id, 10)
   );
@@ -35,8 +36,29 @@ const InformationContainer = ({ id }) => {
           <p> {productInformation.price}$</p>
         </div>
       </div>
+      <div className="mt-4">
+        <label
+          htmlFor="sizeSelect"
+          className="block font-semibold text-gray-700"
+        >
+          Select size:
+        </label>
+        <select
+          id="sizeSelect"
+          value={selectedSize}
+          onChange={(e) => setSelectedSize(e.target.value)}
+          className="block w-24 mt-1 p-2 border rounded-md shadow-sm focus:ring focus:ring-ecommerceOrangeColor focus:border-ecommerceOrangeColor"
+        >
+          <option value="">Available size:</option>
+          {productInformation.availableSizes.map((size) => (
+            <option key={size} value={size}>
+              {size}
+            </option>
+          ))}
+        </select>
+      </div>
       <div className="mt-5 sm:mt-0">
-        <QuantityButton product={productInformation} />
+        <QuantityButton size={selectedSize} product={productInformation} />
       </div>
     </section>
   );
