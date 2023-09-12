@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { EcommerceContext } from '../context/EcommerceContext';
 
 const QuantityButton = ({ handleErrorIfSizeIsNotSelected, product, size }) => {
-  const { shoppingCartContent, addToCart } = useContext(EcommerceContext);
+  const { addItemToCart } = useContext(EcommerceContext);
   const [inputQuantity, setInptQuantity] = useState(0);
   //this effect serves to update the quantity value when the quantities are reset from the shopping cart the value in the quantity field
   // in this component will also reset to 0
@@ -15,7 +15,7 @@ const QuantityButton = ({ handleErrorIfSizeIsNotSelected, product, size }) => {
   // }, [cartContent]);
   // removeItemFromCart,
   // editCartItemQuantity,
-  console.log(shoppingCartContent);
+  // console.log(shoppingCartContent);
   const handleCartAddButton = () => {
     if (size === 0 || size == '') {
       handleErrorIfSizeIsNotSelected((prevError) => ({
@@ -39,7 +39,7 @@ const QuantityButton = ({ handleErrorIfSizeIsNotSelected, product, size }) => {
         quantity: false,
       }));
     }
-    return addToCart(product, inputQuantity, size);
+    return addItemToCart(product, inputQuantity, size);
   };
   const handleMinusClick = () => {
     if (inputQuantity > 0) {

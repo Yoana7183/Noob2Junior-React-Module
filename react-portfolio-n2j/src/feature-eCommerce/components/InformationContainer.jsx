@@ -44,7 +44,7 @@ const InformationContainer = ({ id }) => {
         </div>
       </div>
 
-      <div className="mt-4">
+      <div className="mt-4 mb-10">
         {error.size ? (
           <p className="text-ecommerceOrangeColor">Please select a size!</p>
         ) : (
@@ -52,7 +52,7 @@ const InformationContainer = ({ id }) => {
             htmlFor="sizeSelect"
             className="block font-semibold text-gray-700"
           >
-            Select size:
+            Available size :
           </label>
         )}
         <select
@@ -61,7 +61,7 @@ const InformationContainer = ({ id }) => {
           onChange={(e) => setSelectedSize(e.target.value)}
           className="block w-24 mt-1 p-2 border rounded-md shadow-sm focus:ring focus:ring-ecommerceOrangeColor focus:border-ecommerceOrangeColor"
         >
-          <option value="">Available size:</option>
+          <option value="">Select:</option>
           {productInformation.availableSizes.map((size) => (
             <option key={size} value={size}>
               {size}

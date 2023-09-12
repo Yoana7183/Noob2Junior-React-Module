@@ -38,7 +38,7 @@ export const EcommerceContextProvider = ({ children }) => {
    * @param {number} quantity - The quantity of the product to add.
    * @param {string} selectedSize - The selected size of the product.
    */
-  const addToCart = (productToAdd, quantity = 1, selectedSize) => {
+  const addItemToCart = (productToAdd, quantity = 1, selectedSize) => {
     if (selectedSize == 0 || quantity == 0) {
       return;
     }
@@ -49,7 +49,7 @@ export const EcommerceContextProvider = ({ children }) => {
     );
 
     if (existingProductIndex !== -1) {
-      editCartItem(existingProductIndex, { QUANTITY: quantity });
+      editItemFromCart(existingProductIndex, { QUANTITY: quantity });
     } else {
       setShoppingCartContent((prevProducts) => [
         ...prevProducts,
@@ -72,7 +72,7 @@ export const EcommerceContextProvider = ({ children }) => {
    * @function
    * @param {number} productId - The ID of the product to remove.
    */
-  const removeFromCart = (productId) => {
+  const removeItemFromCart = (productId) => {
     setShoppingCartContent((prevProducts) =>
       prevProducts.filter((product) => product.ID !== productId)
     );
@@ -84,7 +84,7 @@ export const EcommerceContextProvider = ({ children }) => {
    * @param {number} index - The index of the product to edit.
    * @param {Object} updatedProperties - The properties to update for the product.
    */
-  const editCartItem = (index, updatedProperties) => {
+  const editItemFromCart = (index, updatedProperties) => {
     setShoppingCartContent((prevProducts) => {
       const updatedProducts = [...prevProducts];
       updatedProducts[index] = {
@@ -99,9 +99,9 @@ export const EcommerceContextProvider = ({ children }) => {
     <EcommerceContext.Provider
       value={{
         shoppingCartContent,
-        addToCart,
-        removeFromCart,
-        editCartItem,
+        addItemToCart,
+        removeItemFromCart,
+        editItemFromCart,
         cartStatus,
         setCartStatus,
         modalStatus,

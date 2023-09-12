@@ -2,21 +2,23 @@ import React, { useContext, useEffect, useState } from 'react';
 import { EcommerceContext } from '../context/EcommerceContext';
 function ShoppingCart() {
   const { shoppingCartContent } = useContext(EcommerceContext);
-  const [total, setTotal] = useState(0);
+  const [totalBillForAllProductsInCart, setTtotalBillForAllProductsInCart] =
+    useState(0);
+  console.log(shoppingCartContent);
   if (shoppingCartContent.length == 0) {
     return <div className="mt-[-15rem]">Still no items in cart</div>;
   }
+  function sumTotal(shoppingCartContent) {
+    return shoppingCartContent.reduce(
+      (total, item) => total + parseFloat(item.TOTAL),
+      0
+    );
+  }
   useEffect(() => {
-    const totalBill = shoppingCartContent
-      .map((item) => {
-        const price = parseFloat(item.PRICE);
-        const discount = parseFloat(item.DISCOUNT);
-        const discountedPrice = price - (price * discount) / 100;
-        return discountedPrice;
-      })
-      .reduce((a, b) => a + b, 0);
-    setTotal(totalBill);
+    const totalSum = sumTotal(shoppingCartContent);
+    setTtotalBillForAllProductsInCart(totalSum);
   }, [shoppingCartContent.length]);
+
   return (
     <div className="mt-[-15rem]">
       <h1 className="text-2xl font-bold mb-4">Shopping Cart</h1>
@@ -53,7 +55,7 @@ function ShoppingCart() {
           </div>
         </div>
       ))}
-      <div>Total : {total}$ </div>
+      <div>Total :{totalBillForAllProductsInCart} $ </div>
     </div>
   );
 }
