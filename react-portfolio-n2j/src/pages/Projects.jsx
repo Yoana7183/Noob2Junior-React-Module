@@ -58,9 +58,8 @@ const Projects = () => {
                     E-commerce
                   </p>
                   <span className="text-gray-400 mr-3 text-xs">
-                    A fully responsive e-commerce webpage / ONLY PRODUCT page /
-                    for an online store, equipped with a user-friendly shopping
-                    cart and an immersive modal gallery.
+                    A fully responsive e-commerce webpage for an online store,
+                    equipped with a user-friendly shopping cart.
                   </span>
                 </div>
               </div>
