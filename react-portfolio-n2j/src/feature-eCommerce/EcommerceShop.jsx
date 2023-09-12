@@ -27,7 +27,7 @@ const EcommerceShop = () => {
         <div className="mb-[50%] h-max sm:h-max  sm:mb-[25rem] md:mb-[15rem] ">
           <MainNavigation />
           <Link to=".." relative="path">
-            <div className="flex">
+            <div className=" hidden sm:flex">
               <img
                 src="\assetsECommerce\icons8-back-30.png"
                 className="w-6 h-6"
