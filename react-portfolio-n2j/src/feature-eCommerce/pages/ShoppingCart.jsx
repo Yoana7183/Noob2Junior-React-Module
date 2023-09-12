@@ -1,32 +1,26 @@
-import React from 'react';
-
+import React, { useContext, useEffect, useState } from 'react';
+import { EcommerceContext } from '../context/EcommerceContext';
 function ShoppingCart() {
-  const products = [
-    {
-      ID: 1,
-      IMG: '/assetsECommerce/store/man-1-1.webp',
-      TITLE: 'test',
-      SIZE: '34',
-      PRICE: 152,
-      DISCOUNT: 15,
-      QUANTITY: 2,
-      TOTAL: 154,
-    },
-    {
-      ID: 2,
-      IMG: '/assetsECommerce/store/man-3-1.webp',
-      TITLE: 'title',
-      SIZE: '34',
-      PRICE: 152,
-      DISCOUNT: 15,
-      QUANTITY: 2,
-      TOTAL: 154,
-    },
-  ];
+  const { shoppingCartContent } = useContext(EcommerceContext);
+  const [total, setTotal] = useState(0);
+  if (shoppingCartContent.length == 0) {
+    return <div className="mt-[-15rem]">Still no items in cart</div>;
+  }
+  useEffect(() => {
+    const totalBill = shoppingCartContent
+      .map((item) => {
+        const price = parseFloat(item.PRICE);
+        const discount = parseFloat(item.DISCOUNT);
+        const discountedPrice = price - (price * discount) / 100;
+        return discountedPrice;
+      })
+      .reduce((a, b) => a + b, 0);
+    setTotal(totalBill);
+  }, [shoppingCartContent.length]);
   return (
     <div className="mt-[-15rem]">
       <h1 className="text-2xl font-bold mb-4">Shopping Cart</h1>
-      {products.map((product) => (
+      {shoppingCartContent.map((product) => (
         <div
           key={product.ID}
           className="bg-white border rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 mb-4 flex flex-col sm:flex-row"
@@ -59,7 +53,7 @@ function ShoppingCart() {
           </div>
         </div>
       ))}
-      <div>Total :</div>
+      <div>Total : {total}$ </div>
     </div>
   );
 }
