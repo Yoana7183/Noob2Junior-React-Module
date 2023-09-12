@@ -6,10 +6,17 @@ import getTotalPriceAfterDescount from '../getTotalPrice';
 
 const InformationContainer = ({ id }) => {
   const [selectedSize, setSelectedSize] = useState(0);
+  const [error, setError] = useState({
+    size: false,
+    quantity: false,
+  });
+  console.log(error);
   const productInformation = Store.find(
     (product) => product.id === parseInt(id, 10)
   );
-
+  const handleErrorIfSizeIsNotSelected = (isError) => {
+    setError(isError);
+  };
   return (
     <section className=" lg:w-[445px] sm:w-[445px] lg:h-[426px] xl:w-[445px] xl:h-[426px] md:w-[350px] h-max lg:mt-[-27rem]  md:mt-[-28rem] md:mr-[17rem] md:ml-[7rem] lg:mr-0 ">
       <div className="w-screen pr-[4rem] lg:w-[445px] sm:w-[445px]">
@@ -36,13 +43,18 @@ const InformationContainer = ({ id }) => {
           <p> {productInformation.price}$</p>
         </div>
       </div>
+
       <div className="mt-4">
-        <label
-          htmlFor="sizeSelect"
-          className="block font-semibold text-gray-700"
-        >
-          Select size:
-        </label>
+        {error.size ? (
+          <p className="text-ecommerceOrangeColor">Please select a size!</p>
+        ) : (
+          <label
+            htmlFor="sizeSelect"
+            className="block font-semibold text-gray-700"
+          >
+            Select size:
+          </label>
+        )}
         <select
           id="sizeSelect"
           value={selectedSize}
@@ -57,8 +69,15 @@ const InformationContainer = ({ id }) => {
           ))}
         </select>
       </div>
+      {error.quantity && (
+        <p className="text-ecommerceOrangeColor">Please select a quantity</p>
+      )}
       <div className="mt-5 sm:mt-0">
-        <QuantityButton size={selectedSize} product={productInformation} />
+        <QuantityButton
+          handleErrorIfSizeIsNotSelected={handleErrorIfSizeIsNotSelected}
+          size={selectedSize}
+          product={productInformation}
+        />
       </div>
     </section>
   );

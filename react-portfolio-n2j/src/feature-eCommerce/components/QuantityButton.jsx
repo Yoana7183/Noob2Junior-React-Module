@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import PropTypes from 'prop-types';
 import { EcommerceContext } from '../context/EcommerceContext';
 
-const QuantityButton = ({ product, size }) => {
+const QuantityButton = ({ handleErrorIfSizeIsNotSelected, product, size }) => {
   const { shoppingCartContent, addToCart } = useContext(EcommerceContext);
   const [inputQuantity, setInptQuantity] = useState(0);
   //this effect serves to update the quantity value when the quantities are reset from the shopping cart the value in the quantity field
@@ -17,6 +17,37 @@ const QuantityButton = ({ product, size }) => {
   // editCartItemQuantity,
 
   console.log(shoppingCartContent);
+  console.log(size);
+
+  const handleCartAddButton = () => {
+    if (size === 0 || size == '') {
+      handleErrorIfSizeIsNotSelected((prevError) => ({
+        ...prevError,
+        size: true,
+      }));
+    } else {
+      handleErrorIfSizeIsNotSelected((prevError) => ({
+        ...prevError,
+        size: false,
+      }));
+    }
+
+    if (inputQuantity === 0) {
+      handleErrorIfSizeIsNotSelected((prevError) => ({
+        ...prevError,
+        quantity: true,
+      }));
+    } else {
+      handleErrorIfSizeIsNotSelected((prevError) => ({
+        ...prevError,
+        quantity: false,
+      }));
+    }
+
+    if (size !== 0 && inputQuantity !== 0) {
+      addToCart(product, inputQuantity, size);
+    }
+  };
   const handleMinusClick = () => {
     if (inputQuantity > 0) {
       setInptQuantity((prevCount) => prevCount - 1);
@@ -58,7 +89,7 @@ const QuantityButton = ({ product, size }) => {
         </div>
         <div
           className="lg:w-[272px] sm:w-[600px] md:w-[300px]  w-[calc(80vw-1px)] h-[56px] mt-2 lg:mt-0 bg-ecommerceOrangeColor hover:bg-hoverEcommerceOrangeColor shadow-lg shadow-hoverEcommerceOrangeColor sm:shadow-none flex justify-center rounded-xl text-white cursor-pointer"
-          onClick={() => addToCart(product, inputQuantity, size)}
+          onClick={handleCartAddButton}
         >
           <button className=" flex justify-center  pt-4">
             <div>
@@ -82,4 +113,5 @@ export default QuantityButton;
 QuantityButton.propTypes = {
   product: PropTypes.any,
   size: PropTypes.any,
+  handleErrorIfSizeIsNotSelected: PropTypes.func,
 };

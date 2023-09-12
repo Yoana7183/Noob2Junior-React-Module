@@ -50,8 +50,7 @@ export const EcommerceContextProvider = ({ children }) => {
    * @param {string} selectedSize - The selected size of the product.
    */
   const addToCart = (productToAdd, quantity = 1, selectedSize) => {
-    if (selectedSize == 0 || quantity == 0) {
-      console.error('Product ID or SIZE is missing.');
+    if (selectedSize >= 0 || quantity == 0) {
       return;
     }
 
