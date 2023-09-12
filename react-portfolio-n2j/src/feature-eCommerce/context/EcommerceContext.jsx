@@ -72,9 +72,11 @@ export const EcommerceContextProvider = ({ children }) => {
    * @function
    * @param {number} productId - The ID of the product to remove.
    */
-  const removeItemFromCart = (productId) => {
+  const removeItemFromCart = (productId, productSize) => {
     setShoppingCartContent((prevProducts) =>
-      prevProducts.filter((product) => product.ID !== productId)
+      prevProducts.filter((product) => {
+        return product.ID !== productId || product.SIZE !== productSize;
+      })
     );
   };
 
