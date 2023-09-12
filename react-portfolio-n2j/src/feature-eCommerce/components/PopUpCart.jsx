@@ -39,8 +39,12 @@ const Cart = () => {
                   <div>
                     <h2 className="w-[140px]">{item.TITLE}</h2>
                     <div>
-                      <p>
-                        ${item.PRICE}x {item.DISCOUNT} ={item.TOTAL}
+                      <p className="">
+                        <p className="text-[11px]">
+                          Regular price {item.PRICE}$
+                        </p>
+                        <p className="text-[11px]">Discount {item.DISCOUNT}%</p>
+                        <p className="text-[11px]">New price: {item.TOTAL}$</p>
                       </p>
                     </div>
                   </div>
