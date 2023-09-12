@@ -12,7 +12,7 @@ function Collections() {
   }, []);
 
   return (
-    <section className="py-6 mt-[-17rem]  px-4 lg:px-0  h-max ">
+    <section className="py-6 mt-[-15rem]  px-4 lg:px-0  h-max ">
       <h1 className="text-2xl font-bold mb-4">Our Collection</h1>
       <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
         {Store.map((prod) => (

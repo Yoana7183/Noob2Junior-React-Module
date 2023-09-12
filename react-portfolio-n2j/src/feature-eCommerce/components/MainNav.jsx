@@ -4,7 +4,7 @@ import { EcommerceContext } from '../context/EcommerceContext';
 
 import { v4 as uuidv4 } from 'uuid';
 const MainNavigation = () => {
-  const { setCartStatus, quantity } = useContext(EcommerceContext);
+  const { setCartStatus, shoppingCartContent } = useContext(EcommerceContext);
   const [isCartHasBeenOpen, setIsCartHasBeenOpen] = useState(true);
   const [isBurgerMenuOnMobileViewIsOpen, setisBurgerMenuOnMobileViewIsOpen] =
     useState();
@@ -127,11 +127,11 @@ const MainNavigation = () => {
           onClick={handleClick}
         >
           <div className="w-[20px] h-[15px] ">
-            {quantity > 0 && (
+            {shoppingCartContent.length > 0 && (
               <div
                 className={` relative  bg-ecommerceOrangeColor text-white text-xs flex font-black rounded-xl justify-center`}
               >
-                <p className="  ">{quantity}</p>
+                <p className="  ">{shoppingCartContent.length}</p>
               </div>
             )}
           </div>
