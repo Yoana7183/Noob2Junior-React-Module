@@ -25,12 +25,7 @@ const Cart = () => {
           {quantity > 0 && (
             <div className="flex justify-around mt-7 ">
               <figure className="w-[50px] h-[50px] ">
-                <img
-                  className="rounded"
-                  src="\assetsECommerce\image-product-1-thumbnail.jpg"
-                  alt="Product_image"
-                  srcSet=""
-                />
+                <img className="rounded" alt="Product_image" srcSet="" />
               </figure>
               <div>
                 <h2>Fall Limited Edition Sneakers</h2>
