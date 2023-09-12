@@ -10,7 +10,7 @@ const InformationContainer = ({ id }) => {
     size: false,
     quantity: false,
   });
-  console.log(error);
+
   const productInformation = Store.find(
     (product) => product.id === parseInt(id, 10)
   );

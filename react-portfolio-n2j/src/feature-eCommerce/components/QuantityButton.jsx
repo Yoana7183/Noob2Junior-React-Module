@@ -15,10 +15,7 @@ const QuantityButton = ({ handleErrorIfSizeIsNotSelected, product, size }) => {
   // }, [cartContent]);
   // removeItemFromCart,
   // editCartItemQuantity,
-
   console.log(shoppingCartContent);
-  console.log(size);
-
   const handleCartAddButton = () => {
     if (size === 0 || size == '') {
       handleErrorIfSizeIsNotSelected((prevError) => ({
@@ -31,7 +28,6 @@ const QuantityButton = ({ handleErrorIfSizeIsNotSelected, product, size }) => {
         size: false,
       }));
     }
-
     if (inputQuantity === 0) {
       handleErrorIfSizeIsNotSelected((prevError) => ({
         ...prevError,
@@ -43,10 +39,7 @@ const QuantityButton = ({ handleErrorIfSizeIsNotSelected, product, size }) => {
         quantity: false,
       }));
     }
-
-    if (size !== 0 && inputQuantity !== 0) {
-      addToCart(product, inputQuantity, size);
-    }
+    return addToCart(product, inputQuantity, size);
   };
   const handleMinusClick = () => {
     if (inputQuantity > 0) {
