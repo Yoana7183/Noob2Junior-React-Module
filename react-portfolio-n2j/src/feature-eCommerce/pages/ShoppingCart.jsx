@@ -90,14 +90,22 @@ function ShoppingCart() {
                 <p className="text-base text-ecommerceOrangeColor font-bold">
                   ${product.TOTAL || '0.00'}
                   {product.QUANTITY >= 2 ? (
-                    <p>Total: {sumTotalPerProduct(product) || '0.00'}$ </p>
+                    <p className="mt-1">
+                      <p className="text-gray-700 sm:text-[10px] p-0 m-0 text-[10px] mt-[-5px]">
+                        Total:
+                      </p>
+                      <p className="mt-[-10px]">
+                        {' '}
+                        {sumTotalPerProduct(product) || '0.00'}${' '}
+                      </p>
+                    </p>
                   ) : null}
                 </p>
               </p>
             </div>
           </div>
           <figure
-            className="pt-8 cursor-pointer z-0 sm:ml-[-2%] ml-[-10%] "
+            className="pt-8 cursor-pointer z-0 sm:ml-[-2%] ml-[-4%] "
             onClick={() => removeItemFromCart(product.ID, product.SIZE)}
           >
             <img
