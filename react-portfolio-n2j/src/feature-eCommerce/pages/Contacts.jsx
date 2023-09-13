@@ -8,7 +8,7 @@ function Contact() {
     });
   }, []);
   return (
-    <div className="sm:bg-gray-100 py-12 md:mt-[-25%] sm:mt-[-40%] mt-[-50%]">
+    <div className="sm:bg-gray-100 py-12 md:mt-[-25%] sm:mt-[-40%] mt-[-15rem]">
       <div className="container mx-auto px-4">
         <h1 className="text-3xl font-semibold mb-8 text-center">Contact Us</h1>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
