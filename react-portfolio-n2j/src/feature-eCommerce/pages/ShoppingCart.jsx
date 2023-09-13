@@ -85,11 +85,13 @@ function ShoppingCart() {
               <p className={propertyStyle}>
                 <p>Quantity:</p> {product.QUANTITY || '0'}
               </p>
-              <p className={`${propertyStyle} `}>
+              <p className={`${propertyStyle} flex flex-row`}>
                 <p>Product price:</p>
                 <p className="text-base text-ecommerceOrangeColor font-bold">
-                  ${product.PRICE || '0.00'} / $ Total:{' '}
-                  {sumTotalPerProduct(product) || '0.00'}
+                  ${product.TOTAL || '0.00'}
+                  {product.QUANTITY >= 2 ? (
+                    <p>Total: {sumTotalPerProduct(product) || '0.00'}$ </p>
+                  ) : null}
                 </p>
               </p>
             </div>
