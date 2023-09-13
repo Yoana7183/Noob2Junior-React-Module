@@ -7,10 +7,15 @@ const Cart = () => {
     useContext(EcommerceContext);
   const div = useRef(null);
   useEffect(() => {
-    div.current.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    div.current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'end',
+      inline: 'nearest',
+    });
   }, []);
   return (
     <section
+      ref={div}
       className={`${
         cartStatus == 'open'
           ? 'opacity-100 relative z-20 flex justify-center'
@@ -18,7 +23,7 @@ const Cart = () => {
       } `}
     >
       <div className=" w-[360px] h-[256px] border-2shadow-2xl rounded-xl bg-white	shadow-2xl xl:ml-[47rem] lg:ml-[40rem] md:ml-[25rem] sm:ml-[18rem] relative-">
-        <div ref={div} className="">
+        <div className="">
           <div className="h-[67px] border-b-[1px] border-[#E4E9F2] pt-5 pl-3 ">
             Cart
           </div>
@@ -60,7 +65,6 @@ const Cart = () => {
             {shoppingCartContent.length > 0 && (
               <NavLink to={`/e-commerce/shopping-cart`}>
                 <div
-                  ref={div}
                   onClick={() => {
                     setCartStatus('closed');
                   }}
