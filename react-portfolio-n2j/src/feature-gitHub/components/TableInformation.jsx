@@ -25,7 +25,9 @@ const TableInformation = () => {
       {tableUserInfo.map((tableInfo) => {
         return (
           <div key={tableInfo[0]}>
-            <p className="flex flex-col items-center py-1 ">{tableInfo[1]}</p>
+            <p className="flex flex-col items-center py-1 text-[10px] sm:text-base">
+              {tableInfo[1]}
+            </p>
             <div className={`  px-2 sm:pr-8 ${toggleNumbers}`}>
               {tableInfo[2]}
             </div>

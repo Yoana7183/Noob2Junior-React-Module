@@ -95,7 +95,6 @@ function ShoppingCart() {
                         Total:
                       </p>
                       <p className="mt-[-10px]">
-                        {' '}
                         {sumTotalPerProduct(product) || '0.00'}${' '}
                       </p>
                     </p>
