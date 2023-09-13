@@ -1,17 +1,13 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import { EcommerceContext } from '../context/EcommerceContext';
 import { NavLink } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 const Cart = () => {
   const { setCartStatus, removeItemFromCart, cartStatus, shoppingCartContent } =
     useContext(EcommerceContext);
-
+  const div = useRef(null);
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      bottom: 0,
-      behavior: 'smooth',
-    });
+    div.current.scrollIntoView({ behavior: 'smooth', block: 'end' });
   }, []);
   return (
     <section
@@ -22,7 +18,7 @@ const Cart = () => {
       } `}
     >
       <div className=" w-[360px] h-[256px] border-2shadow-2xl rounded-xl bg-white	shadow-2xl xl:ml-[47rem] lg:ml-[40rem] md:ml-[25rem] sm:ml-[18rem] relative-">
-        <div className="">
+        <div ref={div} className="">
           <div className="h-[67px] border-b-[1px] border-[#E4E9F2] pt-5 pl-3 ">
             Cart
           </div>
@@ -64,6 +60,7 @@ const Cart = () => {
             {shoppingCartContent.length > 0 && (
               <NavLink to={`/e-commerce/shopping-cart`}>
                 <div
+                  ref={div}
                   onClick={() => {
                     setCartStatus('closed');
                   }}
