@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { EcommerceContext } from '../context/EcommerceContext';
 import { NavLink } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
@@ -6,6 +6,13 @@ const Cart = () => {
   const { setCartStatus, removeItemFromCart, cartStatus, shoppingCartContent } =
     useContext(EcommerceContext);
 
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      bottom: 0,
+      behavior: 'smooth',
+    });
+  }, []);
   return (
     <section
       className={`${
@@ -40,11 +47,8 @@ const Cart = () => {
                     <h2 className="w-[140px]">{item.TITLE}</h2>
                     <div>
                       <p className="">
-                        <p className="text-[11px]">
-                          Regular price {item.PRICE}$
-                        </p>
-                        <p className="text-[11px]">Discount {item.DISCOUNT}%</p>
-                        <p className="text-[11px]">New price: {item.TOTAL}$</p>
+                        <p className="text-[11px]">Price: {item.TOTAL}$</p>
+                        <p className="text-[11px]">Quantity: {item.QUANTITY}</p>
                       </p>
                     </div>
                   </div>
