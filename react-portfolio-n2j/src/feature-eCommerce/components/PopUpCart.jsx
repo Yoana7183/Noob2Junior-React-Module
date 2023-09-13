@@ -5,17 +5,18 @@ import { v4 as uuidv4 } from 'uuid';
 const Cart = () => {
   const { setCartStatus, removeItemFromCart, cartStatus, shoppingCartContent } =
     useContext(EcommerceContext);
-  const div = useRef(null);
+  const scrollContainerRef = useRef(null);
+
   useEffect(() => {
-    div.current.scrollIntoView({
-      behavior: 'smooth',
-      block: 'end',
-      inline: 'nearest',
-    });
-  }, []);
+    if (cartStatus === 'open' && scrollContainerRef.current) {
+      scrollContainerRef.current.scrollTo({
+        top: scrollContainerRef.current.scrollHeight,
+        behavior: 'smooth',
+      });
+    }
+  }, [cartStatus]);
   return (
     <section
-      ref={div}
       className={`${
         cartStatus == 'open'
           ? 'opacity-100 relative z-20 flex justify-center'
@@ -27,7 +28,10 @@ const Cart = () => {
           <div className="h-[67px] border-b-[1px] border-[#E4E9F2] pt-5 pl-3 ">
             Cart
           </div>
-          <div className="overflow-y-auto max-h-[150px]">
+          <div
+            ref={scrollContainerRef}
+            className="overflow-y-auto max-h-[150px]"
+          >
             {shoppingCartContent.length == 0 && (
               <div className="w-[312px] h-[56px] text-gray-300 flex justify-center rounded-xl mt-16 ml-5">
                 <p>Your cart is empty.</p>
