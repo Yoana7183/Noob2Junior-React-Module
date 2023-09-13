@@ -24,7 +24,7 @@ function ShoppingCart() {
   const propertyStyle = `text-gray-700 sm:text-[10px] flex flex-col text-[10px] px-0 md:text-xs sm:px-2 md:px-4`;
   return (
     <div className="mt-[-15rem]">
-      <h1 className="text-2xl font-bold mb-4">Shopping Cart</h1>
+      <h1 className=" ml-5 text-2xl font-bold mb-4">Shopping Cart</h1>
       {shoppingCartContent.map((product) => (
         <div
           key={product.ID}

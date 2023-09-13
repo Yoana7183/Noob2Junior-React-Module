@@ -24,7 +24,7 @@ const ProductCollectionContainer = ({ product }) => {
             <p className="text-gray-400 text-lg">${product.price}</p>
           </div>
         </div>
-        <p className="text-black  text-bold text-lg mb-2">
+        <p className="text-black font-bold flex justify-end  text-bold text-lg mb-2">
           {getTotalPriceAfterDescount(product)}$
         </p>
         <button className="bg-gray-300 text-gray-700 py-2 px-6 rounded-lg shadow-md hover:shadow-sm hover:bg-orange-500 hover:text-white transition duration-300">
