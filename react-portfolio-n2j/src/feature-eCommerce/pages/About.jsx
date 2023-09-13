@@ -8,7 +8,7 @@ const About = () => {
     });
   }, []);
   return (
-    <div className=" h-screen flex flex-col items-center justify-center text-white md:mt-[-35%] sm:mt-[-40%] mt-[-50%]">
+    <div className=" h-screen flex flex-col items-center justify-center text-white md:mt-[-35%] sm:mt-[-40%] mt-[-5rem]">
       <div className="bg-white p-5 rounded-lg shadow-md text-center">
         <h1 className="text-4xl font-bold text-[#FF7E1B] mb-4">About Us</h1>
         <p className="text-lg text-gray-700 mb-6">
